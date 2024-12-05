@@ -1,0 +1,13 @@
+# Enforce LF line endings for all text files
+* text eol=lf
+
+
+# Specific overrides for binary files (prevent Git from changing their line endings)
+*.jpg -text
+*.png -text
+*.gif -text
+*.pdf -text
+*.ico  -text
+*.webp -text
+*.woff2 -text
+
