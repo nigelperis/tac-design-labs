@@ -1,6 +1,7 @@
 {
-  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
   "editor.renderFinalNewline": "dimmed",
   "[html][typescript][typescriptreact][javascript][javascriptreact][css][json]": {
     "files.eol": "\n"

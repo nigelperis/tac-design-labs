@@ -8,8 +8,8 @@ module.exports = {
     'next/core-web-vitals',
     require.resolve('@vercel/style-guide/eslint/browser'),
     require.resolve('@vercel/style-guide/eslint/typescript'),
-    require.resolve(require.resolve('@vercel/style-guide/eslint/next')),
-    'plugin:prettier/recommended',
+    require.resolve('@vercel/style-guide/eslint/next'),
+    'prettier',
   ],
   parserOptions: {
     project,
@@ -23,6 +23,7 @@ module.exports = {
   },
   rules: {
     'import/no-default-export': 'off',
+    'import/order': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
   },
 };
