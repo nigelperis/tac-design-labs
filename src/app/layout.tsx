@@ -1,5 +1,9 @@
-import type { Metadata } from 'next';
+// eslint-disable-next-line camelcase -- disbled because package is exported in this manner
+import { Comic_Neue } from 'next/font/google';
 import localFont from 'next/font/local';
+
+import type { Metadata } from 'next';
+
 import './globals.css';
 
 const geistSans = localFont({
@@ -11,6 +15,13 @@ const geistMono = localFont({
   src: './fonts/GeistMonoVF.woff',
   variable: '--font-geist-mono',
   weight: '100 900',
+});
+
+const comicNeue = Comic_Neue({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  weight: ['300', '400', '700'],
+  variable: '--font-comic-neue',
 });
 
 export const metadata: Metadata = {
@@ -26,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${comicNeue.variable} antialiased`}
       >
         {children}
       </body>
