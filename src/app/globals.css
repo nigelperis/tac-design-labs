@@ -38,4 +38,18 @@
   --color-accent-800: #502e11;
   --color-accent-900: #261608;
   --color-accent-950: #150c05;
+
+  @theme {
+    --color-surface-50: #fdfaf6;
+    --color-surface-100: #fbf2ea;
+    --color-surface-200: #f8e8d8;
+    --color-surface-300: #f4dac3;
+    --color-surface-400: #f0cdad;
+    --color-surface-500: #ecc19a;
+    --color-surface-600: #df9958;
+    --color-surface-700: #c57325;
+    --color-surface-800: #854d19;
+    --color-surface-900: #40250c;
+    --color-surface-950: #221406;
+  }
 }

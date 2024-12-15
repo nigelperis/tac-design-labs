@@ -1,3 +1,6 @@
+import flowBitePlugin from 'flowbite/plugin';
+import tailwindCSSAnimate from 'tailwindcss-animate';
+
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -5,6 +8,7 @@ export default {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/flowbite/**/*.js',
   ],
   theme: {
     extend: {
@@ -48,11 +52,24 @@ export default {
           900: '#261608',
           950: '#150C05',
         },
+        surface: {
+          50: '#FDFAF6',
+          100: '#FBF2EA',
+          200: '#F8E8D8',
+          300: '#F4DAC3',
+          400: '#F0CDAD',
+          500: '#ECC19A',
+          600: '#DF9958',
+          700: '#C57325',
+          800: '#854D19',
+          900: '#40250C',
+          950: '#221406',
+        },
       },
       fontFamily: {
         primary: ['var(--font-comic-neue)'],
       },
     },
   },
-  plugins: [],
+  plugins: [flowBitePlugin, tailwindCSSAnimate],
 } satisfies Config;

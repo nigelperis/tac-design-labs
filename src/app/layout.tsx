@@ -1,6 +1,9 @@
-// eslint-disable-next-line camelcase -- disbled because package is exported in this manner
+// eslint-disable-next-line camelcase -- disabled because package is exported in this manner
 import { Comic_Neue } from 'next/font/google';
 import localFont from 'next/font/local';
+
+import Footer from '~/components/footer';
+import Header from '~/components/header';
 
 import type { Metadata } from 'next';
 
@@ -39,7 +42,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${comicNeue.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

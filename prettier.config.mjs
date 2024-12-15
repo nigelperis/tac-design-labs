@@ -7,6 +7,8 @@ import vercelPrettierConfig from '@vercel/style-guide/prettier';
 const config = {
   ...vercelPrettierConfig,
   semi: true,
+  tailwindAttributes: ['cn'],
+  tailwindFunctions: ['cn'],
   plugins: [
     '@ianvs/prettier-plugin-sort-imports',
     'prettier-plugin-tailwindcss',
@@ -15,7 +17,13 @@ const config = {
     '^react$',
     '<THIRD_PARTY_MODULES>',
     '',
-    '^~/ui/(.*)$',
+    '^~/components/ui/(.*)$',
+    '',
+    '^~/components/(.*)$',
+    '',
+    '^~/utils/(.*)$',
+    '',
+    '^~/assets/(.*)$',
     '',
     '^[./]',
     '<TYPES>',
