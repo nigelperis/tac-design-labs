@@ -40,11 +40,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${comicNeue.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${comicNeue.variable} min-h-screengrid-rows-[fit-content_1fr]antialiased grid max-h-screen`}
       >
         <Header />
-        {children}
-        <Footer />
+        <main>{children}</main>
+        {/* <Footer /> */}
       </body>
     </html>
   );
