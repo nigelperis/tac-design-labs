@@ -1,3 +1,4 @@
+import tailwindContainerQueries from '@tailwindcss/container-queries';
 import flowBitePlugin from 'flowbite/plugin';
 import tailwindCSSAnimate from 'tailwindcss-animate';
 
@@ -71,5 +72,5 @@ export default {
       },
     },
   },
-  plugins: [flowBitePlugin, tailwindCSSAnimate],
+  plugins: [flowBitePlugin, tailwindCSSAnimate, tailwindContainerQueries],
 } satisfies Config;

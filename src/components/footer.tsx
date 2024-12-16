@@ -23,31 +23,31 @@ function Footer() {
   return (
     <footer>
       <section
-        className="mx-auto flex w-full max-w-screen-xl flex-col bg-[#420C03] bg-blend-soft-light sm:flex-row sm:items-stretch"
+        className="mx-auto flex w-full flex-col bg-[#420C03] bg-blend-soft-light sm:flex-row sm:items-stretch"
         style={{ backgroundImage: `url(${src})` }}
       >
-        <div className="flex h-auto w-fit flex-row items-stretch space-x-4">
-          <div className="flex h-full flex-col items-center p-4 md:py-12">
+        <div className="flex h-auto w-full flex-col items-stretch space-y-8 md:w-fit md:flex-row md:space-x-4 md:space-y-0">
+          <div className="flex h-full flex-col items-center py-11 md:p-12 md:py-12">
             <Link
               href="/"
               className="mb-4 flex w-fit items-center space-x-3 bg-surface-500 sm:mb-0"
             >
               <Image src={logo} width={100} height={100} alt="Flowbite Logo" />
             </Link>
-            <h4 className="mt-6 font-primary text-5xl font-normal text-slate-50">
+            <h4 className="mt-6 text-center font-primary text-5xl font-normal text-slate-50">
               TAC Design LAB
             </h4>
             <div className="mt-6 flex flex-row space-x-5">
               <a
                 href="https://facebook.com"
-                className="rounded-full bg-slate-50 p-2.5"
+                className="rounded-full bg-slate-50 p-2"
               >
                 {/* <Facebook className="stroke-slate-100 text-[30px]" /> */}
                 <Plus size={30} className="stroke-primary-500" />
               </a>
               <a
                 href="https://youtube.com"
-                className="rounded-full bg-slate-50 p-2.5"
+                className="rounded-full bg-slate-50 p-2"
               >
                 {/* <Youtube className="stroke-slate-100 text-[30px]" /> */}
                 <X size={30} className="stroke-primary-500" />
@@ -55,7 +55,7 @@ function Footer() {
 
               <a
                 href="https://instagram.com "
-                className="rounded-full bg-slate-50 p-2.5"
+                className="rounded-full bg-slate-50 p-2"
               >
                 {/* <Instagram className="stroke-slate-100 text-[30px]" /> */}
                 <Circle size={30} className="stroke-primary-500" />
@@ -65,13 +65,13 @@ function Footer() {
 
           <div
             id="vr"
-            className="border-r-2 border-dashed border-surface-500"
+            className="w-full border-b-2 border-dashed border-surface-500 md:w-fit md:border-r-2"
           ></div>
         </div>
 
-        <ul className="grid w-full flex-1 grid-cols-2 gap-5 px-8 pb-9 pt-12">
-          <li>
-            <div className="flex space-x-4">
+        <ul className="mb-10 grid w-full flex-1 grid-cols-1 gap-8 px-8 pb-9 pt-12 @container md:grid-cols-2 md:px-16">
+          <li className="@3xl:w-2/3">
+            <div className="mb-4 flex space-x-4">
               <MapPin size={28} className="stroke-[#DAD84C]" />
               <h5 className="font-primary text-2xl font-bold text-white">
                 Address
@@ -83,8 +83,8 @@ function Footer() {
             </p>
           </li>
 
-          <li>
-            <div className="flex space-x-4">
+          <li className="@3xl:w-2/3">
+            <div className="mb-4 flex space-x-4">
               <Mail size={28} className="stroke-[#DAD84C]" />
               <h5 className="font-primary text-2xl font-bold text-white">
                 Email Us
@@ -98,8 +98,8 @@ function Footer() {
             </a>
           </li>
 
-          <li>
-            <div className="flex space-x-4">
+          <li className="@3xl:w-2/3">
+            <div className="mb-4 flex space-x-4">
               <Phone size={28} className="stroke-[#DAD84C]" />
               <h5 className="font-primary text-2xl font-bold text-white">
                 Phone
@@ -112,8 +112,8 @@ function Footer() {
             </div>
           </li>
 
-          <li>
-            <div className="flex space-x-4">
+          <li className="@3xl:w-2/3">
+            <div className="mb-4 flex space-x-4">
               <Clock5 size={28} className="stroke-[#DAD84C]" />
               <h5 className="font-primary text-2xl font-bold text-white">
                 Working Hours
@@ -128,7 +128,7 @@ function Footer() {
       </section>
 
       <section>
-        <p className="bg-gray-950 py-9 text-center font-primary text-base text-slate-50">
+        <p className="bg-gray-950 py-4 text-center font-primary text-base text-slate-50">
           COPYRIGHT © 2024{' '}
           <Link href="/" className="hover:underline">
             TACDESIGNLAB
