@@ -53,3 +53,31 @@
     --color-surface-950: #221406;
   }
 }
+
+/**
+ * Before is a vertical dashed line
+ */
+.landing-page-hero::before {
+  content: '';
+  position: absolute;
+  top: 60%;
+  right: 20;
+  height: 100%;
+  border-right: 2;
+  border-style: dashed;
+  border-color: var(--color-primary-500);
+}
+
+/**
+ * After is an horizontal dashed line
+ */
+.landing-page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 50;
+  left: 30;
+  width: 100%;
+  border-bottom: 2;
+  border-style: dashed;
+  border-color: var(--color-primary-500);
+}
