@@ -1,14 +1,14 @@
 import React from 'react';
-import { Circle, Clock5, Mail, MapPin, Phone, Plus, X } from 'lucide-react';
+import { Clock5, Mail, MapPin, Phone } from 'lucide-react';
 import Image, { getImageProps } from 'next/image';
 import Link from 'next/link';
 
+import Facebook from '~/assets/svgs/facebook-logo.svg';
+import Instagram from '~/assets/svgs/instagram-logo.svg';
+import Youtube from '~/assets/svgs/youtube-logo.svg';
+
 import footerBackground from '~/assets/images/footer-background.png';
 import logo from '~/assets/images/logo.png';
-
-// import Facebook from '~/assets/svgs/facebook-logo.svg';
-// import Instagram from '~/assets/svgs/instagram-logo.svg';
-// import Youtube from '~/assets/svgs/youtube-logo.svg';
 
 function Footer() {
   const {
@@ -40,25 +40,22 @@ function Footer() {
             <div className="mt-6 flex flex-row space-x-5">
               <a
                 href="https://facebook.com"
-                className="rounded-full bg-slate-50 p-2"
+                className="flex items-center justify-center rounded-full bg-slate-50 p-2"
               >
-                {/* <Facebook className="stroke-slate-100 text-[30px]" /> */}
-                <Plus size={30} className="stroke-primary-500" />
+                <Facebook className="text-3xl" />
               </a>
               <a
                 href="https://youtube.com"
-                className="rounded-full bg-slate-50 p-2"
+                className="flex items-center justify-center rounded-full bg-slate-50 p-2"
               >
-                {/* <Youtube className="stroke-slate-100 text-[30px]" /> */}
-                <X size={30} className="stroke-primary-500" />
+                <Youtube className="text-3xl" />
               </a>
 
               <a
                 href="https://instagram.com "
-                className="rounded-full bg-slate-50 p-2"
+                className="flex items-center justify-center rounded-full bg-slate-50 p-2"
               >
-                {/* <Instagram className="stroke-slate-100 text-[30px]" /> */}
-                <Circle size={30} className="stroke-primary-500" />
+                <Instagram className="text-3xl" />
               </a>
             </div>
           </div>
