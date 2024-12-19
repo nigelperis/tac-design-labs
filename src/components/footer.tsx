@@ -3,6 +3,8 @@ import { Clock5, Mail, MapPin, Phone } from 'lucide-react';
 import Image, { getImageProps } from 'next/image';
 import Link from 'next/link';
 
+import { cn } from '~/utils/cn';
+
 import Facebook from '~/assets/svgs/facebook-logo.svg';
 import Instagram from '~/assets/svgs/instagram-logo.svg';
 import Youtube from '~/assets/svgs/youtube-logo.svg';
@@ -10,7 +12,7 @@ import Youtube from '~/assets/svgs/youtube-logo.svg';
 import footerBackground from '~/assets/images/footer-background.png';
 import logo from '~/assets/images/logo.png';
 
-function Footer() {
+function Footer({ className }: Readonly<{ className?: string }>) {
   const {
     props: { src },
   } = getImageProps({
@@ -21,7 +23,7 @@ function Footer() {
   });
 
   return (
-    <footer>
+    <footer className={cn('', className)}>
       <section
         className="mx-auto flex w-full flex-col bg-[#420C03] bg-blend-soft-light sm:flex-row sm:items-stretch"
         style={{ backgroundImage: `url(${src})` }}
