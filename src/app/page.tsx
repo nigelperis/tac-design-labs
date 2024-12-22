@@ -54,28 +54,27 @@ export default function Home() {
   return (
     <div className="h-full min-h-full">
       <section
-        className="landing-page-hero relative h-full min-h-full overflow-hidden bg-cover md:flex md:flex-row-reverse md:items-center md:justify-between"
+        className="landing-page-hero relative h-full min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light md:flex md:h-[70vh] md:flex-row-reverse md:items-center md:justify-between"
         style={{
           backgroundImage: optimizedLandingPageHeroBackground,
         }}
       >
-        <div className="relative w-full">
+        <div className="relative ml-auto w-full">
           <Image
             src={landingPageHeroImage}
             placeholder="blur"
             alt="Landing page hero image "
-            className="h-1/4 w-full overflow-hidden rounded-md object-cover md:aspect-video md:w-auto"
+            className="h-1/4 w-full overflow-hidden rounded-md object-cover md:ml-auto md:aspect-video md:h-auto md:w-3/4 md:rounded-none md:rounded-s-3xl"
           />
           <Image
             src={landingPageAssetGrass}
             placeholder="empty"
             alt="Landing page asset grass"
-            className="absolute -right-6 top-full -translate-y-1/2 object-cover drop-shadow-md md:right-full md:translate-x-1/2"
-            width={120}
+            className="absolute -right-6 top-full w-[120px] -translate-y-1/2 object-cover drop-shadow-md md:left-1/3 md:w-[150px] md:-translate-x-full"
           />
         </div>
 
-        <div className="relative mt-8 flex flex-col justify-center p-8">
+        <div className="relative mt-8 flex flex-col items-center justify-center p-8 md:flex-grow">
           <h1 className="text-center font-primary text-5xl font-bold text-primary-500 md:text-7xl">
             TAC Design LAB
           </h1>
@@ -85,22 +84,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-[#EDD7C3] px-8 pb-14 text-secondary-500">
+      <section className="relative bg-[#EDD7C3] px-8 pb-14 text-secondary-500 md:flex md:items-center md:justify-around">
         <Image
           src={landingPageAshamsRavi}
           placeholder="blur"
           loading="lazy"
           alt="Ashams Ravi portrait"
-          className="relative -top-5 rounded-3xl"
+          className="relative -top-5 rounded-3xl md:-top-8 md:w-1/4"
         />
-        <p className="mt-2 text-balance text-justify indent-10 font-primary text-lg font-normal italic">
-          We all know the greenest choice is to avoid building altogether. But
-          when construction is necessary, the focus must shift to creating
-          spaces that respect and protect nature.
-        </p>
-        <p className="text-right font-primary text-2xl font-bold text-accent-500">
-          - Ashams Ravi
-        </p>
+        <div className="md:w-1/2">
+          <p className="mt-2 text-balance text-justify indent-10 font-primary text-lg font-normal italic md:text-4xl">
+            We all know the greenest choice is to avoid building altogether. But
+            when construction is necessary, the focus must shift to creating
+            spaces that respect and protect nature.
+          </p>
+          <p className="text-right font-primary text-2xl font-bold text-accent-500">
+            - Ashams Ravi
+          </p>
+        </div>
+
         <Image
           src={landingPageAssetLeaves}
           loading="lazy"
@@ -111,79 +113,81 @@ export default function Home() {
       </section>
 
       <section
-        className="relative py-16"
+        className="relative bg-[#D19A6A] py-16 bg-blend-soft-light md:flex md:justify-between"
         style={{
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <h2 className="relative w-2/3 pl-7 font-primary text-4xl font-normal leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary-500">
-          Sustainable Architecture
-        </h2>
+        <div className="md:w-1/2">
+          <h2 className="relative w-2/3 pl-7 font-primary text-4xl font-normal leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary-500 md:text-5xl">
+            Sustainable Architecture
+          </h2>
 
-        <ul className="my-8 space-y-8">
-          <li className="px-8">
-            <div className="flex space-x-2">
-              <LandingPageListImage className="" />
-              <h3 className="font-primary text-xl font-bold text-primary-500">
-                Understanding Sustainable Architecture
-              </h3>
-            </div>
-            <p className="text-balance text-justify font-primary font-normal text-primary-500">
-              A practice of designing and constructing buildings that minimize
-              environmental impact while optimizing resources. It combines
-              energy conservation, renewable materials and innovative
-              technologies with traditional wisdom to create harmonious and
-              healthy spaces. At its core, it is about building responsibly for
-              a better future.
-            </p>
-          </li>
+          <ul className="my-8 space-y-8">
+            <li className="px-8">
+              <div className="flex space-x-2">
+                <LandingPageListImage className="" />
+                <h3 className="font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                  Understanding Sustainable Architecture
+                </h3>
+              </div>
+              <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
+                A practice of designing and constructing buildings that minimize
+                environmental impact while optimizing resources. It combines
+                energy conservation, renewable materials and innovative
+                technologies with traditional wisdom to create harmonious and
+                healthy spaces. At its core, it is about building responsibly
+                for a better future.
+              </p>
+            </li>
 
-          <li className="px-8">
-            <div className="flex space-x-2">
-              <LandingPageListImage className="" />
-              <h3 className="font-primary text-xl font-bold text-primary-500">
-                The Need for Sustainable Design
-              </h3>
-            </div>
-            <p className="text-balance text-justify font-primary font-normal text-primary-500">
-              Buildings account for nearly 40% of global carbon emissions,
-              highlighting the urgency for sustainable practices. Thoughtful
-              architecture reduces environmental impact while fostering
-              healthier living spaces and harmony with nature. As awareness
-              grows, architects, engineers and developers are re-imagining
-              construction methods to meet the rising demand for eco-friendly
-              and resilient structures.
-            </p>
-          </li>
+            <li className="px-8">
+              <div className="flex space-x-2">
+                <LandingPageListImage className="" />
+                <h3 className="font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                  The Need for Sustainable Design
+                </h3>
+              </div>
+              <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
+                Buildings account for nearly 40% of global carbon emissions,
+                highlighting the urgency for sustainable practices. Thoughtful
+                architecture reduces environmental impact while fostering
+                healthier living spaces and harmony with nature. As awareness
+                grows, architects, engineers and developers are re-imagining
+                construction methods to meet the rising demand for eco-friendly
+                and resilient structures.
+              </p>
+            </li>
 
-          <li className="px-8">
-            <div className="flex space-x-2">
-              <LandingPageListImage className="" />
-              <h3 className="font-primary text-xl font-bold text-primary-500">
-                A Global Mission
-              </h3>
-            </div>
-            <p className="text-balance text-justify font-primary font-normal text-primary-500">
-              Governments and global organizations are driving sustainable
-              architecture with incentives and regulations, emphasizing its
-              importance as a collective effort to address climate challenges
-              and ensure a resilient future.
-            </p>
-          </li>
-        </ul>
+            <li className="px-8">
+              <div className="flex space-x-2">
+                <LandingPageListImage className="" />
+                <h3 className="font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                  A Global Mission
+                </h3>
+              </div>
+              <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
+                Governments and global organizations are driving sustainable
+                architecture with incentives and regulations, emphasizing its
+                importance as a collective effort to address climate challenges
+                and ensure a resilient future.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section
-        className="relative bg-gradient-to-b from-[#D9D9D9] to-[#D19A6A6B] bg-cover bg-center py-11 bg-blend-soft-light shadow-inner drop-shadow-md"
+        className="relative bg-[#D19A6A] bg-gradient-to-b from-[#D9D9D9] to-[#D19A6A6B] bg-cover bg-center py-11 bg-blend-soft-light shadow-inner drop-shadow-md"
         style={{ backgroundImage: optimizedLandingPageDriedLeavesBackground }}
       >
         <h2 className="z-[1] text-center font-primary text-4xl font-normal text-primary-500">
           What Our Clients Say
         </h2>
 
-        <div className="my-5 overflow-hidden rounded-[20px]">
+        <div className="z-[1] my-5 overflow-hidden rounded-2xl">
           <iframe
-            className="aspect-video w-[102%] overflow-hidden rounded-[20px] px-8"
+            className="aspect-video w-[102%] overflow-hidden rounded-2xl px-8 md:mx-auto md:w-1/2"
             src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=ATiiv6VVmF9B9R1a&amp;controls=0"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -204,7 +208,7 @@ export default function Home() {
       </section>
 
       <section
-        className="bg-cover bg-center py-14"
+        className="bg-[#D19A6A] bg-cover bg-center py-14 bg-blend-soft-light"
         style={{ backgroundImage: optimizedLandingPageWoodenBoardBackground }}
       >
         <h2 className="bg-cover text-center font-primary text-2xl font-normal text-[#250606]">

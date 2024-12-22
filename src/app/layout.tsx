@@ -43,8 +43,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${comicNeue.variable} grid h-screen min-h-screen grid-rows-[auto_1fr] antialiased`}
       >
         <Header />
-        <div className="min-h-full overflow-y-visible">
-          <main className="h-full overflow-y-scroll">{children}</main>
+        <div className="">
+          <main className="">{children}</main>
           <Footer />
         </div>
       </body>

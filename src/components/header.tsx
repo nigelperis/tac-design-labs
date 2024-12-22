@@ -23,7 +23,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <nav className="sticky start-0 top-0 z-20 w-full bg-[#420C03]">
-      <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-4 py-3">
+      <div className="mx-auto flex flex-wrap items-center justify-between px-4 py-3">
         <Link
           href="/"
           className="flex h-[50px] w-[50px] items-center bg-surface-500"
