@@ -13,6 +13,11 @@ import landingPageAssetLeaves from '~/assets/images/landing-page-asset-leaves.pn
 import landingPageDriedLeavesBackground from '~/assets/images/landing-page-dried-leaves-background.png';
 import landingPageHeroBackground from '~/assets/images/landing-page-hero-background.png';
 import landingPageHeroImage from '~/assets/images/landing-page-hero-image.png';
+import landingPagePortfolioHouse1 from '~/assets/images/landing-page-portfolio-house-1.png';
+import landingPagePortfolioHouse2 from '~/assets/images/landing-page-portfolio-house-2.png';
+import landingPagePortfolioHouse3 from '~/assets/images/landing-page-portfolio-house-3.png';
+import landingPagePortfolioHouse4 from '~/assets/images/landing-page-portfolio-house-4.png';
+import landingPagePortfolioHouse5 from '~/assets/images/landing-page-portfolio-house-5.png';
 import landingPageWoodenBoardBackground from '~/assets/images/landing-page-wooden-board-background.png';
 
 export default function Home() {
@@ -118,12 +123,12 @@ export default function Home() {
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <div className="md:w-1/2">
-          <h2 className="relative w-2/3 pl-7 font-primary text-4xl font-normal leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary-500 md:text-5xl">
+        <div className="md:grid md:grid-cols-2">
+          <h2 className="relative w-2/3 pl-7 font-primary text-4xl font-normal leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary-500 md:col-span-2 md:w-fit md:px-16 md:text-5xl">
             Sustainable Architecture
           </h2>
 
-          <ul className="my-8 space-y-8">
+          <ul className="my-8 space-y-8 md:ml-16">
             <li className="px-8">
               <div className="flex space-x-2">
                 <LandingPageListImage className="" />
@@ -172,6 +177,29 @@ export default function Home() {
                 importance as a collective effort to address climate challenges
                 and ensure a resilient future.
               </p>
+            </li>
+          </ul>
+          <ul className="mr-16 hidden grid-cols-2 gap-x-4 gap-y-4 md:grid">
+            <li className="col-span-2">
+              <Image
+                src={landingPagePortfolioHouse1}
+                alt="Portfolio image"
+                className="rounded-3xl object-cover"
+              />
+            </li>
+            <li className="">
+              <Image
+                src={landingPagePortfolioHouse2}
+                alt="Portfolio image"
+                className="aspect-square rounded-3xl object-cover"
+              />
+            </li>
+            <li className="">
+              <Image
+                src={landingPagePortfolioHouse3}
+                alt="Portfolio image"
+                className="aspect-square rounded-3xl object-cover"
+              />
             </li>
           </ul>
         </div>
