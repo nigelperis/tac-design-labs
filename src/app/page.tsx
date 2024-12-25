@@ -202,6 +202,23 @@ export default function Home() {
               />
             </li>
           </ul>
+
+          <ul className="col-span-2 my-4 hidden grid-cols-2 gap-x-4 gap-y-4 md:mx-16 md:grid">
+            <li>
+              <Image
+                src={landingPagePortfolioHouse4}
+                alt="Portfolio image"
+                className="aspect-video rounded-3xl object-cover"
+              />
+            </li>
+            <li>
+              <Image
+                src={landingPagePortfolioHouse5}
+                alt="Portfolio image"
+                className="aspect-video rounded-3xl object-cover"
+              />
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -209,7 +226,7 @@ export default function Home() {
         className="relative bg-[#D19A6A] bg-gradient-to-b from-[#D9D9D9] to-[#D19A6A6B] bg-cover bg-center py-11 bg-blend-soft-light shadow-inner drop-shadow-md"
         style={{ backgroundImage: optimizedLandingPageDriedLeavesBackground }}
       >
-        <h2 className="z-[1] text-center font-primary text-4xl font-normal text-primary-500">
+        <h2 className="z-[1] text-center font-primary text-4xl font-normal text-[#5A3213] md:text-5xl">
           What Our Clients Say
         </h2>
 
@@ -223,23 +240,23 @@ export default function Home() {
         </div>
 
         <div className="z-[1] px-8">
-          <p className="font-primary text-base font-normal text-[#000000]">
+          <p className="font-primary text-base font-normal text-[#552B0A] md:mx-auto md:w-1/2 md:text-2xl">
             &quot;We are much happier and comfortable living in this new house.
             The quality of life has improved a lot. It was a great experience
             and without TAC Design LAB this project wouldn&apos;t have been
             possible.&quot;
           </p>
-          <p className="mt-5 text-center font-primary text-2xl font-bold text-[#062039]">
+          <p className="mt-5 text-center font-primary text-2xl font-bold text-[#062039] md:text-4xl">
             Anunay & Akanksha
           </p>
         </div>
       </section>
 
       <section
-        className="bg-[#D19A6A] bg-cover bg-center py-14 bg-blend-soft-light"
+        className="bg-[#ECC19A99] bg-cover bg-center py-14 bg-blend-soft-light"
         style={{ backgroundImage: optimizedLandingPageWoodenBoardBackground }}
       >
-        <h2 className="bg-cover text-center font-primary text-2xl font-normal text-[#250606]">
+        <h2 className="bg-cover text-center font-primary text-2xl font-normal text-[#250606] md:text-[40px]">
           Dive into our portfolio of projects that blend innovative design with
           sustainable solutions.
         </h2>
