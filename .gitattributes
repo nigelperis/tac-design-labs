@@ -4,6 +4,7 @@
 
 # Specific overrides for binary files (prevent Git from changing their line endings)
 *.jpg -text
+*.jpeg -text
 *.png -text
 *.gif -text
 *.pdf -text

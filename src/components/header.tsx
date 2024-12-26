@@ -10,14 +10,35 @@ import { cn } from '~/utils/cn';
 import logo from '~/assets/images/logo.png';
 
 const navLinks = [
-  'Home',
-  'About Us',
-  'Achievements',
-  'Contact Us',
-  'Our Process',
-  'Team',
-  'Our Work',
-] as const;
+  {
+    label: 'Home',
+    href: '/',
+  },
+  {
+    label: 'About Us',
+    href: '/about-us',
+  },
+  {
+    label: 'Achievements',
+    href: '/achievements',
+  },
+  {
+    label: 'Contact Us',
+    href: '/contact-us',
+  },
+  {
+    label: 'Our Process',
+    href: '/our-process',
+  },
+  {
+    label: 'Team',
+    href: '/team',
+  },
+  {
+    label: 'Our Work',
+    href: '/our-work',
+  },
+] as const satisfies { label: string; href: string }[];
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,8 +87,8 @@ function Header() {
             </button>
             {navLinks.map((link) => {
               return (
-                <li key={link}>
-                  <NavLink text={link} />
+                <li key={link.href}>
+                  <NavLink text={link.label} href={link.href} />
                 </li>
               );
             })}
@@ -80,10 +101,10 @@ function Header() {
 
 export default Header;
 
-function NavLink({ text }: { text: string }) {
+function NavLink({ text, href }: { text: string; href: string }) {
   return (
     <Link
-      href="#"
+      href={href}
       className="relative block rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 hover:underline md:p-0 md:text-base md:hover:bg-transparent"
     >
       {text}
