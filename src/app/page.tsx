@@ -7,7 +7,7 @@ import LandingPageListImage from '~/assets/svgs/landing-page-list-image.svg';
 
 import buttonBackground from '~/assets/images/button-background.png';
 import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.png';
-import landingPageAshamsRavi from '~/assets/images/landing-page-ashams-ravi-portrait.jpeg';
+import landingPageAshamsRavi from '~/assets/images/landing-page-ashams-ravi-potrait.jpeg';
 import landingPageAssetGrass from '~/assets/images/landing-page-asset-grass.png';
 import landingPageAssetLeaves from '~/assets/images/landing-page-asset-leaves.png';
 import landingPageDriedLeavesBackground from '~/assets/images/landing-page-dried-leaves-background.png';
@@ -118,7 +118,7 @@ export default function Home() {
       </section>
 
       <section
-        className="relative bg-[#D19A6A] py-16 bg-blend-soft-light md:flex md:justify-between"
+        className="relative py-16 md:flex md:justify-between"
         style={{
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
@@ -184,21 +184,21 @@ export default function Home() {
               <Image
                 src={landingPagePortfolioHouse1}
                 alt="Portfolio image"
-                className="rounded-3xl object-cover"
+                className="rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
               />
             </li>
             <li className="">
               <Image
                 src={landingPagePortfolioHouse2}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl object-cover"
+                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
               />
             </li>
             <li className="">
               <Image
                 src={landingPagePortfolioHouse3}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl object-cover"
+                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
               />
             </li>
           </ul>
@@ -208,14 +208,14 @@ export default function Home() {
               <Image
                 src={landingPagePortfolioHouse4}
                 alt="Portfolio image"
-                className="aspect-video rounded-3xl object-cover"
+                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
               />
             </li>
             <li>
               <Image
                 src={landingPagePortfolioHouse5}
                 alt="Portfolio image"
-                className="aspect-video rounded-3xl object-cover"
+                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
               />
             </li>
           </ul>
@@ -232,8 +232,8 @@ export default function Home() {
 
         <div className="z-[1] my-5 overflow-hidden rounded-2xl">
           <iframe
-            className="aspect-video w-[102%] overflow-hidden rounded-2xl px-8 md:mx-auto md:w-1/2"
-            src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=ATiiv6VVmF9B9R1a&amp;controls=0"
+            className="aspect-video w-[102%] overflow-hidden rounded-2xl border-[5px] border-[#ECC19A] md:mx-auto md:w-1/2"
+            src="https://www.youtube.com/embed/qpOZ6rXgR_s?si=jQgeuC20qgI6c0pK"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           ></iframe>

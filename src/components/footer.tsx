@@ -41,20 +41,20 @@ function Footer({ className }: Readonly<{ className?: string }>) {
             </h4>
             <div className="mt-6 flex flex-row space-x-5">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/people/TAC-Design-LAB/100090743003401/"
                 className="flex items-center justify-center rounded-full bg-slate-50 p-2"
               >
                 <Facebook className="text-3xl" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://youtube.com/@tacdesignlab?si=tt1qKMFM3MHopeXa"
                 className="flex items-center justify-center rounded-full bg-slate-50 p-2"
               >
                 <Youtube className="text-3xl" />
               </a>
 
               <a
-                href="https://instagram.com "
+                href="https://www.instagram.com/tacdesignlab/profilecard/?igsh=MWo5MXl0cGluajdieg==F"
                 className="flex items-center justify-center rounded-full bg-slate-50 p-2"
               >
                 <Instagram className="text-3xl" />
@@ -77,8 +77,8 @@ function Footer({ className }: Readonly<{ className?: string }>) {
               </h5>
             </div>
             <p className="font-primary text-2xl font-normal text-white">
-              Tc 14/445, Leela’s, Tharagini, opposite to Nikunjam,
-              Kesavadasapuram, Thiruvananthapuram, Kerala 695004
+              Tc 14/4455, Leela's, (Near Kerala Bank) Kesavadasapuram,
+              Thiruvananthapuram, Kerala 695004
             </p>
           </li>
 
@@ -105,9 +105,7 @@ function Footer({ className }: Readonly<{ className?: string }>) {
               </h5>
             </div>
             <div className="space-x-2 font-primary text-2xl font-normal text-white">
-              <a href="tel:+91 99999999">+91 99999999</a>
-              <span>/</span>
-              <a href="tel:88888888">88888888</a>
+              <a href="tel:+91 90720 62086">+91 90720 62086</a>
             </div>
           </li>
 

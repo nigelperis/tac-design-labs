@@ -70,6 +70,9 @@ export default {
       fontFamily: {
         primary: ['var(--font-comic-neue)'],
       },
+      boxShadow: {
+        custom: '0 11px 4px #00000040',
+      },
     },
   },
   plugins: [flowBitePlugin, tailwindCSSAnimate, tailwindContainerQueries],
