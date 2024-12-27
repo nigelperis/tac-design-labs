@@ -1,0 +1,98 @@
+.mainHeading {
+  width: 498px;
+  height: auto;
+  margin: 75px auto; /* Center heading horizontally */
+  font-family: 'Comic Sans MS', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 58.53px;
+  color: #552b0a;
+  text-align: center;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto; /* Center container horizontally */
+  padding: 20px;
+  gap: 54px;
+  background: #ffffff80;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.miniContainer {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 14px;
+  margin-bottom: 20px; /* Add spacing between cards */
+  gap: 60px;
+  border-radius: 20px;
+  background-color: #ffffff80;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: For better visibility */
+}
+
+.imageStyle {
+  flex-shrink: 0; /* Prevent image from shrinking */
+  width: 450px;
+  height: 450px;
+  border-radius: 22px;
+  border: 5px solid #ecc19a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.textContent {
+  flex: 1;
+  padding-left: 20px; /* Add some space between image and text */
+}
+
+.paragraphStyle {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 58.53px;
+  text-align: left;
+  color: #552b0a;
+  margin-bottom: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px; /* Add spacing below buttons */
+}
+
+.buttonStyle {
+  min-width: 134px;
+  height: 51px;
+  padding: 6px 20px;
+  border-radius: 100px;
+  border: 1px solid #c6742b;
+  background: #ffffffe5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+.buttonStyle:hover {
+  background: #ecc19a;
+  transform: scale(1.05); /* Optional: Button hover effect */
+}
+
+.para {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #000000;
+  margin-top: 10px;
+}

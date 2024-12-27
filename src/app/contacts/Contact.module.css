@@ -1,0 +1,182 @@
+/* .firstHeading {
+  width: 1017px;
+  height: 67px;
+  top: 83.51px;
+  left: 90px;
+  gap: 0px;
+  font-family: Comic Sans MS;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 66.89px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #552b0a;
+}
+
+.secondHeading {
+  width: 1250px;
+  height: 78px;
+  top: 179px;
+  left: 90px;
+  gap: 0px;
+  font-family: Comic Sans MS;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.02px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #173552;
+} */
+
+.firstHeading {
+  width: calc(
+    100% - 20px
+  ); /* Adjust this based on container padding or spacing */
+  max-width: 1017px; /* Maximum width to match Figma */
+  height: 67px;
+  margin: 83.51px auto 0; /* Center vertically in the container */
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 66.89px;
+  text-align: left;
+  color: #552b0a;
+}
+
+.secondHeading {
+  width: calc(100% - 20px);
+  max-width: 1250px;
+  height: 78px;
+  margin: 20px auto 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.02px;
+  text-align: left;
+  color: #173552;
+  margin-left: 160px;
+}
+
+.emailContainer {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.emailText {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #c6742b;
+}
+
+.mailId {
+  font-size: 16px;
+  color: #333333;
+  margin-left: 10px;
+}
+
+.imageStyle {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.photoContiner {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.phoneText {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #c6742b;
+}
+
+.phoneNumber {
+  font-size: 16px;
+  color: #333333;
+  margin-left: 10px;
+}
+
+.addressConatiner {
+  margin: 20px 0;
+}
+
+.addressText {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c6742b;
+}
+
+.addressComplete {
+  font-size: 16px;
+  color: #333333;
+}
+
+.workingContainer {
+  margin: 20px 0;
+}
+
+.workingText {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c6742b;
+}
+
+.workingDescription {
+  font-size: 16px;
+  color: #333333;
+}
+
+.tacDesignContainer {
+  margin: 40px 0;
+}
+
+.smallContainer {
+  text-align: center;
+}
+
+.arrowImage {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.tacText {
+  font-size: 24px;
+  font-weight: 700;
+  color: #552b0a;
+}
+
+.tacDescription {
+  font-size: 16px;
+  color: #333333;
+  margin-top: 10px;
+}
+
+.lastSection {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.fbImage,
+.ytImage,
+.inImage {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.fbImage:hover,
+.ytImage:hover,
+.inImage:hover {
+  transform: scale(1.1);
+}
