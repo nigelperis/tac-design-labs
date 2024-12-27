@@ -5,9 +5,10 @@ import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer'
 
 import OurWorkBgButton from '~/assets/images/button-background.png';
 import CanaanBgImg from '~/assets/images/canaan.jpg';
+import HavenBgImg from '~/assets/images/haven.jpg';
 import landingPageArchitectureBackground from '~/assets/images/our-work-bg-img.png';
 import WorkShopBgImg from '~/assets/images/our-work-cta-bg.jpeg';
-import SanchiBgImg from '~/assets/images/saanchi.jpg';
+import SanchiBgImg from '~/assets/images/sanchi.jpg';
 import ShireBgImg from '~/assets/images/shire.jpg';
 
 const OurWork = () => {
@@ -48,9 +49,9 @@ const OurWork = () => {
             responsibility.
           </p>
         </div>
-        <div className="mb-2 flex flex-wrap items-center gap-2 md:mb-20 md:flex-nowrap md:gap-10">
-          <div className="w-full md:w-1/2">
-            <div className="group relative aspect-[16/9] rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+          <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
+            <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
               <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
               <Image
                 src={CanaanBgImg}
@@ -60,13 +61,16 @@ const OurWork = () => {
                 className="rounded-lg"
               />
               <div className="absolute bottom-3 left-4 text-white">
-                <p className="text-2xl font-bold md:text-4xl">Canaan</p>
-                <p className="text-sm text-[#FCBF89] md:text-xl">Trivandrum</p>
+                <p className="text-3xl font-bold md:text-5xl">Canaan</p>
+                <p className="text-base text-[#FCBF89] md:text-lg xl:text-xl">
+                  Trivandrum
+                </p>
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/2">
-            <div className="group relative aspect-[16/9] rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
+
+          <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
+            <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
               <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
               <Image
                 src={ShireBgImg}
@@ -76,15 +80,16 @@ const OurWork = () => {
                 className="rounded-lg"
               />
               <div className="absolute bottom-3 left-4 text-white">
-                <p className="text-2xl font-bold md:text-4xl">Shire</p>
-                <p className="text-sm text-[#FCBF89] md:text-xl">Udupi</p>
+                <p className="text-3xl font-bold md:text-5xl">Shire</p>
+                <p className="text-base text-[#FCBF89] md:text-lg xl:text-xl">
+                  Udupi
+                </p>
               </div>
             </div>
           </div>
-        </div>
-        <div className="relative flex w-full justify-center">
-          <div className="w-full md:w-1/2">
-            <div className="group relative aspect-[16/9] rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
+
+          <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
+            <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
               <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
               <Image
                 src={SanchiBgImg}
@@ -94,8 +99,29 @@ const OurWork = () => {
                 className="rounded-lg"
               />
               <div className="absolute bottom-3 left-4 text-white">
-                <p className="text-2xl font-bold md:text-4xl">Saanchi Bags</p>
-                <p className="text-sm text-[#FCBF89] md:text-xl">Trivandrum</p>
+                <p className="text-3xl font-bold md:text-5xl">Sanchi Bags</p>
+                <p className="text-base text-[#FCBF89] md:text-lg xl:text-xl">
+                  Trivandrum
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
+            <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
+              <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
+              <Image
+                src={HavenBgImg}
+                layout="fill"
+                objectFit="cover"
+                alt="HavenBgImg"
+                className="rounded-lg"
+              />
+              <div className="absolute bottom-3 left-4 text-white">
+                <p className="text-3xl font-bold md:text-5xl">Haven</p>
+                <p className="text-base text-[#FCBF89] md:text-lg xl:text-xl">
+                  Manvilla
+                </p>
               </div>
             </div>
           </div>
@@ -114,9 +140,10 @@ const OurWork = () => {
 
           <div className="relative z-10 h-full items-center justify-center text-white">
             <h2 className="mb-7 text-center font-primary text-[32px] md:text-[64px]">
-              WORKSHOPS: Learn, Build, Innovate
+              <span className="font-bold">Workshops:</span> Learn, Build,
+              Innovate
             </h2>
-            <div className="text-center text-[13px] text-surface-500 md:text-[32px]">
+            <div className="text-center text-[16px] text-surface-500 md:text-[32px]">
               <p className="mb-10">
                 Gain hands-on experience in sustainable construction through our
                 expertly curated workshops. Explore the possibilities of bamboo,
@@ -125,7 +152,7 @@ const OurWork = () => {
               </p>
               <div className="mb-8">Take the first step toward change.</div>
               <button
-                className="relative rounded bg-cover bg-center p-6 text-[11px] font-bold text-primary-500 hover:bg-opacity-80 md:p-10 md:text-2xl"
+                className="relative rounded bg-cover bg-center p-6 text-[11px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-10 md:text-2xl"
                 style={{
                   backgroundImage: optimizedOurWorkBgButton,
                 }}
