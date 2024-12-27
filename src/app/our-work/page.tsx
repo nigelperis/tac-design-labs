@@ -110,7 +110,7 @@ const OurWork = () => {
             backgroundImage: optimizedWorkShopBgImg,
           }}
         >
-          <div className="absolute inset-0 bg-[#000000] bg-opacity-40 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-[#000000] bg-opacity-50 backdrop-blur-sm"></div>
 
           <div className="relative z-10 h-full items-center justify-center text-white">
             <h2 className="mb-7 text-center font-primary text-[32px] md:text-[64px]">
@@ -125,7 +125,7 @@ const OurWork = () => {
               </p>
               <div className="mb-8">Take the first step toward change.</div>
               <button
-                className="relative rounded bg-cover bg-center p-6 text-[11px] font-bold text-primary-500 shadow hover:bg-opacity-80 md:p-10 md:text-2xl"
+                className="relative rounded bg-cover bg-center p-6 text-[11px] font-bold text-primary-500 hover:bg-opacity-80 md:p-10 md:text-2xl"
                 style={{
                   backgroundImage: optimizedOurWorkBgButton,
                 }}
