@@ -11,6 +11,12 @@ import SeparatorSM from '~/assets/svgs/separator-sm.svg';
 import aboutUsPageImage1 from '~/assets/images/about-us-page-image-1.png';
 import aboutUsPageImage2 from '~/assets/images/about-us-page-image-2.png';
 import aboutUsPageImage3 from '~/assets/images/about-us-page-image-3.png';
+// import aboutUsPageImage4 from '~/assets/images/about-us-page-image-4.jpeg';
+// import aboutUsPageImage5 from '~/assets/images/about-us-page-image-5.jpeg';
+// import aboutUsPageImage6 from '~/assets/images/about-us-page-image-6.png';
+// import aboutUsPageImage7 from '~/assets/images/about-us-page-image-7.png';
+// import aboutUsPageImage8 from '~/assets/images/about-us-page-image-8.png';
+// import aboutUsPageImage9 from '~/assets/images/about-us-page-image-9.png';
 import laurieBarkerPortrait from '~/assets/images/about-us-page-laurie-barker-portrait.jpeg';
 import buttonBackground from '~/assets/images/button-background.png';
 import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.png';
@@ -45,7 +51,7 @@ function AboutUsPage() {
         }}
       >
         <p className="mx-8 w-fit rounded-full bg-white px-5 py-2 font-primary text-xs font-normal text-primary-500 md:px-10 md:py-[15px] md:text-base">
-          Our story
+          OUR STORY
         </p>
 
         <h2 className="mt-8 px-8 font-primary text-3xl font-normal leading-9 text-primary-500 md:text-[52px] md:leading-[72px]">
@@ -64,7 +70,7 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-5xl font-normal text-primary-500">
+              <h3 className="font-primary text-3xl font-normal text-primary-500">
                 Foundations of
                 <span className="text-accent-500"> Our Vision</span>
               </h3>
