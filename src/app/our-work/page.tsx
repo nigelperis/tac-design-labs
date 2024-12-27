@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
+import OurWorkBgButton from '~/assets/images/button-background.png';
 import CanaanBgImg from '~/assets/images/canaan.jpg';
-import OurWorkBgButton from '~/assets/images/our-work-bg-button.png';
 import landingPageArchitectureBackground from '~/assets/images/our-work-bg-img.png';
+import WorkShopBgImg from '~/assets/images/our-work-cta-bg.jpeg';
 import SanchiBgImg from '~/assets/images/saanchi.jpg';
 import ShireBgImg from '~/assets/images/shire.jpg';
-import WorkShopBgImg from '~/assets/images/workshop-our-work.png';
 
-const Team = () => {
+const OurWork = () => {
   const optimizedLandingPageArchitectureBackground =
     getOptimizedBackgroundImage({
       src: landingPageArchitectureBackground.src,
@@ -143,4 +143,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default OurWork;
