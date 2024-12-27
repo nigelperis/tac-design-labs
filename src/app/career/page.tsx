@@ -1,22 +1,19 @@
-'use client';
-
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
+import careerPageBackground from '~/assets/images/career-page-background.png';
 import career from '~/assets/images/career.jpg';
-import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.png';
 
 export default function Career() {
-  const optimizedLandingPageArchitectureBackground =
-    getOptimizedBackgroundImage({
-      src: landingPageArchitectureBackground.src,
-      width: landingPageArchitectureBackground.width,
-      height: landingPageArchitectureBackground.height,
-    });
+  const optimizedCareerPageBackground = getOptimizedBackgroundImage({
+    src: careerPageBackground.src,
+    width: careerPageBackground.width,
+    height: careerPageBackground.height,
+  });
   return (
     <div
-      className="bg-[#EDD7C3] py-16 font-primary bg-blend-soft-light"
+      className="bg-[#EDD7C3] bg-contain py-16 font-primary bg-blend-soft-light"
       style={{
-        backgroundImage: `url(${optimizedLandingPageArchitectureBackground})`,
+        backgroundImage: optimizedCareerPageBackground,
       }}
     >
       <div className="bg-white py-2">
