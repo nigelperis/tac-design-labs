@@ -50,15 +50,14 @@ const OurWork = () => {
         </div>
         <div className="mb-2 flex flex-wrap items-center gap-2 md:mb-20 md:flex-nowrap md:gap-10">
           <div className="w-full md:w-1/2">
-            <div className="group relative rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
-              <div className="absolute inset-0 rounded-2xl bg-[#000000] bg-opacity-50 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
-
+            <div className="group relative aspect-[16/9] rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
+              <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
               <Image
                 src={CanaanBgImg}
-                width={600}
-                height={600}
-                alt="ShireBgImg"
-                className="w-full rounded-lg"
+                layout="fill"
+                objectFit="cover"
+                alt="CanaanBgImg"
+                className="rounded-lg"
               />
               <div className="absolute bottom-3 left-4 text-white">
                 <p className="text-2xl font-bold md:text-4xl">Canaan</p>
@@ -67,15 +66,14 @@ const OurWork = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2">
-            <div className="group relative rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
-              <div className="absolute inset-0 rounded-2xl bg-[#000000] bg-opacity-50 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
-
+            <div className="group relative aspect-[16/9] rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
+              <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
               <Image
                 src={ShireBgImg}
-                width={600}
-                height={600}
+                layout="fill"
+                objectFit="cover"
                 alt="ShireBgImg"
-                className="w-full rounded-lg"
+                className="rounded-lg"
               />
               <div className="absolute bottom-3 left-4 text-white">
                 <p className="text-2xl font-bold md:text-4xl">Shire</p>
@@ -86,15 +84,14 @@ const OurWork = () => {
         </div>
         <div className="relative flex w-full justify-center">
           <div className="w-full md:w-1/2">
-            <div className="group relative rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
-              <div className="absolute inset-0 rounded-2xl bg-[#000000] bg-opacity-50 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
-
+            <div className="group relative aspect-[16/9] rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
+              <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
               <Image
                 src={SanchiBgImg}
-                width={600}
-                height={600}
-                alt="ShireBgImg"
-                className="w-full rounded-lg"
+                layout="fill"
+                objectFit="cover"
+                alt="SanchiBgImg"
+                className="rounded-lg"
               />
               <div className="absolute bottom-3 left-4 text-white">
                 <p className="text-2xl font-bold md:text-4xl">Saanchi Bags</p>
@@ -104,6 +101,7 @@ const OurWork = () => {
           </div>
         </div>
       </div>
+
       <div>
         <hr className="mx-auto w-full border-t-4 border-white md:border-t-8"></hr>
         <div
@@ -112,7 +110,7 @@ const OurWork = () => {
             backgroundImage: optimizedWorkShopBgImg,
           }}
         >
-          <div className="absolute inset-0 bg-[#000000] bg-opacity-40"></div>
+          <div className="absolute inset-0 bg-[#000000] bg-opacity-40 backdrop-blur-sm"></div>
 
           <div className="relative z-10 h-full items-center justify-center text-white">
             <h2 className="mb-7 text-center font-primary text-[32px] md:text-[64px]">
