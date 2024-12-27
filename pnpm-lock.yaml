@@ -17,6 +17,12 @@ importers:
       clsx:
         specifier: 2.1.1
         version: 2.1.1
+  embla-carousel-autoplay:
+    specifier: 8.5.1
+    version: 8.5.1(embla-carousel@8.5.1)
+  embla-carousel-react:
+    specifier: 8.5.1
+    version: 8.5.1(react@19.0.0-rc-66855b96-20241106)
       flowbite:
         specifier: 2.5.2
         version: 2.5.2

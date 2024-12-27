@@ -41,7 +41,7 @@ function AboutUsPage() {
       <section
         className="bg-[#EDD7C3] py-16 bg-blend-soft-light"
         style={{
-          backgroundImage: `url(${optimizedLandingPageArchitectureBackground})`,
+          backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
         <p className="mx-8 w-fit rounded-full bg-white px-5 py-2 font-primary text-xs font-normal text-primary-500 md:px-10 md:py-[15px] md:text-base">
@@ -163,7 +163,7 @@ function AboutUsPage() {
       <section
         className="relative border-y-8 border-white bg-[#EDD7C3] py-11 bg-blend-soft-light md:py-20"
         style={{
-          backgroundImage: `url(${optimizedLandingPageHeroBackground})`,
+          backgroundImage: optimizedLandingPageHeroBackground,
         }}
       >
         <SeparatorSM className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 md:hidden" />
