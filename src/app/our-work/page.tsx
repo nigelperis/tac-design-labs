@@ -84,7 +84,7 @@ const OurWork = () => {
         </div>
         <div className="relative flex w-full justify-center">
           <div className="w-full md:w-1/2">
-            <div className="group relative aspect-[16/9] rounded-2xl border-8 border-[#F3F5E5] shadow-custom hover:cursor-pointer">
+            <div className="group relative aspect-[16/9] rounded-2xl border-8 border-[#F3F5E5] hover:cursor-pointer">
               <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
               <Image
                 src={SanchiBgImg}
@@ -103,9 +103,8 @@ const OurWork = () => {
       </div>
 
       <div>
-        <hr className="mx-auto w-full border-t-4 border-white md:border-t-8"></hr>
         <div
-          className="relative w-full items-center justify-center bg-cover bg-center px-1 py-8 text-white md:px-24 md:py-16"
+          className="relative w-full items-center justify-center border-b-4 border-t-4 bg-cover bg-center px-1 py-8 text-white md:border-b-8 md:border-t-8 md:px-24 md:py-16"
           style={{
             backgroundImage: optimizedWorkShopBgImg,
           }}
@@ -135,7 +134,6 @@ const OurWork = () => {
             </div>
           </div>
         </div>
-        <hr className="mx-auto w-full border-t-4 border-white md:border-t-8"></hr>
       </div>
     </div>
   );
