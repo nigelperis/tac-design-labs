@@ -119,7 +119,7 @@ const TeamPage = () => {
           <div className="block">
             <a href="/our-work">
               <Image
-                className="mx-auto"
+                className="mx-auto duration-200 hover:scale-105"
                 src={exploreOurWork}
                 alt="explore-our-work"
               />
