@@ -4,17 +4,23 @@ import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
-import bamboo from '~/assets/images/Bamboo1.jpg';
-import bamboo1 from '~/assets/images/bamboo2.jpg';
-import bamboo2 from '~/assets/images/bamboo3.jpg';
-import bgworkshop from '~/assets/images/bgworkshop.png';
 import buttonBackground from '~/assets/images/button-background.png';
-import landingPageArchitectureBackground from '~/assets/images/our-work-bg-img.png';
 import Workshope3 from '~/assets/images/workshop_image1.jpg';
 import Workshope4 from '~/assets/images/workshop_image2.jpg';
 import Workshope5 from '~/assets/images/workshop_image3.jpg';
-import Workshop from '~/assets/images/workshop1.png';
-import Workshop1 from '~/assets/images/workshop2.png';
+import bambooWorkshop1 from '~/assets/images/workshop-bamboo-1.jpg';
+import bambooWorkshop2 from '~/assets/images/workshop-bamboo-2.jpg';
+import bambooWorkshop3 from '~/assets/images/workshop-bamboo-3.jpg';
+import brickWorkshop1 from '~/assets/images/workshop-brick-1.jpeg';
+import brickWorkshop2 from '~/assets/images/workshop-brick-2.jpeg';
+import brickWorkshop3 from '~/assets/images/workshop-brick-3.jpeg';
+import workshopCta from '~/assets/images/workshop-cta.jpg';
+import workshopHeaderBackground from '~/assets/images/workshop-header-background.png';
+import mudWorkshop1 from '~/assets/images/workshop-mud-1.jpeg';
+import mudWorkshop2 from '~/assets/images/workshop-mud-2.jpeg';
+import mudWorkshop3 from '~/assets/images/workshop-mud-3.jpeg';
+import workshopPageBackground from '~/assets/images/workshop-page-background.png';
+import workshopImage1 from '~/assets/images/workshop-page-image-1.png';
 import Workshope6 from '~/assets/images/Workshop4.jpg';
 import Workshope7 from '~/assets/images/workshop5.jpg';
 import Workshope8 from '~/assets/images/workshop6.jpg';
@@ -25,24 +31,28 @@ const Workshops = () => {
     width: buttonBackground.width,
     height: buttonBackground.height,
   });
-  const optimizedLandingPageArchitectureBackground =
-    getOptimizedBackgroundImage({
-      src: landingPageArchitectureBackground.src,
-      width: landingPageArchitectureBackground.width,
-      height: landingPageArchitectureBackground.height,
-    });
+  const optimizedWorkshopPageBackground = getOptimizedBackgroundImage({
+    src: workshopPageBackground.src,
+    width: workshopPageBackground.width,
+    height: workshopPageBackground.height,
+  });
+  const optimizedWorkshopCtaBackground = getOptimizedBackgroundImage({
+    src: workshopCta.src,
+    width: workshopCta.width,
+    height: workshopCta.height,
+  });
   return (
-    <section
-      className="bg-[#E9D0B7] font-primary"
+    <div
+      className="bg-[#E9D0B7] bg-repeat font-primary"
       style={{
-        backgroundImage: optimizedLandingPageArchitectureBackground,
+        backgroundImage: optimizedWorkshopPageBackground,
       }}
     >
       <div className="mx-auto flex h-[457px] flex-col items-stretch lg:flex-row">
         <div className="relative lg:w-[40%]">
           <Image
-            src={Workshop1}
-            alt="Workshops Background"
+            src={workshopHeaderBackground}
+            alt="Workshops Header Background"
             width={600}
             height={300}
             className="h-full w-full object-cover"
@@ -58,7 +68,7 @@ const Workshops = () => {
 
         <div className="relative h-full bg-amber-950 lg:w-[60%]">
           <Image
-            src={Workshop}
+            src={workshopImage1}
             alt="Workshop Gallery"
             width={840}
             height={500}
@@ -158,7 +168,7 @@ const Workshops = () => {
           <h1 className="mb-8 text-3xl font-bold text-[#C6742B] md:text-[48px]">
             Workshop Structure
           </h1>
-          <p className="text-[28px] font-[700] text-[#173552]">
+          <p className="text-[28px] font-bold text-[#173552]">
             These workshops are thoughtfully crafted to inspire and educate,
             combining engaging lectures with hands-on sessions to provide a
             holistic learning experience in sustainable architecture.
@@ -265,7 +275,7 @@ const Workshops = () => {
             <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:px-10">
               <div className="relative h-[380px]">
                 <Image
-                  src={bamboo}
+                  src={bambooWorkshop1}
                   alt="Workshop Group"
                   layout="fill"
                   objectFit="cover"
@@ -274,7 +284,7 @@ const Workshops = () => {
               </div>
               <div className="relative h-[380px]">
                 <Image
-                  src={bamboo1}
+                  src={bambooWorkshop2}
                   alt="Bamboo Structure"
                   layout="fill"
                   objectFit="cover"
@@ -283,7 +293,7 @@ const Workshops = () => {
               </div>
               <div className="relative h-[380px]">
                 <Image
-                  src={bamboo2}
+                  src={bambooWorkshop3}
                   alt="Hands-on Bamboo Work"
                   layout="fill"
                   objectFit="cover"
@@ -340,18 +350,18 @@ const Workshops = () => {
           <div className=" ">
             <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5">
               <h1 className="text-center text-3xl font-bold text-[#C6742B] md:text-[48px]">
-                Bamboo Workshop
+                Mud Workshop
               </h1>
             </div>
             <p className="my-6 text-[24px] font-[700] text-[#173552] md:px-10">
-              Discover the versatility and elegance of bamboo as a sustainable
-              construction material.
+              Step into the timeless world of mud construction, a practice
+              rooted in tradition yet essential for sustainable living.
             </p>
 
             <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:px-10">
               <div className="relative h-[380px]">
                 <Image
-                  src={bamboo}
+                  src={mudWorkshop1}
                   alt="Workshop Group"
                   layout="fill"
                   objectFit="cover"
@@ -360,7 +370,7 @@ const Workshops = () => {
               </div>
               <div className="relative h-[380px]">
                 <Image
-                  src={bamboo1}
+                  src={mudWorkshop2}
                   alt="Bamboo Structure"
                   layout="fill"
                   objectFit="cover"
@@ -369,7 +379,7 @@ const Workshops = () => {
               </div>
               <div className="relative h-[380px]">
                 <Image
-                  src={bamboo2}
+                  src={mudWorkshop3}
                   alt="Hands-on Bamboo Work"
                   layout="fill"
                   objectFit="cover"
@@ -380,42 +390,38 @@ const Workshops = () => {
 
             <div className="space-y-4 text-lg">
               <p className="text-[24px] font-[400] text-[#173552] md:px-10">
-                Here is what this workshop has in store for you -
+                A sneak peek of what you’ll learn in this workshop -
               </p>
               <ul className="list-inside text-[24px] font-[400] text-[#173552] md:px-10">
                 <li className="my-5">
-                  <strong>Introduction to Bamboo:</strong>Characteristics,
-                  properties, and preservation methods. Feasibility in Current
-                  Scenarios: Exploring the pros and cons of bamboo in
-                  contemporary construction
+                  <strong>Introduction to Mud:</strong>Understanding mud’s
+                  characteristics, properties, and preservation techniques.
                 </li>
                 <li className="my-5">
-                  <strong>Feasibility in Current Scenarios:</strong> Exploring
-                  the pros and cons of bamboo in contemporary construction.
+                  <strong>Feasibility in Current Scenarios:</strong> Discussing
+                  the advantages and challenges of mud in modern construction.
                 </li>
                 <li className="my-5">
-                  <strong>Climatic Considerations:</strong> Understanding how
-                  bamboo performs in different climatic conditions.
+                  <strong>Climatic Considerations:</strong> Evaluating mud's
+                  performance in different environments
                 </li>
                 <li className="my-5">
-                  <strong>Treatment Methods:</strong> Techniques for treating
-                  bamboo to enhance durability and resistance to pests.
+                  <strong>Tests for Mud:</strong> Learning methods to assess mud
+                  quality and suitability
                 </li>
                 <li className="mt-5">
-                  <strong>Joining Techniques: </strong> Methods for joining
-                  bamboo components in construction.
-                </li>
-                <li className="">
-                  Structural Properties: Examining bamboo's tensile strength and
-                  bending capacity.
-                </li>
-                <li className="">
-                  Practical Construction: Building a structure using bamboo,
-                  applying the knowledge gained in the lecture.
+                  <strong>Elemental Composition:</strong> Understanding the role
+                  of mud components in construction
                 </li>
                 <li className="mt-5">
-                  <strong>Relevant IS Codes:</strong> Overview of Indian
-                  Standards (IS) codes related to bamboo construction.
+                  <strong>Stabilization Methods:</strong> Understanding the role
+                  Techniques for stabilizing mud using lime, rice husk, or other
+                  binders
+                </li>
+                <li className="mt-5">
+                  <strong>Practical Construction:</strong> Understanding the
+                  role Building structures using mud, such as Adobe bricks, Cob
+                  walls and Wattle & Daub walls.
                 </li>
               </ul>
             </div>
@@ -426,18 +432,18 @@ const Workshops = () => {
           <div className=" ">
             <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5">
               <h1 className="text-center text-3xl font-bold text-[#C6742B] md:text-[48px]">
-                Bamboo Workshop
+                Brick Workshop
               </h1>
             </div>
             <p className="my-6 text-[24px] font-[700] text-[#173552] md:px-10">
-              Discover the versatility and elegance of bamboo as a sustainable
-              construction material.
+              Explore the enduring charm and strength of bricks in sustainable
+              construction.
             </p>
 
             <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:px-10">
               <div className="relative h-[380px]">
                 <Image
-                  src={bamboo}
+                  src={brickWorkshop1}
                   alt="Workshop Group"
                   layout="fill"
                   objectFit="cover"
@@ -446,7 +452,7 @@ const Workshops = () => {
               </div>
               <div className="relative h-[380px]">
                 <Image
-                  src={bamboo1}
+                  src={brickWorkshop2}
                   alt="Bamboo Structure"
                   layout="fill"
                   objectFit="cover"
@@ -455,7 +461,7 @@ const Workshops = () => {
               </div>
               <div className="relative h-[380px]">
                 <Image
-                  src={bamboo2}
+                  src={brickWorkshop3}
                   alt="Hands-on Bamboo Work"
                   layout="fill"
                   objectFit="cover"
@@ -466,42 +472,35 @@ const Workshops = () => {
 
             <div className="space-y-4 text-lg">
               <p className="text-[24px] font-[400] text-[#173552] md:px-10">
-                Here is what this workshop has in store for you -
+                See what valuable insights await in this workshop -
               </p>
               <ul className="list-inside text-[24px] font-[400] text-[#173552] md:px-10">
                 <li className="my-5">
-                  <strong>Introduction to Bamboo:</strong>Characteristics,
-                  properties, and preservation methods. Feasibility in Current
-                  Scenarios: Exploring the pros and cons of bamboo in
-                  contemporary construction
-                </li>
-                <li className="my-5">
-                  <strong>Feasibility in Current Scenarios:</strong> Exploring
-                  the pros and cons of bamboo in contemporary construction.
+                  <strong>Introduction to Bricks:</strong>Characteristics,
+                  properties, and preservation techniques. Feasibility in
+                  Current Scenarios: Assessing the relevance of bricks in
+                  sustainable architecture.
                 </li>
                 <li className="my-5">
                   <strong>Climatic Considerations:</strong> Understanding how
-                  bamboo performs in different climatic conditions.
+                  bricks perform in different climatic conditions
                 </li>
                 <li className="my-5">
-                  <strong>Treatment Methods:</strong> Techniques for treating
-                  bamboo to enhance durability and resistance to pests.
+                  <strong>Brick Baking Process:</strong> An overview of how
+                  bricks are made and baked
+                </li>
+                <li className="my-5">
+                  <strong>Types of Bricks:</strong> Exploring their variety and
+                  uses.
                 </li>
                 <li className="mt-5">
-                  <strong>Joining Techniques: </strong> Methods for joining
-                  bamboo components in construction.
+                  <strong>Bonding Techniques:</strong> Learning different
+                  methods to join bricks.
                 </li>
                 <li className="">
-                  Structural Properties: Examining bamboo's tensile strength and
-                  bending capacity.
-                </li>
-                <li className="">
-                  Practical Construction: Building a structure using bamboo,
-                  applying the knowledge gained in the lecture.
-                </li>
-                <li className="mt-5">
-                  <strong>Relevant IS Codes:</strong> Overview of Indian
-                  Standards (IS) codes related to bamboo construction.
+                  <strong>Practical Construction:</strong> Learning different
+                  Crafting walls, arches, jalis, and other decorative elements
+                  using brick
                 </li>
               </ul>
             </div>
@@ -566,22 +565,20 @@ const Workshops = () => {
           <div
             className="flex h-[400px] w-full items-center justify-center bg-cover bg-center"
             style={{
-              backgroundImage: `url(${bgworkshop.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundImage: optimizedWorkshopCtaBackground,
             }}
           >
-            <div className="m-auto max-w-xl text-center">
-              <h1 className="mb-4 text-2xl font-semibold text-[#000000]">
+            <div className="m-auto max-w-3xl text-center">
+              <h1 className="mb-4 text-3xl font-semibold text-[#000000]">
                 Dive deeper into sustainable architecture, materials, and
                 techniques by exploring our blog posts. Gain valuable knowledge,
                 tips, and inspiration to fuel your design journey.
               </h1>
               <div className="flex justify-center">
                 <Link
-                  href="#"
+                  href=""
                   style={{ backgroundImage: optimizedButtonBackground }}
-                  className="mt-5 block w-fit bg-cover bg-center px-[60px] py-[35px] font-primary text-lg font-bold text-[#331803]"
+                  className="mt-5 block w-fit bg-cover bg-center px-[60px] py-[35px] font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105"
                 >
                   Read Our Latest Posts
                 </Link>
@@ -590,7 +587,7 @@ const Workshops = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
