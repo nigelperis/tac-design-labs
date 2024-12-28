@@ -9,12 +9,12 @@ import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer'
 import exploreProjectBG from '~/assets/images/explore-our-work-background.png';
 import exploreOurWork from '~/assets/images/explore-our-work.png';
 import landingPageLeavesBackground from '~/assets/images/landing-page-team-background.png';
-import teamPicture from '~/assets/images/TAC-team-picture.png';
-import akshay from '~/assets/profile-images/akshay.png';
-import ashams from '~/assets/profile-images/ashams.png';
-import aswathi from '~/assets/profile-images/aswathy.png';
-import priya from '~/assets/profile-images/priya.png';
-import vijayan from '~/assets/profile-images/vijayan.png';
+import teamPicture from '~/assets/images/TAC-team-picture.jpg';
+import akshay from '~/assets/profile-images/akshay.jpg';
+import ashams from '~/assets/profile-images/ashams.jpg';
+import aswathi from '~/assets/profile-images/aswathy.jpg';
+import priya from '~/assets/profile-images/priya.jpeg';
+import vijayan from '~/assets/profile-images/vijayan.jpg';
 
 interface TeamMember {
   name: string;
@@ -136,7 +136,7 @@ function TeamCard(props: TeamCardDetail) {
     <>
       <div className="mb-40 mt-[calc(20vw-20px)] flex flex-col items-center gap-20 bg-white px-8 md:mt-10 md:flex-row md:px-20 md:py-0">
         <Image
-          className="-mb-20 -mt-[40%] aspect-square w-screen overflow-visible object-cover md:-mt-20 md:w-min md:min-w-[500]"
+          className="-mb-20 -mt-[40%] aspect-square w-screen rounded-3xl border-[6px] border-secondary-100 object-cover shadow-[0px_4px_4px_0px_#00000040] backdrop-blur-sm md:-mt-20 md:w-min md:min-w-[500]"
           src={props.picture}
           alt="team-picture"
           draggable="false"
@@ -162,7 +162,7 @@ function ProfileCard(props: TeamMember) {
       }
     >
       <Image
-        className="-mt-[40%] aspect-square w-[80%] md:-mt-0 md:h-[300] md:w-[300] md:self-start"
+        className="-mt-[40%] aspect-square w-[80%] rounded-3xl border-[6px] border-secondary-100 shadow-[0px_4px_4px_0px_#00000040] backdrop-blur-sm md:-mt-0 md:h-[300] md:w-[300] md:self-start"
         src={props.picture}
         alt={'profile-image'}
       />
