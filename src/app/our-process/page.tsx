@@ -597,19 +597,16 @@ const OurProcess = () => {
                 At TAC Design LAB, every step in our process is designed to
                 achieve excellence. From concept to completion, we ensure that
                 our projects not only meet but exceed expectations. Curious
-                about the milestones we have reached? Explore our proudest
+                about the milestones we've reached? Explore our proudest
                 achievements.
               </p>
               <button
-                className="relative max-w-[220px] rounded bg-cover bg-center p-6 text-base font-bold text-primary-500 md:text-2xl"
+                className="relative max-w-[220px] rounded bg-cover bg-center p-6 text-base font-normal text-primary-500 duration-200 hover:scale-105 md:p-10 md:text-2xl md:font-bold"
                 style={{
                   backgroundImage: optimizedOurWorkBgButton,
                 }}
               >
-                <span className="block md:hidden">
-                  Schedule A Free Consultation
-                </span>
-                <span className="hidden p-10 md:block">Achievements</span>
+                Achievements
               </button>
             </div>
           </div>
