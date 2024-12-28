@@ -1,4 +1,4 @@
-/* .firstHeading {
+.firstHeading {
   width: 1017px;
   height: 67px;
   top: 83.51px;
@@ -28,110 +28,247 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #173552;
-} */
-
-.firstHeading {
-  width: calc(
-    100% - 20px
-  ); /* Adjust this based on container padding or spacing */
-  max-width: 1017px; /* Maximum width to match Figma */
-  height: 67px;
-  margin: 83.51px auto 0; /* Center vertically in the container */
-  font-family: 'Comic Sans MS', sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 66.89px;
-  text-align: left;
-  color: #552b0a;
 }
 
-.secondHeading {
-  width: calc(100% - 20px);
-  max-width: 1250px;
-  height: 78px;
-  margin: 20px auto 0;
-  font-family: 'Comic Sans MS', sans-serif;
-  font-size: 28px;
+.sectionContainer {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 16px; /* Add space between the title line and description */
+  margin-top: 50px;
+}
+
+.titleContainer {
+  display: flex; /* Align the arrow image and text horizontally */
+  align-items: center; /* Align items vertically in the center */
+  gap: 10px; /* Add spacing between the image and text */
+  margin-left: 22px;
+}
+
+.arrowImage {
+  width: 50px; /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.tacText {
+  font-size: 25px; /* Set font size for "TAC Design LAB" */
+  font-weight: 700; /* Bold text */
+  line-height: 32px;
+  color: #000;
+  margin: 0; /* Remove default margin */
+}
+
+.tacDescription {
+  font-size: 16px; /* Adjust font size for description */
   font-weight: 400;
-  line-height: 39.02px;
-  text-align: left;
-  color: #173552;
-  margin-left: 160px;
+  line-height: 22px; /* Set line height for readability */
+  color: #555;
+  margin-top: 15px;
+}
+
+.bodyContainer {
+  display: flex;
+  justify-content: space-between; /* Creates space between the left and right sections */
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 20px; /* Adds spacing between left and right containers */
+}
+
+.leftConatiner {
+  flex: 1; /* Makes the left section take equal space */
+  max-width: 50%; /* Ensures it doesn’t exceed half of the container */
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  gap: 16px; /* Add space between TacDesignLab and SocialMediaSection */
+}
+
+.custom-svg-container {
+  width: 29px;
+  height: 18.29px;
+  position: absolute;
+  top: 318.19px;
+  left: 101.89px;
+  gap: 0px; /* Not needed for SVG but kept for consistency */
+  opacity: 0; /* Adjust as needed, 0 makes it invisible */
+}
+
+.custom-svg-container svg {
+  display: block; /* Ensures the SVG doesn't add extra inline space */
+  width: 100%;
+  height: 100%;
 }
 
 .emailContainer {
   display: flex;
-  align-items: center;
+  margin-top: 50px;
+  flex-direction: column; /* Ensures emailHeader and mailId are stacked */
   margin: 20px 0;
 }
 
+.emailHeader {
+  display: flex;
+  align-items: center; /* Aligns EmailSvg and emailText vertically */
+}
+
 .emailText {
-  font-size: 18px;
-  font-weight: 600;
-  margin-left: 10px;
+  margin-left: 10px; /* Adds space between EmailSvg and text */
+  font-family: 'Comic Sans MS';
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 50.17px;
   color: #c6742b;
+  margin-left: 20px;
 }
 
 .mailId {
-  font-size: 16px;
-  color: #333333;
-  margin-left: 10px;
+  margin-top: 10px; /* Space between header and email ID */
+  font-family: 'Comic Sans MS';
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.02px;
+  color: #173552;
 }
 
 .imageStyle {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 10px;
   margin: 20px 0;
 }
 
-.photoContiner {
+.photoContainer {
+  margin-top: 50px;
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Stack phoneHeader and phoneNumber vertically */
   margin: 20px 0;
 }
 
+.phoneHeader {
+  margin-top: 30px;
+  display: flex;
+  align-items: center; /* Align PhoneSvg and phoneText vertically */
+}
+
 .phoneText {
-  font-size: 18px;
-  font-weight: 600;
-  margin-left: 10px;
+  margin-left: 20px; /* Space between PhoneSvg and text */
+  font-family: 'Comic Sans MS';
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 44.59px;
   color: #c6742b;
 }
 
 .phoneNumber {
-  font-size: 16px;
-  color: #333333;
-  margin-left: 10px;
+  margin-top: 15px; /* Space between header and phone number */
+  font-family: 'Comic Sans MS';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 39.02px;
+  color: #173552;
 }
 
-.addressConatiner {
-  margin: 20px 0;
+.customSvg {
+  width: 24px;
+  height: 29.62px;
 }
 
 .addressText {
-  font-size: 18px;
-  font-weight: 600;
+  font-family:
+    Comic Sans MS,
+    sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 44.59px;
+  color: #c6742b;
+  margin-left: 10px;
+}
+
+.custom-svg {
+  width: 24px;
+  height: 29.62px;
+  position: relative;
+  top: 1.33px;
+  left: 4px;
+  gap: 0px; /* Although `gap` isn't applicable to SVG, it's included as per the request */
+}
+
+.addressContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; /* Stack header and description vertically */
+  gap: 10px; /* Add spacing between header and description */
+}
+
+.addressHeader {
+  display: flex; /* Align SVG and text horizontally */
+  align-items: center; /* Vertically center-align SVG and text */
+  gap: 8px; /* Space between SVG and text */
+}
+
+.addressText {
+  font-family: 'Comic Sans MS';
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 44.59px;
   color: #c6742b;
 }
 
-.addressComplete {
-  font-size: 16px;
-  color: #333333;
+.addressDescription {
+  margin-top: 15px;
+  font-family: 'Comic Sans MS';
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.02px;
+  color: #173552;
 }
 
 .workingContainer {
-  margin: 20px 0;
+  width: 529px;
+  height: 232.25px;
+  top: 858.3px;
+  left: 106.89px;
+  gap: 0px;
+  margin-top: 40px;
+}
+
+.workingContainer {
+  width: 529px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column; /* Stack header and description vertically */
+  gap: 16px; /* Add spacing between header and description */
+}
+
+.workingHeader {
+  margin-top: 10px;
+  display: flex; /* Align ClockSvg and heading horizontally */
+  align-items: center; /* Vertically center the items */
+  gap: 8px; /* Add space between ClockSvg and the heading */
+}
+
+.clockSvg {
+  width: 31.67px;
+  height: 31.67px;
+  fill: #c6742b; /* Sets the fill color of the SVG */
+}
+
+.workingHeading {
+  font-family: Comic Sans MS;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 44.59px;
+  color: #c6742b;
+  margin-left: 10px;
 }
 
 .workingText {
-  font-size: 18px;
-  font-weight: 600;
-  color: #c6742b;
-}
-
-.workingDescription {
-  font-size: 16px;
-  color: #333333;
+  font-family: Comic Sans MS;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.02px;
+  color: #173552;
 }
 
 .tacDesignContainer {
@@ -143,20 +280,41 @@
 }
 
 .arrowImage {
-  width: 50px;
-  margin-bottom: 10px;
+  width: 56px;
+  height: 54px;
+  left: 91px;
+  margin-top: 13px;
+  gap: 0px;
 }
 
 .tacText {
-  font-size: 24px;
-  font-weight: 700;
-  color: #552b0a;
+  margin-left: 10px;
+  width: 366px;
+  height: 67px;
+  gap: 0px;
+  font-family: Comic Sans MS;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 66.89px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #420c03;
+  margin-top: 15px;
 }
 
 .tacDescription {
-  font-size: 16px;
-  color: #333333;
-  margin-top: 10px;
+  font-family: Comic Sans MS;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.02px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #173552;
+  width: 727.34px;
+  height: 117px;
+  gap: 0px;
 }
 
 .lastSection {
