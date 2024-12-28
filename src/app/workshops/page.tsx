@@ -135,7 +135,7 @@ const Workshops = () => {
           </div>
 
           <div className="mt-5 grid w-full grid-cols-2 gap-6 md:w-[45%]">
-            <div className="col-span-1 overflow-hidden rounded-xl">
+            <div className="col-span-1 overflow-hidden rounded-xl drop-shadow-xl">
               <Image
                 src={Workshope3}
                 alt="Workshop Image 1"
@@ -144,7 +144,7 @@ const Workshops = () => {
                 className="h-full w-full rounded-xl border-[5px] border-[#F0E0D6] object-cover"
               />
             </div>
-            <div className="col-span-1 overflow-hidden rounded-xl">
+            <div className="col-span-1 overflow-hidden rounded-xl drop-shadow-xl">
               <Image
                 src={Workshope4}
                 alt="Workshop Image 2"
@@ -153,7 +153,7 @@ const Workshops = () => {
                 className="h-full w-full rounded-xl border-[5px] border-[#F0E0D6] object-cover"
               />
             </div>
-            <div className="col-span-2 overflow-hidden rounded-xl">
+            <div className="col-span-2 overflow-hidden rounded-xl drop-shadow-xl">
               <Image
                 src={Workshope5}
                 alt="Workshop Image 3"
@@ -223,7 +223,7 @@ const Workshops = () => {
                     alt="Lecture Image 1"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-xl border-[5px] border-[#F0E0D6] shadow-md"
+                    className="rounded-xl border-[5px] border-[#F0E0D6] shadow-md drop-shadow-xl"
                   />
                 </div>
                 <div className="relative h-52 w-full">
@@ -232,7 +232,7 @@ const Workshops = () => {
                     alt="Lecture Image 2"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-xl border-[5px] border-[#F0E0D6] shadow-md"
+                    className="rounded-xl border-[5px] border-[#F0E0D6] shadow-md drop-shadow-xl"
                   />
                 </div>
                 <div className="relative h-52 w-full">
@@ -241,7 +241,7 @@ const Workshops = () => {
                     alt="Lecture Image 3"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-xl border-[5px] border-[#F0E0D6] shadow-md"
+                    className="rounded-xl border-[5px] border-[#F0E0D6] shadow-md drop-shadow-xl"
                   />
                 </div>
               </div>
@@ -279,7 +279,7 @@ const Workshops = () => {
                   alt="Workshop Group"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6]"
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
@@ -288,7 +288,7 @@ const Workshops = () => {
                   alt="Bamboo Structure"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6]"
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
@@ -297,7 +297,7 @@ const Workshops = () => {
                   alt="Hands-on Bamboo Work"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6]"
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
                 />
               </div>
             </div>
@@ -365,7 +365,7 @@ const Workshops = () => {
                   alt="Workshop Group"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6]"
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
@@ -374,7 +374,7 @@ const Workshops = () => {
                   alt="Bamboo Structure"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6]"
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
@@ -383,7 +383,7 @@ const Workshops = () => {
                   alt="Hands-on Bamboo Work"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6]"
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
                 />
               </div>
             </div>
@@ -447,7 +447,7 @@ const Workshops = () => {
                   alt="Workshop Group"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6]"
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
@@ -456,7 +456,7 @@ const Workshops = () => {
                   alt="Bamboo Structure"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6]"
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
@@ -465,7 +465,7 @@ const Workshops = () => {
                   alt="Hands-on Bamboo Work"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6]"
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
                 />
               </div>
             </div>
