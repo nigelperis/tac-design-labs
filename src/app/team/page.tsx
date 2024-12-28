@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Image, { StaticImageData } from 'next/image';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
+import brickButton from '~/assets/images/button-background.png';
 import exploreProjectBG from '~/assets/images/explore-our-work-background.png';
 import exploreOurWork from '~/assets/images/explore-our-work.png';
 import landingPageLeavesBackground from '~/assets/images/landing-page-team-background.png';
@@ -27,6 +27,12 @@ interface TeamCardDetail {
   picture: StaticImageData;
   summary: string;
 }
+
+const optimizedButton = getOptimizedBackgroundImage({
+  src: brickButton.src,
+  width: brickButton.width,
+  height: brickButton.height,
+});
 
 const teamMemberDetails: Array<TeamMember> = [
   {
@@ -117,13 +123,14 @@ const TeamPage = () => {
             dedication that goes into every one of our projects.
           </h1>
           <div className="block">
-            <a href="/our-work">
-              <Image
-                className="mx-auto duration-200 hover:scale-105"
-                src={exploreOurWork}
-                alt="explore-our-work"
-              />
-            </a>
+            <button
+              className="relative rounded bg-cover bg-center p-6 text-[11px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-10 md:text-2xl"
+              style={{
+                backgroundImage: optimizedButton,
+              }}
+            >
+              Explore Our Work
+            </button>
           </div>
         </div>
       </section>
@@ -171,7 +178,7 @@ function ProfileCard(props: TeamMember) {
           <span className="text-2xl font-medium tracking-[2%] text-primary-500 md:text-4xl">
             {props.name}
           </span>
-          <span className="text-2xl font-medium tracking-[2%] text-primary-500 md:text-4xl">
+          <span className="pt-2 text-base font-medium tracking-[2%] text-primary-500 md:text-2xl">
             - {props.position}
           </span>
         </div>
@@ -182,7 +189,7 @@ function ProfileCard(props: TeamMember) {
         </div>
         <button
           onClick={() => setExpanded((state) => !state)}
-          className="self-end text-xl"
+          className="self-end text-xl font-semibold text-primary-500 transition-transform duration-200 hover:scale-105"
         >
           Read {isExpanded ? 'Less' : 'More'} {'>'}
         </button>
