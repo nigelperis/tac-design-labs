@@ -19,6 +19,11 @@ const geistMono = localFont({
   variable: '--font-geist-mono',
   weight: '100 900',
 });
+const comicSansFont = localFont({
+  src: './fonts/comic-sans-ms.ttf',
+  variable: '--font-comic-sans',
+  weight: '100 400 700  900',
+});
 
 const comicNeue = Comic_Neue({
   subsets: ['latin'],
@@ -40,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${comicNeue.variable} grid h-screen min-h-screen grid-rows-[auto_1fr] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${comicNeue.variable} ${comicSansFont.variable} grid h-screen min-h-screen grid-rows-[auto_1fr] antialiased`}
       >
         <Header />
         <div className="">
