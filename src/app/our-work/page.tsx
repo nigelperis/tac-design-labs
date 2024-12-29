@@ -52,7 +52,7 @@ const OurWork = () => {
         <div className="flex flex-wrap justify-center gap-6 md:gap-12">
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
             <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
-              <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
+              <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
               <Image
                 src={CanaanBgImg}
                 layout="fill"
@@ -60,9 +60,11 @@ const OurWork = () => {
                 alt="CanaanBgImg"
                 className="rounded-lg"
               />
-              <div className="absolute bottom-3 left-4 text-white">
-                <p className="text-3xl font-bold md:text-5xl">Canaan</p>
-                <p className="text-base text-[#FCBF89] md:text-lg xl:text-xl">
+              <div className="absolute bottom-3 left-4 z-10 text-white">
+                <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
+                  Canaan
+                </p>
+                <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
                   Trivandrum
                 </p>
               </div>
@@ -71,7 +73,7 @@ const OurWork = () => {
 
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
             <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
-              <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
+              <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
               <Image
                 src={ShireBgImg}
                 layout="fill"
@@ -79,9 +81,11 @@ const OurWork = () => {
                 alt="ShireBgImg"
                 className="rounded-lg"
               />
-              <div className="absolute bottom-3 left-4 text-white">
-                <p className="text-3xl font-bold md:text-5xl">Shire</p>
-                <p className="text-base text-[#FCBF89] md:text-lg xl:text-xl">
+              <div className="absolute bottom-3 left-4 z-20 text-white">
+                <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
+                  Shire
+                </p>
+                <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
                   Udupi
                 </p>
               </div>
@@ -90,7 +94,7 @@ const OurWork = () => {
 
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
             <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
-              <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
+              <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
               <Image
                 src={SanchiBgImg}
                 layout="fill"
@@ -98,9 +102,11 @@ const OurWork = () => {
                 alt="SanchiBgImg"
                 className="rounded-lg"
               />
-              <div className="absolute bottom-3 left-4 text-white">
-                <p className="text-3xl font-bold md:text-5xl">Sanchi Bags</p>
-                <p className="text-base text-[#FCBF89] md:text-lg xl:text-xl">
+              <div className="absolute bottom-3 left-4 z-20 text-white">
+                <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
+                  Sanchi Bags
+                </p>
+                <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
                   Trivandrum
                 </p>
               </div>
@@ -109,7 +115,7 @@ const OurWork = () => {
 
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
             <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
-              <div className="absolute inset-0 z-10 rounded-2xl bg-[#000000] bg-opacity-40 transition delay-150 duration-300 ease-in-out group-hover:bg-opacity-0"></div>
+              <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
               <Image
                 src={HavenBgImg}
                 layout="fill"
@@ -117,9 +123,11 @@ const OurWork = () => {
                 alt="HavenBgImg"
                 className="rounded-lg"
               />
-              <div className="absolute bottom-3 left-4 text-white">
-                <p className="text-3xl font-bold md:text-5xl">Haven</p>
-                <p className="text-base text-[#FCBF89] md:text-lg xl:text-xl">
+              <div className="absolute bottom-3 left-4 z-20 text-white">
+                <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
+                  Haven
+                </p>
+                <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
                   Manvilla
                 </p>
               </div>
