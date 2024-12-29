@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import Facebook from '~/assets/svgs/facebook-logo.svg';
 import Instagram from '~/assets/svgs/instagram-logo.svg';
-import Logo from '~/assets/svgs/logo.svg';
+import Logo from '~/assets/svgs/tacDesign.svg';
 import Youtube from '~/assets/svgs/youtube-logo.svg';
 
 import footerBackground from '~/assets/images/footer-background.png';

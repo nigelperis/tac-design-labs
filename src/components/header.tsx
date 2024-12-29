@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 import { cn } from '~/utils/cn';
 
-import Logo from '~/assets/svgs/logo.svg';
+import Logo from '~/assets/svgs/tacDesign.svg';
 
 const navLinks = [
   {
