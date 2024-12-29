@@ -174,12 +174,12 @@ function ProfileCard(props: TeamMember) {
         alt={'profile-image'}
       />
       <div className="flex flex-col gap-8 p-5">
-        <div className="class flex-col gap-2 text-center md:flex md:flex-row md:text-left">
+        <div className="flex flex-col gap-2 text-center md:text-left">
           <span className="text-2xl font-medium tracking-[2%] text-primary-500 md:text-4xl">
             {props.name}
           </span>
-          <span className="pt-2 text-base font-medium tracking-[2%] text-primary-500 md:text-2xl">
-            - {props.position}
+          <span className="text-base font-medium tracking-[2%] text-primary-500 md:text-2xl">
+            {props.position}
           </span>
         </div>
         <div
