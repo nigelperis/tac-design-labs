@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-confusing-void-expression -- temperory disabled*/
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -34,11 +35,34 @@ const navLinks = [
     label: 'Contact Us',
     href: '/contact-us',
   },
-] as const satisfies { label: string; href: string }[];
+] as const;
 
 function Header() {
+  const [mounted, setMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropDownOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Early return during server-side rendering
+  const isBrowser = typeof window !== 'undefined';
 
   return (
     <nav className="sticky start-0 top-0 z-20 w-full bg-[#420C03] md:h-auto">
@@ -47,100 +71,115 @@ function Header() {
           href="/"
           className="flex h-[50px] w-[50px] items-center bg-surface-500"
         >
-          <Image src={logo} alt="logo" width={50} height={50} />
+          <Image src={logo} alt="logo" width={50} height={50} priority />
         </Link>
-        <div className="flex space-x-3 md:order-2 md:hidden md:space-x-0 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 focus:outline-none"
-            aria-expanded="false"
-            onClick={() => {
-              setIsMenuOpen((prev) => !prev);
-            }}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Menu className="stroke-surface-500" size={24} />
-          </button>
-        </div>
-        <div
-          id="navbar-content"
-          className={cn(
-            'fixed inset-0 hidden h-screen w-screen translate-x-full items-center justify-between transition-all ease-out md:relative md:order-1 md:flex md:h-auto md:w-auto md:translate-x-0',
-            { 'flex translate-x-0': isMenuOpen },
-          )}
-        >
-          <ul
-            className={cn(
-              'flex h-screen w-full flex-col overflow-y-scroll bg-[#420C03] p-4 font-medium md:mt-0 md:h-full md:flex-row md:space-x-8 md:overflow-y-auto md:border-0 md:p-0 rtl:space-x-reverse',
-            )}
-          >
+
+        {/* Only show mobile menu button if mounted */}
+        {mounted && (
+          <div className="flex space-x-3 md:order-2 md:hidden md:space-x-0 rtl:space-x-reverse">
             <button
               type="button"
-              onClick={() => {
-                setIsMenuOpen(false);
-              }}
-              className="md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 focus:outline-none"
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen((prev) => !prev)}
             >
-              <X size={34} className="my-4 ml-auto stroke-accent-500" />
+              <span className="sr-only">Open main menu</span>
+              <Menu className="stroke-surface-500" size={24} />
             </button>
-            {navLinks.map((link) => {
-              return (
-                <li key={link.href}>
-                  <NavLink
-                    text={link.label}
-                    href={link.href}
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  />
-                </li>
-              );
-            })}
+          </div>
+        )}
+
+        <div
+          className={cn(
+            'fixed inset-0 hidden h-screen w-screen translate-x-full items-center justify-between transition-all ease-out md:relative md:order-1 md:flex md:h-auto md:w-auto md:translate-x-0',
+            { 'flex translate-x-0': mounted && isMenuOpen },
+          )}
+        >
+          <ul className="flex h-screen w-full flex-col bg-[#420C03] p-4 font-medium md:mt-0 md:h-full md:flex-row md:space-x-8 md:overflow-visible md:border-0 md:p-0 rtl:space-x-reverse">
+            {mounted && (
+              <button
+                type="button"
+                onClick={() => setIsMenuOpen(false)}
+                className="md:hidden"
+              >
+                <X size={34} className="my-4 ml-auto stroke-accent-500" />
+              </button>
+            )}
+
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <NavLink
+                  text={link.label}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                />
+              </li>
+            ))}
 
             <li
-              id="dropdown-container"
-              className="relative"
-              data-dropdown-open={isDropDownOpen ? 'true' : 'false'}
-              onClick={() => {
-                setIsDropDownOpen((prev) => !prev);
-              }}
+              ref={dropdownRef}
+              className="group relative"
+              onMouseEnter={() =>
+                isBrowser && window.innerWidth >= 768 && setIsDropDownOpen(true)
+              }
+              onMouseLeave={() =>
+                isBrowser &&
+                window.innerWidth >= 768 &&
+                setIsDropDownOpen(false)
+              }
+              onClick={() =>
+                isBrowser &&
+                window.innerWidth < 768 &&
+                setIsDropDownOpen((prev) => !prev)
+              }
             >
-              <p className="flex w-full cursor-pointer items-center space-x-2 rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 md:p-0 md:text-base md:hover:bg-transparent">
-                More <ChevronDown className="text-lg" />
-              </p>
-              <ul
-                id="dropdown"
-                className="absolute top-full w-full rounded-md bg-[#420C03] px-3 py-2 md:-left-14 md:min-w-[200%]"
-              >
-                <DropdownNavLink
-                  text="Our Process"
-                  href="our-process"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                  }}
-                />
-                <DropdownNavLink
-                  text="Our Team "
-                  href="our-process"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                  }}
-                />
-                <DropdownNavLink
-                  text="Blogs"
-                  href="our-process"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                  }}
-                />
-                <DropdownNavLink
-                  text="Career"
-                  href="our-process"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                  }}
-                />
-              </ul>
+              <div className="flex w-full cursor-pointer items-center space-x-2 rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 transition-colors md:p-0 md:text-base md:hover:text-gray-300">
+                <span>More</span>
+                <ChevronDown className="text-lg transition-all group-hover:rotate-180" />
+              </div>
+
+              {mounted && (
+                <ul
+                  className={cn(
+                    'absolute top-full w-full rounded-md bg-[#420C03] px-3 py-2 shadow-lg transition-all md:-left-14 md:min-w-[200%]',
+                    'invisible opacity-0 group-hover:visible group-hover:opacity-100',
+                    { 'visible opacity-100': isDropDownOpen },
+                  )}
+                >
+                  <DropdownNavLink
+                    text="Our Process"
+                    href="/our-process"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsDropDownOpen(false);
+                    }}
+                  />
+                  <DropdownNavLink
+                    text="Our Team"
+                    href="/our-team"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsDropDownOpen(false);
+                    }}
+                  />
+                  <DropdownNavLink
+                    text="Blogs"
+                    href="/blogs"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsDropDownOpen(false);
+                    }}
+                  />
+                  <DropdownNavLink
+                    text="Career"
+                    href="/career"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsDropDownOpen(false);
+                    }}
+                  />
+                </ul>
+              )}
             </li>
           </ul>
         </div>
@@ -148,8 +187,6 @@ function Header() {
     </nav>
   );
 }
-
-export default Header;
 
 function NavLink({
   text,
@@ -163,7 +200,7 @@ function NavLink({
   return (
     <Link
       href={href}
-      className="relative block rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 hover:underline md:p-0 md:text-base md:hover:bg-transparent"
+      className="relative block rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 transition-colors hover:text-gray-300 md:p-0 md:text-base"
       onClick={onClick}
     >
       {text}
@@ -183,10 +220,12 @@ function DropdownNavLink({
   return (
     <Link
       href={href}
-      className="relative my-2 block rounded px-3 py-4 font-primary text-2xl font-bold text-gray-100 hover:underline md:p-0 md:text-base md:hover:bg-transparent"
+      className="relative block rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 transition-colors hover:text-gray-300 md:my-2 md:p-0 md:py-2 md:text-base"
       onClick={onClick}
     >
       {text}
     </Link>
   );
 }
+
+export default Header;
