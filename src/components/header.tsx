@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 import { cn } from '~/utils/cn';
 
-import logo from '~/assets/images/logo.png';
+import logo from '~/assets/svgs/logo.svg';
 
 const navLinks = [
   {
