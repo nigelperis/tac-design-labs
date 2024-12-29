@@ -133,7 +133,7 @@ function Header() {
               onMouseLeave={() => handleDropdownHover(false)}
               onClick={handleMobileDropdownClick}
             >
-              <div className="flex w-full cursor-pointer items-center space-x-2 rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 transition-colors md:p-0 md:text-base md:hover:text-gray-300">
+              <div className="flex w-full cursor-pointer items-center space-x-2 rounded px-3 py-3 font-primary text-2xl font-bold text-gray-100 transition-colors md:py-2 md:text-base md:hover:text-gray-300">
                 <span>More</span>
                 <ChevronDown
                   className={cn(
