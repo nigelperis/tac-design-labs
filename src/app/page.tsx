@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Carousel, CarouselContent, CarouselItem } from '~/components/carousel';
-
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
 import LandingPageListImage from '~/assets/svgs/landing-page-list-image.svg';
@@ -21,6 +19,8 @@ import landingPagePortfolioHouse3 from '~/assets/images/landing-page-portfolio-h
 import landingPagePortfolioHouse4 from '~/assets/images/landing-page-portfolio-house-4.png';
 import landingPagePortfolioHouse5 from '~/assets/images/landing-page-portfolio-house-5.png';
 import landingPageWoodenBoardBackground from '~/assets/images/landing-page-wooden-board-background.png';
+
+import { LandingPageCarousel } from './landing-page-carousel';
 
 export default function Home() {
   const optimizedLandingPageHeroBackground = getOptimizedBackgroundImage({
@@ -221,32 +221,9 @@ export default function Home() {
               />
             </li>
           </ul>
-        </div>
-      </section>
 
-      <section className="mx-auto w-1/2">
-        <Carousel>
-          <CarouselContent className="-ml-4">
-            <CarouselItem className="flex aspect-square h-24 w-24 items-center justify-center rounded border border-gray-400 pl-4 text-center text-3xl md:basis-1/2 lg:basis-1/3">
-              1
-            </CarouselItem>
-            <CarouselItem className="flex aspect-square h-24 w-24 items-center justify-center rounded border border-gray-400 pl-4 text-center text-3xl md:basis-1/2 lg:basis-1/3">
-              2
-            </CarouselItem>
-            <CarouselItem className="justify-centerpl-4 flex aspect-square h-24 w-24 items-center rounded border border-gray-400 text-center text-3xl md:basis-1/2 lg:basis-1/3">
-              3
-            </CarouselItem>
-            <CarouselItem className="justify-centerpl-4 flex aspect-square h-24 w-24 items-center rounded border border-gray-400 text-center text-3xl md:basis-1/2 lg:basis-1/3">
-              4
-            </CarouselItem>
-            <CarouselItem className="flex aspect-square h-24 w-24 items-center justify-center rounded border border-gray-400 pl-4 text-center text-3xl md:basis-1/2 lg:basis-1/3">
-              5
-            </CarouselItem>
-            <CarouselItem className="border-gray-400text-center flex aspect-square h-24 w-24 items-center justify-center rounded border pl-4 text-3xl md:basis-1/2 lg:basis-1/3">
-              6
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
+          <LandingPageCarousel />
+        </div>
       </section>
 
       <section
