@@ -11,4 +11,5 @@
 *.ico  -text
 *.webp -text
 *.woff2 -text
+*.ttf -text
 

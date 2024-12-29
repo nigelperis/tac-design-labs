@@ -69,7 +69,7 @@ export default {
       },
       fontFamily: {
         // primary: ['var(--font-comic-neue)'],
-        primary: ['Comic Sans MS'],
+        primary: ['var(--font-comic-sans)'],
       },
       boxShadow: {
         custom: '0 11px 4px #00000040',
