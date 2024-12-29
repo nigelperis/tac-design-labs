@@ -95,7 +95,7 @@ function Header() {
             { 'flex translate-x-0': mounted && isMenuOpen },
           )}
         >
-          <ul className="flex h-screen w-full flex-col bg-[#420C03] p-4 font-medium md:mt-0 md:h-full md:flex-row md:space-x-8 md:overflow-visible md:border-0 md:p-0 rtl:space-x-reverse">
+          <ul className="flex h-screen w-full flex-col overflow-scroll bg-[#420C03] p-4 font-medium md:mt-0 md:h-full md:flex-row md:space-x-8 md:overflow-visible md:border-0 md:p-0 rtl:space-x-reverse">
             {mounted && (
               <button
                 type="button"
@@ -141,7 +141,7 @@ function Header() {
               {mounted && (
                 <ul
                   className={cn(
-                    'absolute top-full w-full rounded-md bg-[#420C03] px-3 py-2 shadow-lg transition-all md:-left-14 md:min-w-[200%]',
+                    'absolute top-full w-full rounded-md bg-[#420C03] px-3 py-3 transition-all md:-left-14 md:min-w-[200%] md:py-2',
                     'invisible opacity-0 group-hover:visible group-hover:opacity-100',
                     { 'visible opacity-100': isDropDownOpen },
                   )}
@@ -200,7 +200,7 @@ function NavLink({
   return (
     <Link
       href={href}
-      className="relative block rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 transition-colors hover:text-gray-300 md:p-0 md:text-base"
+      className="relative my-2 block rounded px-3 py-3 font-primary text-2xl font-bold text-gray-100 transition-colors hover:text-gray-300 md:my-auto md:p-0 md:py-2 md:text-base"
       onClick={onClick}
     >
       {text}
@@ -220,7 +220,7 @@ function DropdownNavLink({
   return (
     <Link
       href={href}
-      className="relative block rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 transition-colors hover:text-gray-300 md:my-2 md:p-0 md:py-2 md:text-base"
+      className="relative my-2 block rounded px-3 py-3 font-primary text-2xl font-bold text-gray-100 transition-colors hover:text-gray-300 md:p-0 md:py-2 md:text-base"
       onClick={onClick}
     >
       {text}
