@@ -61,8 +61,19 @@ function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Early return during server-side rendering
   const isBrowser = typeof window !== 'undefined';
+
+  const handleMobileDropdownClick = () => {
+    if (isBrowser && window.innerWidth < 768) {
+      setIsDropDownOpen((prev) => !prev);
+    }
+  };
+
+  const handleDropdownHover = (isHovered: boolean) => {
+    if (isBrowser && window.innerWidth >= 768) {
+      setIsDropDownOpen(isHovered);
+    }
+  };
 
   return (
     <nav className="sticky start-0 top-0 z-20 w-full bg-[#420C03] md:h-auto">
@@ -74,7 +85,6 @@ function Header() {
           <Image src={logo} alt="logo" width={50} height={50} priority />
         </Link>
 
-        {/* Only show mobile menu button if mounted */}
         {mounted && (
           <div className="flex space-x-3 md:order-2 md:hidden md:space-x-0 rtl:space-x-reverse">
             <button
@@ -119,30 +129,26 @@ function Header() {
             <li
               ref={dropdownRef}
               className="group relative"
-              onMouseEnter={() =>
-                isBrowser && window.innerWidth >= 768 && setIsDropDownOpen(true)
-              }
-              onMouseLeave={() =>
-                isBrowser &&
-                window.innerWidth >= 768 &&
-                setIsDropDownOpen(false)
-              }
-              onClick={() =>
-                isBrowser &&
-                window.innerWidth < 768 &&
-                setIsDropDownOpen((prev) => !prev)
-              }
+              onMouseEnter={() => handleDropdownHover(true)}
+              onMouseLeave={() => handleDropdownHover(false)}
+              onClick={handleMobileDropdownClick}
             >
               <div className="flex w-full cursor-pointer items-center space-x-2 rounded px-3 py-2 font-primary text-2xl font-bold text-gray-100 transition-colors md:p-0 md:text-base md:hover:text-gray-300">
                 <span>More</span>
-                <ChevronDown className="text-lg transition-all group-hover:rotate-180" />
+                <ChevronDown
+                  className={cn(
+                    'text-lg transition-transform duration-200',
+                    { 'rotate-180': isDropDownOpen },
+                    'md:transition-all md:group-hover:rotate-180',
+                  )}
+                />
               </div>
 
               {mounted && (
                 <ul
                   className={cn(
                     'absolute top-full w-full rounded-md bg-[#420C03] px-3 py-3 transition-all md:-left-14 md:min-w-[200%] md:py-2',
-                    'invisible opacity-0 group-hover:visible group-hover:opacity-100',
+                    'invisible opacity-0 md:group-hover:visible md:group-hover:opacity-100',
                     { 'visible opacity-100': isDropDownOpen },
                   )}
                 >
