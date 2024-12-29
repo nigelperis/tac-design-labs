@@ -20,6 +20,8 @@ import landingPagePortfolioHouse4 from '~/assets/images/landing-page-portfolio-h
 import landingPagePortfolioHouse5 from '~/assets/images/landing-page-portfolio-house-5.png';
 import landingPageWoodenBoardBackground from '~/assets/images/landing-page-wooden-board-background.png';
 
+import { LandingPageCarousel } from './landing-page-carousel';
+
 export default function Home() {
   const optimizedLandingPageHeroBackground = getOptimizedBackgroundImage({
     src: landingPageHeroBackground.src,
@@ -219,6 +221,8 @@ export default function Home() {
               />
             </li>
           </ul>
+
+          <LandingPageCarousel />
         </div>
       </section>
 

@@ -1,14 +1,20 @@
 import React from 'react';
 import { type StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
+
+import SeparatorLG from '~/assets/svgs/separator-lg.svg';
+import SeparatorSM from '~/assets/svgs/separator-sm.svg';
 
 import aboutUsPageImage1 from '~/assets/images/about-us-page-image-1.png';
 import aboutUsPageImage2 from '~/assets/images/about-us-page-image-2.png';
 import aboutUsPageImage3 from '~/assets/images/about-us-page-image-3.png';
 import laurieBarkerPortrait from '~/assets/images/about-us-page-laurie-barker-portrait.jpeg';
+import buttonBackground from '~/assets/images/button-background.png';
 import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.png';
+import landingPageHeroBackground from '~/assets/images/landing-page-hero-background.png';
 
 function AboutUsPage() {
   const optimizedLandingPageArchitectureBackground =
@@ -18,19 +24,31 @@ function AboutUsPage() {
       height: landingPageArchitectureBackground.height,
     });
 
+  const optimizedLandingPageHeroBackground = getOptimizedBackgroundImage({
+    src: landingPageHeroBackground.src,
+    width: landingPageHeroBackground.width,
+    height: landingPageHeroBackground.height,
+  });
+
+  const optimizedButtonBackground = getOptimizedBackgroundImage({
+    src: buttonBackground.src,
+    width: buttonBackground.width,
+    height: buttonBackground.height,
+  });
+
   return (
     <div className="relative">
       <section
         className="bg-[#EDD7C3] py-16 bg-blend-soft-light"
         style={{
-          backgroundImage: `url(${optimizedLandingPageArchitectureBackground})`,
+          backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <p className="mx-8 w-fit rounded-full bg-white px-5 py-[10px] font-primary text-xs font-normal text-primary-500">
+        <p className="mx-8 w-fit rounded-full bg-white px-5 py-2 font-primary text-xs font-normal text-primary-500 md:px-10 md:py-[15px] md:text-base">
           Our story
         </p>
 
-        <h2 className="mt-8 px-8 font-primary text-3xl font-normal text-primary-500 md:text-[52px]">
+        <h2 className="mt-8 px-8 font-primary text-3xl font-normal leading-9 text-primary-500 md:text-[52px] md:leading-[72px]">
           TAC Design LAB: Crafting{' '}
           <span className="text-accent-500"> Sustainable Future</span> with
           Vision and Innovation
@@ -106,7 +124,7 @@ function AboutUsPage() {
         <p className="w-fit rounded-full bg-[#F3D1B3] px-5 py-[10px] font-primary text-xs font-normal text-primary-500 md:hidden">
           Inspiration
         </p>
-        <h2 className="l font-primary text-3xl font-normal text-primary-500 md:hidden">
+        <h2 className="font-primary text-3xl font-normal text-primary-500 md:hidden">
           Laurie Baker: The Pioneer of Sustainable Architecture and Timeless
           Inspiration
         </h2>
@@ -117,7 +135,7 @@ function AboutUsPage() {
             className="w-full overflow-hidden rounded-lg border-[6px] border-white"
           />
           <div>
-            <p className="mb-3 hidden w-fit rounded-full bg-[#F3D1B3] px-5 py-[10px] font-primary text-xs font-normal text-primary-500 md:block">
+            <p className="mb-3 hidden w-fit rounded-full bg-[#F3D1B3] px-10 py-[15px] font-primary text-base font-normal text-primary-500 md:block">
               Inspiration
             </p>
             <h2 className="mb-3 hidden font-primary text-5xl font-normal text-primary-500 md:block">
@@ -141,6 +159,35 @@ function AboutUsPage() {
             </p>
           </div>
         </div>
+      </section>
+      <section
+        className="relative border-y-8 border-white bg-[#EDD7C3] py-11 bg-blend-soft-light md:py-20"
+        style={{
+          backgroundImage: optimizedLandingPageHeroBackground,
+        }}
+      >
+        <SeparatorSM className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 md:hidden" />
+        <SeparatorLG className="absolute left-1/2 top-0 hidden -translate-x-1/2 -translate-y-1/2 md:block" />
+        <div className="bg-opacity-50 px-8 py-12 md:px-32">
+          <h2 className="font-primary text-3xl font-normal text-primary-500 md:text-[52px]">
+            We
+            <span className="text-accent-500"> Collaborate</span> with Everyone
+          </h2>
+          <p className="mt-5 text-balance text-justify font-primary text-lg font-normal text-gray-950 md:text-2xl">
+            At TAC Design Lab, we believe in the power of collaboration. Whether
+            you&apos;re a homeowner, a business, or an institution, we tailor
+            our services to meet your unique needs. Let&apos;s work together to
+            create sustainable and innovative spaces that leave a lasting
+            impact.
+          </p>
+        </div>
+        <Link
+          href="#"
+          style={{ backgroundImage: optimizedButtonBackground }}
+          className="mx-auto block w-fit bg-cover bg-center px-[40px] py-[20px] font-primary text-lg font-bold text-[#331803] md:mx-32 md:ml-auto"
+        >
+          Explore Our Services
+        </Link>
       </section>
     </div>
   );
