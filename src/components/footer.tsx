@@ -29,7 +29,7 @@ function Footer({ className }: Readonly<{ className?: string }>) {
             href="/"
             className="flex w-fit items-center space-x-3 bg-surface-500"
           >
-            <Logo className="h-24 w-24 object-contain" />
+            <Logo width={100} height={100} className="object-contain" />
           </Link>
           <h4 className="text-center font-primary text-5xl font-normal text-slate-50">
             TAC Design LAB
