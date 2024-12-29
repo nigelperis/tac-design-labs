@@ -257,21 +257,24 @@ export default function Home() {
       </section>
 
       <section
-        className="bg-[#ECC19A99] bg-cover bg-center py-14 bg-blend-soft-light"
-        style={{ backgroundImage: optimizedLandingPageWoodenBoardBackground }}
+        className="border-b-[5px] border-t-[5px] border-white bg-[#ECC19A99] bg-cover bg-center py-14 bg-blend-soft-light"
+        style={{
+          backgroundImage: optimizedLandingPageWoodenBoardBackground,
+          boxShadow: 'inset 0px 8px 12px rgba(0, 0, 0, 0.25)',
+        }}
       >
-        <h2 className="bg-cover text-center font-primary text-2xl font-normal text-[#250606] md:text-[40px]">
+        <h2 className="bg-cover px-5 text-center font-primary text-2xl font-normal text-[#250606] md:text-[40px] md:leading-10">
           Dive into our portfolio of projects that blend innovative design with
           sustainable solutions.
         </h2>
 
         <div className="flex justify-center">
           <Link
-            href="#"
+            href="/our-work"
             style={{ backgroundImage: optimizedButtonBackground }}
-            className="block w-fit bg-cover bg-center px-[34px] py-[30px] font-primary text-lg font-bold text-[#331803]"
+            className="block w-fit bg-cover bg-center px-[34px] py-[30px] font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105"
           >
-            Explore Projects
+            See Our Work
           </Link>
         </div>
       </section>
