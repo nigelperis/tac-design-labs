@@ -1,9 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+// import { LandingPageCarousel } from './landing-page-carousel';
+import EmblaCarousel from '~/components/landingpage2';
+
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
+import CloseQuote from '~/assets/svgs/closequote.svg';
 import LandingPageListImage from '~/assets/svgs/landing-page-list-image.svg';
+import OpenQuote from '~/assets/svgs/openquote.svg';
 
 import buttonBackground from '~/assets/images/button-background.png';
 import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.png';
@@ -99,13 +104,16 @@ export default function Home() {
           alt="Ashams Ravi portrait"
           className="relative -top-5 rounded-3xl md:-top-8 md:w-1/4"
         />
-        <div className="md:w-1/2">
-          <p className="mt-2 text-balance text-justify indent-10 font-primary text-lg font-normal italic md:text-4xl">
+        <div className="relative md:w-1/2">
+          <OpenQuote className="absolute -left-11 -top-4 hidden xl:inline" />
+          <p className="mt-2 text-center font-primary text-lg font-normal italic tracking-wide md:text-left md:text-4xl">
             We all know the greenest choice is to avoid building altogether. But
             when construction is necessary, the focus must shift to creating
-            spaces that respect and protect nature.
+            spaces that respect and protect nature.{' '}
+            <CloseQuote className="mt-5 hidden xl:inline" />
           </p>
-          <p className="text-right font-primary text-2xl font-bold text-accent-500">
+
+          <p className="mt-6 text-right font-primary text-2xl font-bold text-accent-500">
             - Ashams Ravi
           </p>
         </div>
@@ -257,24 +265,26 @@ export default function Home() {
       </section>
 
       <section
-        className="border-b-[5px] border-t-[5px] border-white bg-[#ECC19A99] bg-cover bg-center py-14 bg-blend-soft-light"
+        className="border-b-[5px] border-t-[5px] border-white bg-[#ECC19A99] bg-cover bg-center py-14 bg-blend-soft-light md:py-32"
         style={{
           backgroundImage: optimizedLandingPageWoodenBoardBackground,
           boxShadow: 'inset 0px 8px 12px rgba(0, 0, 0, 0.25)',
         }}
       >
-        <h2 className="bg-cover px-5 text-center font-primary text-2xl font-normal text-[#250606] md:text-[40px] md:leading-10">
+        <h2 className="mb-4 bg-cover px-5 text-center font-primary text-2xl font-normal text-[#250606] md:mb-11 md:text-4xl">
           Dive into our portfolio of projects that blend innovative design with
           sustainable solutions.
         </h2>
 
-        <div className="flex justify-center">
+        <EmblaCarousel />
+
+        <div className="flex justify-center md:mt-10">
           <Link
             href="/our-work"
             style={{ backgroundImage: optimizedButtonBackground }}
             className="block w-fit bg-cover bg-center px-[34px] py-[30px] font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105"
           >
-            See Our Work
+            <span className="md:p-8">See Our Work</span>
           </Link>
         </div>
       </section>
