@@ -134,7 +134,7 @@ export default function Home() {
         }}
       >
         <div className="md:grid md:grid-cols-2">
-          <h2 className="relative w-2/3 pl-7 font-primary text-4xl font-normal leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary-500 md:col-span-2 md:w-fit md:px-16 md:text-5xl">
+          <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-16 md:pl-28 md:text-5xl md:font-normal">
             Sustainable Architecture
           </h2>
 
@@ -235,7 +235,7 @@ export default function Home() {
       </section>
 
       <section
-        className="relative bg-[#D19A6A] bg-gradient-to-b from-[#D9D9D9] to-[#D19A6A6B] bg-cover bg-center py-11 bg-blend-soft-light shadow-inner drop-shadow-md"
+        className="relative bg-gradient-to-b from-[#D9D9D9] to-[#C6742B33] bg-cover bg-center py-11 opacity-80 shadow-inner drop-shadow-md"
         style={{ backgroundImage: optimizedLandingPageDriedLeavesBackground }}
       >
         <h2 className="z-[1] text-center font-primary text-4xl font-normal text-[#5A3213] md:text-5xl">
@@ -258,7 +258,7 @@ export default function Home() {
             and without TAC Design LAB this project wouldn&apos;t have been
             possible.&quot;
           </p>
-          <p className="mt-5 text-center font-primary text-2xl font-bold text-[#062039] md:text-4xl">
+          <p className="mt-5 text-center font-primary text-xl font-normal text-[#062039] md:text-3xl md:text-4xl">
             Anunay & Akanksha
           </p>
         </div>
