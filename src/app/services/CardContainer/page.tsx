@@ -73,26 +73,26 @@ const CardContainer = () => {
         return (
           <section
             key={index}
-            className="mb-5 flex w-full max-w-[1200px] flex-row items-center gap-14 rounded-2xl bg-white/80 p-10 shadow-md"
+            className="mb-5 flex w-full max-w-[1200px] flex-row items-center gap-14 rounded-2xl bg-white/40 p-10 shadow-md"
           >
             <img
               src={cardData.image}
               alt={cardData.heading}
-              className="h-[450px] w-[450px] rounded-2xl border-4 border-[#ecc19a] shadow-lg"
+              className="h-[450px] w-[450px] rounded-2xl border-4 border-[#ecc19a]"
             />
             <span className="flex-1 pl-5">
               <p className="mb-5 text-4xl font-bold text-[#552b0a]">
                 {cardData.heading}
               </p>
               <section className="mb-5 flex gap-4">
-                <button className="flex h-[51px] min-w-[134px] items-center justify-center rounded-full border border-[#c6742b] bg-[#ffffffe5] px-5 py-2 text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a]">
+                <button className="flex h-[51px] min-w-[134px] items-center justify-center rounded-full border border-[#c6742b] bg-[#ffffffe5] px-5 py-2 text-xl font-bold text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a]">
                   {cardData.buttonOne}
                 </button>
-                <button className="flex h-[51px] min-w-[134px] items-center justify-center rounded-full border border-[#c6742b] bg-[#ffffffe5] px-5 py-2 text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a]">
+                <button className="flex h-[51px] min-w-[134px] items-center justify-center rounded-full border border-[#c6742b] bg-[#ffffffe5] px-5 py-2 text-xl font-bold text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a]">
                   {cardData.buttonTwo}
                 </button>
                 {cardData.buttonThree && (
-                  <button className="flex h-[51px] min-w-[134px] items-center justify-center rounded-full border border-[#c6742b] bg-[#ffffffe5] px-5 py-2 text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a]">
+                  <button className="flex h-[51px] min-w-[134px] items-center justify-center rounded-full border border-[#c6742b] bg-[#ffffffe5] px-5 py-2 text-xl font-bold text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a]">
                     {cardData.buttonThree}
                   </button>
                 )}
