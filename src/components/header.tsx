@@ -146,7 +146,7 @@ function Header() {
               {mounted && (
                 <ul
                   className={cn(
-                    'absolute top-full w-full rounded-md bg-[#420C03] px-3 py-3 transition-all md:-left-14 md:min-w-[200%] md:py-2',
+                    'absolute top-full w-full rounded-md bg-[#420C03] px-3 py-3 transition-all md:-left-24 md:min-w-[200%] md:py-2',
                     'invisible opacity-0 md:group-hover:visible md:group-hover:opacity-100',
                     { 'visible opacity-100': isDropDownOpen },
                   )}
