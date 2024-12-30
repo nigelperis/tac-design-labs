@@ -1,6 +1,5 @@
 import React from 'react';
 import { Clock5, Mail, MapPin, Phone } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import Facebook from '~/assets/svgs/facebook-logo.svg';

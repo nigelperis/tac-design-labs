@@ -20,7 +20,7 @@ const images = [
   { src: HavenBgImg, name: 'Haven', place: 'Manvilla' },
 ] as const;
 
-const EmblaCarousel = () => {
+const WorksCarousel = () => {
   // const OPTIONS: EmblaOptionsType = { loop: true };
   // const SLIDE_COUNT = 5;
   // const slides = Array.from(Array(SLIDE_COUNT).keys());
@@ -56,14 +56,14 @@ const EmblaCarousel = () => {
             return (
               <div className="embla__slide cursor-pointer p-1" key={index}>
                 <div className="w-full">
-                  <div className="group relative aspect-[16/9] transform rounded-lg border-2 border-[#F3F5E5] shadow-custom md:border-4">
-                    <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
+                  <div className="group relative aspect-[16/9] transform rounded-lg border-2 border-[#F3F5E5] shadow-custom md:rounded-2xl md:border-4">
+                    <div className="absolute inset-0 z-10 rounded-lg bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20 md:rounded-2xl"></div>
                     <Image
                       src={itm.src}
                       layout="fill"
                       objectFit="cover"
                       alt="SanchiBgImg"
-                      className="rounded-md"
+                      className="rounded-md md:rounded-xl"
                     />
                     <div className="absolute bottom-3 left-4 z-20 text-white">
                       <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
@@ -89,4 +89,4 @@ const EmblaCarousel = () => {
   );
 };
 
-export default EmblaCarousel;
+export default WorksCarousel;

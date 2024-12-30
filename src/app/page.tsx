@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import WorksCarousel from '~/components/landingpage2';
+
 // import { LandingPageCarousel } from './landing-page-carousel';
-import EmblaCarousel from '~/components/landingpage2';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
@@ -11,11 +12,11 @@ import LandingPageListImage from '~/assets/svgs/landing-page-list-image.svg';
 import OpenQuote from '~/assets/svgs/openquote.svg';
 
 import buttonBackground from '~/assets/images/button-background.png';
-import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.png';
+import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.jpg';
 import landingPageAshamsRavi from '~/assets/images/landing-page-ashams-ravi-potrait.jpeg';
 import landingPageAssetGrass from '~/assets/images/landing-page-asset-grass.png';
 import landingPageAssetLeaves from '~/assets/images/landing-page-asset-leaves.png';
-import landingPageDriedLeavesBackground from '~/assets/images/landing-page-dried-leaves-background.png';
+import landingPageDriedLeavesBackground from '~/assets/images/landing-page-dried-leaves-background.jpg';
 import landingPageHeroBackground from '~/assets/images/landing-page-hero-background.png';
 import landingPageHeroImage from '~/assets/images/landing-page-hero-image.png';
 import landingPagePortfolioHouse1 from '~/assets/images/landing-page-portfolio-house-1.png';
@@ -128,13 +129,13 @@ export default function Home() {
       </section>
 
       <section
-        className="relative py-16 md:flex md:justify-between"
+        className="relative bg-cover py-16 md:flex md:justify-between"
         style={{
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
         <div className="md:grid md:grid-cols-2">
-          <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-16 md:pl-28 md:text-5xl md:font-normal">
+          <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl font-bold leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-16 md:pl-28 md:text-5xl">
             Sustainable Architecture
           </h2>
 
@@ -235,16 +236,16 @@ export default function Home() {
       </section>
 
       <section
-        className="relative bg-gradient-to-b from-[#D9D9D9] to-[#C6742B33] bg-cover bg-center py-11 opacity-80 shadow-inner drop-shadow-md"
+        className="relative bg-gradient-to-b from-[#D9D9D9] to-[#C6742B33] bg-cover bg-center bg-repeat py-11 shadow-inner drop-shadow-md"
         style={{ backgroundImage: optimizedLandingPageDriedLeavesBackground }}
       >
-        <h2 className="z-[1] text-center font-primary text-4xl font-normal text-[#5A3213] md:text-5xl">
+        <h2 className="z-[1] text-center font-primary text-3xl font-bold text-[#5A3213] md:text-5xl">
           What Our Clients Say
         </h2>
 
         <div className="z-[1] my-5 overflow-hidden rounded-2xl">
           <iframe
-            className="aspect-video w-[102%] overflow-hidden rounded-2xl border-[5px] border-[#ECC19A] md:mx-auto md:w-1/2"
+            className="mx-auto aspect-video w-[95%] rounded-2xl border-[5px] border-[#ECC19A] sm:w-[90%] md:w-3/4 lg:w-1/2"
             src="https://www.youtube.com/embed/qpOZ6rXgR_s?si=jQgeuC20qgI6c0pK"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -252,13 +253,13 @@ export default function Home() {
         </div>
 
         <div className="z-[1] px-8">
-          <p className="font-primary text-base font-normal text-[#552B0A] md:mx-auto md:w-1/2 md:text-2xl">
+          <p className="text-center font-primary text-base font-normal text-[#552B0A] md:mx-auto md:w-1/2 md:text-2xl">
             &quot;We are much happier and comfortable living in this new house.
             The quality of life has improved a lot. It was a great experience
             and without TAC Design LAB this project wouldn&apos;t have been
             possible.&quot;
           </p>
-          <p className="mt-5 text-center font-primary text-xl font-normal text-[#062039] md:text-3xl md:text-4xl">
+          <p className="mt-5 text-center font-primary text-xl font-bold text-[#062039] md:text-3xl">
             Anunay & Akanksha
           </p>
         </div>
@@ -276,7 +277,7 @@ export default function Home() {
           sustainable solutions.
         </h2>
 
-        <EmblaCarousel />
+        <WorksCarousel />
 
         <div className="flex justify-center md:mt-10">
           <Link

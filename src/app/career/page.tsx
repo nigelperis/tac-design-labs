@@ -1,3 +1,5 @@
+import WorksCarousel from '~/components/landingpage2';
+
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
 import careerPageBackground from '~/assets/images/career-page-background.png';
@@ -11,7 +13,7 @@ export default function Career() {
   });
   return (
     <div
-      className="bg-[#EDD7C3] bg-contain py-16 font-primary bg-blend-soft-light"
+      className="bg-[#EDD7C3] bg-contain py-16 font-primary bg-blend-overlay"
       style={{
         backgroundImage: optimizedCareerPageBackground,
       }}
@@ -56,7 +58,7 @@ export default function Career() {
           </p>
         </div>
 
-        <div className="px-[18px] py-11 md:px-28 md:py-24">
+        <div className="md:py-18 px-[18px] py-5 md:px-28">
           <h2 className="mb-4 text-[28px] font-[700] text-[#552B0A] md:text-[42px]">
             Discover Our Impactful Projects
           </h2>
@@ -66,6 +68,7 @@ export default function Career() {
             practices into every project we undertake.
           </p>
         </div>
+        <WorksCarousel />
       </div>
     </div>
   );
