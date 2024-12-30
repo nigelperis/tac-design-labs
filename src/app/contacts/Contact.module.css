@@ -12,6 +12,16 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #552b0a;
+  margin-top: -45px;
+}
+
+@media (max-width: 768px) {
+  .firstHeading {
+    width: 333px;
+    height: 90px;
+    font-size: 28px;
+    line-height: 45px;
+  }
 }
 
 .secondHeading {
@@ -30,39 +40,122 @@
   color: #173552;
 }
 
+@media (max-width: 768px) {
+  .secondHeading {
+    width: 333px;
+    height: 120px;
+    top: 140px;
+    left: 30px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+
 .sectionContainer {
   display: flex;
   flex-direction: column; /* Stack items vertically */
   gap: 16px; /* Add space between the title line and description */
   margin-top: 50px;
 }
+@media (max-width: 768px) {
+  .sectionContainer {
+    width: 393px;
+    height: 163px;
+    top: 1258px;
+    padding: 0px 30px 0px 30px;
+    gap: 18px;
+  }
+}
 
 .titleContainer {
   display: flex; /* Align the arrow image and text horizontally */
   align-items: center; /* Align items vertically in the center */
   gap: 10px; /* Add spacing between the image and text */
-  margin-left: 22px;
+  margin-left: 88px;
 }
 
+@media (max-width: 768px) {
+  .titleContainer {
+    width: 309px;
+    height: 45px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .arrowImage {
+    width: 45px;
+    height: 45px;
+    gap: 0px;
+  }
+}
 .arrowImage {
   width: 50px; /* Adjust the width of the image */
   height: auto; /* Maintain aspect ratio */
 }
 
 .tacText {
-  font-size: 25px; /* Set font size for "TAC Design LAB" */
-  font-weight: 700; /* Bold text */
-  line-height: 32px;
-  color: #000;
-  margin: 0; /* Remove default margin */
+  margin-left: 10px;
+  width: 366px;
+  height: 67px;
+  gap: 0px;
+  font-family: Comic Sans MS;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 66.89px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #420c03;
+  margin-top: 15px;
 }
 
+@media (max-width: 768px) {
+  .tacText {
+    width: 244px;
+    height: 45px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 44.59px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+@media (max-width: 768px) {
+  .tacDescription {
+    width: 333px;
+    height: 100px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.08px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
 .tacDescription {
-  font-size: 16px; /* Adjust font size for description */
+  font-family: Comic Sans MS;
+  font-size: 28px;
   font-weight: 400;
-  line-height: 22px; /* Set line height for readability */
-  color: #555;
-  margin-top: 15px;
+  line-height: 39.02px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  width: 727.34px;
+  height: 117px;
+  gap: 0px;
+  color: #173552;
 }
 
 .bodyContainer {
@@ -111,15 +204,49 @@
   display: flex;
   align-items: center; /* Aligns EmailSvg and emailText vertically */
 }
-
+@media (max-width: 768px) {
+  .emailContainer {
+    width: 333px; /* Fixed width for mobile */
+    height: 77px; /* Fixed height for mobile */
+    gap: 10px;
+  }
+}
 .emailText {
   margin-left: 10px; /* Adds space between EmailSvg and text */
   font-family: 'Comic Sans MS';
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 50.17px;
   color: #c6742b;
   margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .emailText {
+    width: 264.22px;
+    height: 36px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36.23px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+@media (max-width: 768px) {
+  .mailId {
+    width: 333px;
+    height: 31px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
 }
 
 .mailId {
@@ -132,10 +259,30 @@
 }
 
 .imageStyle {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  margin: 20px 0;
+  width: 671px;
+  height: 379.5px;
+  top: 285.49px;
+  left: 1335.07px;
+  gap: 0px;
+  border-radius: 20px;
+  border: 5px 0px 0px 0px;
+  opacity: 0px;
+  angle: -180 deg;
+  border: 5px solid #ecc19a;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+@media (max-width: 768px) {
+  .imageStyle {
+    width: 333px;
+    height: 222px;
+    gap: 0px;
+    border-radius: 20px;
+    border: 5px 0px 0px 0px;
+    opacity: 0px;
+    angle: -180 deg;
+    border: 5px solid #ecc19a;
+    box-shadow: 0px 4px 4px 0px #00000040;
+  }
 }
 
 .photoContainer {
@@ -144,22 +291,57 @@
   flex-direction: column; /* Stack phoneHeader and phoneNumber vertically */
   margin: 20px 0;
 }
+@media (max-width: 768px) {
+  .photoContainer {
+    width: 333pxpx;
+    height: 77px px;
+    gap: 10px;
+  }
+}
 
 .phoneHeader {
-  margin-top: 30px;
+  margin-top: 32px;
   display: flex;
   align-items: center; /* Align PhoneSvg and phoneText vertically */
+}
+@media (max-width: 768px) {
+  .phoneText {
+    width: 71px;
+    height: 36px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36.23px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
 }
 
 .phoneText {
   margin-left: 20px; /* Space between PhoneSvg and text */
   font-family: 'Comic Sans MS';
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 44.59px;
   color: #c6742b;
 }
 
+@media (max-width: 768px) {
+  .phoneNumber {
+    width: 333px;
+    height: 31px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.66px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
 .phoneNumber {
   margin-top: 15px; /* Space between header and phone number */
   font-family: 'Comic Sans MS';
@@ -174,11 +356,25 @@
   height: 29.62px;
 }
 
+@media (max-width: 768px) {
+  .addressText {
+    width: 102px;
+    height: 36px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36.23px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
 .addressText {
   font-family:
     Comic Sans MS,
     sans-serif;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 44.59px;
   color: #c6742b;
@@ -200,6 +396,13 @@
   flex-direction: column; /* Stack header and description vertically */
   gap: 10px; /* Add spacing between header and description */
 }
+@media (max-width) {
+  .addressContainer {
+    width: 333px;
+    height: 206px;
+    gap: 10px;
+  }
+}
 
 .addressHeader {
   display: flex; /* Align SVG and text horizontally */
@@ -209,7 +412,7 @@
 
 .addressText {
   font-family: 'Comic Sans MS';
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 44.59px;
   color: #c6742b;
@@ -223,6 +426,21 @@
   line-height: 39.02px;
   color: #173552;
 }
+@media (max-width: 768px) {
+  .addressDescription {
+    width: 333px;
+    height: 160px;
+    top: 46px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
 
 .workingContainer {
   width: 529px;
@@ -233,6 +451,13 @@
   margin-top: 40px;
 }
 
+@media (max-width) {
+  .workingContainer {
+    width: 333px;
+    height: 206px;
+    gap: 10px;
+  }
+}
 .workingContainer {
   width: 529px;
   margin-top: 40px;
@@ -247,6 +472,28 @@
   align-items: center; /* Vertically center the items */
   gap: 8px; /* Add space between ClockSvg and the heading */
 }
+@media (max-width: 768px) {
+  .workingHeader {
+    width: 222px;
+    height: 36px;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .workingHeading {
+    width: 186px;
+    height: 36px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36.23px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
 
 .clockSvg {
   width: 31.67px;
@@ -256,7 +503,7 @@
 
 .workingHeading {
   font-family: Comic Sans MS;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 44.59px;
   color: #c6742b;
@@ -269,6 +516,22 @@
   font-weight: 400;
   line-height: 39.02px;
   color: #173552;
+}
+
+@media (max-width: 768px) {
+  .workingText {
+    width: 333px;
+    height: 160px;
+    top: 46px;
+    gap: 0px;
+    font-family: Comic Sans MS;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
 }
 
 .tacDesignContainer {
@@ -285,22 +548,6 @@
   left: 91px;
   margin-top: 13px;
   gap: 0px;
-}
-
-.tacText {
-  margin-left: 10px;
-  width: 366px;
-  height: 67px;
-  gap: 0px;
-  font-family: Comic Sans MS;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 66.89px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #420c03;
-  margin-top: 15px;
 }
 
 .tacDescription {

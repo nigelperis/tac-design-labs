@@ -4,7 +4,6 @@ import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer'
 
 import contactPageBackground from '~/assets/images/contactusBG.png';
 
-import styles from './Contact.module.css';
 import EmailSection from './EmailSection';
 import ScoialMediaSection from './ScoialMediaSection';
 import TacDesignLab from './TacDesignLab';
@@ -16,24 +15,26 @@ const Contacts = () => {
     width: contactPageBackground.width,
     height: contactPageBackground.height,
   });
+
   return (
     <section
-      className="bg-[#EDD7C3] bg-contain py-16 font-primary bg-blend-soft-light"
+      className="relative bg-[#EDD7C3] bg-contain py-16 font-primary bg-blend-soft-light"
       style={{
         backgroundImage: optimizedCareerPageBackground,
       }}
     >
-      <div style={{ padding: '20px 30px 20px 70px', marginTop: '50px' }}>
-        <div className={styles.headerStyles}>
+      <div className="relative z-10 mt-12 px-8 py-12 sm:px-10 lg:px-16">
+        <div className="mb-12 text-center lg:text-left">
           <TopSection />
         </div>
-        <div className={styles.bodyContainer}>
-          <div className={styles.leftConatiner}>
+
+        <div className="flex flex-col gap-12 lg:flex-row">
+          <div className="flex-1">
             <EmailSection />
           </div>
-          <div className={styles.rightContainer}>
+          <div className="flex-1">
             <TacDesignLab />
-            <div style={{ marginLeft: '50px' }}>
+            <div className="ml-12 mt-8">
               <ScoialMediaSection />
             </div>
           </div>
