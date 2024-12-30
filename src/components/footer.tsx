@@ -72,7 +72,7 @@ function Footer({ className }: Readonly<{ className?: string }>) {
               </h5>
             </div>
             <p className="font-primary text-lg font-normal text-white md:text-2xl">
-              Tc 14/4455, Leela's, (Near Kerala Bank) Kesavadasapuram,
+              Tc 14/4455, Leela&apos;s, (Near Kerala Bank) Kesavadasapuram,
               Thiruvananthapuram, Kerala 695004
             </p>
           </li>

@@ -13,7 +13,7 @@ import aboutUsPageImage2 from '~/assets/images/about-us-page-image-2.png';
 import aboutUsPageImage3 from '~/assets/images/about-us-page-image-3.png';
 import laurieBarkerPortrait from '~/assets/images/about-us-page-laurie-barker-portrait.jpeg';
 import buttonBackground from '~/assets/images/button-background.png';
-import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.png';
+import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.jpg';
 import landingPageHeroBackground from '~/assets/images/landing-page-hero-background.png';
 
 function AboutUsPage() {
