@@ -56,7 +56,7 @@ function LandingPageCarousel() {
                   <Image
                     src={itm}
                     alt="Portfolio image"
-                    className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                    className="aspect-square rounded-3xl border-[5px] border-[#EDDED4] object-cover drop-shadow-lg"
                   />
                 </div>
               </CarouselItem>

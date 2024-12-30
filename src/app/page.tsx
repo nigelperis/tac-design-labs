@@ -135,7 +135,7 @@ export default function Home() {
         }}
       >
         <div className="md:grid md:grid-cols-2">
-          <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl font-bold leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-16 md:pl-28 md:text-5xl">
+          <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl font-bold leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-[95%] after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-14 md:pl-24 md:text-5xl">
             Sustainable Architecture
           </h2>
 
@@ -190,26 +190,26 @@ export default function Home() {
               </p>
             </li>
           </ul>
-          <ul className="mr-16 hidden grid-cols-2 gap-x-4 gap-y-4 md:grid">
+          <ul className="mr-16 hidden grid-cols-2 gap-x-4 gap-y-4 md:grid md:pt-7">
             <li className="col-span-2">
               <Image
                 src={landingPagePortfolioHouse1}
                 alt="Portfolio image"
-                className="rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
             <li className="">
               <Image
                 src={landingPagePortfolioHouse2}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="aspect-square rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
             <li className="">
               <Image
                 src={landingPagePortfolioHouse3}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="aspect-square rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
           </ul>
@@ -219,14 +219,14 @@ export default function Home() {
               <Image
                 src={landingPagePortfolioHouse4}
                 alt="Portfolio image"
-                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="aspect-video rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
             <li>
               <Image
                 src={landingPagePortfolioHouse5}
                 alt="Portfolio image"
-                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="aspect-video rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
           </ul>
@@ -243,7 +243,7 @@ export default function Home() {
           What Our Clients Say
         </h2>
 
-        <div className="z-[1] my-5 overflow-hidden rounded-2xl">
+        <div className="z-[1] my-5 overflow-hidden rounded-2xl drop-shadow-xl">
           <iframe
             className="mx-auto aspect-video w-[95%] rounded-2xl border-[5px] border-[#ECC19A] sm:w-[90%] md:w-3/4 lg:w-1/2"
             src="https://www.youtube.com/embed/qpOZ6rXgR_s?si=jQgeuC20qgI6c0pK"
