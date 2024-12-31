@@ -1,16 +1,22 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import WorksCarousel from '~/components/landingpage2';
+
+// import { LandingPageCarousel } from './landing-page-carousel';
+
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
+import CloseQuote from '~/assets/svgs/closequote.svg';
 import LandingPageListImage from '~/assets/svgs/landing-page-list-image.svg';
+import OpenQuote from '~/assets/svgs/openquote.svg';
 
 import buttonBackground from '~/assets/images/button-background.png';
-import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.png';
+import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.jpg';
 import landingPageAshamsRavi from '~/assets/images/landing-page-ashams-ravi-potrait.jpeg';
 import landingPageAssetGrass from '~/assets/images/landing-page-asset-grass.png';
 import landingPageAssetLeaves from '~/assets/images/landing-page-asset-leaves.png';
-import landingPageDriedLeavesBackground from '~/assets/images/landing-page-dried-leaves-background.png';
+import landingPageDriedLeavesBackground from '~/assets/images/landing-page-dried-leaves-background.jpg';
 import landingPageHeroBackground from '~/assets/images/landing-page-hero-background.png';
 import landingPageHeroImage from '~/assets/images/landing-page-hero-image.png';
 import landingPagePortfolioHouse1 from '~/assets/images/landing-page-portfolio-house-1.png';
@@ -99,13 +105,16 @@ export default function Home() {
           alt="Ashams Ravi portrait"
           className="relative -top-5 rounded-3xl md:-top-8 md:w-1/4"
         />
-        <div className="md:w-1/2">
-          <p className="mt-2 text-balance text-justify indent-10 font-primary text-lg font-normal italic md:text-4xl">
+        <div className="relative md:w-1/2">
+          <OpenQuote className="absolute -left-11 -top-4 hidden xl:inline" />
+          <p className="mt-2 text-center font-primary text-lg font-normal italic tracking-wide md:text-left md:text-4xl">
             We all know the greenest choice is to avoid building altogether. But
             when construction is necessary, the focus must shift to creating
-            spaces that respect and protect nature.
+            spaces that respect and protect nature.{' '}
+            <CloseQuote className="mt-5 hidden xl:inline" />
           </p>
-          <p className="text-right font-primary text-2xl font-bold text-accent-500">
+
+          <p className="mt-6 text-right font-primary text-2xl font-bold text-accent-500">
             - Ashams Ravi
           </p>
         </div>
@@ -120,13 +129,13 @@ export default function Home() {
       </section>
 
       <section
-        className="relative py-16 md:flex md:justify-between"
+        className="relative bg-cover py-16 md:flex md:justify-between"
         style={{
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
         <div className="md:grid md:grid-cols-2">
-          <h2 className="relative w-2/3 pl-7 font-primary text-4xl font-normal leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary-500 md:col-span-2 md:w-fit md:px-16 md:text-5xl">
+          <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl font-bold leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-[95%] after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-14 md:pl-24 md:text-5xl">
             Sustainable Architecture
           </h2>
 
@@ -181,26 +190,26 @@ export default function Home() {
               </p>
             </li>
           </ul>
-          <ul className="mr-16 hidden grid-cols-2 gap-x-4 gap-y-4 md:grid">
+          <ul className="mr-16 hidden grid-cols-2 gap-x-4 gap-y-4 md:grid md:pt-7">
             <li className="col-span-2">
               <Image
                 src={landingPagePortfolioHouse1}
                 alt="Portfolio image"
-                className="rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
             <li className="">
               <Image
                 src={landingPagePortfolioHouse2}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="aspect-square rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
             <li className="">
               <Image
                 src={landingPagePortfolioHouse3}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="aspect-square rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
           </ul>
@@ -210,14 +219,14 @@ export default function Home() {
               <Image
                 src={landingPagePortfolioHouse4}
                 alt="Portfolio image"
-                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="aspect-video rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
             <li>
               <Image
                 src={landingPagePortfolioHouse5}
                 alt="Portfolio image"
-                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="aspect-video rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
               />
             </li>
           </ul>
@@ -227,16 +236,16 @@ export default function Home() {
       </section>
 
       <section
-        className="relative bg-[#D19A6A] bg-gradient-to-b from-[#D9D9D9] to-[#D19A6A6B] bg-cover bg-center py-11 bg-blend-soft-light shadow-inner drop-shadow-md"
+        className="relative bg-gradient-to-b from-[#D9D9D9] to-[#C6742B33] bg-cover bg-center bg-repeat py-11 shadow-inner drop-shadow-md"
         style={{ backgroundImage: optimizedLandingPageDriedLeavesBackground }}
       >
-        <h2 className="z-[1] text-center font-primary text-4xl font-normal text-[#5A3213] md:text-5xl">
+        <h2 className="z-[1] text-center font-primary text-3xl font-bold text-[#5A3213] md:text-5xl">
           What Our Clients Say
         </h2>
 
-        <div className="z-[1] my-5 overflow-hidden rounded-2xl">
+        <div className="z-[1] my-5 overflow-hidden rounded-2xl drop-shadow-xl">
           <iframe
-            className="aspect-video w-[102%] overflow-hidden rounded-2xl border-[5px] border-[#ECC19A] md:mx-auto md:w-1/2"
+            className="mx-auto aspect-video w-[95%] rounded-2xl border-[5px] border-[#ECC19A] sm:w-[90%] md:w-3/4 lg:w-1/2"
             src="https://www.youtube.com/embed/qpOZ6rXgR_s?si=jQgeuC20qgI6c0pK"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -244,34 +253,39 @@ export default function Home() {
         </div>
 
         <div className="z-[1] px-8">
-          <p className="font-primary text-base font-normal text-[#552B0A] md:mx-auto md:w-1/2 md:text-2xl">
+          <p className="text-center font-primary text-base font-normal text-[#552B0A] md:mx-auto md:w-1/2 md:text-2xl">
             &quot;We are much happier and comfortable living in this new house.
             The quality of life has improved a lot. It was a great experience
             and without TAC Design LAB this project wouldn&apos;t have been
             possible.&quot;
           </p>
-          <p className="mt-5 text-center font-primary text-2xl font-bold text-[#062039] md:text-4xl">
+          <p className="mt-5 text-center font-primary text-xl font-bold text-[#062039] md:text-3xl">
             Anunay & Akanksha
           </p>
         </div>
       </section>
 
       <section
-        className="bg-[#ECC19A99] bg-cover bg-center py-14 bg-blend-soft-light"
-        style={{ backgroundImage: optimizedLandingPageWoodenBoardBackground }}
+        className="border-b-[5px] border-t-[5px] border-white bg-[#ECC19A99] bg-cover bg-center py-14 bg-blend-soft-light md:py-32"
+        style={{
+          backgroundImage: optimizedLandingPageWoodenBoardBackground,
+          boxShadow: 'inset 0px 8px 12px rgba(0, 0, 0, 0.25)',
+        }}
       >
-        <h2 className="bg-cover text-center font-primary text-2xl font-normal text-[#250606] md:text-[40px]">
+        <h2 className="mb-4 bg-cover px-5 text-center font-primary text-2xl font-normal text-[#250606] md:mb-11 md:text-4xl">
           Dive into our portfolio of projects that blend innovative design with
           sustainable solutions.
         </h2>
 
-        <div className="flex justify-center">
+        <WorksCarousel />
+
+        <div className="flex justify-center md:mt-10">
           <Link
-            href="#"
+            href="/our-work"
             style={{ backgroundImage: optimizedButtonBackground }}
-            className="block w-fit bg-cover bg-center px-[34px] py-[30px] font-primary text-lg font-bold text-[#331803]"
+            className="block w-fit bg-cover bg-center px-[34px] py-[30px] font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105"
           >
-            Explore Projects
+            <span className="md:p-8">See Our Work</span>
           </Link>
         </div>
       </section>

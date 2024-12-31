@@ -3,12 +3,11 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { cn } from '~/utils/cn';
 
-import logo from '~/assets/images/logo.png';
+import Logo from '~/assets/svgs/tacDesign.svg';
 
 const navLinks = [
   {
@@ -82,7 +81,7 @@ function Header() {
           href="/"
           className="flex h-[50px] w-[50px] items-center bg-surface-500"
         >
-          <Image src={logo} alt="logo" width={50} height={50} priority />
+          <Logo width={50} height={50} />
         </Link>
 
         {mounted && (
@@ -147,7 +146,7 @@ function Header() {
               {mounted && (
                 <ul
                   className={cn(
-                    'absolute top-full w-full rounded-md bg-[#420C03] px-3 py-3 transition-all md:-left-14 md:min-w-[200%] md:py-2',
+                    'absolute top-full w-full rounded-md bg-[#420C03] px-3 py-3 transition-all md:-left-24 md:min-w-[200%] md:py-2',
                     'invisible opacity-0 md:group-hover:visible md:group-hover:opacity-100',
                     { 'visible opacity-100': isDropDownOpen },
                   )}

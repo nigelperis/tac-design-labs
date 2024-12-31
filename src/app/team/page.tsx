@@ -1,13 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
 import brickButton from '~/assets/images/button-background.png';
 import exploreProjectBG from '~/assets/images/explore-our-work-background.png';
-import exploreOurWork from '~/assets/images/explore-our-work.png';
 import landingPageLeavesBackground from '~/assets/images/landing-page-team-background.png';
 import teamPicture from '~/assets/images/TAC-team-picture.jpg';
 import akshay from '~/assets/profile-images/akshay.jpg';
@@ -15,6 +14,8 @@ import ashams from '~/assets/profile-images/ashams.jpg';
 import aswathi from '~/assets/profile-images/aswathy.jpg';
 import priya from '~/assets/profile-images/priya.jpeg';
 import vijayan from '~/assets/profile-images/vijayan.jpg';
+
+import type { StaticImageData } from 'next/image';
 
 interface TeamMember {
   name: string;
@@ -34,7 +35,7 @@ const optimizedButton = getOptimizedBackgroundImage({
   height: brickButton.height,
 });
 
-const teamMemberDetails: Array<TeamMember> = [
+const teamMemberDetails: TeamMember[] = [
   {
     name: 'AR. ASHAMS RAVI',
     summary:
@@ -188,7 +189,9 @@ function ProfileCard(props: TeamMember) {
           {props.summary}
         </div>
         <button
-          onClick={() => setExpanded((state) => !state)}
+          onClick={() => {
+            setExpanded((state) => !state);
+          }}
           className="self-end text-xl font-semibold text-primary-500 transition-transform duration-200 hover:scale-105"
         >
           Read {isExpanded ? 'Less' : 'More'} {'>'}

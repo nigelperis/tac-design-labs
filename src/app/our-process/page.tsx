@@ -597,7 +597,7 @@ const OurProcess = () => {
                 At TAC Design LAB, every step in our process is designed to
                 achieve excellence. From concept to completion, we ensure that
                 our projects not only meet but exceed expectations. Curious
-                about the milestones we've reached? Explore our proudest
+                about the milestones we have reached? Explore our proudest
                 achievements.
               </p>
               <button
