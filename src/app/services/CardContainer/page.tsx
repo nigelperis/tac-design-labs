@@ -26,8 +26,8 @@ const CardContainer = () => {
       image: '/images/image3.png',
       heading: 'Institutional Projects',
       buttonOne: 'Educational',
-      buttonTwo: 'HealthCare',
-      buttonThree: 'Yoga Centers',
+      buttonTwo: 'Healthcare',
+      buttonThree: 'YogaCenters',
       description:
         'Building institutions that inspire learning, healing, and holistic well-being.',
     },
@@ -60,8 +60,7 @@ const CardContainer = () => {
     {
       image: '/images/image7.png',
       heading: 'Interior Design',
-      buttonOne: 'Residential',
-      buttonTwo: 'Commercial Interiors',
+      buttonOne: 'Residential & Commercial Interiors',
       description:
         'Transforming interiors with eco-friendly, stylish designs that reflect individual personalities.',
     },
@@ -73,31 +72,36 @@ const CardContainer = () => {
         return (
           <section
             key={index}
-            className="mb-5 flex w-full max-w-[1200px] flex-row items-center gap-14 rounded-2xl bg-white/40 p-10 shadow-md"
+            className="mt-[8%] flex h-[473px] w-[333px] flex-col items-center rounded-2xl bg-white/40 p-[25px] shadow-md lg:mb-5 lg:mt-[1%] lg:w-full lg:max-w-[1200px] lg:flex-row lg:gap-14 lg:p-10"
           >
             <img
               src={cardData.image}
               alt={cardData.heading}
-              className="h-[450px] w-[450px] rounded-2xl border-4 border-[#ecc19a]"
+              className="h-[290px] w-[290px] rounded-2xl border-4 border-[#ecc19a] lg:ml-[-3%] lg:h-[450px] lg:w-[450px]"
             />
             <span className="flex-1 pl-5">
-              <p className="mb-5 text-4xl font-bold text-[#552b0a]">
+              <p className="mt-3 text-lg font-bold text-[#552b0a] lg:mb-5 lg:text-4xl">
                 {cardData.heading}
               </p>
-              <section className="mb-5 flex gap-4">
-                <button className="flex h-[51px] min-w-[134px] items-center justify-center rounded-full border border-[#c6742b] bg-[#ffffffe5] px-5 py-2 text-xl font-bold text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a]">
-                  {cardData.buttonOne}
-                </button>
-                <button className="flex h-[51px] min-w-[134px] items-center justify-center rounded-full border border-[#c6742b] bg-[#ffffffe5] px-5 py-2 text-xl font-bold text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a]">
-                  {cardData.buttonTwo}
-                </button>
+              <section className="ml-[-2%] mt-2 flex gap-1 lg:mb-5 lg:gap-4">
+                {cardData.buttonOne && (
+                  <button className="flex items-center justify-center whitespace-nowrap rounded-full border border-[#c6742b] bg-[#ffffffe5] px-2 py-2 font-bold text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a] lg:h-[51px] lg:min-w-[134px] lg:px-5 lg:py-2 lg:text-xl">
+                    {cardData.buttonOne}
+                  </button>
+                )}
+                {cardData.buttonTwo && (
+                  <button className="flex items-center justify-center whitespace-nowrap rounded-full border border-[#c6742b] bg-[#ffffffe5] px-2 py-2 font-bold text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a] lg:h-[51px] lg:min-w-[134px] lg:px-5 lg:py-2 lg:text-xl">
+                    {cardData.buttonTwo}
+                  </button>
+                )}
+
                 {cardData.buttonThree && (
-                  <button className="flex h-[51px] min-w-[134px] items-center justify-center rounded-full border border-[#c6742b] bg-[#ffffffe5] px-5 py-2 text-xl font-bold text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a]">
+                  <button className="flex items-center justify-center whitespace-nowrap rounded-full border border-[#c6742b] bg-[#ffffffe5] px-3 py-2 font-bold text-[#C6742B] transition-all duration-300 hover:scale-105 hover:bg-[#ecc19a] lg:h-[51px] lg:min-w-[134px] lg:px-5 lg:py-2 lg:text-xl">
                     {cardData.buttonThree}
                   </button>
                 )}
               </section>
-              <p className="mt-2 text-lg font-normal leading-[45px] tracking-wide text-black">
+              <p className="mt-2 text-[12px] font-normal leading-[20px] tracking-wide text-black lg:text-lg">
                 {cardData.description}
               </p>
             </span>
@@ -109,3 +113,8 @@ const CardContainer = () => {
 };
 
 export default CardContainer;
+
+{
+  /*
+   */
+}
