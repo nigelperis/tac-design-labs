@@ -1,8 +1,7 @@
 import React from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 
-import { Button } from '~/components/button';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
@@ -14,7 +13,7 @@ import OurWorkBgButton from '~/assets/images/button-background.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
 import landingPageBlogLeavesBackground from '~/assets/images/landing-page-blog-main-leaves-bg.png';
 
-export const blogs: Array<BlogCardDetail> = [
+export const blogs: BlogCardDetail[] = [
   {
     title: 'Sustainable building materials in India',
     description: `When it comes to sustainable architecture, the materials you choose play a crucial role in determining the environmental impact of your building project. Sustainable building materials in India and around the world are increasingly being recognized for their ability to reduce this impact. However, not all materials are created equal, and understanding the environmental footprint of different building materials is essential for making eco-conscious decisions.`,
@@ -33,7 +32,7 @@ export const blogs: Array<BlogCardDetail> = [
   },
   {
     title: 'How to reduce carbon footprint in building design ...',
-    description: `Incorporating carbon reduction strategies from the initial planning stages of a building project is essential for creating sustainable structures. Addressing carbon footprints early can reduce long-term operational costs and contribute positively to the environment.`,
+    description: `Incorporating carbon reduction strategies from the initial planning stages of a building project is essential for creating sustainable structures. Addressing carbon footprints early can reduce long-term operational costs and contribute positively to the environment.`,
     postedBy: 'admin',
     publishedDate: new Date(),
     imageUrl: blogPost3,
@@ -110,10 +109,7 @@ export const BlogCard = (props: BlogCardDetail) => {
         <div className="line-clamp-3 leading-[33px] tracking-[5%]">
           {props.description}
         </div>
-        <Link
-          href={props.blogURL}
-          className="self-end text-accent-500 md:self-center"
-        >
+        <Link href={props.blogURL} className="self-center text-accent-500">
           Read More ...
         </Link>
       </div>
@@ -155,7 +151,7 @@ const ConsultationCTA = () => {
       </div>
       <div className="flex flex-col items-center justify-center gap-6 leading-8 tracking-[2%] md:leading-[45px]">
         <h3 className="text-md text-balance text-center md:text-[32px]">
-          Every great project starts with a conversation. Let's design something
+          Every great project starts with a conversation. Let&apos;s design something
           extraordinary together—talk to us!
         </h3>
         <button
