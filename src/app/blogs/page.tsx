@@ -1,5 +1,6 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 import { Button } from '~/components/button';
 
@@ -20,6 +21,7 @@ const blogs: Array<BlogCardDetail> = [
     postedBy: 'admin',
     publishedDate: new Date(),
     imageUrl: blogPost1,
+    blogURL: '/blogs/01',
   },
   {
     title: 'The Benefits of Bamboo in Sustainable Architecture',
@@ -27,6 +29,7 @@ const blogs: Array<BlogCardDetail> = [
     postedBy: 'admin',
     publishedDate: new Date(),
     imageUrl: blogPost2,
+    blogURL: '/blogs/02',
   },
   {
     title: 'How to reduce carbon footprint in building design ...',
@@ -34,6 +37,7 @@ const blogs: Array<BlogCardDetail> = [
     postedBy: 'admin',
     publishedDate: new Date(),
     imageUrl: blogPost3,
+    blogURL: '/blogs/03',
   },
   {
     title: 'How to design energy-efficient homes',
@@ -41,6 +45,7 @@ const blogs: Array<BlogCardDetail> = [
     postedBy: 'admin',
     publishedDate: new Date(),
     imageUrl: blogPost4,
+    blogURL: '/blogs/04',
   },
 ];
 
@@ -79,6 +84,7 @@ interface BlogCardDetail {
   postedBy: string;
   publishedDate: Date;
   imageUrl: StaticImageData;
+  blogURL: string;
 }
 
 const BlogCard = (props: BlogCardDetail) => {
@@ -104,9 +110,9 @@ const BlogCard = (props: BlogCardDetail) => {
         <div className="line-clamp-3 leading-[33px] tracking-[5%]">
           {props.description}
         </div>
-        <a href="" className="self-center text-accent-500">
+        <Link href={props.blogURL} className="self-center text-accent-500">
           Read More ...
-        </a>
+        </Link>
       </div>
     </div>
   );
