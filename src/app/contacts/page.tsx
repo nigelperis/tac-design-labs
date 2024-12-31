@@ -23,7 +23,7 @@ const Contacts = () => {
         backgroundImage: optimizedCareerPageBackground,
       }}
     >
-      <div className="relative z-10 mt-12 px-8 py-12 sm:px-10 lg:px-16">
+      <div className="relative z-10 mt-12 px-[7%] py-12 lg:px-16">
         <div className="mb-12 text-center lg:text-left">
           <TopSection />
         </div>
@@ -34,7 +34,7 @@ const Contacts = () => {
           </div>
           <div className="flex-1">
             <TacDesignLab />
-            <div className="ml-12 mt-8">
+            <div className="mt-8">
               <ScoialMediaSection />
             </div>
           </div>

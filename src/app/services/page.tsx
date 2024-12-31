@@ -21,20 +21,17 @@ const ServicePage = () => {
       {/* Overlay for subtle dark effect */}
       <div className="pointer-events-none absolute inset-0 bg-opacity-20"></div>
 
-      {/* Content Wrapper */}
-      <div className="relative z-10" style={{ fontFamily: 'Comic Sans MS' }}>
-        {/* Header Section */}
+      <div className="z-10 lg:relative" style={{ fontFamily: 'Comic Sans MS' }}>
         <div className="text-[42px]">
           <h1
-            className="xmt-[75px] mx-auto mb-[30px] w-[498px] text-center text-[42px] font-bold leading-[58.53px] text-[#552b0a]"
+            className="lg:xmt-[75px] top-[20px] h-[33px] w-[393px] text-center text-[24px] font-bold text-[#552b0a] lg:mx-auto lg:mb-[30px] lg:w-[498px] lg:text-[42px] lg:leading-[58.53px]"
             style={{ fontFamily: 'Comic Sans MS' }}
           >
             We Work with Everyone
           </h1>
         </div>
 
-        {/* Card Container Section */}
-        <div className="mx-auto my-0 flex w-[1200px] flex-col items-center gap-[54px] p-[20px]">
+        <div className="flex flex-col items-center lg:mx-auto lg:my-0 lg:w-[1200px] lg:gap-[54px] lg:p-[20px]">
           <CardContainer />
         </div>
       </div>

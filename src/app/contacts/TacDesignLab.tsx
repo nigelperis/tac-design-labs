@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import styles from './Contact.module.css';
 
@@ -17,10 +18,13 @@ const TacDesignLab = () => {
           <section className={styles.sectionContainer}>
             {/* Title line with arrow image and text */}
             <div className={styles.titleContainer}>
-              <img
-                src="./images/arrowImage.png"
+              <Image
+                src="/images/arrowImage.png"
                 alt="Arrow Image"
                 className={styles.arrowImage}
+                height={0}
+                width={0}
+                sizes="100vw"
               />
               <p className={styles.tacText}>TAC Design LAB</p>
             </div>
