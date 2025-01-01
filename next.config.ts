@@ -1,3 +1,5 @@
+import createMDX from '@next/mdx';
+
 /* eslint-disable @typescript-eslint/no-explicit-any -- hh */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access -- hh */
 /* eslint-disable @typescript-eslint/no-unsafe-call -- hh */
@@ -47,6 +49,12 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+});
+
+// Merge MDX config with Next.js config
+export default withMDX(nextConfig);
