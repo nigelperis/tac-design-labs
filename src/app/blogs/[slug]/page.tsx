@@ -12,7 +12,7 @@ import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 
 import BlogHero from '../components/BlogHero';
 import MoreBlogs from '../components/MoreBlogs';
-// MARK: Markdown imports
+
 import Blog01 from '../markdown/blog-01.mdx';
 import Blog02 from '../markdown/blog-02.mdx';
 import Blog03 from '../markdown/blog-03.mdx';
