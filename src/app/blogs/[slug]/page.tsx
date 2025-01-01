@@ -11,6 +11,7 @@ import blogPost3 from '~/assets/images/blog-images/blog-post-3.png';
 import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 
 import BlogHero from '../components/BlogHero';
+import MoreBlogs from '../components/MoreBlogs';
 // MARK: Markdown imports
 import Blog01 from '../markdown/blog-01.mdx';
 import Blog02 from '../markdown/blog-02.mdx';
@@ -126,6 +127,7 @@ export default function Page({
         <div className="p-5 md:p-28">
           {blogs[slug].markdown({ components: overrideComponents })}
         </div>
+        <MoreBlogs currentBlogKey={Number(slug)} />
       </div>
     </>
   );
