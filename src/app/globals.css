@@ -175,7 +175,8 @@ img[alt='b1-6'] {
 img[alt='b1-1'],
 img[alt='b1-4'],
 img[alt='b1-5'],
-img[alt='b1-7'] {
+img[alt='b1-7'],
+img[alt='auto'] {
   margin: auto;
   width: auto;
   height: 484;
@@ -191,7 +192,9 @@ img[alt='b1-7'] {
   img[alt='b1-4'],
   img[alt='b1-5'],
   img[alt='b1-6'],
-  img[alt='b1-7'] {
+  img[alt='b1-7'],
+  img[alt='full'],
+  img[alt='auto'] {
     height: 200px;
   }
 }
