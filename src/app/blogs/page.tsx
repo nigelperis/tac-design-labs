@@ -14,7 +14,7 @@ import OurWorkBgButton from '~/assets/images/button-background.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
 import landingPageBlogLeavesBackground from '~/assets/images/landing-page-blog-main-leaves-bg.png';
 
-const blogs: Array<BlogCardDetail> = [
+export const blogs: Array<BlogCardDetail> = [
   {
     title: 'Sustainable building materials in India',
     description: `When it comes to sustainable architecture, the materials you choose play a crucial role in determining the environmental impact of your building project. Sustainable building materials in India and around the world are increasingly being recognized for their ability to reduce this impact. However, not all materials are created equal, and understanding the environmental footprint of different building materials is essential for making eco-conscious decisions.`,
@@ -87,7 +87,7 @@ interface BlogCardDetail {
   blogURL: string;
 }
 
-const BlogCard = (props: BlogCardDetail) => {
+export const BlogCard = (props: BlogCardDetail) => {
   return (
     <div className="line-clamp-4 flex flex-col rounded-[22px] bg-white bg-opacity-60">
       <Image
@@ -110,7 +110,10 @@ const BlogCard = (props: BlogCardDetail) => {
         <div className="line-clamp-3 leading-[33px] tracking-[5%]">
           {props.description}
         </div>
-        <Link href={props.blogURL} className="self-center text-accent-500">
+        <Link
+          href={props.blogURL}
+          className="self-end text-accent-500 hover:font-bold md:self-center"
+        >
           Read More ...
         </Link>
       </div>
