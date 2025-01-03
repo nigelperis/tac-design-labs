@@ -2,12 +2,11 @@ import React from 'react';
 import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 
-
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
 import blogPost1 from '~/assets/images/blog-images/blog-post-1.jpg';
 import blogPost2 from '~/assets/images/blog-images/blog-post-2.jpg';
-import blogPost3 from '~/assets/images/blog-images/blog-post-3.png';
+import blogPost3 from '~/assets/images/blog-images/blog-post-3.jpg';
 import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 import OurWorkBgButton from '~/assets/images/button-background.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
@@ -31,7 +30,7 @@ export const blogs: BlogCardDetail[] = [
     blogURL: '/blogs/02',
   },
   {
-    title: 'How to reduce carbon footprint in building design ...',
+    title: 'How to reduce carbon footprint in building design...',
     description: `Incorporating carbon reduction strategies from the initial planning stages of a building project is essential for creating sustainable structures. Addressing carbon footprints early can reduce long-term operational costs and contribute positively to the environment.`,
     postedBy: 'admin',
     publishedDate: new Date(),
@@ -99,18 +98,18 @@ export const BlogCard = (props: BlogCardDetail) => {
         }}
       />
       <div className="flex flex-col gap-2 p-5">
-        <h1 className="line-clamp-1 text-xl font-semibold text-primary-500 md:text-2xl">
+        <h1 className="line-clamp-2 text-[22px] font-semibold text-primary-500 md:line-clamp-2">
           {props.title}
         </h1>
         <span className="text-xs">
           by <span className="underline">{props.postedBy}</span> |{' '}
           {props.publishedDate.toDateString()}
         </span>
-        <div className="line-clamp-3 leading-[33px] tracking-[5%]">
+        <div className="line-clamp-6 leading-[33px] tracking-[5%] md:line-clamp-4">
           {props.description}
         </div>
         <Link href={props.blogURL} className="self-center text-accent-500">
-          Read More ...
+          Read More....
         </Link>
       </div>
     </div>
@@ -151,8 +150,8 @@ const ConsultationCTA = () => {
       </div>
       <div className="flex flex-col items-center justify-center gap-6 leading-8 tracking-[2%] md:leading-[45px]">
         <h3 className="text-md text-balance text-center md:text-[32px]">
-          Every great project starts with a conversation. Let&apos;s design something
-          extraordinary together—talk to us!
+          Every great project starts with a conversation. Let&apos;s design
+          something extraordinary together—talk to us!
         </h3>
         <button
           className="relative h-[70px] w-[225] rounded bg-cover bg-center text-base font-bold text-primary-500 duration-200 hover:scale-105 md:h-[120px] md:w-[380px] md:p-10 md:text-2xl md:font-bold"
