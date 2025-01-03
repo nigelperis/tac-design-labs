@@ -78,7 +78,7 @@ const BlogMainPage = () => {
   );
 };
 
-interface BlogCardDetail {
+export interface BlogCardDetail {
   title: string;
   description: string;
   postedBy: string;
@@ -112,7 +112,7 @@ export const BlogCard = (props: BlogCardDetail) => {
         </div>
         <Link
           href={props.blogURL}
-          className="self-end text-accent-500 hover:font-bold md:self-center"
+          className="self-end text-accent-500 md:self-center"
         >
           Read More ...
         </Link>
