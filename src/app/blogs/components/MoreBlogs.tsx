@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 
-import { BlogCard, BlogCardDetail, blogs } from '../page';
+import { BlogCard, blogs } from '../page';
+import type { BlogCardDetail } from '../page';
 
 const MoreBlogs = (props: { currentBlogKey: number }) => {
   const otherBlogs = blogs.filter(
@@ -24,7 +25,7 @@ const MoreBlogs = (props: { currentBlogKey: number }) => {
   );
 };
 
-const MobileMoreBlogs = (props: { blog: Array<BlogCardDetail> }) => {
+const MobileMoreBlogs = (props: { blog: BlogCardDetail[] }) => {
   const [scrollPosition, setScrollPosition] = useState({
     scrollWidth: 0,
     scrollLeft: 0,

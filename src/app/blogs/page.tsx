@@ -100,14 +100,14 @@ export const BlogCard = (props: BlogCardDetail) => {
         }}
       />
       <div className="flex flex-col gap-2 p-5">
-        <h1 className="line-clamp-2 text-[22px] font-semibold text-primary-500 md:line-clamp-2">
+        <h1 className="line-clamp-2 text-xl font-semibold text-primary-500 md:line-clamp-1 md:text-2xl">
           {props.title}
         </h1>
         <span className="text-xs">
           by <span className="underline">{props.postedBy}</span> |{' '}
           {props.publishedDate.toDateString()}
         </span>
-        <div className="line-clamp-6 leading-[33px] tracking-[5%] md:line-clamp-4">
+        <div className="line-clamp-6 leading-[33px] tracking-[5%] md:line-clamp-4 lg:line-clamp-3">
           {props.description}
         </div>
         <Link href={props.blogURL} className="self-center text-accent-500">
