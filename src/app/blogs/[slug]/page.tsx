@@ -1,13 +1,13 @@
 'use client';
 
 import { use } from 'react';
-import { MDXComponents, MDXProps } from 'mdx/types';
-import { StaticImageData } from 'next/image';
+import { type MDXComponents, type MDXProps } from 'mdx/types';
+import { type StaticImageData } from 'next/image';
 
 // MARK: Image imports
-import blogPost1 from '~/assets/images/blog-images/blog-post-1.jpg';
+import blogPost1 from '~/assets/images/blog-images/blog-post-1-banner.jpg';
 import blogPost2 from '~/assets/images/blog-images/blog-post-2.jpg';
-import blogPost3 from '~/assets/images/blog-images/blog-post-3.jpg';
+import blogPost3 from '~/assets/images/blog-images/blog-post-3-banner.jpg';
 import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 
 import BlogHero from '../components/BlogHero';
