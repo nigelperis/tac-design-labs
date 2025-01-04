@@ -1,5 +1,5 @@
 import React from 'react';
-import Image, { type StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
@@ -11,6 +11,8 @@ import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 import OurWorkBgButton from '~/assets/images/button-background.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
 import landingPageBlogLeavesBackground from '~/assets/images/landing-page-blog-main-leaves-bg.png';
+
+import type { StaticImageData } from 'next/image';
 
 export const blogs: BlogCardDetail[] = [
   {
@@ -89,7 +91,7 @@ export const BlogCard = (props: BlogCardDetail) => {
   return (
     <div className="line-clamp-4 flex flex-col rounded-[22px] bg-white bg-opacity-60">
       <Image
-        className="h-80 w-full object-cover"
+        className="h-56 w-full object-cover md:h-80"
         src={props.imageUrl}
         alt="blog-image"
         height={400}
