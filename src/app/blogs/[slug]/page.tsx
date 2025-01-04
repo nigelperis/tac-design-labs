@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import blogPost1 from '~/assets/images/blog-images/blog-post-1.jpg';
 import blogPost2 from '~/assets/images/blog-images/blog-post-2.jpg';
-import blogPost3 from '~/assets/images/blog-images/blog-post-3.jpg';
+import blogPost3 from '~/assets/images/blog-images/blog-post-3-banner.jpg';
 import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 
 import BlogHero from '../components/BlogHero';
