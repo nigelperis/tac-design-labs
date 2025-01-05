@@ -131,10 +131,10 @@ const Workshops = () => {
                 Exposure to diverse materials and methods sparks creativity,
                 encouraging students to explore fresh, sustainable design ideas.
               </li>
-              <li className="md:text-[24px text-[16px]">
+              <li className="text-[16px] md:text-[24px]">
                 <span className="font-bold">Real-World Solutions:</span>{' '}
                 Hands-on experience equips students with the tools to tackle
-                real-world challenges in sustainable construction confidently.
+                real-world challenges in sustainable construction confidently
               </li>
             </ul>
             <p className="text-[16px] md:text-[24px]">
@@ -151,7 +151,7 @@ const Workshops = () => {
                 alt="Workshop Image 1"
                 width={500}
                 height={500}
-                className="aspect-square h-full w-full rounded-xl border-2 border-[#F0E0D6] object-cover md:border-[5px]"
+                className="borderborder-[1.5px] aspect-square h-full w-full rounded-xl border-[#F0E0D6] object-cover md:border-[2.5px]"
               />
             </div>
             <div className="col-span-1 overflow-hidden rounded-xl drop-shadow-xl">
@@ -160,7 +160,7 @@ const Workshops = () => {
                 alt="Workshop Image 2"
                 width={500}
                 height={500}
-                className="aspect-square h-full w-full rounded-xl border-2 border-[#F0E0D6] object-cover md:border-[5px]"
+                className="aspect-square h-full w-full rounded-xl border-[1.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
               />
             </div>
             <div className="col-span-2 overflow-hidden rounded-xl drop-shadow-xl">
@@ -169,7 +169,7 @@ const Workshops = () => {
                 alt="Workshop Image 3"
                 width={500}
                 height={500}
-                className="h-full w-full rounded-xl border-2 border-[#F0E0D6] object-cover md:border-[5px]"
+                className="aspect-video h-full w-full rounded-xl border-[1.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
               />
             </div>
           </div>
@@ -178,7 +178,7 @@ const Workshops = () => {
           <h1 className="mb-4 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-8 md:text-[48px]">
             Workshop Structure
           </h1>
-          <p className="text-[16px] font-bold text-[#173552] md:text-[28px]">
+          <p className="text-[16px] font-bold italic text-[#173552] md:text-[28px]">
             These workshops are thoughtfully crafted to inspire and educate,
             combining engaging lectures with hands-on sessions to provide a
             holistic learning experience in sustainable architecture.
@@ -204,11 +204,11 @@ const Workshops = () => {
                     urgent need for eco-conscious development.
                   </li>
                   <li>
-                    <span className="font-bold">A Thought to Ponder:</span> "The
-                    earth is not given to you by your parents; you have taken a
-                    loan from your next generation." This quote serves as a
-                    powerful reminder of our shared responsibility toward the
-                    planet.
+                    <span className="font-bold">A Thought to Ponder:</span>{' '}
+                    &quot;The earth is not given to you by your parents; you
+                    have taken a loan from your next generation.&quot; This
+                    quote serves as a powerful reminder of our shared
+                    responsibility toward the planet.
                   </li>
                   <li>
                     <span className="font-bold">
@@ -226,32 +226,32 @@ const Workshops = () => {
                 </ul>
               </div>
 
-              <div className="mt-0 flex w-full flex-col gap-4 md:mt-12 lg:w-1/3">
-                <div className="relative h-72 w-full lg:h-52">
+              <div className="mt-0 flex w-full flex-col gap-4 md:mt-12 lg:w-[30%]">
+                <div className="relative h-52 w-full">
                   <Image
                     src={Workshope6}
                     alt="Lecture Image 1"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-xl border-[2px] border-[#F0E0D6] shadow-md drop-shadow-xl md:border-[5px]"
+                    className="rounded-xl border-[2.5px] border-[#F0E0D6] shadow-md drop-shadow-xl"
                   />
                 </div>
-                <div className="relative h-72 w-full lg:h-52">
+                <div className="relative h-52 w-full">
                   <Image
                     src={Workshope7}
                     alt="Lecture Image 2"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-xl border-[2px] border-[#F0E0D6] shadow-md drop-shadow-xl md:border-[5px]"
+                    className="rounded-xl border-[2.5px] border-[#F0E0D6] shadow-md drop-shadow-xl"
                   />
                 </div>
-                <div className="relative h-72 w-full lg:h-52">
+                <div className="relative h-52 w-full">
                   <Image
                     src={Workshope8}
                     alt="Lecture Image 3"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-xl border-[2px] border-[#F0E0D6] shadow-md drop-shadow-xl md:border-[5px]"
+                    className="rounded-xl border-[2.5px] border-[#F0E0D6] shadow drop-shadow-xl"
                   />
                 </div>
               </div>
@@ -260,7 +260,7 @@ const Workshops = () => {
               <h2 className="mb-3 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-8 md:text-[36px]">
                 Hands-On Sessions
               </h2>
-              <p className="text-[16px] font-[700] text-[#173552] md:text-[24px]">
+              <p className="text-[16px] font-[700] italic text-[#173552] md:text-[24px]">
                 Dive into a world of experiential learning with our hands-on
                 sessions, where sustainable materials take center stage. These
                 sessions are crafted to highlight the versatility of each
@@ -277,7 +277,7 @@ const Workshops = () => {
                 Bamboo Workshop
               </h1>
             </div>
-            <p className="my-6 text-[16px] font-[700] text-[#173552] md:px-10 md:text-[24px]">
+            <p className="my-6 text-[16px] font-[700] italic text-[#173552] md:px-10 md:text-[24px]">
               Discover the versatility and elegance of bamboo as a sustainable
               construction material.
             </p>
@@ -340,8 +340,8 @@ const Workshops = () => {
                   bamboo components in construction.
                 </li>
                 <li className="">
-                  Structural Properties: Examining bamboo's tensile strength and
-                  bending capacity.
+                  Structural Properties: Examining bamboo&apos;s tensile
+                  strength and bending capacity.
                 </li>
                 <li className="">
                   Practical Construction: Building a structure using bamboo,
@@ -363,7 +363,7 @@ const Workshops = () => {
                 Mud Workshop
               </h1>
             </div>
-            <p className="my-6 text-[16px] font-[700] text-[#173552] md:px-10 md:text-[24px]">
+            <p className="my-6 text-[16px] font-[700] italic text-[#173552] md:px-10 md:text-[24px]">
               Step into the timeless world of mud construction, a practice
               rooted in tradition yet essential for sustainable living.
             </p>
@@ -412,8 +412,8 @@ const Workshops = () => {
                   the advantages and challenges of mud in modern construction.
                 </li>
                 <li className="my-5">
-                  <strong>Climatic Considerations:</strong> Evaluating mud's
-                  performance in different environments
+                  <strong>Climatic Considerations:</strong> Evaluating
+                  mud&apos;s performance in different environments
                 </li>
                 <li className="my-5">
                   <strong>Tests for Mud:</strong> Learning methods to assess mud
@@ -445,7 +445,7 @@ const Workshops = () => {
                 Brick Workshop
               </h1>
             </div>
-            <p className="my-6 text-[16px] font-[700] text-[#173552] md:px-10 md:text-[24px]">
+            <p className="my-6 text-[16px] font-[700] italic text-[#173552] md:px-10 md:text-[24px]">
               Explore the enduring charm and strength of bricks in sustainable
               construction.
             </p>
@@ -520,7 +520,7 @@ const Workshops = () => {
         <div className="mt-6">
           <div className="">
             {/* Key Takeaways Section */}
-            <div className="mb-8 rounded-[18px] border-2 border-orange-300 bg-[#FFFFFF80] bg-opacity-50 p-8 shadow-md">
+            <div className="mb-8 rounded-[18px] border-2 border-[#ECC19A] bg-[#FFFFFF80] bg-opacity-50 p-8 shadow-md drop-shadow-xl">
               <h2 className="text-[24px] font-bold text-[#C6742B] md:text-[36px]">
                 Key Takeaways for Students
               </h2>
@@ -546,11 +546,11 @@ const Workshops = () => {
                   preparing for real-world projects.
                 </li>
               </ul>
-              <p className="mt-6 text-[16px] font-[700] text-[#173552] md:text-[24px]">
+              <p className="mt-6 text-[16px] font-[700] italic text-[#173552] md:text-[24px]">
                 These workshops bridge the gap between theory and practice,
                 empowering students with the skills, confidence, and creativity
                 needed to build sustainably. By engaging with these hands-on
-                experiences, participants are not just learning – they're
+                experiences, participants are not just learning – they&apos;re
                 shaping a greener future in architecture.
               </p>
             </div>
@@ -560,8 +560,8 @@ const Workshops = () => {
               <h2 className="text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Completed Workshops and Talks
               </h2>
-              <p className="mt-5 text-[16px] font-[700] text-[#173552] md:text-[24px]">
-                A journey of impactful workshops and enlightening talks that
+              <p className="mt-5 text-base font-bold italic leading-5 text-[#173552] md:text-[24px]">
+                A journey of impactful workshos and enlightening talks that
                 promote sustainable architectural practices.
               </p>
             </div>
@@ -570,20 +570,23 @@ const Workshops = () => {
 
         <div className="h-32"></div>
       </div>
-      <div className="py-10">
+      <div>
         <div className="bg-white py-2">
           <div
-            className="flex h-[400px] w-full items-center justify-center bg-cover bg-center"
+            className="flex h-[320px] w-full items-center justify-center bg-cover bg-center px-4 sm:h-[380px] sm:px-8 md:h-[520px] md:px-16 lg:px-20"
             style={{
               backgroundImage: optimizedWorkshopCtaBackground,
             }}
           >
             <div className="m-auto max-w-3xl text-center">
-              <h1 className="mb-4 text-[16px] font-[400] text-[#000000] md:text-3xl md:font-semibold">
+              <h2 className="mb-2 text-center text-[24px] font-normal md:text-[48px]">
+                Explore More Insights
+              </h2>{' '}
+              <p className="text-base font-[400] tracking-wide text-[#000000] md:text-[32px] md:leading-10">
                 Dive deeper into sustainable architecture, materials, and
                 techniques by exploring our blog posts. Gain valuable knowledge,
                 tips, and inspiration to fuel your design journey.
-              </h1>
+              </p>
               <div className="flex justify-center">
                 <Link
                   href=""
