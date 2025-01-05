@@ -1,5 +1,5 @@
 import React from 'react';
-import Image, { type StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
@@ -11,6 +11,8 @@ import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 import OurWorkBgButton from '~/assets/images/button-background.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
 import landingPageBlogLeavesBackground from '~/assets/images/landing-page-blog-main-leaves-bg.png';
+
+import type { StaticImageData } from 'next/image';
 
 export const blogs: BlogCardDetail[] = [
   {
@@ -89,7 +91,7 @@ export const BlogCard = (props: BlogCardDetail) => {
   return (
     <div className="line-clamp-4 flex flex-col rounded-[22px] bg-white bg-opacity-60">
       <Image
-        className="h-80 w-full object-cover"
+        className="h-56 w-full object-cover md:h-80"
         src={props.imageUrl}
         alt="blog-image"
         height={400}
@@ -98,14 +100,14 @@ export const BlogCard = (props: BlogCardDetail) => {
         }}
       />
       <div className="flex flex-col gap-2 p-5">
-        <h1 className="line-clamp-2 text-[22px] font-semibold text-primary-500 md:line-clamp-2">
+        <h1 className="line-clamp-2 text-xl font-semibold text-primary-500 md:line-clamp-1 md:text-2xl">
           {props.title}
         </h1>
         <span className="text-xs">
           by <span className="underline">{props.postedBy}</span> |{' '}
           {props.publishedDate.toDateString()}
         </span>
-        <div className="line-clamp-6 leading-[33px] tracking-[5%] md:line-clamp-4">
+        <div className="line-clamp-6 leading-[33px] tracking-[5%] md:line-clamp-4 lg:line-clamp-3">
           {props.description}
         </div>
         <Link href={props.blogURL} className="self-center text-accent-500">
