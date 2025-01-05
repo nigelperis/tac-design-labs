@@ -150,6 +150,7 @@ function AboutUsPage() {
           <div className="md:flex-1 md:basis-1/3">
             <Image
               src={laurieBarkerPortrait}
+              placeholder="blur"
               alt="Laurie Barker Portrait"
               className="w-full overflow-hidden rounded-lg border-[6px] border-white"
             />
@@ -189,11 +190,11 @@ function AboutUsPage() {
         <SeparatorSM className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 md:hidden" />
         <SeparatorLG className="absolute left-1/2 top-0 hidden -translate-x-1/2 -translate-y-1/2 md:block" />
         <div className="bg-opacity-50 px-8 py-12 md:px-32">
-          <h2 className="font-primary text-3xl font-normal text-primary-500 md:text-[52px]">
+          <h2 className="font-primary text-3xl font-normal text-primary-500 md:text-[52px] md:leading-[72px]">
             We
             <span className="text-accent-500"> Collaborate</span> with Everyone
           </h2>
-          <p className="mt-5 text-balance text-justify font-primary text-lg font-normal text-gray-950 md:text-2xl">
+          <p className="mt-5 text-balance text-justify font-primary text-lg font-normal text-gray-950 md:text-2xl md:leading-[45px]">
             At TAC Design Lab, we believe in the power of collaboration. Whether
             you&apos;re a homeowner, a business, or an institution, we tailor
             our services to meet your unique needs. Let&apos;s work together to
@@ -230,7 +231,7 @@ function StoryCard(props: StoryCardProps) {
     props;
   return (
     <li className="group">
-      <div className="md:hidden">{title} </div>
+      <div className="md:hidden md:leading-[48px]">{title} </div>
 
       <div className="items-center md:mt-8 md:flex md:gap-11 md:group-odd:flex-row-reverse">
         <div className="flex-grow basis-1/2">
@@ -243,7 +244,7 @@ function StoryCard(props: StoryCardProps) {
         </div>
 
         <div className="flex-grow basis-1/2">
-          <div className="mb-5 hidden md:block">{title}</div>
+          <div className="mb-5 hidden md:block md:leading-[48px]">{title}</div>
           <p className="text-balance text-justify font-primary text-lg font-normal text-gray-950 md:text-2xl md:leading-[45px]">
             {description}
           </p>

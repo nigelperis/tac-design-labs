@@ -94,14 +94,16 @@ function Achievement() {
   return (
     <div className=" ">
       <section
-        className="space-y-5 bg-[#D19A6A] bg-opacity-35 bg-repeat px-7 py-8 bg-blend-soft-light md:px-32"
+        className="bg-[#D19A6A] bg-opacity-35 bg-repeat px-7 py-8 bg-blend-soft-light md:px-32"
         style={{
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        {achievements.map((achievement, index) => (
-          <AchievementCard key={index} {...achievement} />
-        ))}
+        <ul className="group space-y-5">
+          {achievements.map((achievement, index) => (
+            <AchievementCard key={index} {...achievement} />
+          ))}
+        </ul>
       </section>
 
       <section
@@ -141,14 +143,15 @@ function AchievementCard(props: AchievementCardProps) {
   const { title, description, image, buttonText, href } = props;
 
   return (
-    <div className="gap-2 overflow-auto rounded-[20px] bg-[#FFFFFF80] p-5 font-primary shadow-lg last:mb-10 md:grid md:grid-cols-[2fr_1fr] md:rounded-[48px]">
+    <li className="gap-2 overflow-auto rounded-[20px] bg-[#FFFFFF80] p-5 font-primary shadow-lg last:mb-10 md:grid md:grid-cols-[2fr_1fr] md:rounded-[48px]">
       <h3 className="text-2xl font-bold text-[#552B0A] lg:text-3xl 2xl:self-center">
         {title}
       </h3>
       <Image
         src={image}
         alt="Achievement photo"
-        className="my-5 h-full items-center overflow-hidden rounded-[22px] border-4 border-[#ECC19A] md:col-start-2 md:col-end-3 md:row-span-3 md:my-auto md:min-h-full"
+        className="my-5 h-full items-center overflow-hidden rounded-[22px] border-4 border-[#ECC19A] md:col-start-2 md:col-end-3 md:row-span-3 md:my-auto md:h-auto"
+        placeholder="blur"
       />
       <p className="text-balance text-justify text-base leading-7 text-black md:text-xl lg:leading-10 2xl:h-fit 2xl:self-center">
         {description}
@@ -159,6 +162,6 @@ function AchievementCard(props: AchievementCardProps) {
       >
         {buttonText} <ChevronRight className="text-[7px]" />
       </Link>
-    </div>
+    </li>
   );
 }
