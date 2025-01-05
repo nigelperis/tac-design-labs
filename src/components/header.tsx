@@ -152,6 +152,14 @@ function Header() {
                   )}
                 >
                   <DropdownNavLink
+                    text="Workshops"
+                    href="/workshops"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsDropDownOpen(false);
+                    }}
+                  />
+                  <DropdownNavLink
                     text="Our Process"
                     href="/our-process"
                     onClick={() => {
