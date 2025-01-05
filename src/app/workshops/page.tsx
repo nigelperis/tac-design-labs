@@ -312,10 +312,8 @@ const Workshops = () => {
               </p>
               <ul className="list-inside text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 <li className="my-5">
-                  <strong>Introduction to Bamboo:</strong>Characteristics,
-                  properties, and preservation methods. Feasibility in Current
-                  Scenarios: Exploring the pros and cons of bamboo in
-                  contemporary construction
+                  <strong>Introduction to Bamboo:</strong> Characteristics,
+                  properties, and preservation methods.
                 </li>
                 <li className="my-5">
                   <strong>Feasibility in Current Scenarios:</strong> Exploring
@@ -333,13 +331,13 @@ const Workshops = () => {
                   <strong>Joining Techniques: </strong> Methods for joining
                   bamboo components in construction.
                 </li>
-                <li className="">
-                  Structural Properties: Examining bamboo&apos;s tensile
-                  strength and bending capacity.
+                <li className="mt-5">
+                  <strong>Structural Properties: </strong>Examining
+                  bamboo&apos;s tensile strength and bending capacity.
                 </li>
-                <li className="">
-                  Practical Construction: Building a structure using bamboo,
-                  applying the knowledge gained in the lecture.
+                <li className="mt-5">
+                  <strong>Practical Construction: </strong>Building a structure
+                  using bamboo, applying the knowledge gained in the lecture.
                 </li>
                 <li className="mt-5">
                   <strong>Relevant IS Codes:</strong> Overview of Indian
