@@ -362,7 +362,7 @@ const Workshops = () => {
               rooted in tradition yet essential for sustainable living.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 lg:gap-4">
+            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={mudWorkshop1}
@@ -442,7 +442,7 @@ const Workshops = () => {
               construction.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 lg:gap-4">
+            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={brickWorkshop1}
@@ -477,10 +477,10 @@ const Workshops = () => {
                 <li className="my-5">
                   <strong>Introduction to Bricks:</strong>Characteristics,
                   properties, and preservation techniques.
-                  <li className="my-5">
-                    <strong>Feasibility in Current Scenarios:</strong> Assessing
-                    the relevance of bricks in sustainable architecture.{' '}
-                  </li>
+                </li>
+                <li className="my-5">
+                  <strong>Feasibility in Current Scenarios:</strong> Assessing
+                  the relevance of bricks in sustainable architecture.{' '}
                 </li>
                 <li className="my-5">
                   <strong>Climatic Considerations:</strong> Understanding how
