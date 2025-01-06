@@ -100,7 +100,7 @@ const Workshops = () => {
           solutions.
         </p>
       </div>
-      <div className="px-[18px] font-primary md:px-10 lg:px-20">
+      <div className="px-[18px] font-primary md:px-10 lg:px-16">
         <h1 className="mb-2 text-xl font-bold leading-normal text-[#C6742B] md:mb-8 md:text-[42px]">
           Why These Workshops Matter
         </h1>
@@ -176,7 +176,7 @@ const Workshops = () => {
           </div>
         </div>
         <div className="py-1 md:py-10">
-          <h1 className="mb-4 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-8 md:text-[48px]">
+          <h1 className="mb-4 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-10 md:text-[48px]">
             Workshop Structure
           </h1>
           <p className="text-[16px] font-bold italic text-[#173552] md:text-[28px]">
@@ -186,11 +186,11 @@ const Workshops = () => {
           </p>
           <div className="py-6">
             <div className="flex flex-col justify-between gap-8 lg:flex-row">
-              <div className="w-full lg:w-[70%]">
-                <h2 className="mb-8 text-3xl text-[24px] font-bold text-[#C6742B] md:text-[36px]">
+              <div className="flex h-full w-full flex-col justify-between lg:w-[70%]">
+                <h2 className="mb-8 text-3xl text-[24px] font-bold text-[#C6742B] md:ml-6 md:text-[36px]">
                   Lecture Session Highlights:
                 </h2>
-                <ul className="ml-6 max-w-2xl list-disc space-y-4 text-[16px] text-[#173552] md:ml-12 md:text-[24px]">
+                <ul className="ml-9 max-w-[790px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px]">
                   <li>
                     <span className="font-bold">
                       Understanding the Built Environment:
@@ -205,11 +205,11 @@ const Workshops = () => {
                     urgent need for eco-conscious development.
                   </li>
                   <li>
-                    <span className="font-bold">A Thought to Ponder:</span>{' '}
-                    &quot;The earth is not given to you by your parents; you
-                    have taken a loan from your next generation.&quot; This
-                    quote serves as a powerful reminder of our shared
-                    responsibility toward the planet.
+                    <span className="font-bold">A Thought to Ponder:</span> "The
+                    earth is not given to you by your parents; you have taken a
+                    loan from your next generation." This quote serves as a
+                    powerful reminder of our shared responsibility toward the
+                    planet.
                   </li>
                   <li>
                     <span className="font-bold">
@@ -219,7 +219,7 @@ const Workshops = () => {
                     waste, and designing with minimal environmental impact.
                   </li>
                   <li>
-                    <span className="font-bold">Building with Purpose:</span>{' '}
+                    <span className="font-bold">Building with Purpose:</span>
                     Understand how to create spaces that blend comfort,
                     functionality, and environmental harmony through humane
                     design and site analysis.
@@ -227,8 +227,8 @@ const Workshops = () => {
                 </ul>
               </div>
 
-              <div className="mt-0 flex w-full flex-col gap-4 md:mt-12 lg:w-[50%]">
-                <div className="relative aspect-video w-full lg:aspect-[4/3] xl:aspect-[2/0.9]">
+              <div className="mt-0 flex h-full w-full flex-col gap-4 md:mt-12 lg:w-[30%]">
+                <div className="relative aspect-video h-full w-full lg:aspect-[5/3.5] xl:aspect-[2/1]">
                   <Image
                     src={Workshope6}
                     alt="Lecture Image 1"
@@ -236,7 +236,7 @@ const Workshops = () => {
                     className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow-md drop-shadow-xl"
                   />
                 </div>
-                <div className="relative aspect-video w-full lg:aspect-[4/3] xl:aspect-[2/0.9]">
+                <div className="w-ful relative aspect-video h-full lg:aspect-[5/3.5] xl:aspect-[2/1]">
                   <Image
                     src={Workshope7}
                     alt="Lecture Image 2"
@@ -244,7 +244,7 @@ const Workshops = () => {
                     className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow-md drop-shadow-xl"
                   />
                 </div>
-                <div className="relative aspect-video w-full lg:aspect-[4/3] xl:aspect-[2/0.9]">
+                <div className="relative aspect-video h-full w-full lg:aspect-[5/3.5] xl:aspect-[2/1]">
                   <Image
                     src={Workshope8}
                     alt="Lecture Image 3"
@@ -281,7 +281,7 @@ const Workshops = () => {
               construction material.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
+            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={bambooWorkshop1}
@@ -362,12 +362,13 @@ const Workshops = () => {
               rooted in tradition yet essential for sustainable living.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 md:gap-1 lg:gap-4">
+            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={mudWorkshop1}
                   alt="Workshop Group"
                   fill
+                  objectPosition="50% 30%"
                   className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
@@ -441,7 +442,7 @@ const Workshops = () => {
               construction.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 md:gap-1 lg:gap-4">
+            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={brickWorkshop1}
@@ -475,9 +476,11 @@ const Workshops = () => {
               <ul className="list-inside text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 <li className="my-5">
                   <strong>Introduction to Bricks:</strong>Characteristics,
-                  properties, and preservation techniques. Feasibility in
-                  Current Scenarios: Assessing the relevance of bricks in
-                  sustainable architecture.
+                  properties, and preservation techniques.
+                  <li className="my-5">
+                    <strong>Feasibility in Current Scenarios:</strong> Assessing
+                    the relevance of bricks in sustainable architecture.{' '}
+                  </li>
                 </li>
                 <li className="my-5">
                   <strong>Climatic Considerations:</strong> Understanding how
@@ -561,12 +564,12 @@ const Workshops = () => {
       <div>
         <div className="bg-white py-2">
           <div
-            className="flex h-[320px] w-full items-center justify-center bg-cover bg-center px-4 sm:h-[380px] sm:px-8 md:h-[520px] md:px-16 lg:px-20"
+            className="flex h-[320px] w-full items-center justify-center bg-cover bg-center px-4 sm:h-[380px] sm:px-8 md:h-[520px] md:px-16 lg:px-16"
             style={{
               backgroundImage: optimizedWorkshopCtaBackground,
             }}
           >
-            <div className="m-auto max-w-3xl text-center">
+            <div className="m-auto max-w-5xl text-center">
               <h2 className="mb-2 text-center text-[24px] font-normal md:text-[48px]">
                 Explore More Insights
               </h2>{' '}
