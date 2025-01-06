@@ -5,7 +5,7 @@ import type { BlogCardDetail } from '../page';
 
 const MoreBlogs = (props: { currentBlogKey: number }) => {
   const otherBlogs = blogs.filter(
-    (blog, index) => index !== props.currentBlogKey,
+    (blog, index) => index + 1 !== props.currentBlogKey,
   );
   return (
     <div className="flex flex-col gap-5 border-y-[10px] bg-surface-500 py-5 md:gap-12 md:px-28 md:py-16">

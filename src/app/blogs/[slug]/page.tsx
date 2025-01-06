@@ -12,7 +12,6 @@ import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 
 import BlogHero from '../components/BlogHero';
 import MoreBlogs from '../components/MoreBlogs';
-
 import Blog01 from '../markdown/blog-01.mdx';
 import Blog02 from '../markdown/blog-02.mdx';
 import Blog03 from '../markdown/blog-03.mdx';
@@ -56,7 +55,7 @@ const overrideComponents: MDXComponents = {
       {children}
     </p>
   ),
-  a: ({ children }) => (
+  a: ({ children, ...rest }) => (
     <a
       className="text-base leading-7 md:text-2xl md:leading-10"
       style={{
@@ -64,6 +63,7 @@ const overrideComponents: MDXComponents = {
         letterSpacing: '5%',
         paddingBottom: '23px',
       }}
+      {...rest}
     >
       {children}
     </a>
