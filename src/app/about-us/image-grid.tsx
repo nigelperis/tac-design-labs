@@ -7,6 +7,7 @@ import { cn } from '~/utils/cn';
 import imageGridStyles from './image-grid-style.module.css';
 
 interface ImageGridProps {
+  mobileImage: string | StaticImport;
   mainImage: string | StaticImport;
   subImage1: string | StaticImport;
   subImage2: string | StaticImport;
@@ -14,7 +15,13 @@ interface ImageGridProps {
 }
 
 function ImageGrid(props: ImageGridProps) {
-  const { mainImage, subImage1, subImage2, alignment = 'main-left' } = props;
+  const {
+    mobileImage,
+    mainImage,
+    subImage1,
+    subImage2,
+    alignment = 'main-left',
+  } = props;
 
   return (
     <div
@@ -24,6 +31,15 @@ function ImageGrid(props: ImageGridProps) {
         [imageGridStyles.main_bottom]: alignment === 'main-bottom',
       })}
     >
+      <Image
+        className={cn(
+          imageGridStyles.image_base_style,
+          imageGridStyles.mobile_image,
+        )}
+        src={mobileImage}
+        placeholder="blur"
+        alt="Grid mobile image"
+      />
       <Image
         className={cn(
           imageGridStyles.image_base_style,

@@ -15,11 +15,19 @@
   object-position: center;
   border-width: 5px;
   box-shadow: 0px 4px 4px 0px #00000040;
+
   @apply border-surface-500;
+}
+
+.mobile_image {
+  aspect-ratio: 16 / 9;
+  display: block;
+  min-height: 224px;
 }
 
 .main_image {
   grid-area: main-image;
+  display: none;
 }
 
 .sub_image_1 {
@@ -45,10 +53,17 @@
 }
 
 @screen md {
+  .mobile_image {
+    display: none;
+  }
+
   .image_grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+  .main_image {
+    display: block;
   }
   .sub_image_1 {
     display: block;

@@ -3,8 +3,6 @@ import Link from 'next/link';
 
 import WorksCarousel from '~/components/landingpage2';
 
-// import { LandingPageCarousel } from './landing-page-carousel';
-
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
 import CloseQuote from '~/assets/svgs/closequote.svg';

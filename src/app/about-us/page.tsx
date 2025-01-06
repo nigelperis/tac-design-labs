@@ -53,12 +53,12 @@ function AboutUsPage() {
   return (
     <div className="relative">
       <section
-        className="bg-[#EDD7C3] py-16 bg-blend-soft-light"
+        className="bg-[#EDD7C3] py-10 bg-blend-soft-light"
         style={{
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <p className="mx-8 w-fit rounded-full bg-white px-5 py-2 font-primary text-xs font-normal text-primary-500 md:mx-[120px] md:px-10 md:py-[15px] md:text-base">
+        <p className="mx-8 w-fit rounded-full bg-white px-5 py-[10px] font-primary text-xs font-normal text-primary-500 md:mx-[120px] md:px-10 md:py-[15px] md:text-base">
           Our story
         </p>
 
@@ -68,8 +68,9 @@ function AboutUsPage() {
           Vision and Innovation
         </h2>
 
-        <ul className="my-10 space-y-10 px-8 md:px-[120px]">
+        <ul className="space-y-10 px-8 md:px-[120px]">
           <StoryCard
+            mobileImage={aboutUsPageImage1}
             mainImage={aboutUsPageImage1}
             subImage1={aboutUsPageImage2}
             subImage2={aboutUsPageImage3}
@@ -78,11 +79,12 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-5xl font-normal text-primary-500">
+              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
                 Foundations of
                 <span className="text-accent-500"> Our Vision</span>
               </h3>
             }
+            mobileImage={aboutUsPageImage5}
             mainImage={aboutUsPageImage4}
             subImage1={aboutUsPageImage5}
             subImage2={aboutUsPageImage6}
@@ -92,12 +94,13 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-3xl font-normal text-primary-500 md:text-5xl">
+              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
                 Partnering with
                 <span className="text-accent-500"> Clients</span> for Better
                 Designs
               </h3>
             }
+            mobileImage={aboutUsPageImage8}
             mainImage={aboutUsPageImage7}
             subImage1={aboutUsPageImage8}
             subImage2={aboutUsPageImage9}
@@ -107,7 +110,7 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-3xl font-normal text-primary-500 md:text-5xl">
+              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
                 A Portfolio of{' '}
                 <span className="text-accent-500">
                   {' '}
@@ -115,6 +118,7 @@ function AboutUsPage() {
                 </span>
               </h3>
             }
+            mobileImage={aboutUsImage11}
             mainImage={aboutUsImage10}
             subImage1={aboutUsImage11}
             subImage2={aboutUsImage12}
@@ -124,11 +128,12 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-3xl font-normal text-primary-500 md:text-5xl">
+              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
                 From Workshops to a{' '}
                 <span className="text-accent-500"> Greener Future </span>
               </h3>
             }
+            mobileImage={aboutUsImage14}
             mainImage={aboutUsImage13}
             subImage1={aboutUsImage14}
             subImage2={aboutUsImage15}
@@ -139,15 +144,15 @@ function AboutUsPage() {
       </section>
 
       <section className="bg-[#FAEEE5] px-8 py-9 md:px-[120px] md:py-[100px]">
-        <p className="w-fit rounded-full bg-[#F3D1B3] px-5 py-[10px] font-primary text-xs font-normal text-primary-500 md:hidden">
-          Inspiration
+        <p className="w-fit rounded-full bg-[#F3D1B3] px-9 py-[15px] font-primary text-xs font-extrabold tracking-[20%] text-primary-500 md:hidden">
+          INSPIRATION
         </p>
-        <h2 className="font-primary text-3xl font-normal text-primary-500 md:hidden">
-          Laurie Baker: The Pioneer of Sustainable Architecture and Timeless
-          Inspiration
+        <h2 className="font-primary text-3xl font-normal leading-[39px] text-primary-500 md:hidden md:leading-[67px]">
+          Laurie Baker: <span className="text-accent-500"> The Pioneer</span> of
+          Sustainable Architecture and Timeless Inspiration
         </h2>
-        <div className="flex flex-col items-center gap-10 md:flex-row md:gap-20">
-          <div className="md:flex-1 md:basis-1/3">
+        <div className="flex flex-col items-center gap-5 md:flex-row md:gap-20">
+          <div className="mt-5 md:my-0 md:flex-1 md:basis-1/3">
             <Image
               src={laurieBarkerPortrait}
               placeholder="blur"
@@ -156,15 +161,15 @@ function AboutUsPage() {
             />
           </div>
           <div className="md:flex-1 md:basis-2/3">
-            <p className="mb-3 hidden w-fit rounded-full bg-[#F3D1B3] px-10 py-[15px] font-primary text-base font-normal text-primary-500 md:block">
-              Inspiration
+            <p className="mb-3 hidden w-fit rounded-full bg-[#F3D1B3] px-9 py-[15px] font-primary text-base font-extrabold tracking-[20%] text-primary-500 md:block">
+              INSPIRATION
             </p>
             <h2 className="mb-3 hidden font-primary text-5xl font-normal text-primary-500 md:block md:leading-[66px]">
               Laurie Baker:{' '}
               <span className="text-accent-500"> The Pioneer</span> of
               Sustainable Architecture and Timeless Inspiration
             </h2>
-            <p className="text-balance text-justify font-primary text-lg font-normal text-gray-950">
+            <p className="text-balance text-justify font-primary text-lg font-normal leading-8 tracking-[2%] text-gray-950">
               Laurie Baker (2 March 1917 – 1 April 2007) was a British-born
               Indian architect, known for his sustainable and cost-effective
               approach to architecture. Baker was deeply committed to the idea
@@ -182,14 +187,14 @@ function AboutUsPage() {
         </div>
       </section>
       <section
-        className="relative border-y-8 border-white bg-[#EDD7C3] py-11 bg-blend-soft-light md:py-20"
+        className="relative border-y-8 border-white bg-[#EDD7C3] py-11 bg-blend-soft-light md:py-[88px]"
         style={{
           backgroundImage: optimizedLandingPageHeroBackground,
         }}
       >
         <SeparatorSM className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 md:hidden" />
         <SeparatorLG className="absolute left-1/2 top-0 hidden -translate-x-1/2 -translate-y-1/2 md:block" />
-        <div className="bg-opacity-50 px-8 py-12 md:px-32">
+        <div className="bg-opacity-50 px-8 md:px-32">
           <h2 className="font-primary text-3xl font-normal text-primary-500 md:text-[52px] md:leading-[72px]">
             We
             <span className="text-accent-500"> Collaborate</span> with Everyone
@@ -205,7 +210,7 @@ function AboutUsPage() {
         <Link
           href="#"
           style={{ backgroundImage: optimizedButtonBackground }}
-          className="mx-auto block w-fit bg-cover bg-center px-[40px] py-[20px] font-primary text-lg font-bold text-[#331803] md:mx-32 md:ml-auto"
+          className="mx-auto block w-fit bg-cover bg-center px-[34px] py-[30px] font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105 md:ml-auto"
         >
           Explore Our Services
         </Link>
@@ -218,7 +223,7 @@ export default AboutUsPage;
 
 interface StoryCardProps {
   title?: React.ReactNode;
-
+  mobileImage: string | StaticImport;
   mainImage: string | StaticImport;
   subImage1: string | StaticImport;
   subImage2: string | StaticImport;
@@ -227,8 +232,15 @@ interface StoryCardProps {
 }
 
 function StoryCard(props: StoryCardProps) {
-  const { title, mainImage, description, subImage1, subImage2, alignment } =
-    props;
+  const {
+    title,
+    mobileImage,
+    mainImage,
+    description,
+    subImage1,
+    subImage2,
+    alignment,
+  } = props;
   return (
     <li className="group">
       <div className="md:hidden md:leading-[48px]">{title} </div>
@@ -236,6 +248,7 @@ function StoryCard(props: StoryCardProps) {
       <div className="items-center md:mt-8 md:flex md:gap-11 md:group-odd:flex-row-reverse">
         <div className="flex-grow basis-1/2">
           <ImageGrid
+            mobileImage={mobileImage}
             mainImage={mainImage}
             subImage1={subImage1}
             subImage2={subImage2}
