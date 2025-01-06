@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
 import buttonBackground from '~/assets/images/button-background.png';
+import workshopHeaderBackground from '~/assets/images/workshop_bg_header_2.jpg';
+import workshopImage1 from '~/assets/images/workshop_bg_header.jpg';
 import Workshope3 from '~/assets/images/workshop_image1.jpg';
 import Workshope4 from '~/assets/images/workshop_image2.jpg';
 import Workshope5 from '~/assets/images/workshop_image3.jpg';
@@ -15,12 +17,10 @@ import brickWorkshop1 from '~/assets/images/workshop-brick-1.jpeg';
 import brickWorkshop2 from '~/assets/images/workshop-brick-2.jpeg';
 import brickWorkshop3 from '~/assets/images/workshop-brick-3.jpeg';
 import workshopCta from '~/assets/images/workshop-cta.jpg';
-import workshopHeaderBackground from '~/assets/images/workshop-header-background.png';
 import mudWorkshop1 from '~/assets/images/workshop-mud-1.jpeg';
 import mudWorkshop2 from '~/assets/images/workshop-mud-2.jpeg';
 import mudWorkshop3 from '~/assets/images/workshop-mud-3.jpeg';
 import workshopPageBackground from '~/assets/images/workshop-page-background.png';
-import workshopImage1 from '~/assets/images/workshop-page-image-1.png';
 import Workshope6 from '~/assets/images/Workshop4.jpg';
 import Workshope7 from '~/assets/images/workshop5.jpg';
 import Workshope8 from '~/assets/images/workshop6.jpg';
@@ -50,42 +50,43 @@ const Workshops = () => {
       }}
     >
       <div className="mx-auto flex h-auto flex-col lg:flex-row">
-        <div className="relative lg:w-[40%]">
+        <div className="relative flex-shrink-0 lg:w-[35%]">
           <Image
             src={workshopHeaderBackground}
             alt="Workshops Header Background"
             width={600}
             height={300}
-            className="hidden h-auto w-full object-cover lg:flex"
+            className="hidden h-full w-full object-cover lg:flex"
           />
           <Image
             src={Workshopemobile}
             alt="Workshops Header Background"
             width={600}
             height={300}
-            className="flex h-auto w-full object-cover lg:hidden"
+            className="flex h-full w-full object-cover lg:hidden"
           />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-5 p-6 font-primary">
             <h2 className="text-center text-[44px] font-bold text-[#331803] md:text-[62px]">
               Workshops
             </h2>
-            <p className="text-[25px] text-[#5A3213] md:text-[36px]">
+            <p className="text-center text-[25px] text-[#5A3213] md:text-[36px]">
               Learn, Build, Innovate
             </p>
           </div>
         </div>
 
-        <div className="relative h-full lg:w-[60%]">
+        <div className="relative h-full lg:w-[65%]">
           <Image
             src={workshopImage1}
             alt="Workshop Gallery"
             width={840}
             height={500}
-            className="hidden h-auto w-full object-cover lg:flex"
+            className="hidden h-full w-full object-cover lg:flex"
           />
         </div>
       </div>
+
       <div className="px-[18px] py-10 md:px-20 md:py-10">
         <p className="text-justify text-[16px] font-[400] leading-relaxed text-[#173552] md:text-[28px]">
           At TAC Design LAB, we believe in nurturing the next generation of
@@ -99,13 +100,13 @@ const Workshops = () => {
           solutions.
         </p>
       </div>
-      <div className="px-[18px] font-primary md:px-20">
+      <div className="px-[18px] font-primary md:px-10 lg:px-20">
         <h1 className="mb-2 text-xl font-bold leading-normal text-[#C6742B] md:mb-8 md:text-[42px]">
           Why These Workshops Matter
         </h1>
 
-        <div className="mb-12 flex flex-col-reverse gap-8 md:justify-between xl:flex-row-reverse">
-          <div className="w-full space-y-6 font-[400] text-[#173552] xl:w-[50%]">
+        <div className="mb-12 flex flex-col-reverse gap-8 md:justify-between xl:flex-col-reverse">
+          <div className="w-full space-y-6 font-[400] text-[#173552] xl:w-[100%]">
             <ul className="list-disc pl-6 md:pl-10">
               <li className="text-[16px] md:text-[24px]">
                 <span className="font-bold">Practical Learning:</span>{' '}
@@ -144,32 +145,32 @@ const Workshops = () => {
             </p>
           </div>
 
-          <div className="mt-5 grid w-full grid-cols-2 gap-2 xl:w-[45%]">
-            <div className="col-span-1 overflow-hidden rounded-xl drop-shadow-xl">
+          <div className="mt-5 grid w-full grid-cols-2 gap-2 lg:w-[100%] lg:grid-cols-3 xl:gap-0">
+            <div className="col-span-1 overflow-hidden rounded-xl drop-shadow-xl xl:p-3">
               <Image
                 src={Workshope3}
                 alt="Workshop Image 1"
                 width={500}
                 height={500}
-                className="borderborder-[1.5px] aspect-square h-full w-full rounded-xl border-[#F0E0D6] object-cover md:border-[2.5px]"
+                className="borderborder-[1.5px] aspect-[4/3] h-full w-full rounded-xl border-[#F0E0D6] object-cover md:border-[2.5px]"
               />
             </div>
-            <div className="col-span-1 overflow-hidden rounded-xl drop-shadow-xl">
+            <div className="col-span-1 overflow-hidden rounded-xl drop-shadow-xl xl:p-3">
               <Image
                 src={Workshope4}
                 alt="Workshop Image 2"
                 width={500}
                 height={500}
-                className="aspect-square h-full w-full rounded-xl border-[1.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
+                className="aspect-[4/3] h-full w-full rounded-xl border-[1.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
               />
             </div>
-            <div className="col-span-2 overflow-hidden rounded-xl drop-shadow-xl">
+            <div className="col-span-2 overflow-hidden rounded-xl drop-shadow-xl lg:col-span-1 xl:p-3">
               <Image
                 src={Workshope5}
                 alt="Workshop Image 3"
                 width={500}
                 height={500}
-                className="aspect-video h-full w-full rounded-xl border-[1.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
+                className="aspect-[4/3] h-full w-full rounded-xl border-[1.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
               />
             </div>
           </div>
@@ -184,8 +185,8 @@ const Workshops = () => {
             holistic learning experience in sustainable architecture.
           </p>
           <div className="py-6">
-            <div className="flex flex-col gap-8 lg:flex-row">
-              <div className="flex-1">
+            <div className="flex flex-col justify-between gap-8 lg:flex-row">
+              <div className="w-full lg:w-[70%]">
                 <h2 className="mb-8 text-3xl text-[24px] font-bold text-[#C6742B] md:text-[36px]">
                   Lecture Session Highlights:
                 </h2>
@@ -226,8 +227,8 @@ const Workshops = () => {
                 </ul>
               </div>
 
-              <div className="mt-0 flex w-full flex-col gap-4 md:mt-12 lg:w-[30%]">
-                <div className="relative h-52 w-full">
+              <div className="mt-0 flex w-full flex-col gap-4 md:mt-12 lg:w-[50%]">
+                <div className="relative aspect-video w-full lg:aspect-[4/3] xl:aspect-[2/0.9]">
                   <Image
                     src={Workshope6}
                     alt="Lecture Image 1"
@@ -235,7 +236,7 @@ const Workshops = () => {
                     className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow-md drop-shadow-xl"
                   />
                 </div>
-                <div className="relative h-52 w-full">
+                <div className="relative aspect-video w-full lg:aspect-[4/3] xl:aspect-[2/0.9]">
                   <Image
                     src={Workshope7}
                     alt="Lecture Image 2"
@@ -243,12 +244,12 @@ const Workshops = () => {
                     className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow-md drop-shadow-xl"
                   />
                 </div>
-                <div className="relative h-52 w-full">
+                <div className="relative aspect-video w-full lg:aspect-[4/3] xl:aspect-[2/0.9]">
                   <Image
                     src={Workshope8}
                     alt="Lecture Image 3"
                     fill
-                    className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow drop-shadow-xl"
+                    className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow-md drop-shadow-xl"
                   />
                 </div>
               </div>
@@ -267,6 +268,7 @@ const Workshops = () => {
             </div>
           </div>
         </div>
+
         <div className="">
           <div className=" ">
             <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5 md:py-2">
@@ -279,8 +281,8 @@ const Workshops = () => {
               construction material.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:px-10">
-              <div className="relative h-[380px]">
+            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
+              <div className="relative aspect-square">
                 <Image
                   src={bambooWorkshop1}
                   alt="Workshop Group"
@@ -288,7 +290,7 @@ const Workshops = () => {
                   className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
-              <div className="relative h-[380px]">
+              <div className="relative aspect-square">
                 <Image
                   src={bambooWorkshop2}
                   alt="Bamboo Structure"
@@ -296,7 +298,7 @@ const Workshops = () => {
                   className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
-              <div className="relative h-[380px]">
+              <div className="relative aspect-square">
                 <Image
                   src={bambooWorkshop3}
                   alt="Hands-on Bamboo Work"
@@ -360,8 +362,8 @@ const Workshops = () => {
               rooted in tradition yet essential for sustainable living.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:px-10">
-              <div className="relative h-[380px]">
+            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 md:gap-1 lg:gap-4">
+              <div className="relative aspect-square">
                 <Image
                   src={mudWorkshop1}
                   alt="Workshop Group"
@@ -369,7 +371,7 @@ const Workshops = () => {
                   className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
-              <div className="relative h-[380px]">
+              <div className="relative aspect-square">
                 <Image
                   src={mudWorkshop2}
                   alt="Bamboo Structure"
@@ -377,7 +379,7 @@ const Workshops = () => {
                   className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
-              <div className="relative h-[380px]">
+              <div className="relative aspect-square">
                 <Image
                   src={mudWorkshop3}
                   alt="Hands-on Bamboo Work"
@@ -439,8 +441,8 @@ const Workshops = () => {
               construction.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:px-10">
-              <div className="relative h-[380px]">
+            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 md:gap-1 lg:gap-4">
+              <div className="relative aspect-square">
                 <Image
                   src={brickWorkshop1}
                   alt="Workshop Group"
@@ -448,7 +450,7 @@ const Workshops = () => {
                   className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
-              <div className="relative h-[380px]">
+              <div className="relative aspect-square">
                 <Image
                   src={brickWorkshop2}
                   alt="Bamboo Structure"
@@ -456,7 +458,7 @@ const Workshops = () => {
                   className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
-              <div className="relative h-[380px]">
+              <div className="relative aspect-square">
                 <Image
                   src={brickWorkshop3}
                   alt="Hands-on Bamboo Work"
@@ -510,7 +512,7 @@ const Workshops = () => {
               <h2 className="text-[24px] font-bold text-[#C6742B] md:text-[36px]">
                 Key Takeaways for Students
               </h2>
-              <ul className="mx-auto mt-8 max-w-6xl space-y-4 text-[16px] text-lg font-[400] text-[#173552] md:text-[24px]">
+              <ul className="mx-auto mt-8 space-y-4 text-[16px] text-lg font-[400] text-[#173552] md:text-[24px]">
                 <li>
                   <strong>Confidence with Sustainable Materials:</strong>{' '}
                   Hands-on sessions help students understand and confidently use
@@ -546,7 +548,7 @@ const Workshops = () => {
               <h2 className="text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Completed Workshops and Talks
               </h2>
-              <p className="mt-5 text-base font-bold italic leading-5 text-[#173552] md:text-[24px]">
+              <p className="mt-5 text-base font-bold italic leading-relaxed text-[#173552] md:text-[24px]">
                 A journey of impactful workshos and enlightening talks that
                 promote sustainable architectural practices.
               </p>
