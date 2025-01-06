@@ -3,23 +3,6 @@
 @tailwind utilities;
 
 :root {
-  /* styles/globals.css */
-  ::-webkit-scrollbar {
-    width: 10px;
-    border-radius: 10px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #e7e3df;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #635553;
-    border-radius: 10px;
-  }
-
   --color-primary-50: #fbe8db;
   --color-primary-100: #f6d2b6;
   --color-primary-200: #eda268;
@@ -56,18 +39,33 @@
   --color-accent-900: #261608;
   --color-accent-950: #150c05;
 
-  @theme {
-    --color-surface-50: #fdfaf6;
-    --color-surface-100: #fbf2ea;
-    --color-surface-200: #f8e8d8;
-    --color-surface-300: #f4dac3;
-    --color-surface-400: #f0cdad;
-    --color-surface-500: #ecc19a;
-    --color-surface-600: #df9958;
-    --color-surface-700: #c57325;
-    --color-surface-800: #854d19;
-    --color-surface-900: #40250c;
-    --color-surface-950: #221406;
+  --color-surface-50: #fdfaf6;
+  --color-surface-100: #fbf2ea;
+  --color-surface-200: #f8e8d8;
+  --color-surface-300: #f4dac3;
+  --color-surface-400: #f0cdad;
+  --color-surface-500: #ecc19a;
+  --color-surface-600: #df9958;
+  --color-surface-700: #c57325;
+  --color-surface-800: #854d19;
+  --color-surface-900: #40250c;
+  --color-surface-950: #221406;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--color-accent-50);
+    box-shadow: inset 0 0 5px #e7e3df;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-accent-500);
+    border-radius: 10px;
   }
 }
 
@@ -80,9 +78,14 @@
   top: 60%;
   right: 20;
   height: 100%;
-  border-right: 2;
-  border-style: dashed;
-  border-color: var(--color-primary-500);
+  width: 2px;
+
+  background-image: repeating-linear-gradient(
+    var(--color-primary-500) 0 4px,
+    transparent 4px 8px,
+    var(--color-primary-500) 8px 16px,
+    transparent 16px 24px
+  );
 }
 
 /**
@@ -94,9 +97,14 @@
   bottom: 30;
   left: 20;
   width: 100%;
-  border-bottom: 2;
-  border-style: dashed;
-  border-color: var(--color-primary-500);
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    to right,
+    black 0 4px,
+    transparent 4px 8px,
+    black 8px 16px,
+    transparent 16px 24px
+  );
 }
 
 @media screen and (min-width: 768px) {

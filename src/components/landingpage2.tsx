@@ -2,7 +2,6 @@
 
 import React from 'react';
 import AutoScroll from 'embla-carousel-auto-scroll';
-// import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
@@ -21,12 +20,6 @@ const images = [
 ] as const;
 
 const WorksCarousel = () => {
-  // const OPTIONS: EmblaOptionsType = { loop: true };
-  // const SLIDE_COUNT = 5;
-  // const slides = Array.from(Array(SLIDE_COUNT).keys());
-  // const { slides } = props;
-  // const OPTIONS: EmblaOptionsType = { loop: true };
-
   const [emblaRef] = useEmblaCarousel(
     {
       align: 'center',
@@ -47,11 +40,6 @@ const WorksCarousel = () => {
     <section className="embla font-primary">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {/* {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
-            </div>
-          ))} */}
           {images.map((itm, index) => {
             return (
               <div className="embla__slide cursor-pointer p-1" key={index}>
@@ -75,11 +63,6 @@ const WorksCarousel = () => {
                     </div>
                   </div>
                 </div>
-                {/* <Image
-                  src={itm}
-                  alt="Portfolio image"
-                  className="aspect-square rounded-lg border-[5px] border-[#F0E0D6] object-cover lg:h-[300px]"
-                /> */}
               </div>
             );
           })}
