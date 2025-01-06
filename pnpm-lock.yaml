@@ -62,19 +62,19 @@ devDependencies:
     specifier: 9.6.1
     version: 9.6.1
   '@types/node':
-    specifier: ^20
+    specifier: '20'
     version: 20.17.9
   '@types/react':
-    specifier: ^18
+    specifier: '18'
     version: 18.3.13
   '@types/react-dom':
-    specifier: ^18
+    specifier: '18'
     version: 18.3.1
   '@vercel/style-guide':
     specifier: 6.0.0
     version: 6.0.0(eslint@8.57.1)(prettier@3.4.2)(typescript@5.6.2)
   eslint:
-    specifier: ^8
+    specifier: '8'
     version: 8.57.1
   eslint-config-next:
     specifier: 15.0.3
@@ -89,7 +89,7 @@ devDependencies:
     specifier: 15.2.10
     version: 15.2.10
   postcss:
-    specifier: ^8
+    specifier: '8'
     version: 8.4.49
   prettier:
     specifier: 3.4.2
@@ -2800,6 +2800,7 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    requiresBuild: true
 
   /color-string@1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
