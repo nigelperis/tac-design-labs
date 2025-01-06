@@ -1,0 +1,38 @@
+/**
+ * Before is a vertical dashed line
+ */
+.dashed_dotted_line::before {
+  content: '';
+  position: absolute;
+  top: 60%;
+  right: 1.25rem; /* 20px */
+  height: 100%;
+  width: 2px;
+  background-image: var(--vertical-dotted-dashed-line);
+}
+
+/**
+   * After is an horizontal dashed line
+   */
+.dashed_dotted_line::after {
+  content: '';
+  position: absolute;
+  bottom: 1.875rem; /* 30px */
+  left: 1.25rem; /* 20px */
+  width: 100%;
+  height: 2px;
+  background-image: var(--horizontal-dotted-dashed-line);
+}
+
+@screen md {
+  .dashed_dotted_line::before {
+    right: auto;
+    left: 2.5rem; /* 40px */
+    top: 0.625rem; /* 10px */
+  }
+
+  .dashed_dotted_line::after {
+    top: 2.5rem; /*40px */
+    bottom: auto;
+  }
+}

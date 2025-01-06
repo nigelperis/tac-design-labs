@@ -55,10 +55,9 @@ const OurWork = () => {
               <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
               <Image
                 src={CanaanBgImg}
-                layout="fill"
-                objectFit="cover"
                 alt="CanaanBgImg"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-cover"
               />
               <div className="absolute bottom-3 left-4 z-10 text-white">
                 <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
@@ -76,10 +75,9 @@ const OurWork = () => {
               <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
               <Image
                 src={ShireBgImg}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt="ShireBgImg"
-                className="rounded-lg"
+                className="rounded-lg object-cover"
               />
               <div className="absolute bottom-3 left-4 z-20 text-white">
                 <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
@@ -97,10 +95,9 @@ const OurWork = () => {
               <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
               <Image
                 src={SanchiBgImg}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt="SanchiBgImg"
-                className="rounded-lg"
+                className="rounded-lg object-cover"
               />
               <div className="absolute bottom-3 left-4 z-20 text-white">
                 <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
@@ -118,10 +115,9 @@ const OurWork = () => {
               <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
               <Image
                 src={HavenBgImg}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt="HavenBgImg"
-                className="rounded-lg"
+                className="rounded-lg object-cover"
               />
               <div className="absolute bottom-3 left-4 z-20 text-white">
                 <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
