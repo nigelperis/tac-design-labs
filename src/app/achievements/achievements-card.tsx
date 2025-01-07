@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { cn } from '~/utils/cn';
 
-import achievementsStyles from './achievements-style.module.css';
+import achievementsStyles from './achievements-card-style.module.css';
 
 interface AchievementCardProps {
   title: string;
