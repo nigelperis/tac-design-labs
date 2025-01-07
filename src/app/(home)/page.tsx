@@ -4,6 +4,7 @@ import Link from 'next/link';
 import WorksCarousel from '~/components/landingpage2';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
+import { cn } from '~/utils/cn';
 
 import CloseQuote from '~/assets/svgs/closequote.svg';
 import LandingPageListImage from '~/assets/svgs/landing-page-list-image.svg';
@@ -25,6 +26,7 @@ import landingPagePortfolioHouse5 from '~/assets/images/landing-page-portfolio-h
 import landingPageWoodenBoardBackground from '~/assets/images/landing-page-wooden-board-background.png';
 
 import { LandingPageCarousel } from './landing-page-carousel';
+import styles from './landing-page-style.module.css';
 
 export default function Home() {
   const optimizedLandingPageHeroBackground = getOptimizedBackgroundImage({
@@ -65,7 +67,10 @@ export default function Home() {
   return (
     <div className="h-full min-h-full">
       <section
-        className="landing-page-hero relative h-full min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light md:flex md:h-[70vh] md:flex-row-reverse md:items-center md:justify-between"
+        className={cn(
+          'relative h-full min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light md:flex md:h-[70vh] md:flex-row-reverse md:items-center md:justify-between',
+          styles.dashed_dotted_line,
+        )}
         style={{
           backgroundImage: optimizedLandingPageHeroBackground,
         }}

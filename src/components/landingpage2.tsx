@@ -48,10 +48,9 @@ const WorksCarousel = () => {
                     <div className="absolute inset-0 z-10 rounded-lg bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20 md:rounded-2xl"></div>
                     <Image
                       src={itm.src}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
                       alt="SanchiBgImg"
-                      className="rounded-md md:rounded-xl"
+                      className="rounded-md object-cover md:rounded-xl"
                     />
                     <div className="absolute bottom-3 left-4 z-20 text-white">
                       <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">

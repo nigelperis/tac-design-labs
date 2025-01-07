@@ -231,27 +231,24 @@ const Workshops = () => {
                   <Image
                     src={Workshope6}
                     alt="Lecture Image 1"
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-xl border-[2.5px] border-[#F0E0D6] shadow-md drop-shadow-xl"
+                    fill
+                    className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow-md drop-shadow-xl"
                   />
                 </div>
                 <div className="relative h-52 w-full">
                   <Image
                     src={Workshope7}
                     alt="Lecture Image 2"
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-xl border-[2.5px] border-[#F0E0D6] shadow-md drop-shadow-xl"
+                    fill
+                    className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow-md drop-shadow-xl"
                   />
                 </div>
                 <div className="relative h-52 w-full">
                   <Image
                     src={Workshope8}
                     alt="Lecture Image 3"
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-xl border-[2.5px] border-[#F0E0D6] shadow drop-shadow-xl"
+                    fill
+                    className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow drop-shadow-xl"
                   />
                 </div>
               </div>
@@ -287,27 +284,24 @@ const Workshops = () => {
                 <Image
                   src={bambooWorkshop1}
                   alt="Workshop Group"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
+                  fill
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
                 <Image
                   src={bambooWorkshop2}
                   alt="Bamboo Structure"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
+                  fill
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
                 <Image
                   src={bambooWorkshop3}
                   alt="Hands-on Bamboo Work"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
+                  fill
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
             </div>
@@ -373,27 +367,24 @@ const Workshops = () => {
                 <Image
                   src={mudWorkshop1}
                   alt="Workshop Group"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
+                  fill
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
                 <Image
                   src={mudWorkshop2}
                   alt="Bamboo Structure"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
+                  fill
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
                 <Image
                   src={mudWorkshop3}
                   alt="Hands-on Bamboo Work"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
+                  fill
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
             </div>
@@ -455,27 +446,24 @@ const Workshops = () => {
                 <Image
                   src={brickWorkshop1}
                   alt="Workshop Group"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
+                  fill
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
                 <Image
                   src={brickWorkshop2}
                   alt="Bamboo Structure"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
+                  fill
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
               <div className="relative h-[380px]">
                 <Image
                   src={brickWorkshop3}
                   alt="Hands-on Bamboo Work"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[38px] border-[5px] border-[#F0E0D6] drop-shadow-xl"
+                  fill
+                  className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
             </div>
