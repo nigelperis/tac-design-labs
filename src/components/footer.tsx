@@ -28,9 +28,9 @@ function Footer({ className }: Readonly<{ className?: string }>) {
             href="/"
             className="flex w-fit items-center space-x-3 bg-surface-500"
           >
-            <Logo width={100} height={100} className="object-contain" />
+            <Logo className="h-20 w-20 object-contain md:h-32 md:w-32" />{' '}
           </Link>
-          <h4 className="text-center font-primary text-5xl font-normal text-slate-50">
+          <h4 className="text-center font-primary text-3xl font-normal text-slate-50 md:text-4xl">
             TAC Design LAB
           </h4>
           <div className="mt-6 flex flex-row space-x-5">
@@ -67,11 +67,11 @@ function Footer({ className }: Readonly<{ className?: string }>) {
           <li className="flex flex-col">
             <div className="mb-2 flex items-center space-x-4">
               <MapPin size={28} className="stroke-[#DAD84C]" />
-              <h5 className="font-primary text-2xl font-bold text-white">
+              <h5 className="font-primary text-lg font-bold text-white md:text-2xl">
                 Address
               </h5>
             </div>
-            <p className="font-primary text-lg font-normal text-white md:text-2xl">
+            <p className="font-primary text-base font-normal text-white md:text-xl">
               Tc 14/4455, Leela&apos;s, (Near Kerala Bank) Kesavadasapuram,
               Thiruvananthapuram, Kerala 695004
             </p>
@@ -81,13 +81,13 @@ function Footer({ className }: Readonly<{ className?: string }>) {
           <li className="flex flex-col">
             <div className="mb-2 flex items-center space-x-4">
               <Mail size={28} className="stroke-[#DAD84C]" />
-              <h5 className="font-primary text-2xl font-bold text-white">
+              <h5 className="font-primary text-lg font-bold text-white md:text-2xl">
                 Email Us
               </h5>
             </div>
             <a
               href="mailto:tacdesignlab@gmail.com"
-              className="font-primary text-lg font-normal text-white underline md:text-2xl"
+              className="font-primary text-base font-normal text-white underline md:text-xl"
             >
               tacdesignlab@gmail.com
             </a>
@@ -97,11 +97,11 @@ function Footer({ className }: Readonly<{ className?: string }>) {
           <li className="flex flex-col">
             <div className="mb-2 flex items-center space-x-4">
               <Phone size={28} className="stroke-[#DAD84C]" />
-              <h5 className="font-primary text-2xl font-bold text-white">
+              <h5 className="font-primary text-lg font-bold text-white md:text-2xl">
                 Phone
               </h5>
             </div>
-            <div className="font-primary text-lg font-normal text-white md:text-2xl">
+            <div className="font-primary text-base font-normal text-white md:text-xl">
               <a href="tel:+919072062086">+91 90720 62086</a>
             </div>
           </li>
@@ -110,11 +110,11 @@ function Footer({ className }: Readonly<{ className?: string }>) {
           <li className="flex flex-col">
             <div className="mb-2 flex items-center space-x-4">
               <Clock5 size={28} className="stroke-[#DAD84C]" />
-              <h5 className="font-primary text-2xl font-bold text-white">
+              <h5 className="font-primary text-lg font-bold text-white md:text-2xl">
                 Working Hours
               </h5>
             </div>
-            <p className="font-primary text-lg font-normal text-white md:text-2xl">
+            <p className="font-primary text-base font-normal text-white md:text-xl">
               Monday to Friday: 9AM – 5PM
               <br />
               Saturday: 9AM – 12:30PM
@@ -127,7 +127,7 @@ function Footer({ className }: Readonly<{ className?: string }>) {
 
       {/* Footer Bottom */}
       <section className="bg-gray-950 py-4">
-        <p className="text-center font-primary text-sm text-slate-50 md:text-base">
+        <p className="text-center font-primary text-[8px] leading-3 text-slate-50 md:text-base">
           COPYRIGHT © 2024{' '}
           <Link href="/" className="hover:underline">
             TACDESIGNLAB
