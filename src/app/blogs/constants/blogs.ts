@@ -38,4 +38,4 @@ export const blogs: BlogCardDetail[] = [
     imageUrl: blogPost4,
     blogURL: '/blogs/04',
   },
-];
+] as const;
