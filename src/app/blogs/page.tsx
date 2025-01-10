@@ -1,53 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
-import blogPost1 from '~/assets/images/blog-images/blog-post-1.jpg';
-import blogPost2 from '~/assets/images/blog-images/blog-post-2.jpg';
-import blogPost3 from '~/assets/images/blog-images/blog-post-3.jpg';
-import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 import OurWorkBgButton from '~/assets/images/button-background.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
 import landingPageBlogLeavesBackground from '~/assets/images/landing-page-blog-main-leaves-bg.png';
 
-import type { StaticImageData } from 'next/image';
-
-export const blogs: BlogCardDetail[] = [
-  {
-    title: 'Sustainable building materials in India',
-    description: `When it comes to sustainable architecture, the materials you choose play a crucial role in determining the environmental impact of your building project. Sustainable building materials in India and around the world are increasingly being recognized for their ability to reduce this impact. However, not all materials are created equal, and understanding the environmental footprint of different building materials is essential for making eco-conscious decisions.`,
-    postedBy: 'admin',
-    publishedDate: new Date(),
-    imageUrl: blogPost1,
-    blogURL: '/blogs/01',
-  },
-  {
-    title: 'The Benefits of Bamboo in Sustainable Architecture',
-    description: `Bamboo, often called “green steel,” is gaining popularity in sustainable architecture. This versatile plant is not only eco-friendly but also incredibly strong, making it a compelling alternative to building materials like steel and concrete. However, not all materials are ...`,
-    postedBy: 'admin',
-    publishedDate: new Date(),
-    imageUrl: blogPost2,
-    blogURL: '/blogs/02',
-  },
-  {
-    title: 'How to reduce carbon footprint in building design...',
-    description: `Incorporating carbon reduction strategies from the initial planning stages of a building project is essential for creating sustainable structures. Addressing carbon footprints early can reduce long-term operational costs and contribute positively to the environment.`,
-    postedBy: 'admin',
-    publishedDate: new Date(),
-    imageUrl: blogPost3,
-    blogURL: '/blogs/03',
-  },
-  {
-    title: 'How to design energy-efficient homes',
-    description: `Insulating your home effectively doesn't have to break the bank. By choosing cost-effective and sustainable insulation materials, you can ensure that your home stays cool in the summer and warm in the winter, all while reducing energy consumption. Here are some budget-friendly ...`,
-    postedBy: 'admin',
-    publishedDate: new Date(),
-    imageUrl: blogPost4,
-    blogURL: '/blogs/04',
-  },
-];
+import { BlogCard } from './components/blog-card';
+import { blogs } from './constants/blogs';
 
 const BlogMainPage = () => {
   const optimizedLandingPageArchitectureBackground =
@@ -74,46 +34,6 @@ const BlogMainPage = () => {
         </div>
       </section>
       <ConsultationCTA />
-    </div>
-  );
-};
-
-export interface BlogCardDetail {
-  title: string;
-  description: string;
-  postedBy: string;
-  publishedDate: Date;
-  imageUrl: StaticImageData;
-  blogURL: string;
-}
-
-export const BlogCard = (props: BlogCardDetail) => {
-  return (
-    <div className="line-clamp-4 flex flex-col rounded-[22px] bg-white bg-opacity-60">
-      <Image
-        className="h-56 w-full object-cover md:h-80"
-        src={props.imageUrl}
-        alt="blog-image"
-        height={400}
-        style={{
-          boxShadow: '0px 4px 4px 0px #00000040',
-        }}
-      />
-      <div className="flex flex-col gap-2 p-5">
-        <h1 className="line-clamp-2 text-xl font-semibold text-primary-500 md:line-clamp-1 md:text-2xl">
-          {props.title}
-        </h1>
-        <span className="text-xs">
-          by <span className="underline">{props.postedBy}</span> |{' '}
-          {props.publishedDate.toDateString()}
-        </span>
-        <div className="line-clamp-6 leading-[33px] tracking-[5%] md:line-clamp-4 lg:line-clamp-3">
-          {props.description}
-        </div>
-        <Link href={props.blogURL} className="self-center text-accent-500">
-          Read More....
-        </Link>
-      </div>
     </div>
   );
 };
