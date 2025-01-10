@@ -205,11 +205,11 @@ const Workshops = () => {
                     urgent need for eco-conscious development.
                   </li>
                   <li>
-                    <span className="font-bold">A Thought to Ponder:</span> "The
-                    earth is not given to you by your parents; you have taken a
-                    loan from your next generation." This quote serves as a
-                    powerful reminder of our shared responsibility toward the
-                    planet.
+                    <span className="font-bold">A Thought to Ponder:</span>{' '}
+                    &quot;The earth is not given to you by your parents; you
+                    have taken a loan from your next generation.&quot; This
+                    quote serves as a powerful reminder of our shared
+                    responsibility toward the planet.
                   </li>
                   <li>
                     <span className="font-bold">
