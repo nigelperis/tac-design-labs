@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticImageData } from 'next/image';
+import { type StaticImageData } from 'next/image';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 

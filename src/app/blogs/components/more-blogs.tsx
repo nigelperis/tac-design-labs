@@ -31,7 +31,7 @@ const MobileMoreBlogs = (props: { blog: BlogCardDetail[] }) => {
     scrollLeft: 0,
     offsetWidth: 0,
   });
-  const scrollDemoRef = useRef(null);
+  const scrollDemoRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
     if (scrollDemoRef.current) {

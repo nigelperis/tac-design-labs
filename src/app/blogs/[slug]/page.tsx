@@ -2,7 +2,7 @@
 
 import { use } from 'react';
 import { type MDXComponents, type MDXProps } from 'mdx/types';
-import { type StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 // MARK: Image imports
 import blogPost1 from '~/assets/images/blog-images/blog-post-1-banner.jpg';
@@ -10,13 +10,13 @@ import blogPost2 from '~/assets/images/blog-images/blog-post-2.jpg';
 import blogPost3 from '~/assets/images/blog-images/blog-post-3-banner.jpg';
 import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 
-import BlogHero from '../components/BlogHero';
-import MoreBlogs from '../components/MoreBlogs';
-
+import BlogHero from '../components/blog-hero';
+import MoreBlogs from '../components/more-blogs';
 import Blog01 from '../markdown/blog-01.mdx';
 import Blog02 from '../markdown/blog-02.mdx';
 import Blog03 from '../markdown/blog-03.mdx';
 import Blog04 from '../markdown/blog-04.mdx';
+import type { StaticImageData } from 'next/image';
 
 const overrideComponents: MDXComponents = {
   h2: ({ children }) => (
@@ -68,7 +68,11 @@ const overrideComponents: MDXComponents = {
       {children}
     </a>
   ),
-  img: ({ src, alt }) => <img draggable={false} src={src} alt={alt} />,
+  img: ({ src, alt }) => {
+    return src ? (
+      <Image draggable={false} src={src} alt={alt ?? 'Blog image'} />
+    ) : undefined;
+  },
   li: ({ children }) => (
     <li
       className="list-inside list-decimal text-base leading-7 md:text-2xl md:leading-10"
