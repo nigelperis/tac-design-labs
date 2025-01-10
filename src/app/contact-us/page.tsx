@@ -1,5 +1,4 @@
-import React, { FC, SVGProps } from 'react';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+import React from 'react';
 import Image from 'next/image';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
@@ -48,9 +47,12 @@ const ContactUsPage = () => {
                   Email
                 </h2>
               </div>
-              <p className="text-lg text-[#173552] md:text-2xl">
+              <a
+                href="mailto:tacdesignlab@gmail.com"
+                className="text-lg text-[#173552] md:text-2xl"
+              >
                 tacdesignlab@gmail.com
-              </p>
+              </a>
             </div>
 
             {/* MARK: Phone Section */}
@@ -61,9 +63,12 @@ const ContactUsPage = () => {
                   Phone
                 </h2>
               </div>
-              <p className="text-lg text-[#173552] md:text-2xl">
+              <a
+                href="tel:+919072062086"
+                className="text-lg text-[#173552] md:text-2xl"
+              >
                 +91 90720 62086
-              </p>
+              </a>
             </div>
 
             {/* MARK: Address Section */}
@@ -75,7 +80,7 @@ const ContactUsPage = () => {
                 </h2>
               </div>
               <p className="max-w-[530px] text-lg text-[#173552] md:text-2xl">
-                Tc 14/4455, Leela's, (Near Kerala Bank) Kesavadasapuram
+                Tc 14/4455, Leela&apos;s, (Near Kerala Bank) Kesavadasapuram
                 Thiruvananthapuram, Kerala 695004
               </p>
             </div>
@@ -108,7 +113,7 @@ const ContactUsPage = () => {
               <Logo className="h-full w-full" />
             </div>
             <h1 className="text-3xl text-primary-500 md:text-5xl">
-              TAC Design Lab
+              TAC Design LAB
             </h1>
           </div>
 
@@ -120,13 +125,25 @@ const ContactUsPage = () => {
 
           {/* Social Handles */}
           <div className="flex w-72 items-center justify-between rounded-3xl border-4 border-white bg-[#EDD7C3] px-5 py-3 shadow-[0px_4px_4px_0px_#00000040] backdrop-blur-lg md:w-[460px] md:px-12 md:py-6">
-            <a href="https://www.facebook.com/people/TAC-Design-LAB/100090743003401/">
+            <a
+              href="https://www.facebook.com/people/TAC-Design-LAB/100090743003401/"
+              target="blank"
+              className="transition-transform duration-300 hover:scale-105"
+            >
               <FacebookLogo className="scale-75 md:scale-100" />
             </a>
-            <a href="https://www.instagram.com/tacdesignlab/profilecard/?igsh=MWo5MXl0cGluajdieg==F">
+            <a
+              href="https://www.instagram.com/tacdesignlab?igsh=MWF2cXBxdWU0YTA0NA=="
+              target="blank"
+              className="transition-transform duration-300 hover:scale-105"
+            >
               <InstagramLogo className="scale-75 md:scale-100" />
             </a>
-            <a href="https://youtube.com/@tacdesignlab?si=tt1qKMFM3MHopeXa">
+            <a
+              href="https://youtube.com/@tacdesignlab?si=tt1qKMFM3MHopeXa"
+              target="blank"
+              className="transition-transform duration-300 hover:scale-105"
+            >
               <YoutubeLogo className="scale-75 md:scale-100" />
             </a>
           </div>
