@@ -2,7 +2,6 @@
   backdrop-filter: blur(100px);
   box-shadow: 0px 14px 26.3px 0px #00000040 inset;
   background: #edd7c3;
-  background-blend-mode: color;
 }
 
 .achievement_cta .cta_content {

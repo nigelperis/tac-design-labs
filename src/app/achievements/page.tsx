@@ -119,7 +119,7 @@ function Achievement() {
             'border-y-8 border-white bg-[#420C03CC] py-9',
           )}
         >
-          <p className="text-balance px-9 py-5 text-center font-primary text-2xl text-white">
+          <p className="text-balance px-9 py-5 text-center font-primary text-[22px] text-white md:px-10 md:text-[40px] md:leading-[50px]">
             Inspired by our achievements? Discover how we can help you bring
             your vision to life with sustainable and innovative solutions
             tailored to your needs.
@@ -128,7 +128,7 @@ function Achievement() {
 
         <button
           style={{ backgroundImage: optimizedButtonBackground }}
-          className="mx-auto mt-4 block rounded bg-cover bg-center p-8 font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105"
+          className="mx-auto mt-4 block rounded bg-cover bg-center p-8 font-primary text-[12px] font-bold text-[#331803] duration-200 hover:scale-105 md:text-2xl"
         >
           Explore Our Services
         </button>
