@@ -29,7 +29,7 @@ const achievements = [
   {
     title: 'The Better India: Recognizing Sustainable Innovation',
     description:
-      'The Better India featured Ar. Ashams Ravi of TAC Design LAB for his groundbreaking sustainable home in Kerala, constructed using 90% recycled materials and bamboo. This recognition highlights his innovative approach to eco-friendly design, achieving significant environmental...',
+      'The Better India featured Ar. Ashams Ravi of TAC Design LAB for his innovative sustainable home in Kerala, built with 90% recycled materials and bamboo. Completed in just four months, the project showcases his commitment to eco-friendly design and architectural excellence.',
     image: achievementPhoto2,
     buttonText: 'Read the full article',
     href: 'https://thebetterindia.com/224686/kerala-architect-sustainable-home-recycled-material-eco-friendly-water-india-ang136/',

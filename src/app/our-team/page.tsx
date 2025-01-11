@@ -179,12 +179,12 @@ function ProfileCard(props: TeamMember) {
           <span className="text-2xl font-medium tracking-[2%] text-primary-500 md:text-4xl">
             {props.name}
           </span>
-          <span className="text-base font-medium tracking-[2%] text-primary-500 md:text-2xl">
+          <span className="text-base font-medium italic tracking-[2%] text-primary-500 md:text-2xl">
             {props.position}
           </span>
         </div>
         <div
-          className={`${isExpanded ? 'line-clamp-none leading-6' : 'line-clamp-5 leading-6 md:line-clamp-4'} text-justify text-sm md:text-2xl`}
+          className={`${isExpanded ? 'line-clamp-none leading-7 md:leading-10' : 'line-clamp-5 leading-6 md:line-clamp-4 md:leading-10'} text-justify text-sm md:text-2xl`}
         >
           {props.summary}
         </div>

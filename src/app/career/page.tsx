@@ -50,9 +50,9 @@ export default function Career() {
             Our office is designed as a dynamic space for architectural
             dialogue, creativity, and innovative design. We foster an
             environment where every team member feels connected, both with each
-            other and the space around them. Spread across 2400 sq. feet of
-            open, rectangular floor plan, our workspace encourages collaboration
-            and sparks creativity. Understanding the psychology of space, we’ve
+            other and the space around them. Spread across a wide open,
+            rectangular floor plan, our workspace encourages collaboration and
+            sparks creativity. Understanding the psychology of space, we’ve
             crafted an environment that nurtures the creative minds of
             architects, helping them thrive in their work.
           </p>

@@ -33,6 +33,7 @@ function AchievementCard(props: AchievementCardProps) {
       </p>
       <Link
         href={href}
+        target="blank"
         className={cn(achievementsStyles.achievement_card_link)}
       >
         {buttonText} <ChevronRight className="text-[7px]" />
