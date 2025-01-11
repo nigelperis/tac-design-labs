@@ -8,7 +8,7 @@ import blogPost2 from '~/assets/images/blog-images/blog-post-2.jpg';
 import blogPost3 from '~/assets/images/blog-images/blog-post-3-banner.jpg';
 import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 
-import BlogHero from '../components/BlogHero';
+import BlogHero from '../components/blog-hero';
 import MoreBlogs from '../components/more-blogs';
 import Blog01 from '../markdown/blog-01.mdx';
 import Blog02 from '../markdown/blog-02.mdx';
