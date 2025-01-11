@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 import { cn } from '~/utils/cn';
@@ -126,12 +127,15 @@ function Achievement() {
           </p>
         </div>
 
-        <button
-          style={{ backgroundImage: optimizedButtonBackground }}
-          className="mx-auto mt-4 block rounded bg-cover bg-center p-8 font-primary text-[12px] font-bold text-[#331803] duration-200 hover:scale-105 md:text-2xl"
-        >
-          Explore Our Services
-        </button>
+        <div className="flex justify-center font-primary">
+          <Link
+            href="/services"
+            style={{ backgroundImage: optimizedButtonBackground }}
+            className="rounded bg-cover bg-center p-11 px-4 text-[13px] font-bold text-[#331803] duration-200 hover:scale-105 hover:bg-opacity-80 md:p-14 md:text-2xl"
+          >
+            Explore Our Services
+          </Link>
+        </div>
       </section>
     </div>
   );

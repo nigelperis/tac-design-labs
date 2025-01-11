@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
@@ -118,20 +119,19 @@ const TeamPage = () => {
             backgroundImage: getOptimizedBackgroundImage(exploreProjectBG),
           }}
         >
-          <h1 className="mb-8 text-balance">
+          <h1 className="mb-6 sm:text-balance">
             Curious to see the projects that define our approach to sustainable
             design? Explore our portfolio to discover the creativity and
             dedication that goes into every one of our projects.
           </h1>
-          <div className="block">
-            <button
-              className="relative rounded bg-cover bg-center p-6 text-[11px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-10 md:text-2xl"
-              style={{
-                backgroundImage: optimizedButton,
-              }}
+          <div className="flex justify-center">
+            <Link
+              href="/our-work"
+              style={{ backgroundImage: optimizedButton }}
+              className="rounded bg-cover bg-center p-8 px-4 text-[13px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-12 md:text-2xl"
             >
               Explore Our Work
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -184,7 +184,7 @@ function ProfileCard(props: TeamMember) {
           </span>
         </div>
         <div
-          className={`${isExpanded ? 'line-clamp-none' : 'line-clamp-5 md:line-clamp-4'} text-justify text-sm md:text-2xl`}
+          className={`${isExpanded ? 'line-clamp-none leading-6' : 'line-clamp-5 leading-6 md:line-clamp-4'} text-justify text-sm md:text-2xl`}
         >
           {props.summary}
         </div>
