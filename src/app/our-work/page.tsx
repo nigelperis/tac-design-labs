@@ -44,7 +44,7 @@ const OurWork = () => {
             <span className="text-accent-500">Futures</span>
           </h1>
           <p className="text-center text-base text-[#173552] md:text-4xl">
-            At TAC Design Lab, our portfolio reflects our dedication to
+            At TAC Design LAB, our portfolio reflects our dedication to
             sustainability, innovation and craftsmanship. Explore a curated
             selection of projects where thoughtful design meets environmental
             responsibility.

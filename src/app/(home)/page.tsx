@@ -109,12 +109,12 @@ export default function Home() {
           className="relative -top-5 rounded-3xl md:-top-8 md:w-1/4"
         />
         <div className="relative md:w-1/2">
-          <OpenQuote className="absolute -left-11 -top-4 hidden xl:inline" />
+          <OpenQuote className="absolute -left-11 -top-4 xl:inline" />
           <p className="mt-2 text-justify font-primary text-lg font-normal italic leading-5 tracking-wide md:text-left md:text-4xl">
             We all know the greenest choice is to avoid building altogether. But
             when construction is necessary, the focus must shift to creating
             spaces that respect and protect nature.{' '}
-            <CloseQuote className="mt-5 hidden xl:inline" />
+            <CloseQuote className="mt-5 xl:inline" />
           </p>
 
           <p className="mt-6 text-center font-primary text-2xl font-bold text-accent-500 md:text-right md:text-[32px]">
@@ -198,21 +198,30 @@ export default function Home() {
               <Image
                 src={landingPagePortfolioHouse1}
                 alt="Portfolio image"
-                className="rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
+                className="rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                style={{
+                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+                }}
               />
             </li>
             <li className="">
               <Image
                 src={landingPagePortfolioHouse2}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
+                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                style={{
+                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+                }}
               />
             </li>
             <li className="">
               <Image
                 src={landingPagePortfolioHouse3}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
+                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                style={{
+                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+                }}
               />
             </li>
           </ul>
@@ -222,14 +231,20 @@ export default function Home() {
               <Image
                 src={landingPagePortfolioHouse4}
                 alt="Portfolio image"
-                className="aspect-video rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
+                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                style={{
+                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+                }}
               />
             </li>
             <li>
               <Image
                 src={landingPagePortfolioHouse5}
                 alt="Portfolio image"
-                className="aspect-video rounded-3xl border-[5px] border-[#EDDFD2] object-cover drop-shadow-xl"
+                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                style={{
+                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+                }}
               />
             </li>
           </ul>
@@ -239,19 +254,26 @@ export default function Home() {
       </section>
 
       <section
-        className="relative bg-gradient-to-b from-[#D9D9D9] to-[#C6742B33] bg-cover bg-center bg-repeat py-11 shadow-inner drop-shadow-md"
-        style={{ backgroundImage: optimizedLandingPageDriedLeavesBackground }}
+        className="relative py-11"
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0) -98.6%, rgba(198, 116, 43, 0.2) 100%), ${optimizedLandingPageDriedLeavesBackground}`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
         <h2 className="z-[1] text-center font-primary text-3xl font-bold text-[#5A3213] md:text-5xl">
           What Our Clients Say
         </h2>
 
-        <div className="z-[1] my-5 overflow-hidden rounded-2xl drop-shadow-xl">
+        <div className="z-[1] my-5 overflow-hidden rounded-2xl drop-shadow-2xl">
           <iframe
             className="mx-auto aspect-video w-[95%] rounded-2xl border-[5px] border-[#ECC19A] sm:w-[90%] md:w-3/4 lg:w-1/2"
             src="https://www.youtube.com/embed/qpOZ6rXgR_s?si=jQgeuC20qgI6c0pK"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            style={{
+              boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.2)',
+            }}
           ></iframe>
         </div>
 
@@ -269,12 +291,12 @@ export default function Home() {
       </section>
 
       <section
-        className="border-b-[5px] border-t-[5px] border-white bg-[#ECC19A99] bg-cover bg-center py-7 bg-blend-soft-light md:py-24"
+        className="md:py-26 border-b-[5px] border-t-[5px] border-white bg-[#f3d5b899] bg-cover bg-center pt-11 bg-blend-soft-light md:pb-8 md:pt-8"
         style={{
           backgroundImage: optimizedLandingPageWoodenBoardBackground,
         }}
       >
-        <h2 className="mb-4 bg-cover px-5 text-center font-primary text-[22px] font-normal text-[#250606] md:mb-11 md:px-7 md:text-[40px]">
+        <h2 className="mb-4 bg-cover px-5 text-center font-primary text-[22px] font-normal text-[#250606] md:mb-11 md:px-7 md:pt-6 md:text-[40px]">
           Dive into our portfolio of projects that blend innovative design with
           sustainable solutions.
         </h2>

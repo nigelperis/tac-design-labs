@@ -36,18 +36,21 @@ function Footer({ className }: Readonly<{ className?: string }>) {
           <div className="mt-6 flex flex-row space-x-5">
             <a
               href="https://www.facebook.com/people/TAC-Design-LAB/100090743003401/"
+              target="blank"
               className="flex items-center justify-center rounded-full bg-slate-50 p-2"
             >
               <Facebook className="text-3xl" />
             </a>
             <a
               href="https://youtube.com/@tacdesignlab?si=tt1qKMFM3MHopeXa"
+              target="blank"
               className="flex items-center justify-center rounded-full bg-slate-50 p-2"
             >
               <Youtube className="text-3xl" />
             </a>
             <a
-              href="https://www.instagram.com/tacdesignlab/profilecard/?igsh=MWo5MXl0cGluajdieg==F"
+              href="https://www.instagram.com/tacdesignlab?igsh=MWF2cXBxdWU0YTA0NA=="
+              target="blank"
               className="flex items-center justify-center rounded-full bg-slate-50 p-2"
             >
               <Instagram className="text-3xl" />
@@ -115,11 +118,11 @@ function Footer({ className }: Readonly<{ className?: string }>) {
               </h5>
             </div>
             <p className="font-primary text-base font-normal text-white md:text-xl">
-              Monday to Friday: 9AM – 5PM
+              Monday to Friday: 9:30 AM – 5:00 PM
               <br />
-              Saturday: 9AM – 12:30PM
+              Saturday: 9:30 AM – 01:00 PM
               <br />
-              Sunday & Public Holidays: Closed
+              Sunday, Second Saturday & Other Public Holidays: Closed
             </p>
           </li>
         </ul>

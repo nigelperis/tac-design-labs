@@ -17,7 +17,7 @@ import aboutUsPageImage6 from '~/assets/images/about-us-page-image-6.jpeg';
 import aboutUsPageImage7 from '~/assets/images/about-us-page-image-7.png';
 import aboutUsPageImage8 from '~/assets/images/about-us-page-image-8.png';
 import aboutUsPageImage9 from '~/assets/images/about-us-page-image-9.png';
-import aboutUsImage10 from '~/assets/images/about-us-page-image-10.jpeg';
+import aboutUsImage10 from '~/assets/images/about-us-page-image-10.jpg';
 import aboutUsImage11 from '~/assets/images/about-us-page-image-11.jpeg';
 import aboutUsImage12 from '~/assets/images/about-us-page-image-12.jpeg';
 import aboutUsImage13 from '~/assets/images/about-us-page-image-13.jpeg';
@@ -58,7 +58,7 @@ function AboutUsPage() {
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <p className="mx-8 w-fit rounded-full bg-white px-5 py-[10px] font-primary text-xs font-normal text-primary-500 md:mx-[120px] md:px-10 md:py-[15px] md:text-base">
+        <p className="mx-8 w-fit rounded-full bg-white px-5 py-[10px] font-primary text-xs font-extrabold text-primary-500 md:mx-[120px] md:px-10 md:py-[15px] md:text-base">
           OUR STORY{' '}
         </p>
 
@@ -137,14 +137,16 @@ function AboutUsPage() {
             mainImage={aboutUsImage13}
             subImage1={aboutUsImage14}
             subImage2={aboutUsImage15}
-            description="Our portfolio features key projects like Project Canaan, which earned the HUDCO National Award and widespread recognition for its green building efforts. Our team excels in unique, innovative designs, meticulous on-site detailing, and effective project management. Looking ahead, our vision is to reduce the building industry's environmental impact, creating a more sustainable world for future generations."
+            description="Beyond our projects, TAC Design LAB engages with the community through collaborations with architecture and engineering colleges, advocating for sustainable practices, and conducting hands-on workshops in bamboo, mud, and brick masonry.
+            
+            Looking ahead, our vision is to reduce the building industry's environmental impact, creating a more sustainable world for future generations."
             alignment="main-left"
           />
         </ul>
       </section>
 
       <section className="bg-[#FAEEE5] px-8 py-9 md:px-[120px] md:py-[100px]">
-        <p className="w-fit rounded-full bg-[#F3D1B3] px-9 py-[15px] font-primary text-xs font-extrabold tracking-[20%] text-primary-500 md:hidden">
+        <p className="w-fit rounded-full bg-[#F3D1B3] px-9 py-[15px] font-primary font-extrabold tracking-[20%] md:hidden md:font-black">
           INSPIRATION
         </p>
         <h2 className="font-primary text-3xl font-normal leading-[39px] text-primary-500 md:hidden md:leading-[67px]">
