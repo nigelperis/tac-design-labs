@@ -59,7 +59,7 @@ function AboutUsPage() {
         }}
       >
         <p className="mx-8 w-fit rounded-full bg-white px-5 py-[10px] font-primary text-xs font-normal text-primary-500 md:mx-[120px] md:px-10 md:py-[15px] md:text-base">
-          Our story
+          OUR STORY{' '}
         </p>
 
         <h2 className="mt-8 px-8 font-primary text-3xl font-normal leading-9 text-primary-500 md:px-[120px] md:text-[52px] md:leading-[72px]">
@@ -74,7 +74,7 @@ function AboutUsPage() {
             mainImage={aboutUsPageImage1}
             subImage1={aboutUsPageImage2}
             subImage2={aboutUsPageImage3}
-            description="TAC Design Lab is a collective of visionary architects and designers from Thiruvananthapuram, united by a passion for sustainability and innovation. Founded by Ar. Ashams Ravi, TAC was born from a commitment to creating buildings that harmonize with the earth, inspired by the principles of Laurie Baker. We focus on using minimal resources to deliver affordable, impactful architectural solutions."
+            description="TAC Design LAB is a collective of visionary architects and designers from Thiruvananthapuram, united by a passion for sustainability and innovation. Founded by Ar. Ashams Ravi, TAC was born from a commitment to creating buildings that harmonize with the earth, inspired by the principles of Laurie Baker. We focus on using minimal resources to deliver affordable, impactful architectural solutions."
           />
 
           <StoryCard
@@ -187,7 +187,7 @@ function AboutUsPage() {
         </div>
       </section>
       <section
-        className="relative border-y-8 border-white bg-[#EDD7C3] py-11 bg-blend-soft-light md:py-[88px]"
+        className="relative border-y-8 border-white bg-[#EDD7C3] py-11 bg-blend-soft-light md:h-[540px] md:py-[88px]"
         style={{
           backgroundImage: optimizedLandingPageHeroBackground,
         }}
@@ -199,21 +199,23 @@ function AboutUsPage() {
             We
             <span className="text-accent-500"> Collaborate</span> with Everyone
           </h2>
-          <p className="mt-5 text-balance text-justify font-primary text-lg font-normal text-gray-950 md:text-2xl md:leading-[45px]">
-            At TAC Design Lab, we believe in the power of collaboration. Whether
+          <p className="mt-5 text-justify font-primary text-lg font-normal text-gray-950 md:text-2xl md:leading-[45px]">
+            At TAC Design LAB, we believe in the power of collaboration. Whether
             you&apos;re a homeowner, a business, or an institution, we tailor
             our services to meet your unique needs. Let&apos;s work together to
             create sustainable and innovative spaces that leave a lasting
             impact.
           </p>
         </div>
-        <Link
-          href="#"
-          style={{ backgroundImage: optimizedButtonBackground }}
-          className="mx-auto block w-fit bg-cover bg-center px-[34px] py-[30px] font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105 md:ml-auto"
-        >
-          Explore Our Services
-        </Link>
+        <div className="flex justify-center font-primary">
+          <Link
+            href="/services"
+            style={{ backgroundImage: optimizedButtonBackground }}
+            className="rounded bg-cover bg-center p-10 px-4 text-[13px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-14 md:text-2xl"
+          >
+            Explore Our Services
+          </Link>
+        </div>
       </section>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
@@ -7,7 +8,7 @@ import OurWorkBgButton from '~/assets/images/button-background.png';
 import CanaanBgImg from '~/assets/images/canaan.jpg';
 import HavenBgImg from '~/assets/images/haven.jpg';
 import landingPageArchitectureBackground from '~/assets/images/our-work-bg-img.png';
-import WorkShopBgImg from '~/assets/images/our-work-cta-bg.jpeg';
+import WorkShopBgImg from '~/assets/images/our-work-cta-bg.jpg';
 import SanchiBgImg from '~/assets/images/sanchi.jpg';
 import ShireBgImg from '~/assets/images/shire.jpg';
 
@@ -57,7 +58,7 @@ const OurWork = () => {
                 src={CanaanBgImg}
                 alt="CanaanBgImg"
                 fill
-                className="rounded-lg object-cover"
+                className="rounded-xl object-cover"
               />
               <div className="absolute bottom-3 left-4 z-10 text-white">
                 <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
@@ -77,7 +78,7 @@ const OurWork = () => {
                 src={ShireBgImg}
                 fill
                 alt="ShireBgImg"
-                className="rounded-lg object-cover"
+                className="rounded-xl object-cover"
               />
               <div className="absolute bottom-3 left-4 z-20 text-white">
                 <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
@@ -97,7 +98,7 @@ const OurWork = () => {
                 src={SanchiBgImg}
                 fill
                 alt="SanchiBgImg"
-                className="rounded-lg object-cover"
+                className="rounded-xl object-cover"
               />
               <div className="absolute bottom-3 left-4 z-20 text-white">
                 <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
@@ -117,7 +118,7 @@ const OurWork = () => {
                 src={HavenBgImg}
                 fill
                 alt="HavenBgImg"
-                className="rounded-lg object-cover"
+                className="rounded-xl object-cover"
               />
               <div className="absolute bottom-3 left-4 z-20 text-white">
                 <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
@@ -133,36 +134,40 @@ const OurWork = () => {
       </div>
 
       <div>
-        <hr className="mx-auto w-full border-t-4 border-white md:border-t-8"></hr>
+        <hr className="mx-auto border-t-4 border-white md:border-t-8"></hr>
         <div
           className="relative w-full items-center justify-center bg-cover bg-center px-1 py-8 text-white md:px-24 md:py-16"
           style={{
             backgroundImage: optimizedWorkShopBgImg,
           }}
         >
-          <div className="absolute inset-0 bg-[#000000] bg-opacity-50 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-[#000000] bg-opacity-65 backdrop-blur-[1px]"></div>
 
           <div className="relative z-10 h-full items-center justify-center text-white">
             <h2 className="mb-7 text-center font-primary text-[32px] md:text-[64px]">
-              <span className="font-bold">Workshops:</span> Learn, Build,
-              Innovate
+              <span className="font-bold">Workshops</span>
+              <br />
+              <span className="text-[28px] md:text-[48px]">
+                Learn, Build, Innovate
+              </span>
             </h2>
-            <div className="text-center text-[16px] text-surface-500 md:text-[32px]">
+            <div className="px-6 text-center text-[16px] tracking-wide text-surface-500 md:text-[32px]">
               <p className="mb-10">
                 Gain hands-on experience in sustainable construction through our
                 expertly curated workshops. Explore the possibilities of bamboo,
                 mud and brick while honing the skills that redefine modern
                 architecture.
               </p>
-              <div className="mb-8">Take the first step toward change.</div>
-              <button
-                className="relative rounded bg-cover bg-center p-6 text-[11px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-10 md:text-2xl"
-                style={{
-                  backgroundImage: optimizedOurWorkBgButton,
-                }}
-              >
-                Discover More
-              </button>
+              <div className="mb-2">Take the first step toward change.</div>
+              <div className="flex justify-center">
+                <Link
+                  href="/workshops"
+                  style={{ backgroundImage: optimizedOurWorkBgButton }}
+                  className="rounded bg-cover bg-center p-8 px-4 text-[13px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-12 md:text-2xl"
+                >
+                  Discover More
+                </Link>
+              </div>
             </div>
           </div>
         </div>

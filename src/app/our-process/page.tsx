@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
@@ -593,21 +594,25 @@ const OurProcess = () => {
 
           <div className="relative z-10 h-full items-center justify-center text-white">
             <div className="text-center text-[13px] md:text-[32px]">
-              <p className="mb-2 text-base text-black md:text-3xl">
+              <h2 className="mb-2 text-center text-[24px] font-semibold text-[#4B2300] md:text-[48px] md:font-medium">
+                Our Journey, Your Achievements{' '}
+              </h2>
+              <p className="mb-2 text-base leading-[30px] text-black md:text-3xl md:leading-[45px]">
                 At TAC Design LAB, every step in our process is designed to
                 achieve excellence. From concept to completion, we ensure that
                 our projects not only meet but exceed expectations. Curious
-                about the milestones we have reached? Explore our proudest
+                about the milestones we&apos;ve reached? Explore our proudest
                 achievements.
               </p>
-              <button
-                className="relative max-w-[220px] rounded bg-cover bg-center p-6 text-base font-normal text-primary-500 duration-200 hover:scale-105 md:p-10 md:text-2xl md:font-bold"
-                style={{
-                  backgroundImage: optimizedOurWorkBgButton,
-                }}
-              >
-                Achievements
-              </button>
+              <div className="flex justify-center">
+                <Link
+                  href="/achievements"
+                  style={{ backgroundImage: optimizedOurWorkBgButton }}
+                  className="rounded bg-cover bg-center p-8 text-[13px] font-bold text-[#331803] duration-200 hover:scale-105 hover:bg-opacity-80 md:mt-2 md:p-14 md:text-2xl"
+                >
+                  Achievements
+                </Link>
+              </div>
             </div>
           </div>
         </div>

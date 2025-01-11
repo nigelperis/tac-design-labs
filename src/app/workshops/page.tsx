@@ -152,7 +152,7 @@ const Workshops = () => {
                 alt="Workshop Image 1"
                 width={500}
                 height={500}
-                className="borderborder-[1.5px] aspect-[4/3] h-full w-full rounded-xl border-[#F0E0D6] object-cover md:border-[2.5px]"
+                className="aspect-[4/3] h-full w-full rounded-xl border-[2.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
               />
             </div>
             <div className="col-span-1 overflow-hidden rounded-xl drop-shadow-xl xl:p-3">
@@ -161,7 +161,7 @@ const Workshops = () => {
                 alt="Workshop Image 2"
                 width={500}
                 height={500}
-                className="aspect-[4/3] h-full w-full rounded-xl border-[1.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
+                className="aspect-[4/3] h-full w-full rounded-xl border-[2.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
               />
             </div>
             <div className="col-span-2 overflow-hidden rounded-xl drop-shadow-xl lg:col-span-1 xl:p-3">
@@ -170,7 +170,7 @@ const Workshops = () => {
                 alt="Workshop Image 3"
                 width={500}
                 height={500}
-                className="aspect-[4/3] h-full w-full rounded-xl border-[1.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
+                className="aspect-[4/3] h-full w-full rounded-xl border-[2.5px] border-[#F0E0D6] object-cover md:border-[2.5px]"
               />
             </div>
           </div>
@@ -570,19 +570,19 @@ const Workshops = () => {
             }}
           >
             <div className="m-auto max-w-5xl text-center">
-              <h2 className="mb-2 text-center text-[24px] font-normal md:text-[48px]">
+              <h2 className="mb-2 text-center text-[24px] font-medium md:text-[48px]">
                 Explore More Insights
               </h2>{' '}
-              <p className="text-base font-[400] tracking-wide text-[#000000] md:text-[32px] md:leading-10">
+              <p className="mt-4 text-base font-[400] tracking-wide text-[#000000] md:text-[32px] md:leading-10">
                 Dive deeper into sustainable architecture, materials, and
                 techniques by exploring our blog posts. Gain valuable knowledge,
                 tips, and inspiration to fuel your design journey.
               </p>
               <div className="flex justify-center">
                 <Link
-                  href=""
+                  href="/blogs"
                   style={{ backgroundImage: optimizedButtonBackground }}
-                  className="mt-5 block w-fit bg-cover bg-center px-[60px] py-[35px] font-primary text-[12px] font-bold text-[#331803] duration-200 hover:scale-105 md:text-lg"
+                  className="rounded bg-cover bg-center p-12 px-4 text-[13px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:mt-2 md:p-14 md:text-2xl"
                 >
                   Read Our Latest Posts
                 </Link>
