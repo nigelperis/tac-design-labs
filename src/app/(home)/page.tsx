@@ -90,11 +90,11 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative mt-8 flex flex-col items-center justify-center p-8 md:flex-grow">
-          <h1 className="text-center font-primary text-5xl font-bold text-primary-500 md:text-7xl">
+        <div className="relative mt-8 flex flex-col items-start justify-center p-8 md:flex-grow">
+          <h1 className="text-center font-primary text-[38px] font-bold text-primary-500 md:text-6xl">
             TAC Design LAB
           </h1>
-          <p className="mt-9 text-balance text-center font-primary text-2xl font-normal text-primary-500 md:text-4xl">
+          <p className="mt-6 text-balance font-primary text-[22px] font-normal text-primary-500 md:text-4xl">
             Where Every Space Is A Step Towards Sustainability
           </p>
         </div>
@@ -110,14 +110,14 @@ export default function Home() {
         />
         <div className="relative md:w-1/2">
           <OpenQuote className="absolute -left-11 -top-4 hidden xl:inline" />
-          <p className="mt-2 text-center font-primary text-lg font-normal italic tracking-wide md:text-left md:text-4xl">
+          <p className="mt-2 text-justify font-primary text-lg font-normal italic leading-5 tracking-wide md:text-left md:text-4xl">
             We all know the greenest choice is to avoid building altogether. But
             when construction is necessary, the focus must shift to creating
             spaces that respect and protect nature.{' '}
             <CloseQuote className="mt-5 hidden xl:inline" />
           </p>
 
-          <p className="mt-6 text-right font-primary text-2xl font-bold text-accent-500">
+          <p className="mt-6 text-center font-primary text-2xl font-bold text-accent-500 md:text-right md:text-[32px]">
             - Ashams Ravi
           </p>
         </div>
@@ -255,8 +255,8 @@ export default function Home() {
           ></iframe>
         </div>
 
-        <div className="z-[1] px-8">
-          <p className="text-center font-primary text-base font-normal text-[#552B0A] md:mx-auto md:w-1/2 md:text-2xl">
+        <div className="z-[1]">
+          <p className="px-12 text-center font-primary text-base font-normal leading-6 text-[#000000] md:px-36 md:text-2xl">
             &quot;We are much happier and comfortable living in this new house.
             The quality of life has improved a lot. It was a great experience
             and without TAC Design LAB this project wouldn&apos;t have been
@@ -269,13 +269,12 @@ export default function Home() {
       </section>
 
       <section
-        className="border-b-[5px] border-t-[5px] border-white bg-[#ECC19A99] bg-cover bg-center py-14 bg-blend-soft-light md:py-32"
+        className="border-b-[5px] border-t-[5px] border-white bg-[#ECC19A99] bg-cover bg-center py-7 bg-blend-soft-light md:py-24"
         style={{
           backgroundImage: optimizedLandingPageWoodenBoardBackground,
-          boxShadow: 'inset 0px 8px 12px rgba(0, 0, 0, 0.25)',
         }}
       >
-        <h2 className="mb-4 bg-cover px-5 text-center font-primary text-2xl font-normal text-[#250606] md:mb-11 md:text-4xl">
+        <h2 className="mb-4 bg-cover px-5 text-center font-primary text-[22px] font-normal text-[#250606] md:mb-11 md:px-7 md:text-[40px]">
           Dive into our portfolio of projects that blend innovative design with
           sustainable solutions.
         </h2>
