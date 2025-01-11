@@ -5,7 +5,9 @@ import { BlogCard } from './blog-card';
 import type { BlogCardDetail } from './blog-card';
 
 const MoreBlogs = (props: { currentBlogKey: number }) => {
-  const otherBlogs = blogs.filter((_, index) => index !== props.currentBlogKey);
+  const otherBlogs = blogs.filter(
+    (_, index) => index + 1 !== props.currentBlogKey,
+  );
   return (
     <div className="flex flex-col gap-5 border-y-[10px] bg-surface-500 py-5 md:gap-12 md:px-28 md:py-16">
       <h2 className="text-center text-3xl font-bold text-accent-500 md:text-left md:text-5xl">

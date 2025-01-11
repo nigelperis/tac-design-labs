@@ -1,11 +1,9 @@
 'use client';
 
 import { use } from 'react';
-import { type MDXComponents, type MDXProps } from 'mdx/types';
 import Image from 'next/image';
 
-// MARK: Image imports
-import blogPost1 from '~/assets/images/blog-images/blog-post-1-banner.jpg';
+import blogPost1 from '~/assets/images/blog-images/blog-post-1.jpg';
 import blogPost2 from '~/assets/images/blog-images/blog-post-2.jpg';
 import blogPost3 from '~/assets/images/blog-images/blog-post-3-banner.jpg';
 import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
@@ -16,6 +14,7 @@ import Blog01 from '../markdown/blog-01.mdx';
 import Blog02 from '../markdown/blog-02.mdx';
 import Blog03 from '../markdown/blog-03.mdx';
 import Blog04 from '../markdown/blog-04.mdx';
+import type { MDXComponents, MDXProps } from 'mdx/types';
 import type { StaticImageData } from 'next/image';
 
 const overrideComponents: MDXComponents = {
@@ -32,6 +31,7 @@ const overrideComponents: MDXComponents = {
       {children}
     </h2>
   ),
+
   h3: ({ children }) => (
     <h3
       className="text-2xl md:text-[28px]"
@@ -56,7 +56,7 @@ const overrideComponents: MDXComponents = {
       {children}
     </p>
   ),
-  a: ({ children }) => (
+  a: ({ children, ...rest }) => (
     <a
       className="text-base leading-7 md:text-2xl md:leading-10"
       style={{
@@ -64,6 +64,7 @@ const overrideComponents: MDXComponents = {
         letterSpacing: '5%',
         paddingBottom: '23px',
       }}
+      {...rest}
     >
       {children}
     </a>
@@ -85,8 +86,6 @@ const overrideComponents: MDXComponents = {
     </li>
   ),
 };
-
-type MDXData = (props: MDXProps) => JSX.Element;
 
 interface BlogDetail {
   title: string;
@@ -117,6 +116,14 @@ const blogs: Record<string, BlogDetail> = {
     markdown: Blog04,
   },
 };
+
+type MDXData = (props: MDXProps) => JSX.Element;
+
+interface BlogDetail {
+  title: string;
+  coverImgURL: StaticImageData;
+  markdown: MDXData;
+}
 
 export default function Page({
   params,
