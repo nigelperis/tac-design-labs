@@ -1,10 +1,7 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
-import { type StaticImport } from 'next/dist/shared/lib/get-img-props';
-import Image from 'next/image';
-import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
+import { cn } from '~/utils/cn';
 
 import achievementPhoto1 from '~/assets/images/achievement-photo-1.jpeg';
 import achievementPhoto2 from '~/assets/images/achievement-photo-2.jpeg';
@@ -15,6 +12,9 @@ import achievementPhoto6 from '~/assets/images/achievement-photo-6.png';
 import achievementsBambooBackground from '~/assets/images/achievements-bamboo-background.png';
 import achievementsPageBackground from '~/assets/images/achievements-page-background.png';
 import buttonBackground from '~/assets/images/button-background.png';
+
+import AchievementCard from './achievements-card';
+import styles from './achivements-page-style.module.css';
 
 const achievements = [
   {
@@ -107,11 +107,19 @@ function Achievement() {
       </section>
 
       <section
-        className="bg-[#EDD7C3] bg-opacity-5 bg-cover bg-center py-10 bg-blend-overlay shadow-inner"
+        className={cn(
+          styles.achievement_cta,
+          'bg-[#D19A6A] bg-opacity-5 bg-cover bg-center py-10',
+        )}
         style={{ backgroundImage: optimizedBambooBackground }}
       >
-        <div className="border-y-8 border-white bg-[#420C03CC] py-9">
-          <p className="text-balance px-9 py-5 text-center font-primary text-2xl text-white">
+        <div
+          className={cn(
+            styles.cta_content,
+            'border-y-8 border-white bg-[#420C03CC] py-9',
+          )}
+        >
+          <p className="text-balance px-9 py-5 text-center font-primary text-[22px] text-white md:px-10 md:text-[40px] md:leading-[50px]">
             Inspired by our achievements? Discover how we can help you bring
             your vision to life with sustainable and innovative solutions
             tailored to your needs.
@@ -120,7 +128,7 @@ function Achievement() {
 
         <button
           style={{ backgroundImage: optimizedButtonBackground }}
-          className="mx-auto mt-4 block rounded bg-cover bg-center p-8 font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105"
+          className="mx-auto mt-4 block rounded bg-cover bg-center p-8 font-primary text-[12px] font-bold text-[#331803] duration-200 hover:scale-105 md:text-2xl"
         >
           Explore Our Services
         </button>
@@ -130,38 +138,3 @@ function Achievement() {
 }
 
 export default Achievement;
-
-interface AchievementCardProps {
-  title: string;
-  description: string;
-  image: string | StaticImport;
-  buttonText: string;
-  href: string;
-}
-
-function AchievementCard(props: AchievementCardProps) {
-  const { title, description, image, buttonText, href } = props;
-
-  return (
-    <li className="gap-2 overflow-auto rounded-[20px] bg-[#FFFFFF80] p-5 font-primary shadow-lg last:mb-10 md:grid md:grid-cols-[2fr_1fr] md:rounded-[48px]">
-      <h3 className="text-2xl font-bold text-[#552B0A] lg:text-3xl 2xl:self-center">
-        {title}
-      </h3>
-      <Image
-        src={image}
-        alt="Achievement photo"
-        className="my-5 h-full items-center overflow-hidden rounded-[22px] border-4 border-[#ECC19A] md:col-start-2 md:col-end-3 md:row-span-3 md:my-auto md:h-auto"
-        placeholder="blur"
-      />
-      <p className="text-balance text-justify text-base leading-7 text-black md:text-xl lg:leading-10 2xl:h-fit 2xl:self-center">
-        {description}
-      </p>
-      <Link
-        href={href}
-        className="mx-auto mt-5 flex h-fit w-fit items-center space-x-4 rounded-full bg-secondary-500 px-5 py-4 text-center text-sm font-bold text-white drop-shadow-xl duration-300 hover:scale-105 md:col-start-1 md:col-end-2 lg:text-base"
-      >
-        {buttonText} <ChevronRight className="text-[7px]" />
-      </Link>
-    </li>
-  );
-}
