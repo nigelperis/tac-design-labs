@@ -92,7 +92,7 @@ export default function Home() {
 
         <div className="relative mt-8 flex flex-col items-start justify-center p-8 md:flex-grow">
           <h1 className="text-center font-primary text-[38px] font-bold text-primary-500 md:text-6xl">
-            TAC Design LAB
+            DONALD IS GAY
           </h1>
           <p className="mt-6 text-balance font-primary text-[22px] font-normal text-primary-500 md:text-4xl">
             Where Every Space Is A Step Towards Sustainability
