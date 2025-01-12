@@ -4,17 +4,15 @@ import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
+import CostEstimation from '~/assets/svgs/costestimation.svg';
+import DocApproval from '~/assets/svgs/docandapproval.svg';
+import Economic from '~/assets/svgs/economic.svg';
+import HealthComfort from '~/assets/svgs/healthandcomfort.svg';
+import PenIcon from '~/assets/svgs/pen.svg';
+import SiteVisit from '~/assets/svgs/sitevisit.svg';
+import SustainableConstruction from '~/assets/svgs/sustainableconstruction.svg';
+
 import OurWorkBgButton from '~/assets/images/button-background.png';
-import constructionapproval from '~/assets/images/constructionapproval.png';
-import constructionapprovallg from '~/assets/images/constructionapprovallg.png';
-import costestimationicon from '~/assets/images/costestimationicon.png';
-import costestimationiconlg from '~/assets/images/costestimationiconlg.png';
-import docandapprovalIcon from '~/assets/images/docandapprovalIcon.png';
-import docandapprovalIconlg from '~/assets/images/docandapprovalIconlg.png';
-import economicicon from '~/assets/images/economicicon.png';
-import economiciconlg from '~/assets/images/economiciconlg.png';
-import healthcomforticon from '~/assets/images/healthcomforticon.png';
-import healthcomforticonlg from '~/assets/images/healthcomforticonlg.png';
 import lineourprocess from '~/assets/images/lineourprocess.png';
 import lineourwork1 from '~/assets/images/lineourwork1.png';
 import lineourwork2 from '~/assets/images/lineourwork2.png';
@@ -24,10 +22,6 @@ import lineourwork5 from '~/assets/images/lineourwork5.png';
 import lineourwork6 from '~/assets/images/lineourwork6.png';
 import OurProcessBgImg from '~/assets/images/our-process-bg-img.png';
 import ourprocesscatbgimg from '~/assets/images/ourproccessbgimg.png';
-import PenIcon from '~/assets/images/pen-icon.png';
-import PenIconLg from '~/assets/images/PenIconLg.png';
-import siteivisiticon from '~/assets/images/siteivisiticon-lg.png';
-import sitevisite from '~/assets/images/sitevisite-icon.png';
 
 const OurProcess = () => {
   const optimizedLandingPageArchitectureBackground =
@@ -57,9 +51,11 @@ const OurProcess = () => {
         <div className="bg-[#EDD7C3CC] px-7 pb-12 pt-24 md:px-24 md:pb-24 md:pt-16">
           <h1 className="mb-2 max-w-[900px] text-4xl text-primary-500 md:mb-5 md:text-6xl">
             Partnering with You for{' '}
-            <span className="text-accent-500">Sustainable Living</span>
+            <span className="text-accent-500 md:mt-4 md:block">
+              Sustainable Living
+            </span>
           </h1>
-          <p className="mb-8 text-base leading-7 text-[#173552] md:mb-24 md:text-4xl">
+          <p className="mb-8 text-base text-[#173552] md:mb-24 md:text-3xl md:font-normal md:leading-normal">
             We are committed to building sustainable architecture that respects
             the environment and enhances your lifestyle. Here is a step-by-step
             overview of how we work together:
@@ -67,18 +63,16 @@ const OurProcess = () => {
           <div className="space-y-4 md:hidden">
             <div className="rounded-xl bg-white bg-opacity-50 px-6 py-5">
               <div className="mb-3 flex items-center gap-2">
-                <Image
-                  src={PenIcon}
-                  alt="logo"
+                <PenIcon
                   width={50}
                   height={50}
                   className="min-h-[50px] min-w-[50px]"
                 />
-                <h3 className="text-2xl font-bold text-accent-500">
+                <h3 className="text-[20px] font-bold text-accent-500">
                   Registration
                 </h3>
               </div>
-              <div className="text-sm leading-7 text-[#173552]">
+              <div className="text-sm leading-6 text-[#173552]">
                 <p className="mb-3">
                   We treat each client as a valued partner in creating something
                   exceptional. Before registration, we ensure you fully
@@ -87,7 +81,7 @@ const OurProcess = () => {
                   methods, materials, and design strategies.
                 </p>
                 <span>Registration Fees (Non-refundable) :</span>
-                <ul className="ml-8 mt-2 list-disc">
+                <ul className="ml-6 mt-2 list-disc leading-7">
                   <li>₹2000 for residential buildings</li>
                   <li>₹10,000 for non-residential buildings</li>
                 </ul>
@@ -105,18 +99,16 @@ const OurProcess = () => {
 
             <div className="rounded-xl bg-white bg-opacity-50 px-6 py-5">
               <div className="mb-3 flex items-center gap-2">
-                <Image
-                  src={sitevisite}
-                  alt="logo"
+                <SiteVisit
                   width={50}
                   height={50}
                   className="min-h-[50px] min-w-[50px]"
                 />
-                <h3 className="text-2xl font-bold text-accent-500">
+                <h3 className="text-[20px] font-bold text-accent-500">
                   Site Visit & Initial Planning
                 </h3>
               </div>
-              <div className="text-sm leading-7 text-[#173552]">
+              <div className="text-sm leading-6 text-[#173552] md:leading-10">
                 <p>
                   After registration, our team will visit your site (with prior
                   notice) within a week to discuss design requirements, budget,
@@ -138,14 +130,12 @@ const OurProcess = () => {
 
             <div className="rounded-xl bg-white bg-opacity-50 px-6 py-5">
               <div className="mb-3 flex items-center gap-2">
-                <Image
-                  src={docandapprovalIcon}
-                  alt="logo"
+                <DocApproval
                   width={50}
                   height={50}
                   className="min-h-[50px] min-w-[50px]"
                 />
-                <h3 className="text-2xl font-bold text-accent-500">
+                <h3 className="text-[20px] font-bold text-accent-500">
                   Documentation & Approvals
                 </h3>
               </div>
@@ -175,14 +165,12 @@ const OurProcess = () => {
             </div>
             <div className="rounded-xl bg-white bg-opacity-50 px-6 py-5">
               <div className="mb-3 flex items-center gap-2">
-                <Image
-                  src={costestimationicon}
-                  alt="logo"
+                <CostEstimation
                   width={50}
                   height={50}
                   className="min-h-[50px] min-w-[50px]"
                 />
-                <h3 className="text-2xl font-bold text-accent-500">
+                <h3 className="text-[20px] font-bold text-accent-500">
                   Cost Estimation
                 </h3>
               </div>
@@ -195,9 +183,11 @@ const OurProcess = () => {
                 </p>
                 <p className="text-xs font-bold">
                   {' '}
-                  <span className="text-accent-500">Note: </span> If a project
-                  is halted before completion, all service charges and
-                  outstanding amounts related to the project must be settled
+                  <span className="leading-[16px] text-accent-500">
+                    Note:{' '}
+                  </span>{' '}
+                  If a project is halted before completion, all service charges
+                  and outstanding amounts related to the project must be settled
                   promptly.
                 </p>
               </div>
@@ -213,25 +203,23 @@ const OurProcess = () => {
             </div>
             <div className="rounded-xl bg-white bg-opacity-50 px-6 py-5">
               <div className="mb-3 flex items-center gap-2">
-                <Image
-                  src={constructionapproval}
-                  alt="logo"
+                <SustainableConstruction
                   width={50}
                   height={50}
                   className="min-h-[50px] min-w-[50px]"
                 />
-                <h3 className="text-2xl font-bold text-accent-500">
-                  Sustainable Construction & Approvals
+                <h3 className="text-[20px] font-bold text-accent-500">
+                  Sustainable Construction
                 </h3>
               </div>
-              <div className="text-sm text-[#173552]">
-                <p className="mb-3 leading-7">
+              <div className="text-[#173552]">
+                <p className="mb-3 text-sm leading-[30px] md:text-[28px]">
                   We begin construction using eco-friendly practices and
                   materials to minimize environmental impact. Our approach
                   includes:
                 </p>
 
-                <ul className="ml-8 mt-2 list-disc leading-7">
+                <ul className="ml-6 mt-2 list-disc text-[12px] leading-[25px]">
                   <li>Low-impact development and native landscaping.</li>
                   <li>
                     Environmentally responsible, non-toxic, reused, recyclable
@@ -265,14 +253,12 @@ const OurProcess = () => {
             </div>
             <div className="rounded-xl bg-white bg-opacity-50 px-6 py-5">
               <div className="mb-3 flex items-center gap-2">
-                <Image
-                  src={healthcomforticon}
-                  alt="logo"
+                <HealthComfort
                   width={50}
                   height={50}
                   className="min-h-[50px] min-w-[50px]"
                 />
-                <h3 className="text-2xl font-bold text-accent-500">
+                <h3 className="text-[20px] font-bold text-accent-500">
                   Health & Comfort Integration
                 </h3>
               </div>
@@ -295,14 +281,12 @@ const OurProcess = () => {
             </div>
             <div className="rounded-xl bg-white bg-opacity-50 px-6 py-5">
               <div className="mb-3 flex items-center gap-2">
-                <Image
-                  src={economicicon}
-                  alt="logo"
+                <Economic
                   width={50}
                   height={50}
                   className="min-h-[50px] min-w-[50px]"
                 />
-                <h3 className="text-2xl font-bold text-accent-500">
+                <h3 className="text-[20px] font-bold text-accent-500">
                   Economic & Environmental Benefits
                 </h3>
               </div>
@@ -320,12 +304,11 @@ const OurProcess = () => {
               </div>
             </div>
           </div>
+          {/* for web */}
           <div className="hidden px-7 md:block">
             <div className="mb-10 flex gap-8">
               <div className="flex flex-col items-center gap-8">
-                <Image
-                  src={PenIconLg}
-                  alt="logo"
+                <PenIcon
                   width={50}
                   height={50}
                   className="min-h-[120px] min-w-[120px]"
@@ -336,15 +319,14 @@ const OurProcess = () => {
                   width={50}
                   height={50}
                   className="h-64 w-2"
-                  // className="min-h-[50px] min-w-[50px]"
                 />
               </div>
               <div className="flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Registration
                 </h3>
-                <div className="text-3xl text-[#173552]">
-                  <p className="mb-5">
+                <div className="text-[28px] text-[#173552]">
+                  <p className="mb-5 leading-10">
                     We treat each client as a valued partner in creating
                     something exceptional. Before registration, we ensure you
                     fully understand our approach, philosophy and techniques
@@ -352,7 +334,7 @@ const OurProcess = () => {
                     construction methods, materials, and design strategies.
                   </p>
                   <span>Registration Fees (Non-refundable) :</span>
-                  <ul className="ml-8 mt-4 list-disc">
+                  <ul className="ml-8 mt-4 list-disc text-[24px] leading-10">
                     <li>₹2000 for residential buildings</li>
                     <li>₹10,000 for non-residential buildings</li>
                   </ul>
@@ -361,11 +343,9 @@ const OurProcess = () => {
             </div>
             <div className="mb-10 flex gap-8">
               <div className="flex flex-col items-center gap-8">
-                <Image
-                  src={siteivisiticon}
-                  alt="logo"
-                  width={200}
-                  height={200}
+                <SiteVisit
+                  width={50}
+                  height={50}
                   className="min-h-[120px] min-w-[120px]"
                 />
                 <Image
@@ -374,14 +354,13 @@ const OurProcess = () => {
                   width={50}
                   height={50}
                   className="h-28 w-2"
-                  // className="min-h-[50px] min-w-[50px]"
                 />
               </div>
               <div className="flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Site Visit & Initial Planning
                 </h3>
-                <div className="text-3xl text-[#173552]">
+                <div className="text-[28px] text-[#173552]">
                   <p className="mb-5">
                     After registration, our team will visit your site (with
                     prior notice) within a week to discuss design requirements,
@@ -394,9 +373,7 @@ const OurProcess = () => {
             </div>
             <div className="mb-10 flex gap-8">
               <div className="flex flex-col items-center gap-8">
-                <Image
-                  src={docandapprovalIconlg}
-                  alt="logo"
+                <DocApproval
                   width={100}
                   height={100}
                   className="min-h-[120px] min-w-[120px]"
@@ -407,20 +384,21 @@ const OurProcess = () => {
                   width={50}
                   height={50}
                   className="h-64 w-2"
-                  // className="min-h-[50px] min-w-[50px]"
                 />
               </div>
               <div className="flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Documentation & Approvals
                 </h3>
-                <div className="text-3xl text-[#173552]">
+                <div className="text-[28px] text-[#173552]">
                   <p className="mb-5">
                     Once the plan is finalized, you’ll need to submit all
                     required documents for sanction drawings.
                   </p>
-                  <span>For government approval, you can either:</span>
-                  <ul className="ml-8 mt-4 list-disc">
+                  <span className="text-2xl">
+                    For government approval, you can either:
+                  </span>
+                  <ul className="ml-8 mt-4 list-disc text-2xl leading-10">
                     <li>Manage the sanctioning process independently.</li>
                     <li>
                       Opt for our assistance by arranging a professional, with
@@ -432,11 +410,9 @@ const OurProcess = () => {
             </div>
             <div className="mb-10 flex gap-8">
               <div className="flex flex-col items-center gap-8">
-                <Image
-                  src={costestimationiconlg}
-                  alt="logo"
-                  width={200}
-                  height={200}
+                <CostEstimation
+                  width={50}
+                  height={50}
                   className="min-h-[120px] min-w-[120px]"
                 />
                 <Image
@@ -445,21 +421,20 @@ const OurProcess = () => {
                   width={50}
                   height={50}
                   className="h-48 w-2"
-                  // className="min-h-[50px] min-w-[50px]"
                 />
               </div>
               <div className="flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Cost Estimation
                 </h3>
-                <div className="text-3xl text-[#173552]">
+                <div className="text-[28px] text-[#173552]">
                   <p className="mb-5">
                     A cost estimate will be provided based on the finalized
                     plan, valid for six months due to market fluctuations. Any
                     adjustments due to changes in design, materials, or
                     unforeseen market conditions will be your responsibility.
                   </p>
-                  <p className="font-bold">
+                  <p className="text-2xl font-bold leading-8">
                     {' '}
                     <span className="text-accent-500">Note: </span> If a project
                     is halted before completion, all service charges and
@@ -471,11 +446,9 @@ const OurProcess = () => {
             </div>
             <div className="mb-10 flex gap-8">
               <div className="flex flex-col items-center gap-8">
-                <Image
-                  src={constructionapprovallg}
-                  alt="logo"
-                  width={100}
-                  height={100}
+                <SustainableConstruction
+                  width={50}
+                  height={50}
                   className="min-h-[120px] min-w-[120px]"
                 />
                 <Image
@@ -489,15 +462,15 @@ const OurProcess = () => {
               </div>
               <div className="flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
-                  Sustainable Construction & Approvals
+                  Sustainable Construction
                 </h3>
-                <div className="text-3xl text-[#173552]">
+                <div className="text-[28px] font-normal text-[#173552]">
                   <p className="mb-5">
                     We begin construction using eco-friendly practices and
                     materials to minimize environmental impact. Our approach
                     includes:
                   </p>
-                  <ul className="ml-8 mt-4 list-disc">
+                  <ul className="ml-8 mt-4 list-disc text-2xl leading-10">
                     <li>Low-impact development and native landscaping.</li>
                     <li>
                       Environmentally responsible, non-toxic, reused, recyclable
@@ -523,11 +496,9 @@ const OurProcess = () => {
             </div>
             <div className="mb-10 flex gap-8">
               <div className="flex flex-col items-center gap-8">
-                <Image
-                  src={healthcomforticonlg}
-                  alt="logo"
-                  width={200}
-                  height={200}
+                <HealthComfort
+                  width={50}
+                  height={50}
                   className="min-h-[120px] min-w-[120px]"
                 />
                 <Image
@@ -536,14 +507,13 @@ const OurProcess = () => {
                   width={50}
                   height={50}
                   className="h-28 w-2"
-                  // className="min-h-[50px] min-w-[50px]"
                 />
               </div>
               <div className="flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Health & Comfort Integration
                 </h3>
-                <div className="text-3xl text-[#173552]">
+                <div className="text-[28px] font-normal text-[#173552]">
                   <p className="mb-5">
                     Our designs enhance indoor air quality, maximize natural
                     light, and ensure comfortable living spaces, fostering
@@ -554,11 +524,9 @@ const OurProcess = () => {
             </div>
             <div className="mb-10 flex gap-8">
               <div className="flex flex-col items-center gap-8">
-                <Image
-                  src={economiciconlg}
-                  alt="logo"
-                  width={200}
-                  height={200}
+                <Economic
+                  width={50}
+                  height={50}
                   className="min-h-[120px] min-w-[120px]"
                 />
               </div>
@@ -566,7 +534,7 @@ const OurProcess = () => {
                 <h3 className="text-4xl font-bold text-accent-500">
                   Economic & Environmental Benefits
                 </h3>
-                <div className="text-3xl text-[#173552]">
+                <div className="text-[28px] font-normal text-[#173552]">
                   <p className="mb-5">
                     By integrating energy efficiency, the use of renewable
                     energy sources and lower waste disposal costs, our projects
