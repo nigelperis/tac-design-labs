@@ -55,8 +55,6 @@ function AboutUsPage() {
         className="py-10"
         style={{
           backgroundImage: optimizedAboutUsBackground,
-          backgroundRepeat: 'repeat-y',
-          backgroundSize: 'contain',
         }}
       >
         <p className="mx-8 w-fit rounded-full bg-white px-5 py-[10px] font-primary text-xs font-extrabold text-primary-500 md:mx-[120px] md:px-10 md:py-[15px] md:text-base">

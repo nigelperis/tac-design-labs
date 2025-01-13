@@ -291,7 +291,7 @@ export default function Home() {
       </section>
 
       <section
-        className="md:py-26 border-b-[5px] border-t-[5px] border-white bg-[#f3d5b899] bg-cover bg-center pt-11 bg-blend-soft-light md:pb-8 md:pt-8"
+        className="md:py-26 border-b-[5px] border-t-[5px] border-white bg-opacity-30 bg-cover bg-center pt-11 mix-blend-multiply md:pb-8 md:pt-8"
         style={{
           backgroundImage: optimizedLandingPageWoodenBoardBackground,
         }}
