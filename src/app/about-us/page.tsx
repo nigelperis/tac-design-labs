@@ -9,6 +9,7 @@ import SeparatorLG from '~/assets/svgs/separator-lg.svg';
 import SeparatorSM from '~/assets/svgs/separator-sm.svg';
 
 import aboutUsCtaBg from '~/assets/images/about-us-cta.png';
+import aboutUsImage15 from '~/assets/images/about-us-image-15.jpg';
 import aboutUsPageBackground from '~/assets/images/about-us-page-background.png';
 import aboutUsPageImage1 from '~/assets/images/about-us-page-image-1.png';
 import aboutUsPageImage2 from '~/assets/images/about-us-page-image-2.png';
@@ -24,7 +25,6 @@ import aboutUsImage11 from '~/assets/images/about-us-page-image-11.jpeg';
 import aboutUsImage12 from '~/assets/images/about-us-page-image-12.jpeg';
 import aboutUsImage13 from '~/assets/images/about-us-page-image-13.jpeg';
 import aboutUsImage14 from '~/assets/images/about-us-page-image-14.jpeg';
-import aboutUsImage15 from '~/assets/images/about-us-page-image-15.jpeg';
 import laurieBarkerPortrait from '~/assets/images/about-us-page-laurie-barker-portrait.jpeg';
 import buttonBackground from '~/assets/images/button-background.png';
 
