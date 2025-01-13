@@ -8,6 +8,8 @@ import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer'
 import SeparatorLG from '~/assets/svgs/separator-lg.svg';
 import SeparatorSM from '~/assets/svgs/separator-sm.svg';
 
+import aboutUsCtaBg from '~/assets/images/about-us-cta.png';
+import aboutUsPageBackground from '~/assets/images/about-us-page-background.png';
 import aboutUsPageImage1 from '~/assets/images/about-us-page-image-1.png';
 import aboutUsPageImage2 from '~/assets/images/about-us-page-image-2.png';
 import aboutUsPageImage3 from '~/assets/images/about-us-page-image-3.png';
@@ -25,23 +27,20 @@ import aboutUsImage14 from '~/assets/images/about-us-page-image-14.jpeg';
 import aboutUsImage15 from '~/assets/images/about-us-page-image-15.jpeg';
 import laurieBarkerPortrait from '~/assets/images/about-us-page-laurie-barker-portrait.jpeg';
 import buttonBackground from '~/assets/images/button-background.png';
-import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.jpg';
-import landingPageHeroBackground from '~/assets/images/landing-page-hero-background.png';
 
 import ImageGrid from './image-grid';
 
 function AboutUsPage() {
-  const optimizedLandingPageArchitectureBackground =
-    getOptimizedBackgroundImage({
-      src: landingPageArchitectureBackground.src,
-      width: landingPageArchitectureBackground.width,
-      height: landingPageArchitectureBackground.height,
-    });
+  const optimizedAboutUsBackground = getOptimizedBackgroundImage({
+    src: aboutUsPageBackground.src,
+    width: aboutUsPageBackground.width,
+    height: aboutUsPageBackground.height,
+  });
 
-  const optimizedLandingPageHeroBackground = getOptimizedBackgroundImage({
-    src: landingPageHeroBackground.src,
-    width: landingPageHeroBackground.width,
-    height: landingPageHeroBackground.height,
+  const optimizedAboutUsCta = getOptimizedBackgroundImage({
+    src: aboutUsCtaBg.src,
+    width: aboutUsCtaBg.width,
+    height: aboutUsCtaBg.height,
   });
 
   const optimizedButtonBackground = getOptimizedBackgroundImage({
@@ -53,9 +52,11 @@ function AboutUsPage() {
   return (
     <div className="relative">
       <section
-        className="bg-[#EDD7C3] py-10 bg-blend-soft-light"
+        className="py-10"
         style={{
-          backgroundImage: optimizedLandingPageArchitectureBackground,
+          backgroundImage: optimizedAboutUsBackground,
+          backgroundRepeat: 'repeat-y',
+          backgroundSize: 'contain',
         }}
       >
         <p className="mx-8 w-fit rounded-full bg-white px-5 py-[10px] font-primary text-xs font-extrabold text-primary-500 md:mx-[120px] md:px-10 md:py-[15px] md:text-base">
@@ -189,9 +190,9 @@ function AboutUsPage() {
         </div>
       </section>
       <section
-        className="relative border-y-8 border-white bg-[#EDD7C3] py-11 bg-blend-soft-light md:h-[540px] md:py-[88px]"
+        className="relative border-y-8 border-white bg-cover py-11 md:h-[540px] md:py-[88px]"
         style={{
-          backgroundImage: optimizedLandingPageHeroBackground,
+          backgroundImage: optimizedAboutUsCta,
         }}
       >
         <SeparatorSM className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 md:hidden" />

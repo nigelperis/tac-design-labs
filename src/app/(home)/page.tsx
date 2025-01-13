@@ -15,7 +15,7 @@ import landingPageArchitectureBackground from '~/assets/images/landing-page-arch
 import landingPageAshamsRavi from '~/assets/images/landing-page-ashams-ravi-potrait.jpeg';
 import landingPageAssetGrass from '~/assets/images/landing-page-asset-grass.png';
 import landingPageAssetLeaves from '~/assets/images/landing-page-asset-leaves.png';
-import landingPageDriedLeavesBackground from '~/assets/images/landing-page-dried-leaves-background.jpg';
+import landingPageDriedLeavesBackground from '~/assets/images/landing-page-dried-leaves-background.png';
 import landingPageHeroBackground from '~/assets/images/landing-page-hero-background.png';
 import landingPageHeroImage from '~/assets/images/landing-page-hero-image.png';
 import landingPagePortfolioHouse1 from '~/assets/images/landing-page-portfolio-house-1.png';

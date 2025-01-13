@@ -13,6 +13,7 @@ import SiteVisit from '~/assets/svgs/sitevisit.svg';
 import SustainableConstruction from '~/assets/svgs/sustainableconstruction.svg';
 
 import OurWorkBgButton from '~/assets/images/button-background.png';
+import OurProcessBgImg from '~/assets/images/career-page-background.png';
 import lineourprocess from '~/assets/images/lineourprocess.png';
 import lineourwork1 from '~/assets/images/lineourwork1.png';
 import lineourwork2 from '~/assets/images/lineourwork2.png';
@@ -20,7 +21,6 @@ import lineourwork3 from '~/assets/images/lineourwork3.png';
 import lineourwork4 from '~/assets/images/lineourwork4.png';
 import lineourwork5 from '~/assets/images/lineourwork5.png';
 import lineourwork6 from '~/assets/images/lineourwork6.png';
-import OurProcessBgImg from '~/assets/images/our-process-bg-img.png';
 import ourprocesscatbgimg from '~/assets/images/ourproccessbgimg.png';
 
 const OurProcess = () => {
@@ -43,12 +43,11 @@ const OurProcess = () => {
   return (
     <div className="font-primary">
       <div
-        className="font-primary"
         style={{
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <div className="bg-[#EDD7C3CC] px-7 pb-12 pt-24 md:px-24 md:pb-24 md:pt-16">
+        <div className="bg-[#EDD7C3CC] bg-repeat px-7 pb-12 pt-24 md:px-24 md:pb-24 md:pt-16">
           <h1 className="mb-2 max-w-[900px] text-4xl text-primary-500 md:mb-5 md:text-6xl">
             Partnering with You for{' '}
             <span className="text-accent-500 md:mt-4 md:block">
