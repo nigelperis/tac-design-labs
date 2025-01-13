@@ -6,13 +6,13 @@ import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer'
 
 import buttonBackground from '~/assets/images/button-background.png';
 import workshopHeaderBackground from '~/assets/images/workshop_bg_header_2.jpg';
-import workshopImage1 from '~/assets/images/workshop_bg_header.jpg';
 import Workshope3 from '~/assets/images/workshop_image1.jpg';
 import Workshope4 from '~/assets/images/workshop_image2.jpg';
 import Workshope5 from '~/assets/images/workshop_image3.jpg';
 import bambooWorkshop1 from '~/assets/images/workshop-bamboo-1.jpg';
 import bambooWorkshop2 from '~/assets/images/workshop-bamboo-2.jpg';
 import bambooWorkshop3 from '~/assets/images/workshop-bamboo-3.jpg';
+import workshopWebBanner from '~/assets/images/workshop-banner-web.png';
 import brickWorkshop1 from '~/assets/images/workshop-brick-1.jpeg';
 import brickWorkshop2 from '~/assets/images/workshop-brick-2.jpeg';
 import brickWorkshop3 from '~/assets/images/workshop-brick-3.jpeg';
@@ -78,7 +78,7 @@ const Workshops = () => {
 
         <div className="relative h-full lg:w-[65%]">
           <Image
-            src={workshopImage1}
+            src={workshopWebBanner}
             alt="Workshop Gallery"
             width={840}
             height={500}

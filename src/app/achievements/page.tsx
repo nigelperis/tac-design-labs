@@ -11,7 +11,7 @@ import achievementPhoto4 from '~/assets/images/achievement-photo-4.jpeg';
 import achievementPhoto5 from '~/assets/images/achievement-photo-5.jpeg';
 import achievementPhoto6 from '~/assets/images/achievement-photo-6.png';
 import achievementsBambooBackground from '~/assets/images/achievements-bamboo-background.png';
-import achievementsPageBackground from '~/assets/images/achievements-page-background.png';
+import achievementsPageBackground from '~/assets/images/achievemnents-page-background.png';
 import buttonBackground from '~/assets/images/button-background.png';
 
 import AchievementCard from './achievements-card';
@@ -95,7 +95,7 @@ function Achievement() {
   return (
     <div className=" ">
       <section
-        className="bg-[#D19A6A] bg-opacity-35 bg-repeat px-7 py-8 bg-blend-soft-light md:px-32"
+        className="bg-opacity-35 bg-cover px-7 py-8 bg-blend-soft-light md:px-32"
         style={{
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
@@ -108,10 +108,7 @@ function Achievement() {
       </section>
 
       <section
-        className={cn(
-          styles.achievement_cta,
-          'bg-[#D19A6A] bg-opacity-5 bg-cover bg-center py-10',
-        )}
+        className={cn(styles.achievement_cta, 'bg-cover bg-center py-10')}
         style={{ backgroundImage: optimizedBambooBackground }}
       >
         <div
@@ -120,7 +117,7 @@ function Achievement() {
             'border-y-8 border-white bg-[#420C03CC] py-9',
           )}
         >
-          <p className="text-balance px-9 py-5 text-center font-primary text-[22px] text-white md:px-10 md:text-[40px] md:leading-[50px]">
+          <p className="text-balance px-9 py-5 text-center font-primary text-[22px] text-white md:px-16 md:py-9 md:text-[40px] md:leading-[50px]">
             Inspired by our achievements? Discover how we can help you bring
             your vision to life with sustainable and innovative solutions
             tailored to your needs.
