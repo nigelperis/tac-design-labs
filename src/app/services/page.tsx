@@ -15,7 +15,7 @@ const ServicePage = () => {
 
   return (
     <div
-      className="relative bg-[#EDD7C3] bg-contain py-16 font-primary bg-blend-soft-light"
+      className="relative bg-[#EDD7C3] bg-contain py-16 font-primary bg-blend-overlay"
       style={{ backgroundImage: optimizedCareerPageBackground }}
     >
       {/* Overlay for subtle dark effect */}
