@@ -153,14 +153,25 @@ function AboutUsPage() {
           Sustainable Architecture and Timeless Inspiration
         </h2>
         <div className="flex flex-col items-center gap-5 md:flex-row md:gap-20">
-          <div className="mt-5 md:my-0 md:flex-1 md:basis-1/3">
+          <div className="mt-5 text-center md:my-0 md:flex-1 md:basis-1/3">
             <Image
               src={laurieBarkerPortrait}
               placeholder="blur"
               alt="Laurie Barker Portrait"
               className="w-full overflow-hidden rounded-lg border-[6px] border-white"
             />
+            <div className="mt-5 inline-flex justify-center space-x-2">
+              <span className="font-primary text-lg">Credits:</span>
+              <a
+                target="_blank"
+                href="https://moremargie.com/article/bricks-of-kerala"
+                className="font-primary text-lg text-accent-500 underline"
+              >
+                https://moremargie.com/article/bricks-of-kerala
+              </a>
+            </div>
           </div>
+
           <div className="md:flex-1 md:basis-2/3">
             <p className="mb-3 hidden w-fit rounded-full bg-[#F3D1B3] px-9 py-[15px] font-primary text-base font-extrabold tracking-[20%] text-primary-500 md:block">
               INSPIRATION
