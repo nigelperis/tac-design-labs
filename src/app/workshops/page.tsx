@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
+import Workshope7 from '~/assets/images/about-us-page-image-15.jpeg';
 import buttonBackground from '~/assets/images/button-background.png';
 import workshopHeaderBackground from '~/assets/images/workshop_bg_header_2.jpg';
 import Workshope3 from '~/assets/images/workshop_image1.jpg';
@@ -22,7 +23,6 @@ import mudWorkshop2 from '~/assets/images/workshop-mud-2.jpeg';
 import mudWorkshop3 from '~/assets/images/workshop-mud-3.jpeg';
 import workshopPageBackground from '~/assets/images/workshop-page-background.png';
 import Workshope6 from '~/assets/images/Workshop4.jpg';
-import Workshope7 from '~/assets/images/workshop5.jpg';
 import Workshope8 from '~/assets/images/workshop6.jpg';
 import Workshopemobile from '~/assets/images/workshopbgmobiel.jpg';
 
@@ -166,7 +166,7 @@ const Workshops = () => {
             </div>
             <div className="col-span-2 overflow-hidden rounded-xl drop-shadow-xl lg:col-span-1 xl:p-3">
               <Image
-                src={Workshope5}
+                src={Workshope7}
                 alt="Workshop Image 3"
                 width={500}
                 height={500}
@@ -238,7 +238,7 @@ const Workshops = () => {
                 </div>
                 <div className="w-ful relative aspect-video h-full lg:aspect-[5/3.5] xl:aspect-[2/1]">
                   <Image
-                    src={Workshope7}
+                    src={Workshope5}
                     alt="Lecture Image 2"
                     fill
                     className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow-md drop-shadow-xl"
@@ -394,7 +394,7 @@ const Workshops = () => {
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 A sneak peek of what you’ll learn in this workshop -
               </p>
-              <ul className="ml-8 list-disc text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
+              <ul className="ml-8 list-disc text-[16px] font-[400] leading-9 text-[#173552] md:px-10 md:text-[24px]">
                 <li className="md:mt-8">
                   <strong>Introduction to Mud:</strong> Understanding mud’s
                   characteristics, properties, and preservation techniques.
