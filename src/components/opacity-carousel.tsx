@@ -38,7 +38,7 @@ export function OpacityCarousel(props: EmblaCarouselProps) {
   const {
     className,
     children,
-    tweenFactorBase = 0.84,
+    tweenFactorBase = 0.64,
     loop = true,
     ...rest
   } = props;
@@ -141,7 +141,7 @@ export function OpacityCarouselSlide(props: OpacityCarouselItemProps) {
   return (
     <div
       className={cn(
-        'w-full min-w-0 flex-shrink-0 flex-grow-0 basis-[70%] pl-4',
+        'w-full min-w-0 flex-shrink-0 flex-grow-0 basis-[75%] pl-4',
         className,
       )}
     >

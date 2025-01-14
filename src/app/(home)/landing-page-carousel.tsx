@@ -40,7 +40,7 @@ function LandingPageCarousel() {
                 <Image
                   src={itm}
                   alt="Portfolio image"
-                  className="aspect-video h-80 overflow-hidden rounded-2xl object-cover"
+                  className="h-52 w-80 overflow-hidden rounded-[30px] border-[5px] border-[#EDDED4] object-cover"
                 />
               </OpacityCarouselSlide>
             );
