@@ -45,6 +45,16 @@ const overrideComponents: MDXComponents = {
       {children}
     </h3>
   ),
+  h4: ({ children }) => (
+    <h4
+      className="text-center text-[10px] italic md:text-[20px] md:text-xl"
+      style={{
+        paddingBottom: '23px',
+      }}
+    >
+      {children}
+    </h4>
+  ),
   p: ({ children }) => (
     <p
       className="text-justify text-base leading-7 md:text-2xl md:leading-10"
