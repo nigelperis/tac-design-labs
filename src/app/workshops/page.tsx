@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
-import Workshope7 from '~/assets/images/about-us-page-image-15.jpeg';
+import Workshope7 from '~/assets/images/about-us-page-image-15.jpg';
 import buttonBackground from '~/assets/images/button-background.png';
 import workshopHeaderBackground from '~/assets/images/workshop_bg_header_2.jpg';
 import Workshope3 from '~/assets/images/workshop_image1.jpg';
@@ -26,7 +26,26 @@ import Workshope6 from '~/assets/images/Workshop4.jpg';
 import Workshope8 from '~/assets/images/workshop6.jpg';
 import Workshopemobile from '~/assets/images/workshopbgmobiel.jpg';
 
+import { WorkshopsMobileCarousel } from './workshops-carousel';
+
 const Workshops = () => {
+  const mudWorkshopImages = [
+    { src: mudWorkshop1, alt: 'Mud Workshop Image 1' },
+    { src: mudWorkshop2, alt: 'Mud Workshop Image 2' },
+    { src: mudWorkshop3, alt: 'Mud Workshop Image 3' },
+  ];
+
+  const bambooWorkshopImages = [
+    { src: bambooWorkshop1, alt: 'Bamboo Workshop Image 1' },
+    { src: bambooWorkshop2, alt: 'Bamboo Workshop Image 2' },
+    { src: bambooWorkshop3, alt: 'Bamboo Workshop Image 3' },
+  ];
+
+  const brickWorkshopImages = [
+    { src: brickWorkshop1, alt: 'Brick Workshop Image 1' },
+    { src: brickWorkshop2, alt: 'Brick Workshop Image 2' },
+    { src: brickWorkshop3, alt: 'Brick Workshop Image 3' },
+  ];
   const optimizedButtonBackground = getOptimizedBackgroundImage({
     src: buttonBackground.src,
     width: buttonBackground.width,
@@ -281,7 +300,7 @@ const Workshops = () => {
               construction material.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
+            <div className="mb-8 hidden grid-cols-1 gap-2 md:grid md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={bambooWorkshop1}
@@ -307,6 +326,8 @@ const Workshops = () => {
                 />
               </div>
             </div>
+
+            <WorkshopsMobileCarousel images={bambooWorkshopImages} />
 
             <div className="space-y-4 text-lg">
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
@@ -362,7 +383,7 @@ const Workshops = () => {
               rooted in tradition yet essential for sustainable living.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
+            <div className="mb-8 hidden grid-cols-1 gap-2 md:grid md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={mudWorkshop1}
@@ -389,6 +410,8 @@ const Workshops = () => {
                 />
               </div>
             </div>
+
+            <WorkshopsMobileCarousel images={mudWorkshopImages} />
 
             <div className="space-y-4 text-lg">
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
@@ -442,7 +465,7 @@ const Workshops = () => {
               construction.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
+            <div className="mb-8 hidden grid-cols-1 gap-2 md:grid md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={brickWorkshop1}
@@ -468,6 +491,8 @@ const Workshops = () => {
                 />
               </div>
             </div>
+
+            <WorkshopsMobileCarousel images={brickWorkshopImages} />
 
             <div className="space-y-4 text-lg">
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
