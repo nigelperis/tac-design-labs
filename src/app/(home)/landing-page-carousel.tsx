@@ -1,10 +1,19 @@
-/* eslint-disable @typescript-eslint/no-unused-vars -- componented to implemented in future */
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
-import { Carousel, CarouselContent, CarouselItem } from '~/components/carousel';
+import {
+  OpacityCarousel,
+  OpacityCarouselContainer,
+  OpacityCarouselIndicator,
+  OpacityCarouselNextButton,
+  OpacityCarouselPrevButton,
+  OpacityCarouselSlide,
+} from '~/components/opacity-carousel';
+
+import { cn } from '~/utils/cn';
 
 import landingPagePortfolioHouse1 from '~/assets/images/landing-page-portfolio-house-1.png';
 import landingPagePortfolioHouse2 from '~/assets/images/landing-page-portfolio-house-2.png';
@@ -12,14 +21,7 @@ import landingPagePortfolioHouse3 from '~/assets/images/landing-page-portfolio-h
 import landingPagePortfolioHouse4 from '~/assets/images/landing-page-portfolio-house-4.png';
 import landingPagePortfolioHouse5 from '~/assets/images/landing-page-portfolio-house-5.png';
 
-import type { CarouselApi } from '~/components/carousel';
-
 function LandingPageCarousel() {
-  const [api, setApi] = useState<CarouselApi>();
-
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-
   const images = [
     landingPagePortfolioHouse1,
     landingPagePortfolioHouse2,
@@ -28,42 +30,53 @@ function LandingPageCarousel() {
     landingPagePortfolioHouse5,
   ] as const;
 
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on('select', () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api]);
-
   return (
-    <div className="overflow-hidden md:hidden">
-      <Carousel
-        className="w-full overflow-hidden"
-        style={{ maxWidth: '100%' }}
-        setApi={setApi}
-      >
-        <CarouselContent>
+    <div className="md:hidden">
+      <OpacityCarousel className="relative max-w-[48rem]">
+        <OpacityCarouselContainer>
           {images.map((itm) => {
             return (
-              <CarouselItem key={itm.src}>
-                <div className="p-1">
-                  <Image
-                    src={itm}
-                    alt="Portfolio image"
-                    className="aspect-square rounded-3xl border-[5px] border-[#EDDED4] object-cover drop-shadow-lg"
-                  />
-                </div>
-              </CarouselItem>
+              <OpacityCarouselSlide key={itm.src}>
+                <Image
+                  src={itm}
+                  alt="Portfolio image"
+                  className="aspect-video h-80 overflow-hidden rounded-2xl object-cover"
+                />
+              </OpacityCarouselSlide>
             );
           })}
-        </CarouselContent>
-      </Carousel>
+        </OpacityCarouselContainer>
+        <div>
+          <OpacityCarouselPrevButton className="absolute left-0 top-1/2 -translate-y-1/2">
+            <ChevronLeft size={32} className="text-primary-500" />
+          </OpacityCarouselPrevButton>
+          <OpacityCarouselNextButton className="absolute right-0 top-1/2 -translate-y-1/2">
+            <ChevronRight size={32} className="text-primary-500" />
+          </OpacityCarouselNextButton>
+        </div>
+        <OpacityCarouselIndicator>
+          {(activeIndex) => {
+            return (
+              <div className="mt-4 flex justify-center">
+                {images.map((_, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className={cn(
+                        'mx-1 size-2 origin-left rounded-full border border-primary-500 opacity-50 transition-all duration-200 ease-out',
+                        {
+                          'w-4 rounded-3xl bg-primary-500 opacity-100':
+                            index === activeIndex,
+                        },
+                      )}
+                    />
+                  );
+                })}
+              </div>
+            );
+          }}
+        </OpacityCarouselIndicator>
+      </OpacityCarousel>
     </div>
   );
 }
