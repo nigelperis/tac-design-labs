@@ -41,6 +41,9 @@ function LandingPageCarousel() {
                   src={itm}
                   alt="Portfolio image"
                   className="h-52 w-80 overflow-hidden rounded-[30px] border-[5px] border-[#EDDED4] object-cover"
+                  style={{
+                    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+                  }}
                 />
               </OpacityCarouselSlide>
             );

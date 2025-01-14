@@ -141,7 +141,7 @@ export function OpacityCarouselSlide(props: OpacityCarouselItemProps) {
   return (
     <div
       className={cn(
-        'w-full min-w-0 flex-shrink-0 flex-grow-0 basis-[75%] pl-4',
+        'w-full min-w-0 flex-shrink-0 flex-grow-0 basis-[75%] pb-3 pl-3',
         className,
       )}
     >
