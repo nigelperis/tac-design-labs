@@ -83,7 +83,7 @@ const overrideComponents: MDXComponents = {
         letterSpacing: '5%',
         paddingBottom: '23px',
       }}
-      target={getLinkTarget(rest.href as string)}
+      target={getLinkTarget(rest.href as unknown as string)}
       {...rest}
     >
       {children}
