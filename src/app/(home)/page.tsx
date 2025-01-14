@@ -111,7 +111,7 @@ export default function Home() {
           className="relative -top-5 rounded-3xl md:-top-8 md:w-1/4"
         />
         <div className="relative md:w-1/2">
-          <OpenQuote className="absolute -left-11 top-2 hidden sm:h-2 sm:w-2 min-[1200px]:-top-4 min-[1200px]:inline" />
+          <OpenQuote className="absolute -left-11 top-2 hidden min-[1200px]:-top-4 min-[1200px]:inline" />
 
           <p className="relative mt-2 text-justify font-primary text-lg font-normal italic leading-5 tracking-wide md:text-left md:text-4xl">
             <OpenQuoteSm className="absolute -top-[7px] inline min-[1200px]:hidden" />{' '}
