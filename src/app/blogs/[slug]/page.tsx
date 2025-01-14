@@ -17,6 +17,15 @@ import Blog04 from '../markdown/blog-04.mdx';
 import type { MDXComponents, MDXProps } from 'mdx/types';
 import type { StaticImageData } from 'next/image';
 
+enum LinkTarget {
+  Internal = '_self',
+  External = '_blank',
+}
+
+const getLinkTarget = (url: string): LinkTarget => {
+  return url.startsWith('https') ? LinkTarget.External : LinkTarget.Internal;
+};
+
 const overrideComponents: MDXComponents = {
   h2: ({ children }) => (
     <h2
@@ -74,6 +83,7 @@ const overrideComponents: MDXComponents = {
         letterSpacing: '5%',
         paddingBottom: '23px',
       }}
+      target={getLinkTarget(rest.href as string)}
       {...rest}
     >
       {children}
