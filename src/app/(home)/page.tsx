@@ -6,8 +6,10 @@ import WorksCarousel from '~/components/landingpage2';
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 import { cn } from '~/utils/cn';
 
+import CloseQuoteSm from '~/assets/svgs/close-quote-sm.svg';
 import CloseQuote from '~/assets/svgs/closequote.svg';
 import LandingPageListImage from '~/assets/svgs/landing-page-list-image.svg';
+import OpenQuoteSm from '~/assets/svgs/open-quote-sm.svg';
 import OpenQuote from '~/assets/svgs/openquote.svg';
 
 import buttonBackground from '~/assets/images/button-background.png';
@@ -109,12 +111,17 @@ export default function Home() {
           className="relative -top-5 rounded-3xl md:-top-8 md:w-1/4"
         />
         <div className="relative md:w-1/2">
-          <OpenQuote className="absolute -left-11 -top-4 xl:inline" />
-          <p className="mt-2 text-justify font-primary text-lg font-normal italic leading-5 tracking-wide md:text-left md:text-4xl">
-            We all know the greenest choice is to avoid building altogether. But
-            when construction is necessary, the focus must shift to creating
-            spaces that respect and protect nature.{' '}
-            <CloseQuote className="mt-5 xl:inline" />
+          <OpenQuote className="absolute -left-11 top-2 hidden min-[1200px]:-top-4 min-[1200px]:inline" />
+
+          <p className="relative mt-2 text-justify font-primary text-lg font-normal italic leading-5 tracking-wide md:text-left md:text-4xl">
+            <OpenQuoteSm className="absolute -top-[7px] inline min-[1200px]:hidden" />{' '}
+            <span className="ml-[30px] min-[1200px]:ml-0">
+              We all know the greenest choice is to avoid building altogether.
+              But when construction is necessary, the focus must shift to
+              creating spaces that respect and protect nature.{' '}
+            </span>
+            <CloseQuote className="mt-5 hidden min-[1200px]:inline" />
+            <CloseQuoteSm className="ml-1 mt-1 inline min-[1200px]:hidden" />
           </p>
 
           <p className="mt-6 text-center font-primary text-2xl font-bold text-accent-500 md:text-right md:text-[32px]">
