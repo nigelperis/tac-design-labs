@@ -7,6 +7,9 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 
+import GoogleAnalyticsScript from '~/components/google-analytics-script';
+import MicrosoftClarity from '~/components/microsoft-clarity';
+
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',
@@ -45,6 +48,8 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
+      <GoogleAnalyticsScript />
+      <MicrosoftClarity />
     </html>
   );
 }
