@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
+import Workshope7 from '~/assets/images/about-us-page-image-15.jpg';
 import buttonBackground from '~/assets/images/button-background.png';
 import workshopHeaderBackground from '~/assets/images/workshop_bg_header_2.jpg';
 import Workshope3 from '~/assets/images/workshop_image1.jpg';
@@ -22,11 +23,29 @@ import mudWorkshop2 from '~/assets/images/workshop-mud-2.jpeg';
 import mudWorkshop3 from '~/assets/images/workshop-mud-3.jpeg';
 import workshopPageBackground from '~/assets/images/workshop-page-background.png';
 import Workshope6 from '~/assets/images/Workshop4.jpg';
-import Workshope7 from '~/assets/images/workshop5.jpg';
 import Workshope8 from '~/assets/images/workshop6.jpg';
 import Workshopemobile from '~/assets/images/workshopbgmobiel.jpg';
 
+import { WorkshopsMobileCarousel } from './workshops-carousel';
+
 const Workshops = () => {
+  const mudWorkshopImages = [
+    { src: mudWorkshop1, alt: 'Mud Workshop Image 1' },
+    { src: mudWorkshop2, alt: 'Mud Workshop Image 2' },
+    { src: mudWorkshop3, alt: 'Mud Workshop Image 3' },
+  ];
+
+  const bambooWorkshopImages = [
+    { src: bambooWorkshop1, alt: 'Bamboo Workshop Image 1' },
+    { src: bambooWorkshop2, alt: 'Bamboo Workshop Image 2' },
+    { src: bambooWorkshop3, alt: 'Bamboo Workshop Image 3' },
+  ];
+
+  const brickWorkshopImages = [
+    { src: brickWorkshop1, alt: 'Brick Workshop Image 1' },
+    { src: brickWorkshop2, alt: 'Brick Workshop Image 2' },
+    { src: brickWorkshop3, alt: 'Brick Workshop Image 3' },
+  ];
   const optimizedButtonBackground = getOptimizedBackgroundImage({
     src: buttonBackground.src,
     width: buttonBackground.width,
@@ -108,37 +127,37 @@ const Workshops = () => {
         <div className="mb-12 flex flex-col-reverse gap-8 md:justify-between xl:flex-col-reverse">
           <div className="w-full space-y-6 font-[400] text-[#173552] xl:w-[100%]">
             <ul className="list-disc pl-6 md:pl-10">
-              <li className="text-[16px] md:text-[24px]">
+              <li className="mb-3 text-[16px] md:text-[24px]">
                 <span className="font-bold">Practical Learning:</span>{' '}
                 Architectural education often lacks hands-on experience. Our
                 workshops offer students the chance to work directly with
                 materials and techniques, bringing theoretical concepts to life.
               </li>
-              <li className="text-[16px] md:text-[24px]">
+              <li className="mb-3 text-[16px] md:text-[24px]">
                 <span className="font-bold">Sustainability in Focus:</span> By
                 working with eco-friendly materials like bamboo and mud,
                 participants gain a deeper appreciation for sustainable
                 construction methods, fostering a commitment to greener
                 practices.
               </li>
-              <li className="text-[16px] md:text-[24px]">
+              <li className="mb-3 text-[16px] md:text-[24px]">
                 <span className="font-bold">Skill Development:</span> Students
                 develop essential skills, from material handling to construction
                 techniques, preparing them to meet the evolving demands of the
                 industry.
               </li>
-              <li className="text-[16px] md:text-[24px]">
+              <li className="mb-3 text-[16px] md:text-[24px]">
                 <span className="font-bold">Inspiring Innovation:</span>{' '}
                 Exposure to diverse materials and methods sparks creativity,
                 encouraging students to explore fresh, sustainable design ideas.
               </li>
-              <li className="text-[16px] md:text-[24px]">
+              <li className="mb-3 text-[16px] md:text-[24px]">
                 <span className="font-bold">Real-World Solutions:</span>{' '}
                 Hands-on experience equips students with the tools to tackle
                 real-world challenges in sustainable construction confidently
               </li>
             </ul>
-            <p className="text-[16px] md:text-[24px]">
+            <p className="mb-3 text-[16px] md:text-[24px]">
               Our workshops are more than just learning experiences - they are a
               step toward building a more sustainable and responsible
               architectural future.
@@ -166,7 +185,7 @@ const Workshops = () => {
             </div>
             <div className="col-span-2 overflow-hidden rounded-xl drop-shadow-xl lg:col-span-1 xl:p-3">
               <Image
-                src={Workshope5}
+                src={Workshope7}
                 alt="Workshop Image 3"
                 width={500}
                 height={500}
@@ -187,10 +206,10 @@ const Workshops = () => {
           <div className="py-6">
             <div className="flex flex-col justify-between gap-8 lg:flex-row">
               <div className="flex h-full w-full flex-col justify-between lg:w-[70%]">
-                <h2 className="mb-8 text-3xl text-[24px] font-bold text-[#C6742B] md:ml-6 md:text-[36px]">
+                <h2 className="mb-4 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-8 md:ml-6 md:text-[36px]">
                   Lecture Session Highlights:
                 </h2>
-                <ul className="ml-9 max-w-[790px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px]">
+                <ul className="ml-6 max-w-[790px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px]">
                   <li>
                     <span className="font-bold">
                       Understanding the Built Environment:
@@ -238,7 +257,7 @@ const Workshops = () => {
                 </div>
                 <div className="w-ful relative aspect-video h-full lg:aspect-[5/3.5] xl:aspect-[2/1]">
                   <Image
-                    src={Workshope7}
+                    src={Workshope5}
                     alt="Lecture Image 2"
                     fill
                     className="rounded-xl border-[2.5px] border-[#F0E0D6] object-cover shadow-md drop-shadow-xl"
@@ -281,7 +300,7 @@ const Workshops = () => {
               construction material.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
+            <div className="mb-8 hidden grid-cols-1 gap-2 md:grid md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={bambooWorkshop1}
@@ -308,40 +327,42 @@ const Workshops = () => {
               </div>
             </div>
 
+            <WorkshopsMobileCarousel images={bambooWorkshopImages} />
+
             <div className="space-y-4 text-lg">
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 Here is what this workshop has in store for you -
               </p>
-              <ul className="list-inside text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
-                <li className="my-5">
+              <ul className="ml-8 list-disc text-[16px] font-[400] text-[#173552] md:px-12 md:text-[24px]">
+                <li className="md:mt-8">
                   <strong>Introduction to Bamboo:</strong> Characteristics,
                   properties, and preservation methods.
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Feasibility in Current Scenarios:</strong> Exploring
                   the pros and cons of bamboo in contemporary construction.
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Climatic Considerations:</strong> Understanding how
                   bamboo performs in different climatic conditions.
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Treatment Methods:</strong> Techniques for treating
                   bamboo to enhance durability and resistance to pests.
                 </li>
-                <li className="mt-5">
+                <li className="md:mt-8">
                   <strong>Joining Techniques: </strong> Methods for joining
                   bamboo components in construction.
                 </li>
-                <li className="mt-5">
+                <li className="md:mt-8">
                   <strong>Structural Properties: </strong>Examining
                   bamboo&apos;s tensile strength and bending capacity.
                 </li>
-                <li className="mt-5">
+                <li className="md:mt-8">
                   <strong>Practical Construction: </strong>Building a structure
                   using bamboo, applying the knowledge gained in the lecture.
                 </li>
-                <li className="mt-5">
+                <li className="md:mt-8">
                   <strong>Relevant IS Codes:</strong> Overview of Indian
                   Standards (IS) codes related to bamboo construction.
                 </li>
@@ -362,13 +383,12 @@ const Workshops = () => {
               rooted in tradition yet essential for sustainable living.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
+            <div className="mb-8 hidden grid-cols-1 gap-2 md:grid md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={mudWorkshop1}
                   alt="Workshop Group"
                   fill
-                  objectPosition="50% 30%"
                   className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
@@ -390,37 +410,39 @@ const Workshops = () => {
               </div>
             </div>
 
+            <WorkshopsMobileCarousel images={mudWorkshopImages} />
+
             <div className="space-y-4 text-lg">
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 A sneak peek of what you’ll learn in this workshop -
               </p>
-              <ul className="list-inside text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
-                <li className="my-5">
-                  <strong>Introduction to Mud:</strong>Understanding mud’s
+              <ul className="ml-8 list-disc text-[16px] font-[400] leading-9 text-[#173552] md:px-10 md:text-[24px]">
+                <li className="md:mt-8">
+                  <strong>Introduction to Mud:</strong> Understanding mud’s
                   characteristics, properties, and preservation techniques.
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Feasibility in Current Scenarios:</strong> Discussing
                   the advantages and challenges of mud in modern construction.
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Climatic Considerations:</strong> Evaluating
                   mud&apos;s performance in different environments
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Tests for Mud:</strong> Learning methods to assess mud
                   quality and suitability
                 </li>
-                <li className="mt-5">
+                <li className="md:mt-8">
                   <strong>Elemental Composition:</strong> Understanding the role
                   of mud components in construction
                 </li>
-                <li className="mt-5">
+                <li className="md:mt-8">
                   <strong>Stabilization Methods:</strong> Understanding the role
                   Techniques for stabilizing mud using lime, rice husk, or other
                   binders
                 </li>
-                <li className="mt-5">
+                <li className="md:mt-8">
                   <strong>Practical Construction:</strong> Understanding the
                   role Building structures using mud, such as Adobe bricks, Cob
                   walls and Wattle & Daub walls.
@@ -442,7 +464,7 @@ const Workshops = () => {
               construction.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
+            <div className="mb-8 hidden grid-cols-1 gap-2 md:grid md:grid-cols-3 md:gap-1 md:px-10 lg:gap-4">
               <div className="relative aspect-square">
                 <Image
                   src={brickWorkshop1}
@@ -469,36 +491,38 @@ const Workshops = () => {
               </div>
             </div>
 
+            <WorkshopsMobileCarousel images={brickWorkshopImages} />
+
             <div className="space-y-4 text-lg">
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 See what valuable insights await in this workshop -
               </p>
-              <ul className="list-inside text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
-                <li className="my-5">
-                  <strong>Introduction to Bricks:</strong>Characteristics,
+              <ul className="ml-8 list-disc text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
+                <li className="md:mt-8">
+                  <strong>Introduction to Bricks:</strong> Characteristics,
                   properties, and preservation techniques.
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Feasibility in Current Scenarios:</strong> Assessing
                   the relevance of bricks in sustainable architecture.{' '}
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Climatic Considerations:</strong> Understanding how
                   bricks perform in different climatic conditions
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Brick Baking Process:</strong> An overview of how
                   bricks are made and baked
                 </li>
-                <li className="my-5">
+                <li className="md:mt-8">
                   <strong>Types of Bricks:</strong> Exploring their variety and
                   uses.
                 </li>
-                <li className="mt-5">
+                <li className="md:mt-8">
                   <strong>Bonding Techniques:</strong> Learning different
                   methods to join bricks.
                 </li>
-                <li className="mt-5">
+                <li className="md:mt-8">
                   <strong>Practical Construction:</strong> Learning different
                   Crafting walls, arches, jalis, and other decorative elements
                   using brick
@@ -511,11 +535,15 @@ const Workshops = () => {
         <div className="mt-6">
           <div className="">
             {/* Key Takeaways Section */}
-            <div className="mb-8 rounded-[18px] border-2 border-[#ECC19A] bg-[#FFFFFF80] bg-opacity-50 p-8 shadow-md drop-shadow-xl">
+            <div
+              className="mb-8 rounded-[18px] border-2 border-[#ECC19A] bg-[#FFFFFF80] bg-opacity-50 p-8"
+              style={{ boxShadow: '0px 4px 4px 0px #00000040' }}
+            >
+              {' '}
               <h2 className="text-[24px] font-bold text-[#C6742B] md:text-[36px]">
                 Key Takeaways for Students
               </h2>
-              <ul className="mx-auto mt-8 space-y-4 text-[16px] text-lg font-[400] text-[#173552] md:text-[24px]">
+              <ul className="ml-2 mt-6 space-y-7 text-base font-[400] text-[#173552] md:ml-9 md:text-[24px] md:leading-[33px]">
                 <li>
                   <strong>Confidence with Sustainable Materials:</strong>{' '}
                   Hands-on sessions help students understand and confidently use
