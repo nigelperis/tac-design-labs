@@ -389,7 +389,6 @@ const Workshops = () => {
                   src={mudWorkshop1}
                   alt="Workshop Group"
                   fill
-                  objectPosition="50% 30%"
                   className="rounded-[38px] border-[5px] border-[#F0E0D6] object-cover drop-shadow-xl"
                 />
               </div>
