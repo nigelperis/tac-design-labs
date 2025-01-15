@@ -13,3 +13,4 @@
 *.woff2 -text
 *.ttf -text
 
+*.JPG binary
