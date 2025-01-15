@@ -70,7 +70,7 @@ export default function Home() {
     <div className="h-full min-h-full">
       <section
         className={cn(
-          'relative h-full min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light md:flex md:h-[70vh] md:flex-row-reverse md:items-center md:justify-between',
+          'relative h-full min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light md:flex md:h-[80vh] md:flex-row-reverse md:items-center md:justify-between',
           styles.dashed_dotted_line,
         )}
         style={{
@@ -82,17 +82,17 @@ export default function Home() {
             src={landingPageHeroImage}
             placeholder="blur"
             alt="Landing page hero image "
-            className="h-1/4 w-full overflow-hidden rounded-md object-cover md:ml-auto md:aspect-video md:h-auto md:w-3/4 md:rounded-none md:rounded-s-3xl"
+            className="w-full overflow-hidden rounded-md md:ml-auto md:aspect-video md:h-[350px] md:w-3/4 md:rounded-none md:rounded-s-3xl"
           />
           <Image
             src={landingPageAssetGrass}
             placeholder="empty"
             alt="Landing page asset grass"
-            className="absolute -right-6 top-full w-[120px] -translate-y-1/2 object-cover drop-shadow-md md:left-1/3 md:w-[150px] md:-translate-x-full"
+            className="absolute -right-6 top-[95%] h-[165px] w-[120px] -translate-y-1/2 object-contain drop-shadow-md md:left-1/3 md:w-[150px] md:-translate-x-[60%]"
           />
         </div>
 
-        <div className="relative mt-8 flex flex-col items-start justify-center p-8 md:flex-grow">
+        <div className="relative mt-8 flex flex-col items-start justify-center p-8 md:pl-24">
           <h1 className="text-center font-primary text-[38px] font-bold text-primary-500 md:text-6xl">
             TAC Design LAB
           </h1>
@@ -108,7 +108,7 @@ export default function Home() {
           placeholder="blur"
           loading="lazy"
           alt="Ashams Ravi portrait"
-          className="relative -top-5 rounded-3xl md:-top-8 md:w-1/4"
+          className="relative -top-5 h-[300px] w-[200px] rounded-3xl object-cover max-sm:mx-auto md:-top-8 md:h-[400px] md:w-[300px] md:object-fill"
         />
         <div className="relative md:w-1/2">
           <OpenQuote className="absolute -left-11 top-2 hidden min-[1200px]:-top-4 min-[1200px]:inline" />
