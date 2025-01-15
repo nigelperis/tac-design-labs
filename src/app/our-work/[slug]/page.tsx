@@ -1,6 +1,7 @@
 import Banner from './components/banner';
 import Highlights from './components/highlights';
 import MainContent from './components/main-content';
+import Testimonial from './components/testimonial';
 import type { PageParams } from './model';
 
 async function Page({ params }: PageParams) {
@@ -11,6 +12,7 @@ async function Page({ params }: PageParams) {
       <Banner work={slug} imagePath={`/works/${slug}-banner.jpeg`} />
       <Highlights work={slug} />
       <MainContent work={slug} />
+      {/* <Testimonial work={slug} /> */}
     </div>
   );
 }

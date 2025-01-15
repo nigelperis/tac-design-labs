@@ -20,13 +20,15 @@ export interface WorkDetails {
   budget: string;
   overview: string;
   designIntent: string;
+  materialsAndTechniques?: BulletPoint[];
   keyFeatures: BulletPoint[];
   materialPallete?: BulletPoint[];
   functionalLayout?: BulletPoint[];
   sustainabilityMeasures?: BulletPoint[];
-  culturalConsiderations?: string;
+  culturalConsiderations?: string | BulletPoint[];
   outcome: string;
   testimonial: string;
+  testimonialVideo: string;
   admiration: string;
 }
 

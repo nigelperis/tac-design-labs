@@ -16,3 +16,11 @@ export interface MainContentProps {
 export interface ImageSliderProps {
   images: string[];
 }
+
+export interface TestimonialProps {
+  work: Work;
+}
+
+export interface DetailsCarouselProps {
+  images: string[];
+}

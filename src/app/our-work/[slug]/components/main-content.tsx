@@ -5,6 +5,7 @@ import Image from 'next/image';
 import landingPageLeavesBackground from '~/assets/images/landing-page-team-background.png';
 
 import { images, rightColImageCount, workDetails } from '../constant';
+import DetailsCarousel from './details-carousel';
 import ImageSlider from './image-slider';
 import type { MainContentProps } from './model';
 
@@ -39,7 +40,12 @@ function MainContent(props: MainContentProps) {
         <div className="mb-8 flex flex-col gap-20 text-[#173552]">
           {[
             { title: 'Design Intent', content: currentWork.designIntent },
+            {
+              title: 'Materials and Techniques',
+              content: currentWork.materialsAndTechniques,
+            },
             { title: 'Key Features', content: currentWork.keyFeatures },
+
             { title: 'Material Palette', content: currentWork.materialPallete },
             {
               title: 'Functional Layout',
@@ -111,7 +117,7 @@ function MainContent(props: MainContentProps) {
         </div>
 
         {/* Main Images Section */}
-        <div className="hidden max-w-[38vw] columns-2 gap-4 lg:block">
+        <div className="hidden max-w-[38vw] gap-x-5 lg:grid lg:grid-cols-2">
           {mainImages.map((image, idx) => (
             <div key={idx} className="mb-5">
               <Image
@@ -125,6 +131,7 @@ function MainContent(props: MainContentProps) {
             </div>
           ))}
         </div>
+        {/* <DetailsCarousel images={mainImages} /> */}
       </div>
       <ImageSlider images={extraImages} />
     </div>
