@@ -351,7 +351,7 @@ const shireData: WorkDetails = {
 export const workDetails: Record<Work, WorkDetails> = {
   [Work.HAVEN]: havenData,
   [Work.CANAAN]: canaanData,
-  [Work.SHIRE]: havenData,
+  [Work.SHIRE]: shireData,
   [Work.SANCHIBAGS]: havenData,
 };
 
@@ -365,7 +365,7 @@ export const images: WorkImages = {
     (_, index) => `/canaan/${(index + 1).toString()}.jpg`,
   ),
   [Work.SHIRE]: Array.from(
-    { length: 23 },
+    { length: 28 },
     (_, index) => `/shire/${(index + 1).toString()}.jpg`,
   ),
   [Work.SANCHIBAGS]: Array.from(
@@ -377,6 +377,6 @@ export const images: WorkImages = {
 export const rightColImageCount = {
   [Work.HAVEN]: 27,
   [Work.CANAAN]: 38,
-  [Work.SHIRE]: 23,
+  [Work.SHIRE]: 28,
   [Work.SANCHIBAGS]: 17,
 };

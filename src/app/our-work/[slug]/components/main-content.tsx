@@ -117,7 +117,7 @@ function MainContent(props: MainContentProps) {
         </div>
 
         {/* Main Images Section */}
-        <div className="hidden max-w-[38vw] gap-x-5 lg:grid lg:grid-cols-2">
+        <div className="hidden max-w-[38vw] columns-2 gap-4 lg:block">
           {mainImages.map((image, idx) => (
             <div key={idx} className="mb-5">
               <Image
