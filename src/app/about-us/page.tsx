@@ -110,10 +110,9 @@ function AboutUsPage() {
           <StoryCard
             title={
               <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
-                A Portfolio of{' '}
+                A Portfolio of&nbsp;
                 <span className="text-accent-500">
-                  {' '}
-                  Excellence & Recognition{' '}
+                  Excellence & Recognition
                 </span>
               </h3>
             }
@@ -136,7 +135,7 @@ function AboutUsPage() {
             mainImage={aboutUsImage13}
             subImage1={aboutUsImage14}
             subImage2={aboutUsImage15}
-            description="Beyond our projects, TAC Design LAB engages with the community through collaborations with architecture and engineering colleges, advocating for sustainable practices, and conducting hands-on workshops in bamboo, mud, and brick masonry.
+            description="Beyond our projects, TAC Design LAB engages with the community through collaborations with architecture and engineering colleges, advocating for sustainable practices, and conducting hands-on workshops in bamboo, mud, and brick masonry.<br/><br/>
             
             Looking ahead, our vision is to reduce the building industry's environmental impact, creating a more sustainable world for future generations."
             alignment="main-left"
@@ -176,8 +175,8 @@ function AboutUsPage() {
             <p className="mb-3 hidden w-fit rounded-full bg-[#F3D1B3] px-9 py-[15px] font-primary text-base font-extrabold tracking-[20%] text-primary-500 md:block">
               INSPIRATION
             </p>
-            <h2 className="mb-3 hidden font-primary text-5xl font-normal text-primary-500 md:block md:leading-[66px]">
-              Laurie Baker:{' '}
+            <h2 className="mb-3 hidden font-primary text-4xl font-normal text-primary-500 md:block md:leading-[66px]">
+              Laurie Baker:
               <span className="text-accent-500"> The Pioneer</span> of
               Sustainable Architecture and Timeless Inspiration
             </h2>
@@ -272,9 +271,10 @@ function StoryCard(props: StoryCardProps) {
 
         <div className="flex-grow basis-1/2">
           <div className="mb-5 hidden md:block md:leading-[48px]">{title}</div>
-          <p className="text-balance text-justify font-primary text-lg font-normal text-gray-950 md:text-2xl md:leading-[45px]">
-            {description}
-          </p>
+          <p
+            className="text-balance text-justify font-primary text-lg font-normal text-gray-950 md:text-2xl md:leading-[45px]"
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></p>
         </div>
       </div>
     </li>

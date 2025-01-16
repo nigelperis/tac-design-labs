@@ -153,7 +153,7 @@ export default function Home() {
             <li className="px-8">
               <div className="flex space-x-2">
                 <LandingPageListImage className="" />
-                <h3 className="font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
                   Understanding Sustainable Architecture
                 </h3>
               </div>
@@ -170,7 +170,7 @@ export default function Home() {
             <li className="px-8">
               <div className="flex space-x-2">
                 <LandingPageListImage className="" />
-                <h3 className="font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
                   The Need for Sustainable Design
                 </h3>
               </div>
@@ -188,7 +188,7 @@ export default function Home() {
             <li className="px-8">
               <div className="flex space-x-2">
                 <LandingPageListImage className="" />
-                <h3 className="font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
                   A Global Mission
                 </h3>
               </div>

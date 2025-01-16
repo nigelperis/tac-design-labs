@@ -56,14 +56,14 @@ const projects: ProjectCard[] = [
     title: 'Hospitality Projects ',
     tags: ['Hotels', 'Resorts', 'Homestays'],
     description:
-      ' Creating serene and sustainable retreats that offer luxury in harmony with nature.',
+      'Creating serene and sustainable retreats that offer luxury in harmony with nature.',
   },
   {
     image: conservationProject.src,
     title: 'Conservation Projects',
     tags: ['Heritage Restoration', 'Adaptive Reuse'],
     description:
-      'Preserving historical structures with innovative, eco-friendly methods that honor their legacy. ',
+      'Preserving historical structures with innovative, eco-friendly methods that honor their legacy.',
   },
   {
     image: landscapeDesign.src,
@@ -80,7 +80,15 @@ const projects: ProjectCard[] = [
       'Transforming interiors with eco-friendly, stylish designs that reflect individual personalities.',
   },
 ];
-const carouselItems = [
+
+interface CarouselItemProps {
+  youtubeLink?: string;
+  imageLink?: string;
+  text: string;
+  author: string;
+}
+
+const carouselItems: CarouselItemProps[] = [
   {
     youtubeLink:
       'https://www.youtube.com/embed/qpOZ6rXgR_s?si=jQgeuC20qgI6c0pK',
@@ -90,63 +98,55 @@ const carouselItems = [
   {
     youtubeLink:
       'https://www.youtube.com/embed/n_6n7HprSFM?si=fRzYlkw0RqeKdlne',
-    text: 'Everything was just how we imagined it. We shared our preferences with the designer, and he was very kind and patient, always ready to make changes and incorporate our suggestions into the design. That collaborative approach was really impressive and something I believe is essential when working with someone.',
+    text: 'Everything was just how we imagined it. We shared our preferences with the designer, and he was very kind and patient, always ready to make changes and incorporate our suggestions into the design.',
     author: '~ Joe and Athira',
   },
   {
-    imageLink: comingsoon.src, // Replace with your image path or URL
+    imageLink: comingsoon.src,
     text: 'A glimpse into how the Sanchi Bags Tailoring Unit redefines sustainability and innovation in commercial spaces.',
     author: '',
   },
 ];
-interface CarouselItemProps {
-  youtubeLink?: string;
-  imageLink?: string;
-  text: string;
-  author: string;
-}
 
-export function CarouselItem({
+const CarouselItem: React.FC<CarouselItemProps> = ({
   youtubeLink,
   imageLink,
   text,
   author,
-}: CarouselItemProps) {
-  return (
-    <div
-      className={`relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-[20px] bg-white bg-opacity-40 shadow-md`}
-    >
-      <div className="relative z-10 flex w-auto flex-col items-center px-10 py-4">
-        {youtubeLink && (
-          <iframe
-            className="aspect-video h-[100%] w-[120%] rounded-[24px] shadow-lg md:mt-10 md:h-[90%] md:w-[160%]"
-            src={youtubeLink}
-            title="YouTube video"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        )}
-        {!youtubeLink && imageLink && (
-          <Image
-            className="rounded-[24px] object-cover shadow-lg md:mt-10"
-            src={imageLink}
-            alt="Coming Soon"
-            width={400}
-            height={400}
-          />
-        )}
-      </div>
-      <div className="px-5">
-        <p className="mt-4 max-w-2xl text-center font-primary text-[14px] font-[400] leading-relaxed md:text-[22px]">
-          &quot;{text}&quot;
-        </p>
-        <h1 className="py-8 text-center font-primary text-[22px] font-[600] text-[#173552]">
-          {author}
-        </h1>
-      </div>
+}) => (
+  <div
+    className={`relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-[20px] bg-white bg-opacity-40 shadow-md`}
+  >
+    <div className="relative z-10 flex w-auto flex-col items-center px-10 py-4">
+      {youtubeLink && (
+        <iframe
+          className="aspect-video h-[100%] w-[120%] rounded-[24px] shadow-lg md:mt-10 md:h-[90%] md:w-[160%]"
+          src={youtubeLink}
+          title="YouTube video"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      )}
+      {!youtubeLink && imageLink && (
+        <Image
+          className="rounded-[24px] object-cover shadow-lg md:mt-10"
+          src={imageLink}
+          alt="Coming Soon"
+          width={400}
+          height={400}
+        />
+      )}
     </div>
-  );
-}
+    <div className="px-5">
+      <p className="mt-4 max-w-2xl text-center font-primary text-[14px] font-[400] leading-relaxed md:text-[22px]">
+        &quot;{text}&quot;
+      </p>
+      <h1 className="py-8 text-center font-primary text-[22px] font-[600] text-[#173552]">
+        {author}
+      </h1>
+    </div>
+  </div>
+);
 
 const ServicePage = () => {
   const optimizedCareerPageBackground = getOptimizedBackgroundImage({
@@ -170,9 +170,7 @@ const ServicePage = () => {
       className="relative bg-[#EDD7C3] bg-contain font-primary bg-blend-overlay"
       style={{ backgroundImage: optimizedCareerPageBackground }}
     >
-      <div className="pointer-events-none absolute inset-0 bg-opacity-20"></div>
-
-      <div className="z-10 lg:relative" style={{ fontFamily: 'Comic Sans MS' }}>
+      <div className="" style={{ fontFamily: 'Comic Sans MS' }}>
         <div className="mb-10 pt-16 text-center text-[32px] font-bold text-[#552b0a] lg:text-[42px]">
           <h1 style={{ fontFamily: 'Comic Sans MS' }}>We Work with Everyone</h1>
         </div>
@@ -196,7 +194,7 @@ const ServicePage = () => {
                     }}
                   />
                 </div>
-                {/* Info Section */}
+
                 <div className="-mt-5 ml-2 flex flex-col justify-center p-4 lg:w-1/2">
                   <h3 className="mb-2 font-primary text-[20px] font-bold text-[#552B0A] md:text-[32px]">
                     {project.title}
@@ -226,9 +224,9 @@ const ServicePage = () => {
             backgroundImage: optimizedBG,
           }}
         >
-          <div className="flex justify-evenly gap-x-2 text-center text-[32px] md:flex-col md:text-left md:text-[72px]">
+          <div className="flex justify-evenly gap-x-2 text-center text-[25px] md:flex-col md:text-left md:text-[72px]">
             <div className="flex">
-              <h2 className="inline text-primary-500">Dream</h2>
+              <h2 className="text-primary-500">Dream</h2>
               <span className="text-black">.</span>
             </div>
             <div className="flex">
@@ -240,8 +238,9 @@ const ServicePage = () => {
               <span className="text-[#552B0A]">.</span>
             </div>
           </div>
+
           <div className="flex flex-col items-center justify-center gap-6 leading-8 tracking-[2%] md:leading-[45px]">
-            <h3 className="text-balance text-center text-lg md:text-[32px]">
+            <h3 className="text-balance text-center text-[17px] md:text-[32px]">
               Every great project starts with a conversation. Let&apos;s design
               something extraordinary together—talk to us!
             </h3>
@@ -260,7 +259,7 @@ const ServicePage = () => {
         </div>
 
         <div
-          className="bg-cover bg-center"
+          className=""
           style={{
             backgroundImage: `url(${service.src})`,
           }}
