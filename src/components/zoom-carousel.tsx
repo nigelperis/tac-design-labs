@@ -156,7 +156,7 @@ export function ZoomCarouselContainer(props: ZoomCarouselContainerProps) {
   const context = useContext(EmblaCarouselContext);
   return (
     <div
-      className="mx-auto w-screen overflow-hidden px-7 lg:mx-0"
+      className="mx-auto overflow-hidden px-7 lg:mx-0"
       ref={context?.carouselRef}
     >
       <div className={cn('flex touch-pan-y touch-pinch-zoom', className)}>
