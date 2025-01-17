@@ -109,7 +109,7 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
+              <h3 className="text-balance font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
                 A Portfolio of&nbsp;
                 <span className="text-accent-500">
                   Excellence & Recognition
