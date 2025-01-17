@@ -47,7 +47,7 @@ function FeaturedVideos(props: FeaturedVideoProps) {
                     <p className="text-[24px] lg:text-[64px]">COMING SOON</p>
                   )}
 
-                  <p className="mx-auto w-[525px] text-center text-[0.9vw]">
+                  <p className="mx-auto w-[30vw] text-center text-[0.9vw]">
                     {video.description}
                   </p>
                 </div>
