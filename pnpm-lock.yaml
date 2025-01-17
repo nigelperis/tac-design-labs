@@ -3497,7 +3497,8 @@ packages:
     hasBin: true
 
   swiper@11.2.1:
-    resolution: {integrity: sha512-62G69+iQRIfUqTmJkWpZDcX891Ra8O9050ckt1/JI2H+0483g+gq0m7gINecDqMtDh2zt5dK+uzBRxGhGOOvQA==, tarball: https://artifactory.intra.nexthink.com:443/artifactory/api/npm/npm/swiper/-/swiper-11.2.1.tgz}
+    resolution: {integrity: sha512-62G69+iQRIfUqTmJkWpZDcX891Ra8O9050ckt1/JI2H+0483g+gq0m7gINecDqMtDh2zt5dK+uzBRxGhGOOvQA==}
+
     engines: {node: '>= 4.7.0'}
 
   synckit@0.9.2:
