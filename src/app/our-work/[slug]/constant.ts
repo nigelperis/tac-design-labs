@@ -69,12 +69,17 @@ const havenData: WorkDetails = {
     {
       title: 'Ground Floor',
       description:
-        'Includes a veranda, living area, open kitchen, work area, courtyard, and one bedroom with an attached bathroom.',
+        'Features a veranda, living area, open kitchen, work area, central courtyard, and a bedroom with an attached bathroom.',
     },
     {
       title: 'First Floor',
       description:
-        'Comprises two bedrooms with attached bathrooms and a balcony.',
+        'Includes two bedrooms with attached bathrooms and a balcony.',
+    },
+    {
+      title: 'Circular Courtyard',
+      description:
+        'Acts as the design’s focal point, optimizing space and enhancing connectivity with minimal circulation.',
     },
   ],
   sustainabilityMeasures: [
@@ -344,28 +349,28 @@ const shireData: WorkDetails = {
   ],
   sustainabilityMeasures: [
     {
-      title: 'Punk',
+      title: 'Placeholder',
       description:
         'Energy-efficient passive cooling systems and the use of reused materials.',
     },
     {
-      title: 'Punk',
+      title: 'Placeholder',
       description:
         'A biogas plant that processes waste, reducing the environmental impact.',
     },
     {
-      title: 'Punk',
+      title: 'Placeholder',
       description: 'Use of renewable resources like solar water heating.',
     },
   ],
   culturalConsiderations: [
     {
-      title: 'Punk',
+      title: 'Placeholder',
       description:
         'Reflects traditional Udupi architecture with rustic aesthetics.',
     },
     {
-      title: 'Punk',
+      title: 'Placeholder',
       description:
         'Combines natural and local materials to exhibit regional heritage.',
     },

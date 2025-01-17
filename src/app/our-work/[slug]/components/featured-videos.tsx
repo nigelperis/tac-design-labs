@@ -26,16 +26,16 @@ function FeaturedVideos(props: FeaturedVideoProps) {
               /* Card */
               return (
                 <div
-                  className="h-[700px] w-[660px] rounded-2xl bg-[#FFFFFFBB] pb-5 pt-8"
+                  className="h-[700px] w-[42vw] rounded-2xl bg-[#FFFFFFBB] pb-5 pl-4 pr-4 pt-8"
                   key={index}
                 >
-                  <h3 className="mx-auto w-[575px] text-center text-[33px] font-bold text-[#552B0A]">
+                  <h3 className="mx-auto w-[37vw] text-center text-[1.9vw] font-bold text-[#552B0A]">
                     {video.title}
                   </h3>
 
                   {video.video ? (
                     <iframe
-                      className="mx-auto my-10 aspect-video h-[350px] w-[500px] rounded-2xl border-[5px] border-[#ECC19A]"
+                      className="mx-auto my-10 aspect-video h-[350px] w-[30vw] rounded-2xl border-[5px] border-[#ECC19A]"
                       src={video.video}
                       title="YouTube video player"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share shadow-md"
@@ -47,7 +47,7 @@ function FeaturedVideos(props: FeaturedVideoProps) {
                     <p className="text-[24px] lg:text-[64px]">COMING SOON</p>
                   )}
 
-                  <p className="mx-auto w-[525px] text-center text-[15px]">
+                  <p className="mx-auto w-[525px] text-center text-[0.9vw]">
                     {video.description}
                   </p>
                 </div>

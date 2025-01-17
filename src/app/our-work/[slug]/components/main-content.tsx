@@ -31,7 +31,7 @@ function MainContent(props: MainContentProps) {
     >
       {/* Overview */}
       <div className="mx-auto w-[333px] lg:w-[85vw]">
-        <p className="text-justify lg:text-[28px]">{currentWork.overview}</p>
+        <p className="text-justify lg:text-[1.62vw]">{currentWork.overview}</p>
       </div>
 
       {/* Main Layout */}
@@ -89,7 +89,7 @@ function MainContent(props: MainContentProps) {
                       width={24}
                       height={24}
                     />
-                    <h1 className="max-w-80 text-[24px] text-[#C6742B] lg:max-w-full lg:text-[36px]">
+                    <h1 className="max-w-80 text-[24px] text-[#C6742B] lg:max-w-full lg:text-[2vw]">
                       {section.title}
                     </h1>
                   </div>
@@ -99,7 +99,7 @@ function MainContent(props: MainContentProps) {
                     <ul className="mx-auto list-disc space-y-4 pl-6 lg:mx-0">
                       {section.content.map((item, contentIdx) => (
                         <li
-                          className="w-[81vw] text-[18px] lg:w-[39vw] lg:text-[28px]"
+                          className="w-[81vw] text-justify text-[18px] lg:w-[38vw] lg:text-[1.62vw]"
                           key={contentIdx}
                         >
                           <b>{item.title}</b>: <span>{item.description}</span>
@@ -107,7 +107,7 @@ function MainContent(props: MainContentProps) {
                       ))}
                     </ul>
                   ) : (
-                    <p className="mx-auto w-[81vw] text-[18px] lg:mx-0 lg:w-[33vw] lg:text-[28px]">
+                    <p className="mx-auto w-[81vw] text-justify text-[18px] lg:mx-0 lg:w-[41vw] lg:text-[1.62vw]">
                       {section.content}
                     </p>
                   )}
@@ -117,7 +117,7 @@ function MainContent(props: MainContentProps) {
         </div>
 
         {/* Main Images Section */}
-        <div className="hidden max-w-[38vw] columns-2 gap-4 lg:block">
+        <div className="mx-auto hidden max-w-[38vw] columns-2 gap-4 lg:my-auto lg:block">
           {mainImages.map((image, idx) => (
             <div key={idx} className="mb-5">
               <Image
@@ -126,6 +126,7 @@ function MainContent(props: MainContentProps) {
                 width={0}
                 height={0}
                 sizes="100vw"
+                loading="lazy"
                 className="max-h-96 w-full max-w-80 rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
               />
             </div>
