@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import WorksCarousel from '~/components/landingpage2';
+import OurWorkCarousel from '~/components/works-carousel';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 import { cn } from '~/utils/cn';
@@ -308,13 +308,13 @@ export default function Home() {
           sustainable solutions.
         </h2>
 
-        <WorksCarousel />
+        <OurWorkCarousel />
 
         <div className="flex justify-center md:mt-10">
           <Link
             href="/our-work"
             style={{ backgroundImage: optimizedButtonBackground }}
-            className="block w-fit bg-cover bg-center px-[34px] py-[30px] font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105"
+            className="block w-fit bg-cover bg-center px-[34px] py-[28px] font-primary text-lg font-bold text-[#331803] duration-200 hover:scale-105"
           >
             <span className="md:p-8">See Our Work</span>
           </Link>

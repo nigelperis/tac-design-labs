@@ -8,7 +8,7 @@ import {
   AutoScrollCarouselPrevButton,
   AutoScrollCarouselSlide,
 } from '~/components/auto-scroll-carousel';
-import WorksCarousel from '~/components/landingpage2';
+import OurWorkCarousel from '~/components/works-carousel';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
@@ -119,7 +119,7 @@ export default function Career() {
             practices into every project we undertake.
           </p>
         </div>
-        <WorksCarousel />
+        <OurWorkCarousel />
       </div>
     </div>
   );
