@@ -30,6 +30,7 @@ export interface WorkDetails {
   testimonial: string;
   testimonialVideo: string;
   admiration: string;
+  featuredVideos?: FeaturedVideo[];
 }
 
 export interface PageParams {
@@ -43,4 +44,10 @@ export interface WorkImages {
   [Work.CANAAN]: string[];
   [Work.SHIRE]: string[];
   [Work.SANCHIBAGS]: string[];
+}
+
+export interface FeaturedVideo {
+  title: string;
+  description: string;
+  video: string;
 }

@@ -1,4 +1,6 @@
+import Admiration from './components/admiration';
 import Banner from './components/banner';
+import FeaturedVideos from './components/featured-videos';
 import Highlights from './components/highlights';
 import MainContent from './components/main-content';
 import Testimonial from './components/testimonial';
@@ -12,7 +14,9 @@ async function Page({ params }: PageParams) {
       <Banner work={slug} imagePath={`/works/${slug}-banner.jpeg`} />
       <Highlights work={slug} />
       <MainContent work={slug} />
-      {/* <Testimonial work={slug} /> */}
+      <Testimonial work={slug} />
+      <FeaturedVideos work={slug} />
+      <Admiration work={slug} />
     </div>
   );
 }

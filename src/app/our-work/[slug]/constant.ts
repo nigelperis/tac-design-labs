@@ -214,9 +214,38 @@ const canaanData: WorkDetails = {
   ],
   outcome:
     "The Canaan Residence, the architect's own home, combines traditional Kerala architecture with sustainable practices. It showcases innovative materials and techniques while respecting the site’s natural contours. This home serves as an inspiring model for eco-conscious living, encouraging others to adopt sustainable design.",
-  testimonial: '',
-  testimonialVideo: '',
-  admiration: '',
+  testimonial:
+    'A glimpse into Project Canaan, showcasing its sustainable design features and the innovative approaches that make it an eco-friendly haven.',
+  testimonialVideo:
+    'https://www.youtube.com/embed/B5cMCt0_VL8?si=3odiSBYhPiZjukSF',
+  admiration:
+    'Project Canaan is not just a house; it’s a statement of how thoughtful design and sustainability can coexist beautifully. This project is a benchmark for future green architecture.',
+  featuredVideos: [
+    {
+      title: 'Project Canaan: Sustainable Architecture Walkthrough',
+      description:
+        'This video offers an in-depth walkthrough of Project Canaan, showcasing its sustainable design features, including passive cooling systems, local material usage, and rainwater harvesting.',
+      video: 'https://www.youtube.com/embed/FQNXv0QjVfg',
+    },
+    {
+      title: 'Incorporating Traditional Techniques for Modern Sustainability',
+      description:
+        'Discover how Project Canaan incorporates traditional architectural techniques adapted to modern sustainability needs, blending aesthetic appeal with eco-conscious design.',
+      video: 'https://www.youtube.com/embed/nag5n_bDz_c',
+    },
+    {
+      title: 'Passive Cooling and Thermal Comfort at Project Canaan',
+      description:
+        'Explore the passive cooling strategies used at Project Canaan, with a focus on the innovative roof design and cross-ventilation methods that enhance thermal comfort.',
+      video: 'https://www.youtube.com/embed/wkCBJ-Y_7ho?t=21s',
+    },
+    {
+      title: 'The Vision Behind Project Canaan: An Architectural Insight',
+      description:
+        'In this video, the architect narrates the design philosophy and the sustainable strategies implemented at Project Canaan, providing insight into the thoughtful integration of eco-friendly practices within the home’s architecture.',
+      video: 'https://www.youtube.com/embed/9w7kEwVBmEk',
+    },
+  ],
 };
 
 const shireData: WorkDetails = {

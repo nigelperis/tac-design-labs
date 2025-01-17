@@ -24,3 +24,11 @@ export interface TestimonialProps {
 export interface DetailsCarouselProps {
   images: string[];
 }
+
+export interface FeaturedVideoProps {
+  work: Work;
+}
+
+export interface AdmirationProps {
+  work: Work;
+}
