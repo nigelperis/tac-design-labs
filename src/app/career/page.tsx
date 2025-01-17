@@ -1,11 +1,28 @@
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+
+import {
+  AutoScrollCarousel,
+  AutoScrollCarouselContainer,
+  AutoScrollCarouselNextButton,
+  AutoScrollCarouselPrevButton,
+  AutoScrollCarouselSlide,
+} from '~/components/auto-scroll-carousel';
 import WorksCarousel from '~/components/landingpage2';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
+import career1 from '~/assets/images/career-images/career-1.jpg';
+import career2 from '~/assets/images/career-images/career-2.jpg';
+import career3 from '~/assets/images/career-images/career-3.jpg';
+import career4 from '~/assets/images/career-images/career-4.jpg';
+import career5 from '~/assets/images/career-images/career-5.jpg';
 import careerPageBackground from '~/assets/images/career-page-background.png';
 import career from '~/assets/images/career.jpg';
 
 export default function Career() {
+  const images = [career1, career2, career3, career4, career5];
+
   const optimizedCareerPageBackground = getOptimizedBackgroundImage({
     src: careerPageBackground.src,
     width: careerPageBackground.width,
@@ -42,7 +59,7 @@ export default function Career() {
       </div>
 
       <div className="font-primary">
-        <div className="px-[18px] py-11 md:px-28 md:py-24">
+        <div className="px-[18px] py-3 md:px-28 md:py-8">
           <h2 className="mb-4 text-center text-[28px] font-[700] text-[#552B0A] md:text-[42px]">
             Life Inside Our Office
           </h2>
@@ -56,6 +73,40 @@ export default function Career() {
             crafted an environment that nurtures the creative minds of
             architects, helping them thrive in their work.
           </p>
+          <AutoScrollCarousel
+            className="relative -mx-[1rem] mt-6 md:-mx-28"
+            loop={true}
+            speed={1}
+            autoScrollDirection="forward"
+          >
+            <AutoScrollCarouselContainer>
+              {images.map((image, index) => (
+                <AutoScrollCarouselSlide
+                  key={index}
+                  className="basis-[60%] pb-4 pl-[20px] md:basis-[30%] md:pl-[40px]"
+                >
+                  <Image
+                    src={image.src}
+                    alt={`Career Image ${String(index + 1)}`}
+                    className="aspect-square overflow-hidden rounded-[20px] border-[2px] border-[#F0E0D6] object-cover md:w-[100px] md:rounded-[40px] md:border-[5px]"
+                    layout="responsive"
+                    width={image.width}
+                    height={image.height}
+                    style={{ boxShadow: '0px 4px 4px 0px #00000040' }}
+                  />
+                </AutoScrollCarouselSlide>
+              ))}
+            </AutoScrollCarouselContainer>
+            <div className="mt-4 flex items-center justify-between">
+              <AutoScrollCarouselPrevButton className="absolute left-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
+                <ChevronLeft size={28} className="text-primary-500" />
+              </AutoScrollCarouselPrevButton>
+
+              <AutoScrollCarouselNextButton className="absolute right-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
+                <ChevronRight size={28} className="text-primary-500" />
+              </AutoScrollCarouselNextButton>
+            </div>
+          </AutoScrollCarousel>
         </div>
 
         <div className="md:py-18 px-[18px] py-5 md:px-28">

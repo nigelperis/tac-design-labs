@@ -69,7 +69,7 @@ export function AutoScrollCarousel(props: EmblaCarouselProps) {
 
   return (
     <EmblaCarouselContext.Provider value={{ carouselRef: emblaRef, emblaApi }}>
-      <div className={cn('mx-auto', className)}>{children}</div>
+      <div className={cn('relative mx-auto', className)}>{children}</div>
     </EmblaCarouselContext.Provider>
   );
 }
