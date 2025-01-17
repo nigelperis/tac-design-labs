@@ -18,7 +18,7 @@ function Highlights(props: HighlightsProps) {
           height={18}
           className="mr-2 h-[18px] w-[18px] lg:h-[40px] lg:w-[40px]"
         />
-        <p className="text-[10px] text-white lg:text-[32px]">
+        <p className="text-[10px] text-white lg:text-[1.85vw]">
           {currentWork.budget}
         </p>
       </div>
@@ -32,7 +32,7 @@ function Highlights(props: HighlightsProps) {
           height={18}
           className="mr-2 h-[18px] w-[18px] lg:h-[40px] lg:w-[40px]"
         />
-        <p className="text-[10px] text-white lg:text-[32px]">
+        <p className="text-[10px] text-white lg:text-[1.85vw]">
           {currentWork.area}
         </p>
       </div>
@@ -46,7 +46,7 @@ function Highlights(props: HighlightsProps) {
           height={18}
           className="mr-2 h-[18px] w-[18px] lg:h-[40px] lg:w-[40px]"
         />
-        <p className="text-[10px] text-white lg:text-[32px]">
+        <p className="text-[10px] text-white lg:text-[1.85vw]">
           {currentWork.completionYear}
         </p>
       </div>
@@ -60,7 +60,7 @@ function Highlights(props: HighlightsProps) {
           height={18}
           className="mr-2 h-[18px] w-[18px] lg:h-[40px] lg:w-[40px]"
         />
-        <p className="text-[10px] text-white lg:text-[32px]">
+        <p className="text-[10px] text-white lg:text-[1.85vw]">
           {currentWork.duration}
         </p>
       </div>
@@ -74,7 +74,7 @@ function Highlights(props: HighlightsProps) {
           height={18}
           className="mr-2 h-[18px] w-[18px] lg:h-[40px] lg:w-[40px]"
         />
-        <p className="text-[10px] text-white lg:text-[32px]">
+        <p className="text-[10px] text-white lg:text-[1.85vw]">
           {currentWork.location}
         </p>
       </div>
