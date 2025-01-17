@@ -134,16 +134,21 @@ export function OpacityCarouselContainer(props: OpacityCarouselContainerProps) {
 
 interface OpacityCarouselItemProps extends PropsWithChildren {
   className?: string;
+  uniqueClass?: string;
 }
 
 export function OpacityCarouselSlide(props: OpacityCarouselItemProps) {
-  const { className, children } = props;
+  const { className, uniqueClass, children } = props;
   return (
     <div
-      className={cn(
-        'w-full min-w-0 flex-shrink-0 flex-grow-0 basis-[75%] pb-3 pl-3',
-        className,
-      )}
+      className={
+        uniqueClass
+          ? uniqueClass
+          : cn(
+              'w-full min-w-0 flex-shrink-0 flex-grow-0 basis-[75%] pb-3 pl-3',
+              className,
+            )
+      }
     >
       {children}
     </div>
