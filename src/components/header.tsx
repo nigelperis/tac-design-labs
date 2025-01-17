@@ -100,11 +100,11 @@ function Header() {
 
         <div
           className={cn(
-            'fixed inset-0 hidden h-screen w-screen translate-x-full items-center justify-between transition-all ease-out md:relative md:order-1 md:flex md:h-auto md:w-auto md:translate-x-0',
+            'fixed inset-0 hidden h-full w-full translate-x-full items-center justify-between transition-all ease-out md:relative md:order-1 md:flex md:h-auto md:w-auto md:translate-x-0',
             { 'flex translate-x-0': mounted && isMenuOpen },
           )}
         >
-          <ul className="flex h-screen w-full flex-col overflow-scroll bg-[#420C03] p-4 font-medium md:mt-0 md:h-full md:flex-row md:space-x-8 md:overflow-visible md:border-0 md:p-0 rtl:space-x-reverse">
+          <ul className="flex h-full w-full flex-col overflow-scroll bg-[#420C03] p-4 font-medium md:mt-0 md:h-full md:flex-row md:space-x-8 md:overflow-visible md:border-0 md:p-0 rtl:space-x-reverse">
             {mounted && (
               <button
                 type="button"

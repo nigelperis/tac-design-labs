@@ -1,14 +1,11 @@
 'use client';
 
 import React, {
-  Children,
-  cloneElement,
   createContext,
   useCallback,
   useContext,
   useEffect,
   useRef,
-  useState,
 } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 
@@ -20,7 +17,7 @@ import type {
   EmblaOptionsType,
 } from 'embla-carousel';
 import type { EmblaViewportRefType } from 'embla-carousel-react';
-import type { ButtonHTMLAttributes, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 interface EmblaCarouselContextType {
   carouselRef: EmblaViewportRefType;
@@ -41,7 +38,7 @@ export function ZoomCarousel(props: EmblaCarouselProps) {
     className,
     children,
     tweenFactorBase = 0.22,
-    loop = true,
+    loop = true, // Ensure looping is enabled
     ...rest
   } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop, ...rest }, []);
@@ -124,9 +121,28 @@ export function ZoomCarousel(props: EmblaCarouselProps) {
       .on('scroll', tweenScale)
       .on('slideFocus', tweenScale);
   }, [emblaApi, tweenScale, setTweenFactor, setTweenNodes]);
+
   return (
     <EmblaCarouselContext.Provider value={{ carouselRef: emblaRef, emblaApi }}>
-      <div className={cn('mx-auto', className)}>{children}</div>
+      <div className={cn('relative', className)}>
+        {children}
+
+        {/* Left Arrow */}
+        <button
+          className="absolute left-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-3 text-black shadow-md"
+          onClick={() => emblaApi?.scrollPrev()}
+        >
+          ←
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          className="absolute right-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-3 text-black shadow-md"
+          onClick={() => emblaApi?.scrollNext()}
+        >
+          →
+        </button>
+      </div>
     </EmblaCarouselContext.Provider>
   );
 }
@@ -139,7 +155,10 @@ export function ZoomCarouselContainer(props: ZoomCarouselContainerProps) {
   const { className, children } = props;
   const context = useContext(EmblaCarouselContext);
   return (
-    <div className="overflow-hidden" ref={context?.carouselRef}>
+    <div
+      className="mx-auto overflow-hidden px-7 lg:mx-0"
+      ref={context?.carouselRef}
+    >
       <div className={cn('flex touch-pan-y touch-pinch-zoom', className)}>
         {children}
       </div>
@@ -154,104 +173,17 @@ interface ZoomCarouselItemProps {
 
 export function ZoomCarouselSlide(props: ZoomCarouselItemProps) {
   const { className, children } = props;
+
   return (
     <div
       className={cn(
-        'w-full min-w-0 flex-shrink-0 flex-grow-0 basis-[68%] pl-4',
+        'mt-4 aspect-square w-full flex-shrink-0 basis-[100%] lg:basis-[50%]', // `aspect-square` ensures a square container
         className,
       )}
     >
-      {Children.map(children, (child) => {
-        return cloneElement(child, { 'data-slide-content': '' });
+      {React.Children.map(children, (child) => {
+        return React.cloneElement(child, { 'data-slide-content': '' });
       })}
     </div>
   );
-}
-
-export function ZoomCarouselPrevButton(
-  props: ButtonHTMLAttributes<HTMLButtonElement> & PropsWithChildren,
-) {
-  const { children, className, onClick, disabled, ...rest } = props;
-  const context = useContext(EmblaCarouselContext);
-
-  return (
-    <button
-      className={cn(
-        'z-10 m-0 flex aspect-square cursor-pointer touch-manipulation items-center justify-center rounded-full border-0 border-none bg-transparent p-0 outline-none disabled:cursor-not-allowed disabled:opacity-50',
-        className,
-      )}
-      disabled={context?.emblaApi?.canScrollPrev() === false || disabled}
-      onClick={(e) => {
-        if (context?.emblaApi) {
-          context.emblaApi.scrollPrev();
-        }
-        onClick?.(e);
-      }}
-      {...rest}
-    >
-      {children}
-    </button>
-  );
-}
-
-export function ZoomCarouselNextButton(
-  props: ButtonHTMLAttributes<HTMLButtonElement> & PropsWithChildren,
-) {
-  const { children, className, onClick, disabled, ...rest } = props;
-  const context = useContext(EmblaCarouselContext);
-
-  return (
-    <button
-      className={cn(
-        'z-10 m-0 flex aspect-square cursor-pointer touch-manipulation items-center justify-center rounded-full border-0 border-none bg-transparent p-0 outline-none disabled:cursor-not-allowed disabled:opacity-50',
-        className,
-      )}
-      disabled={context?.emblaApi?.canScrollNext() === false || disabled}
-      onClick={(e) => {
-        if (context?.emblaApi) {
-          context.emblaApi.scrollNext();
-        }
-        onClick?.(e);
-      }}
-      {...rest}
-    >
-      {children}
-    </button>
-  );
-}
-
-export function ZoomCarouselIndicator(props: {
-  children: (activeIndex?: number) => JSX.Element;
-}) {
-  const { children } = props;
-  const [activeIndex, setActiveIndex] = useState(0);
-  const context = useContext(EmblaCarouselContext);
-
-  useEffect(() => {
-    if (!context?.emblaApi) return;
-
-    const onSelect = () => {
-      if (!context.emblaApi) return;
-      setActiveIndex(context.emblaApi.selectedScrollSnap());
-    };
-
-    context.emblaApi
-      .on('init', () => {
-        if (!context.emblaApi) return;
-        setActiveIndex(context.emblaApi.selectedScrollSnap());
-      })
-      .on('reInit', () => {
-        if (!context.emblaApi) return;
-        setActiveIndex(context.emblaApi.selectedScrollSnap());
-      })
-      .on('select', onSelect);
-
-    return () => {
-      context.emblaApi?.off('select', onSelect);
-    };
-  }, [context?.emblaApi]);
-
-  if (!context?.emblaApi) return null;
-
-  return children(activeIndex);
 }

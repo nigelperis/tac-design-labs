@@ -64,12 +64,18 @@
   }
   .main_image {
     display: block;
+    width: 250px;
+    height: 420px;
   }
   .sub_image_1 {
     display: block;
+    width: 285px;
+    height: 200px;
   }
   .sub_image_2 {
     display: block;
+    width: 285px;
+    height: 200px;
   }
 
   .main_left {
