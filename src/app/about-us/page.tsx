@@ -109,7 +109,7 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="text-balance font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
+              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
                 A Portfolio of&nbsp;
                 <span className="text-accent-500">
                   Excellence & Recognition
@@ -161,13 +161,13 @@ function AboutUsPage() {
             />
             <span className="mt-5 inline-flex space-x-2">
               <span className="font-primary text-lg">Credits:</span>
-              <a
+              <Link
                 target="_blank"
                 href="https://moremargie.com/article/bricks-of-kerala"
-                className="font-primary text-lg text-accent-500 underline"
+                className="break-all font-primary text-lg text-accent-500 underline"
               >
                 https://moremargie.com/article/bricks-of-kerala
-              </a>
+              </Link>
             </span>
           </div>
 
