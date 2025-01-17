@@ -5,7 +5,6 @@ import Image from 'next/image';
 import landingPageLeavesBackground from '~/assets/images/landing-page-team-background.png';
 
 import { images, rightColImageCount, workDetails } from '../constant';
-import DetailsCarousel from './details-carousel';
 import ImageSlider from './image-slider';
 import type { MainContentProps } from './model';
 
@@ -38,7 +37,7 @@ function MainContent(props: MainContentProps) {
       {/* Main Layout */}
       <div className="mx-auto mt-10 flex flex-col lg:mt-20 lg:w-[85vw] lg:flex-row lg:gap-20">
         {/* Left Column */}
-        <div className="mb-8 flex flex-col gap-20 text-[#173552]">
+        <div className="mb-8 flex flex-col gap-16 text-[#173552]">
           {[
             { title: 'Design Intent', content: currentWork.designIntent },
             {
@@ -97,7 +96,7 @@ function MainContent(props: MainContentProps) {
 
                   {/* Section Content */}
                   {Array.isArray(section.content) ? (
-                    <ul className="mx-auto list-disc pl-9 lg:mx-0">
+                    <ul className="mx-auto list-disc space-y-4 pl-6 lg:mx-0">
                       {section.content.map((item, contentIdx) => (
                         <li
                           className="w-[81vw] text-[18px] lg:w-[39vw] lg:text-[28px]"

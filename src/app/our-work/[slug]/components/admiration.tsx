@@ -18,7 +18,7 @@ function Admiration(props: AdmirationProps) {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <h1 className="w-[81vw] text-center text-[18px] text-white lg:w-[57vw] lg:text-[32px]">
+      <h1 className="w-[81vw] text-center text-[18px] italic text-white lg:w-[57vw] lg:text-[1.85vw]">
         {currentWork.admiration}
       </h1>
     </div>

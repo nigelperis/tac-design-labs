@@ -11,9 +11,6 @@ function Testimonial(props: TestimonialProps) {
       style={{
         backgroundImage: "url('/works/testimonial-bg.png')",
         borderTop: '6px solid white',
-        borderLeft: 'none',
-        borderRight: 'none',
-        borderBottom: '4px #ECC19A solid',
       }}
     >
       {/* Content Overlay */}
@@ -24,7 +21,7 @@ function Testimonial(props: TestimonialProps) {
 
         {currentWork.testimonialVideo ? (
           <iframe
-            className="mx-auto aspect-video w-[90%] rounded-2xl border-[5px] border-[#ECC19A] lg:w-1/2"
+            className="mx-auto aspect-video w-[90%] rounded-2xl border-[5px] border-[#ECC19A] lg:w-[50%]"
             src={currentWork.testimonialVideo}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

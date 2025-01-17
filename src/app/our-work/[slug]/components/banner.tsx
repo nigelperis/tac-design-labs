@@ -24,7 +24,7 @@ function Banner(props: BannerProps) {
         <h1 className="text-[42px] font-bold lg:text-[96px]">
           {currentWork.title}
         </h1>
-        <p className="max-w-[351px] text-[22px] lg:max-w-[1082px] lg:text-[32px]">
+        <p className="max-w-[351px] text-[22px] lg:max-w-[1082px] lg:text-[1.85vw]">
           {currentWork.subTitle}
         </p>
       </div>
