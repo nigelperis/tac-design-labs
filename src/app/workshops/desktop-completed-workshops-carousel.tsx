@@ -1,6 +1,12 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import { Lightbox } from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+
+import 'yet-another-react-lightbox/styles.css';
 
 import {
   AutoScrollCarousel,
@@ -122,100 +128,145 @@ const completedWorkshopsLowerHalf = [
 ] as const;
 
 function DesktopCompletedWorkshopsCarousel() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<number | undefined>(undefined);
+
+  function openLightbox(index: number) {
+    setActiveIndex(index);
+    setIsOpen(true);
+  }
+
   return (
-    <div className="space-y-7">
-      <AutoScrollCarousel autoScrollDirection="backward">
-        <AutoScrollCarouselContainer>
-          {completedWorkshopsUpperHalf.map((itm, index) => {
-            return (
-              <AutoScrollCarouselSlide
-                key={index}
-                className="relative basis-[48%] md:basis-[20%]"
-              >
-                <div className="max-w-full">
-                  <div className="flex cursor-pointer flex-col items-center justify-center">
-                    <div
-                      className="mb-3 overflow-hidden rounded-md border-2 border-[#F0E0D6] md:rounded-2xl md:border-4"
-                      style={{
-                        boxShadow: '0px 3.81px 3.81px 0px rgba(0, 0, 0, 0.25)',
-                      }}
-                    >
-                      <Image
-                        src={itm.image}
-                        alt={itm.workshopName}
-                        width={itm.image.width}
-                        height={itm.image.height}
-                        className="h-56 w-44 overflow-hidden rounded-md md:h-[320px] md:w-[250px] md:rounded-2xl"
-                      />
+    <>
+      <div className="space-y-7">
+        {/* Upper Half Carousel */}
+        <AutoScrollCarousel autoScrollDirection="backward">
+          <AutoScrollCarouselContainer>
+            {completedWorkshopsUpperHalf.map((itm, index) => {
+              return (
+                <AutoScrollCarouselSlide
+                  key={index}
+                  className="relative basis-[48%] md:basis-[20%]"
+                >
+                  <div className="max-w-full">
+                    <div className="flex cursor-pointer flex-col items-center justify-center">
+                      <div
+                        className="mb-3 overflow-hidden rounded-md border-2 border-[#F0E0D6] md:rounded-2xl md:border-4"
+                        style={{
+                          boxShadow:
+                            '0px 3.81px 3.81px 0px rgba(0, 0, 0, 0.25)',
+                        }}
+                      >
+                        <Image
+                          src={itm.image}
+                          alt={itm.workshopName}
+                          width={itm.image.width}
+                          height={itm.image.height}
+                          className="h-56 w-44 overflow-hidden rounded-md md:h-[320px] md:w-[250px] md:rounded-2xl"
+                          onClick={() => {
+                            openLightbox(index);
+                          }}
+                        />
+                      </div>
+
+                      <p className="text-balance break-all text-center font-primary text-base font-bold text-[#173552]">
+                        {itm.workshopName}
+                      </p>
                     </div>
-
-                    <p className="text-balance break-all text-center font-primary text-base font-bold text-[#173552]">
-                      {itm.workshopName}
-                    </p>
                   </div>
-                </div>
-              </AutoScrollCarouselSlide>
-            );
-          })}
-        </AutoScrollCarouselContainer>
+                </AutoScrollCarouselSlide>
+              );
+            })}
+          </AutoScrollCarouselContainer>
 
-        <div className="">
-          <AutoScrollCarouselPrevButton className="absolute left-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
-            <ChevronLeft size={28} className="text-primary-500" />
-          </AutoScrollCarouselPrevButton>
+          <div className="">
+            <AutoScrollCarouselPrevButton className="absolute left-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
+              <ChevronLeft size={28} className="text-primary-500" />
+            </AutoScrollCarouselPrevButton>
 
-          <AutoScrollCarouselNextButton className="absolute right-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
-            <ChevronRight size={28} className="text-primary-500" />
-          </AutoScrollCarouselNextButton>
-        </div>
-      </AutoScrollCarousel>
+            <AutoScrollCarouselNextButton className="absolute right-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
+              <ChevronRight size={28} className="text-primary-500" />
+            </AutoScrollCarouselNextButton>
+          </div>
+        </AutoScrollCarousel>
 
-      <AutoScrollCarousel autoScrollDirection="forward">
-        <AutoScrollCarouselContainer>
-          {completedWorkshopsLowerHalf.map((itm, index) => {
-            return (
-              <AutoScrollCarouselSlide
-                key={index}
-                className="relative basis-[48%] md:basis-[20%]"
-              >
-                <div className="max-w-full">
-                  <div className="flex cursor-pointer flex-col items-center justify-center">
-                    <div
-                      className="mb-3 overflow-hidden rounded-md border-2 border-[#F0E0D6] md:rounded-2xl md:border-4"
-                      style={{
-                        boxShadow: '0px 3.81px 3.81px 0px rgba(0, 0, 0, 0.25)',
-                      }}
-                    >
-                      <Image
-                        src={itm.image}
-                        alt={itm.workshopName}
-                        width={itm.image.width}
-                        height={itm.image.height}
-                        className="h-56 w-44 overflow-hidden rounded-md md:h-[320px] md:w-[250px] md:rounded-2xl"
-                      />
+        {/* Lower Half Carousel */}
+        <AutoScrollCarousel autoScrollDirection="forward">
+          <AutoScrollCarouselContainer>
+            {completedWorkshopsLowerHalf.map((itm, index) => {
+              return (
+                <AutoScrollCarouselSlide
+                  key={index}
+                  className="relative basis-[48%] md:basis-[20%]"
+                >
+                  <div className="max-w-full">
+                    <div className="flex cursor-pointer flex-col items-center justify-center">
+                      <div
+                        className="mb-3 overflow-hidden rounded-md border-2 border-[#F0E0D6] md:rounded-2xl md:border-4"
+                        style={{
+                          boxShadow:
+                            '0px 3.81px 3.81px 0px rgba(0, 0, 0, 0.25)',
+                        }}
+                      >
+                        <Image
+                          src={itm.image}
+                          alt={itm.workshopName}
+                          width={itm.image.width}
+                          height={itm.image.height}
+                          className="h-56 w-44 overflow-hidden rounded-md md:h-[320px] md:w-[250px] md:rounded-2xl"
+                          onClick={() => {
+                            const indexToUse =
+                              index + completedWorkshopsUpperHalf.length; // since upper half is already displayed  so we need to add the length of upper half to get the correct index
+
+                            openLightbox(indexToUse);
+                          }}
+                        />
+                      </div>
+
+                      <p className="text-balance break-all text-center font-primary text-base font-bold text-[#173552]">
+                        {itm.workshopName}
+                      </p>
                     </div>
-
-                    <p className="text-balance break-all text-center font-primary text-base font-bold text-[#173552]">
-                      {itm.workshopName}
-                    </p>
                   </div>
-                </div>
-              </AutoScrollCarouselSlide>
-            );
-          })}
-        </AutoScrollCarouselContainer>
+                </AutoScrollCarouselSlide>
+              );
+            })}
+          </AutoScrollCarouselContainer>
 
-        <div className="">
-          <AutoScrollCarouselPrevButton className="absolute left-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
-            <ChevronLeft size={28} className="text-primary-500" />
-          </AutoScrollCarouselPrevButton>
+          <div className="">
+            <AutoScrollCarouselPrevButton className="absolute left-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
+              <ChevronLeft size={28} className="text-primary-500" />
+            </AutoScrollCarouselPrevButton>
 
-          <AutoScrollCarouselNextButton className="absolute right-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
-            <ChevronRight size={28} className="text-primary-500" />
-          </AutoScrollCarouselNextButton>
-        </div>
-      </AutoScrollCarousel>
-    </div>
+            <AutoScrollCarouselNextButton className="absolute right-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300">
+              <ChevronRight size={28} className="text-primary-500" />
+            </AutoScrollCarouselNextButton>
+          </div>
+        </AutoScrollCarousel>
+      </div>
+      {isOpen && (
+        <Lightbox
+          open={isOpen}
+          close={() => {
+            setIsOpen(false);
+            setActiveIndex(undefined);
+          }}
+          plugins={[Zoom]}
+          className="w-full p-0"
+          slides={[completedWorkshopsUpperHalf, completedWorkshopsLowerHalf]
+            .flat()
+            .map((itm) => ({
+              src: itm.image.src,
+            }))}
+          index={activeIndex}
+          styles={{
+            slide: {
+              padding: 0,
+            },
+          }}
+        />
+      )}
+    </>
   );
 }
 
