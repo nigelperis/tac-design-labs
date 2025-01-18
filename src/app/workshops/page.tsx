@@ -26,6 +26,7 @@ import Workshope6 from '~/assets/images/Workshop4.jpg';
 import Workshope8 from '~/assets/images/workshop6.jpg';
 import Workshopemobile from '~/assets/images/workshopbgmobiel.jpg';
 
+import CompletedWorkshopsCarousel from './completed-workshops-carousel';
 import { WorkshopsMobileCarousel } from './workshops-carousel';
 
 const Workshops = () => {
@@ -583,6 +584,7 @@ const Workshops = () => {
                 A journey of impactful workshos and enlightening talks that
                 promote sustainable architectural practices.
               </p>
+              <CompletedWorkshopsCarousel />
             </div>
           </div>
         </div>
