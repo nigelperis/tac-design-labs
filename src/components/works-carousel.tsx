@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {
   AutoScrollCarousel,
@@ -34,33 +35,37 @@ const OurWorkCarousel: React.FC = () => {
         {images.map((itm, index) => (
           <AutoScrollCarouselSlide key={index}>
             <div className="w-full">
-              <div
-                className="group relative mb-4 aspect-[16/9] transform cursor-pointer rounded-lg border-2 border-[#F3F5E5] font-primary md:mb-3 md:rounded-2xl md:border-4"
-                style={{
-                  boxShadow: '0px 8px 4px 0px rgba(0, 0, 0, 0.25)',
-                }}
+              <Link
+                href={`/our-work/${itm.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
-                {/* Overlay */}
-                <div className="absolute inset-0 z-10 rounded-lg bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20 md:rounded-2xl"></div>
+                <div
+                  className="group relative mb-4 aspect-[16/9] transform cursor-pointer rounded-lg border-2 border-[#F3F5E5] font-primary md:mb-3 md:rounded-2xl md:border-4"
+                  style={{
+                    boxShadow: '0px 8px 4px 0px rgba(0, 0, 0, 0.25)',
+                  }}
+                >
+                  {/* Overlay */}
+                  <div className="absolute inset-0 z-10 rounded-lg bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20 md:rounded-2xl"></div>
 
-                {/* Image */}
-                <Image
-                  src={itm.src}
-                  fill
-                  alt={`${itm.name} Background`}
-                  className="rounded-md object-cover md:rounded-xl"
-                />
+                  {/* Image */}
+                  <Image
+                    src={itm.src}
+                    fill
+                    alt={`${itm.name} Background`}
+                    className="rounded-md object-cover md:rounded-xl"
+                  />
 
-                {/* Text Content */}
-                <div className="absolute bottom-3 left-4 z-20 text-white">
-                  <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
-                    {itm.name}
-                  </p>
-                  <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
-                    {itm.place}
-                  </p>
+                  {/* Text Content */}
+                  <div className="absolute bottom-3 left-4 z-20 text-white">
+                    <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
+                      {itm.name}
+                    </p>
+                    <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
+                      {itm.place}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </AutoScrollCarouselSlide>
         ))}

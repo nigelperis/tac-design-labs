@@ -281,6 +281,7 @@ export default function Home() {
             style={{
               boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.2)',
             }}
+            allowFullScreen
           ></iframe>
         </div>
 
