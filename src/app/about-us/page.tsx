@@ -67,7 +67,7 @@ function AboutUsPage() {
           Vision and Innovation
         </h2>
 
-        <ul className="space-y-10 px-8 md:px-[120px]">
+        <ul className="space-y-10 px-8 md:px-[40px]">
           <StoryCard
             mobileImage={aboutUsPageImage1}
             mainImage={aboutUsPageImage1}
@@ -135,10 +135,9 @@ function AboutUsPage() {
             mainImage={aboutUsImage13}
             subImage1={aboutUsImage14}
             subImage2={aboutUsImage15}
-            description="Beyond our projects, TAC Design LAB engages with the community through collaborations with architecture and engineering colleges, advocating for sustainable practices, and conducting hands-on workshops in bamboo, mud, and brick masonry.<br/><br/>
-            
-            Looking ahead, our vision is to reduce the building industry's environmental impact, creating a more sustainable world for future generations."
+            description="Beyond our projects, TAC Design LAB engages with the community through collaborations with architecture and engineering colleges, advocating for sustainable practices, and conducting hands-on workshops in bamboo, mud, and brick masonry. Our vision is to reduce the building industry's environmental impact and create a sustainable future."
             alignment="main-left"
+            specialStyles={true}
           />
         </ul>
       </section>
@@ -242,6 +241,7 @@ interface StoryCardProps {
   subImage2: string | StaticImport;
   description: string;
   alignment?: 'main-left' | 'main-right' | 'main-bottom';
+  specialStyles?: boolean;
 }
 
 function StoryCard(props: StoryCardProps) {
@@ -253,6 +253,7 @@ function StoryCard(props: StoryCardProps) {
     subImage1,
     subImage2,
     alignment,
+    specialStyles = false,
   } = props;
   return (
     <li className="group">
@@ -266,6 +267,7 @@ function StoryCard(props: StoryCardProps) {
             subImage1={subImage1}
             subImage2={subImage2}
             alignment={alignment}
+            specialStyles={specialStyles}
           />
         </div>
 
