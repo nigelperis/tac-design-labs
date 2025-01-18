@@ -21,7 +21,7 @@ function Banner(props: BannerProps) {
 
       {/* Text Part */}
       <div className="flex h-[304px] w-full flex-col items-center justify-center gap-4 bg-[#ECC19A33] text-center text-white backdrop-blur-[4.1px]">
-        <h1 className="text-[42px] font-bold lg:text-[66px]">
+        <h1 className="text-[10vw] font-bold lg:text-[66px]">
           {currentWork.title}
         </h1>
         <p className="max-w-[351px] text-[22px] lg:max-w-[1082px] lg:text-[1.91vw]">

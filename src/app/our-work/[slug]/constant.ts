@@ -387,17 +387,16 @@ const shireData: WorkDetails = {
   ],
   sustainabilityMeasures: [
     {
-      title: 'Placeholder',
+      title: 'Energy-efficiency',
       description:
-        'Energy-efficient passive cooling systems and the use of reused materials.',
+        'With the incorporation of passive cooling systems and the use of reused materials.',
     },
     {
-      title: 'Placeholder',
-      description:
-        'A biogas plant that processes waste, reducing the environmental impact.',
+      title: 'Biogas plant',
+      description: 'That processes waste, reducing the environmental impact.',
     },
     {
-      title: 'Placeholder',
+      title: 'Solar Heater',
       description: 'Use of renewable resources like solar water heating.',
     },
   ],
@@ -415,9 +414,11 @@ const shireData: WorkDetails = {
   ],
   outcome:
     'The Shire project was completed successfully, fulfilling the owners’ expectations and those of the local community. It has inspired others in the region to explore sustainable and eco-friendly construction practices.',
-  testimonial: '',
-  testimonialVideo: '',
-  admiration: '',
+  testimonial:
+    'A heartfelt testimonial from the clients of Project Shire, highlighting the unique design, sustainable features, and the personalized approach that turned their dream home into a reality.',
+  testimonialVideo: 'https://www.youtube.com/embed/qpOZ6rXgR_s',
+  admiration:
+    'Project Shire is a testament to how personalized design and sustainability can create a harmonious living space. This project beautifully demonstrates how eco-conscious choices enhance both functionality and aesthetics.',
   callToAction: {
     title:
       'If Project Shire resonates with you, share this page and inspire others to embrace sustainable architecture!',
@@ -430,7 +431,7 @@ const shireData: WorkDetails = {
 };
 
 const sanchiBagsData: WorkDetails = {
-  title: 'SANCHI BGAS TAILORING UNIT',
+  title: 'SANCHI BAGS TAILORING UNIT',
   subTitle:
     'A functional and eco-friendly tailoring unit, showcasing practicality and sustainable design.',
   location: 'Venjaramoodu, Trivandrum',
@@ -523,7 +524,7 @@ export const images: WorkImages = {
     (_, index) => `/haven/${(index + 1).toString()}.jpg`,
   ),
   [Work.CANAAN]: Array.from(
-    { length: 38 },
+    { length: 30 },
     (_, index) => `/canaan/${(index + 1).toString()}.jpg`,
   ),
   [Work.SHIRE]: Array.from(
@@ -538,7 +539,7 @@ export const images: WorkImages = {
 
 export const rightColImageCount = {
   [Work.HAVEN]: 27,
-  [Work.CANAAN]: 38,
+  [Work.CANAAN]: 30,
   [Work.SHIRE]: 28,
   [Work.SANCHIBAGS]: 17,
 };
