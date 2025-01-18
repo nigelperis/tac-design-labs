@@ -69,18 +69,6 @@ function MainContent(props: MainContentProps) {
                 <div key={idx} className="flex flex-col gap-7">
                   {/* Mobile Images */}
                   <div className="mx-auto grid grid-cols-2 gap-4 lg:hidden">
-                    {/* {getMobileImages(idx).map((image, imageIdx) => (
-                      <div key={imageIdx} className="mb-5">
-                        <Image
-                          src={image}
-                          alt={`Mobile Image ${imageIdx.toString()}`}
-                          width={0}
-                          height={0}
-                          sizes="50vw"
-                          className="h-[140px] w-[160px] rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
-                        />
-                      </div>
-                    ))} */}
                     <ImageGallery
                       images={getMobileImages(idx)}
                       className="h-[140px] w-[160px] rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"

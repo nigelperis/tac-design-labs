@@ -26,7 +26,7 @@ function Highlights(props: HighlightsProps) {
       {/* Area */}
       <div className="relative flex items-center">
         <Image
-          src="/works/property.svg"
+          src="/works/Property.svg"
           alt="Area"
           width={18}
           height={18}
@@ -68,7 +68,7 @@ function Highlights(props: HighlightsProps) {
       {/* Location */}
       <div className="relative flex items-center">
         <Image
-          src="/works/location.svg"
+          src="/works/Location.svg"
           alt="Location"
           width={18}
           height={18}

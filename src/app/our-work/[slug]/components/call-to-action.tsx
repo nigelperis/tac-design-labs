@@ -32,7 +32,7 @@ function CallToAction(props: CallToActionProps) {
   return (
     <div className="w-full bg-[#FFFFFF66] shadow-[inset_0px_10px_4px_0px_rgba(0,0,0,0.15)]">
       {/* Share */}
-      <div className="flex h-[272px] w-full flex-col lg:h-[288px] lg:flex-row lg:items-start lg:justify-center lg:gap-10 lg:pt-10">
+      <div className="relative flex h-[272px] w-full flex-col lg:h-[288px] lg:flex-row lg:items-start lg:justify-center lg:gap-10 lg:pt-10">
         <p className="mx-auto mt-7 w-[80vw] text-center text-[5vw] lg:mx-0 lg:mt-0 lg:w-[43vw] lg:text-left lg:text-[24px]">
           {cta.title}
         </p>
@@ -45,6 +45,11 @@ function CallToAction(props: CallToActionProps) {
           className="mx-auto mt-1 h-[79px] w-[223px] cursor-pointer hover:scale-105 lg:mx-0 lg:mt-0 lg:h-[92px] lg:w-[262px]"
           onClick={handleCopy}
         />
+        {toastVisible && (
+          <div className="absolute left-1/2 top-1/2 z-30 w-[300px] -translate-x-1/2 transform rounded-lg bg-green-500 p-3 text-center text-white">
+            URL copied to clipboard!
+          </div>
+        )}
       </div>
 
       {/* Next Project */}
@@ -69,11 +74,6 @@ function CallToAction(props: CallToActionProps) {
             objectFit: 'cover',
           }}
         />
-        {toastVisible && (
-          <div className="absolute bottom-[10%] left-1/2 z-30 -translate-x-1/2 transform rounded-lg bg-green-500 p-3 text-white">
-            URL copied to clipboard!
-          </div>
-        )}
         {/* Content over the image */}
         <div className="absolute left-1/2 top-[40%] z-10 w-[79%] -translate-x-1/2 -translate-y-1/2 transform text-center text-white lg:top-[0%] lg:mb-80 lg:h-[300px] lg:w-[50.6vw] lg:max-w-none lg:translate-y-0">
           <p className="text-[5vw] lg:text-[2.314vw]">
