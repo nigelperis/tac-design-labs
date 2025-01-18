@@ -404,7 +404,7 @@ export const images: WorkImages = {
   ),
   [Work.SANCHIBAGS]: Array.from(
     { length: 17 },
-    (_, index) => `/saanchi/${(index + 1).toString()}.jpg`,
+    (_, index) => `/sanchi/${(index + 1).toString()}.jpg`,
   ),
 };
 

@@ -11,7 +11,7 @@ async function Page({ params }: PageParams) {
 
   return (
     <div className="bg-[#EDD7C3] font-primary bg-blend-luminosity">
-      <Banner work={slug} imagePath={`/works/${slug}-banner.jpeg`} />
+      <Banner work={slug} imagePath={`/works/${slug}-banner.png`} />
       <Highlights work={slug} />
       <MainContent work={slug} />
       <Testimonial work={slug} />
