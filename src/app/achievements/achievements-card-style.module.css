@@ -29,6 +29,7 @@
   border-width: 4px;
   border-color: #ecc19a;
   box-shadow: 0px 4px 4px 0px #00000040;
+  object-fit: fill;
 }
 
 .achievement_card_description {
@@ -151,5 +152,13 @@
   }
   .achievement_card_image {
     height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievement_card_image {
+    height: 224px;
+    object-fit: fill;
+    object-position: center;
   }
 }
