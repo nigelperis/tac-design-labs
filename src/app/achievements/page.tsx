@@ -100,7 +100,7 @@ function Achievement() {
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <ul className="group space-y-5">
+        <ul className="group space-y-5 lg:space-y-8">
           {achievements.map((achievement, index) => (
             <AchievementCard key={index} {...achievement} />
           ))}

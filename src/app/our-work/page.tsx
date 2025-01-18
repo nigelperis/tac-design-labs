@@ -52,83 +52,91 @@ const OurWork = () => {
         </div>
         <div className="flex flex-wrap justify-center gap-6 md:gap-12">
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
-            <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
-              <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
-              <Image
-                src={CanaanBgImg}
-                alt="CanaanBgImg"
-                fill
-                className="rounded-xl object-cover"
-              />
-              <div className="absolute bottom-3 left-4 z-10 text-white">
-                <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
-                  Canaan
-                </p>
-                <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
-                  Trivandrum
-                </p>
+            <Link href="/our-work/canaan">
+              <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
+                <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
+                <Image
+                  src={CanaanBgImg}
+                  alt="CanaanBgImg"
+                  fill
+                  className="rounded-xl object-cover"
+                />
+                <div className="absolute bottom-3 left-4 z-10 text-white">
+                  <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
+                    Canaan
+                  </p>
+                  <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
+                    Trivandrum
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
-            <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
-              <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
-              <Image
-                src={ShireBgImg}
-                fill
-                alt="ShireBgImg"
-                className="rounded-xl object-cover"
-              />
-              <div className="absolute bottom-3 left-4 z-20 text-white">
-                <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
-                  Shire
-                </p>
-                <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
-                  Udupi
-                </p>
+            <Link href="/our-work/shire">
+              <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
+                <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
+                <Image
+                  src={ShireBgImg}
+                  fill
+                  alt="ShireBgImg"
+                  className="rounded-xl object-cover"
+                />
+                <div className="absolute bottom-3 left-4 z-20 text-white">
+                  <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
+                    Shire
+                  </p>
+                  <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
+                    Udupi
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
-            <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
-              <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
-              <Image
-                src={SanchiBgImg}
-                fill
-                alt="SanchiBgImg"
-                className="rounded-xl object-cover"
-              />
-              <div className="absolute bottom-3 left-4 z-20 text-white">
-                <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
-                  Sanchi Bags
-                </p>
-                <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
-                  Trivandrum
-                </p>
+            <Link href="/our-work/sanchi-bags">
+              <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
+                <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
+                <Image
+                  src={SanchiBgImg}
+                  fill
+                  alt="SanchiBgImg"
+                  className="rounded-xl object-cover"
+                />
+                <div className="absolute bottom-3 left-4 z-20 text-white">
+                  <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
+                    Sanchi Bags
+                  </p>
+                  <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
+                    Trivandrum
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
-            <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
-              <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
-              <Image
-                src={HavenBgImg}
-                fill
-                alt="HavenBgImg"
-                className="rounded-xl object-cover"
-              />
-              <div className="absolute bottom-3 left-4 z-20 text-white">
-                <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
-                  Haven
-                </p>
-                <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
-                  Manvilla
-                </p>
+            <Link href="/our-work/haven">
+              <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
+                <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
+                <Image
+                  src={HavenBgImg}
+                  fill
+                  alt="HavenBgImg"
+                  className="rounded-xl object-cover"
+                />
+                <div className="absolute bottom-3 left-4 z-20 text-white">
+                  <p className="text-2xl font-bold tracking-widest md:text-4xl lg:text-[42px]">
+                    Haven
+                  </p>
+                  <p className="text-base text-[#FCBF89] md:text-lg lg:text-xl xl:text-2xl">
+                    Manvilla
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -136,20 +144,20 @@ const OurWork = () => {
       <div>
         <hr className="mx-auto border-t-4 border-white md:border-t-8"></hr>
         <div
-          className="relative w-full items-center justify-center bg-cover bg-center px-1 py-8 text-white md:px-24 md:py-16"
+          className="relative w-full items-center justify-center bg-cover bg-center px-1 py-8 text-white md:px-24 md:py-12 lg:px-2 lg:py-2"
           style={{
             backgroundImage: optimizedWorkShopBgImg,
           }}
         >
           <div className="relative z-10 h-full items-center justify-center text-white">
-            <h2 className="mb-7 text-center font-primary text-[32px] md:text-[64px]">
+            <h2 className="mb-7 text-center font-primary text-[32px] md:text-[50px]">
               <span className="font-bold">Workshops</span>
               <br />
-              <span className="text-[28px] md:text-[48px]">
+              <span className="text-[28px] md:text-[40px]">
                 Learn, Build, Innovate
               </span>
             </h2>
-            <div className="px-6 text-center text-[16px] tracking-wide text-surface-500 md:text-[32px]">
+            <div className="px-6 text-center text-[16px] tracking-wide text-surface-500 md:text-[28px]">
               <p className="mb-10">
                 Gain hands-on experience in sustainable construction through our
                 expertly curated workshops. Explore the possibilities of bamboo,

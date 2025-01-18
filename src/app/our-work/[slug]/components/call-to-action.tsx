@@ -32,7 +32,7 @@ function CallToAction(props: CallToActionProps) {
   return (
     <div className="w-full bg-[#FFFFFF66] shadow-[inset_0px_10px_4px_0px_rgba(0,0,0,0.15)]">
       {/* Share */}
-      <div className="flex h-[253px] w-full flex-col lg:h-[288px] lg:flex-row lg:items-start lg:justify-center lg:gap-10 lg:pt-10">
+      <div className="flex h-[272px] w-full flex-col lg:h-[288px] lg:flex-row lg:items-start lg:justify-center lg:gap-10 lg:pt-10">
         <p className="mx-auto mt-7 w-[80vw] text-center text-[5vw] lg:mx-0 lg:mt-0 lg:w-[43vw] lg:text-left lg:text-[24px]">
           {cta.title}
         </p>

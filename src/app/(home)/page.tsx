@@ -70,7 +70,7 @@ export default function Home() {
     <div className="h-full min-h-full">
       <section
         className={cn(
-          'relative h-full min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light md:flex md:h-[80vh] md:flex-row-reverse md:items-center md:justify-between',
+          'relative h-[85vh] min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light sm:h-[80vh] md:flex md:h-[80vh] md:flex-row-reverse md:items-center md:justify-between',
           styles.dashed_dotted_line,
         )}
         style={{
@@ -82,7 +82,7 @@ export default function Home() {
             src={landingPageHeroImage}
             placeholder="blur"
             alt="Landing page hero image "
-            className="w-full overflow-hidden rounded-md md:ml-auto md:aspect-video md:h-[350px] md:w-3/4 md:rounded-none md:rounded-s-3xl"
+            className="w-full overflow-hidden rounded-md md:ml-auto md:aspect-video md:h-[350px] md:w-3/4 md:rounded-none md:rounded-s-3xl lg:mt-10 lg:h-[300px]"
           />
           <Image
             src={landingPageAssetGrass}
@@ -92,11 +92,11 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative mt-8 flex flex-col items-start justify-center p-8 md:pl-24">
-          <h1 className="text-center font-primary text-[38px] font-bold text-primary-500 md:text-6xl">
+        <div className="relative mt-8 flex flex-col items-start justify-center p-8 pt-0 sm:pt-8 md:pl-24">
+          <h1 className="whitespace-nowrap text-center font-primary text-[38px] font-bold text-primary-500 md:text-6xl">
             TAC Design LAB
           </h1>
-          <p className="mt-6 text-balance font-primary text-[22px] font-normal text-primary-500 md:text-4xl">
+          <p className="mt-6 text-balance font-primary text-[22px] font-normal text-primary-500 md:text-4xl lg:text-3xl">
             Where Every Space Is A Step Towards Sustainability
           </p>
         </div>
@@ -281,6 +281,7 @@ export default function Home() {
             style={{
               boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.2)',
             }}
+            allowFullScreen
           ></iframe>
         </div>
 
