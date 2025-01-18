@@ -61,7 +61,7 @@ function AboutUsPage() {
           OUR STORY{' '}
         </p>
 
-        <h2 className="mt-8 px-8 font-primary text-3xl font-normal leading-9 text-primary-500 md:px-[120px] md:text-[52px] md:leading-[72px]">
+        <h2 className="mt-8 px-8 font-primary text-3xl font-normal leading-9 text-primary-500 md:px-[120px] md:text-[52px] md:leading-[72px] lg:text-[44px] lg:leading-[67px]">
           TAC Design LAB: Crafting{' '}
           <span className="text-accent-500"> Sustainable Future</span> with
           Vision and Innovation
@@ -78,7 +78,7 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
+              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px] lg:text-[32px] lg:leading-[48px]">
                 Foundations of
                 <span className="text-accent-500"> Our Vision</span>
               </h3>
@@ -93,7 +93,7 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
+              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px] lg:text-[32px] lg:leading-[48px]">
                 Partnering with
                 <span className="text-accent-500"> Clients</span> for Better
                 Designs
@@ -109,7 +109,7 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
+              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px] lg:text-[32px] lg:leading-[48px]">
                 A Portfolio of&nbsp;
                 <span className="text-accent-500">
                   Excellence & Recognition
@@ -126,7 +126,7 @@ function AboutUsPage() {
 
           <StoryCard
             title={
-              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px]">
+              <h3 className="font-primary text-[28px] font-normal leading-[39px] text-primary-500 md:text-[48px] md:leading-[67px] lg:text-[32px] lg:leading-[48px]">
                 From Workshops to a{' '}
                 <span className="text-accent-500"> Greener Future </span>
               </h3>
@@ -222,7 +222,7 @@ function AboutUsPage() {
           <Link
             href="/services"
             style={{ backgroundImage: optimizedButtonBackground }}
-            className="rounded bg-cover bg-center p-10 px-4 text-[13px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-14 md:text-2xl"
+            className="rounded bg-cover bg-center p-10 px-4 text-[13px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-14 md:text-2xl lg:p-8 lg:text-lg"
           >
             Explore Our Services
           </Link>

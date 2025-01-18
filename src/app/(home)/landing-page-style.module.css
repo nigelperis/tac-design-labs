@@ -18,8 +18,8 @@
   content: '';
   position: absolute;
   bottom: 1.875rem; /* 30px */
-  left: 1.25rem; /* 20px */
-  width: 100%;
+  /* left: 1.25rem; 20px */
+  width: 102%;
   height: 2px;
   background-image: var(--horizontal-dotted-dashed-line);
 }
@@ -28,11 +28,22 @@
   .dashed_dotted_line::before {
     right: auto;
     left: 2.5rem; /* 40px */
-    top: 0.625rem; /* 10px */
+    top: 0rem;
   }
 
   .dashed_dotted_line::after {
     top: 2.5rem; /*40px */
     bottom: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashed_dotted_line::before {
+    top: 33rem;
+    height: 50%;
+  }
+  .dashed_dotted_line::after {
+    left: 2.5rem;
+    bottom: 3.875rem; /* 30px */
   }
 }

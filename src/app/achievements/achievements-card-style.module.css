@@ -21,7 +21,7 @@
 
 .achievement_card_image {
   grid-area: image;
-  max-height: 215px;
+  /* max-height: 215px; */
   margin-block: 1.25rem;
   align-items: center;
   overflow: hidden;
@@ -90,7 +90,9 @@
   .achievement_card_image {
     margin-block: 0;
     height: 450px;
-    max-height: 450px;
+    /* max-height: 450px; */
+    object-fit: fill;
+    object-position: center;
   }
   .achievement_card_description {
     font-size: 1.25rem;
@@ -123,5 +125,31 @@
   .achievement_card_description {
     height: fit-content;
     align-self: center;
+  }
+}
+
+@media (max-width: 1920px) {
+  .achievement_card_image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 1620px) {
+  .achievement_card_image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .achievement_card:nth-child(odd) {
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  .achievement_card:nth-child(even) {
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  .achievement_card_image {
+    height: 450px;
   }
 }
