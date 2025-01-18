@@ -174,7 +174,7 @@ const ServicePage = () => {
     >
       <div>
         <div className="mb-10 pt-16 text-center text-[32px] font-bold text-[#552b0a] lg:text-[42px]">
-          <h1>We Work with Everyone</h1>
+          <h1>We Work With Everyone</h1>
         </div>
         <div className="flex flex-col items-center space-y-11 px-4 md:px-32">
           {services.map((serviceItem, index) => (

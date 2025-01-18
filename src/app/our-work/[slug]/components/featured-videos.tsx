@@ -142,6 +142,7 @@ const MobileMoreVideos = (props: { featuredVideos: FeaturedVideo[] }) => {
                   style={{
                     boxShadow: '0px 15px 4px 0px rgba(0, 0, 0, 0.25) inset',
                   }}
+                  allowFullScreen
                 />
               ) : (
                 <p className="text-[24px] lg:text-[64px]">COMING SOON</p>
