@@ -2,6 +2,8 @@
 
 import { useRef, useState } from 'react';
 
+import landingPageLeavesBackground from '~/assets/images/landing-page-team-background.png';
+
 import { workDetails } from '../constant';
 import type { FeaturedVideo } from '../model';
 import type { FeaturedVideoProps } from './model';
@@ -16,10 +18,11 @@ function FeaturedVideos(props: FeaturedVideoProps) {
       {/* Desktop */}
       {currentWork.featuredVideos && (
         <div
-          className="mx-auto my-auto hidden w-full flex-col items-center justify-center p-20 lg:block"
+          className="mx-auto my-auto hidden w-full flex-col items-center justify-center p-20 bg-blend-luminosity lg:block"
           style={{
-            backgroundImage: "url('/works/teamsbg.png')",
-            borderTop: '8px solid white',
+            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.40)), url(${landingPageLeavesBackground.src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
           <p className="text-center text-[32px]">
