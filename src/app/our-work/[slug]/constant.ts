@@ -104,8 +104,28 @@ const havenData: WorkDetails = {
         'Kitchen and toilet waste processed through biogas contributes to cooking fuel.',
     },
   ],
-  culturalConsiderations:
-    'Haven seamlessly blends traditional Kerala architectural elements with modern minimalism. Exposed brickwork and earthy tones create a rustic and timeless aesthetic, while the functional layout reflects the region’s cultural emphasis on courtyard-centric designs.',
+  culturalConsiderations: [
+    {
+      title: 'Traditional Kerala Elements',
+      description:
+        'Incorporates courtyard-centric designs, reflecting the region’s architectural heritage.',
+    },
+    {
+      title: 'Modern Minimalism',
+      description:
+        'Blends simplicity with functionality for a contemporary appeal.',
+    },
+    {
+      title: 'Rustic Aesthetic',
+      description:
+        'Features exposed brickwork and earthy tones for a timeless and grounded look.',
+    },
+    {
+      title: 'Contextual Design',
+      description:
+        'Combines cultural influences with practicality to create a harmonious living space.',
+    },
+  ],
   outcome:
     "Haven was completed successfully, meeting the clients' requirements for a sustainable, functional, and aesthetically pleasing family home. The clients expressed satisfaction with the design's effective use of space, eco-conscious materials, and thoughtful execution.",
   testimonial:
@@ -409,11 +429,92 @@ const shireData: WorkDetails = {
   },
 };
 
+const sanchiBagsData: WorkDetails = {
+  title: 'SANCHI BGAS TAILORING UNIT',
+  subTitle:
+    'A functional and eco-friendly tailoring unit, showcasing practicality and sustainable design.',
+  location: 'Venjaramoodu, Trivandrum',
+  completionYear: 'September, 2023',
+  area: '260 sqm (2,800 sqft)',
+  duration: '6 months',
+  budget: '₹30.8 lakh',
+  overview:
+    'The Sanchi Bags Tailoring Unit is an institutional building that embodies the principles of sustainability and community empowerment. Designed to house the production of Sanchi bags and other handcrafted items, the structure serves as both a functional workspace and a symbol of local resilience.',
+  designIntent: `The building's design is deeply integrated with its surroundings, occupying the flatter terrain of a contoured site. The architecture prioritizes minimal environmental disruption while maximizing comfort and efficiency for the workers. The central octagonal hub is the heart of the building, offering an open, unobstructed space that facilitates the primary activities of tailoring and storage.`,
+  materialsAndTechniques: [
+    {
+      title: 'Locally Sourced Materials',
+      description:
+        'Approximately 95% of materials sourced within a 30 km radius to minimize environmental impact.',
+    },
+    {
+      title: 'Rat Trap Bond Wall System',
+      description:
+        'Used in bricklaying to enhance insulation and reduce material usage.',
+    },
+    {
+      title: 'Traditional Trussed Roofing',
+      description:
+        'Includes skylights and clerestory windows for natural light and ventilation minimizing thew reliance on artificial energy sources.',
+    },
+  ],
+  keyFeatures: [
+    {
+      title: 'Central Octagonal Unit',
+      description:
+        'Serves as the main occupational space, designed for maximum transparency and accessibility.',
+    },
+    {
+      title: 'Ancillary Spaces',
+      description:
+        'Include a dining area with an attic for temporary accommodation and an office with a custom bay window.',
+    },
+    {
+      title: 'Clerestory Windows and Skylights',
+      description:
+        'Enhance natural lighting and promote a continuous passive cooling strategy.',
+    },
+  ],
+  sustainabilityMeasures: [
+    {
+      title: 'Rat-trap Bond Walls',
+      description:
+        'Provides enhanced insulation, reducing indoor temperatures and energy consumption.',
+    },
+    {
+      title: 'Energy Efficiency',
+      description:
+        'Achieved through strategically placed windows, clerestory, and the building’s octagonal layout, which facilitates natural air circulation.',
+    },
+    {
+      title: 'Material Reuse',
+      description:
+        'Doors, windows, rafters, purlins, and Mangalore tiles are repurposed from nearby sites, minimizing environmental impact and construction costs.',
+    },
+  ],
+  outcome:
+    'The Sanchi Bags Tailoring Unit is not just a place of work but a testament to the possibility of merging architectural design with sustainable practices, creating a space that supports both the business and the community it serves.',
+  testimonial:
+    'A heartfelt testimonial from the clients of Project Sanchi Bags, highlighting the unique design, sustainable features, and the personalized approach that turned their dream home into a reality.',
+  testimonialVideo: '',
+  admiration:
+    'The Sanchi Bags project showcases the power of sustainable design to uplift local communities and promote ethical production. This initiative goes beyond architecture, representing a fusion of creativity, sustainability, and social impact.',
+  callToAction: {
+    title:
+      'If the Sanchi Bags project inspires you, share it with others and help promote sustainable development and community empowerment!',
+    nextWorkTitle: 'Haven',
+    nextWorkLocation: 'Trivandrum',
+    nextWorkLink: '/our-work/haven',
+    nextWorkImage: '/works/haven-banner.png',
+    nextWorkViewImage: '/works/view-haven.png',
+  },
+};
+
 export const workDetails: Record<Work, WorkDetails> = {
   [Work.HAVEN]: havenData,
   [Work.CANAAN]: canaanData,
   [Work.SHIRE]: shireData,
-  [Work.SANCHIBAGS]: havenData,
+  [Work.SANCHIBAGS]: sanchiBagsData,
 };
 
 export const images: WorkImages = {

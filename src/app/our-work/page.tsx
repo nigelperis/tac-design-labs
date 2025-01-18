@@ -52,7 +52,7 @@ const OurWork = () => {
         </div>
         <div className="flex flex-wrap justify-center gap-6 md:gap-12">
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
-            <Link href="/canaan">
+            <Link href="/our-work/canaan">
               <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
                 <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
                 <Image
@@ -74,7 +74,7 @@ const OurWork = () => {
           </div>
 
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
-            <Link href="/shire">
+            <Link href="/our-work/shire">
               <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
                 <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
                 <Image
@@ -96,7 +96,7 @@ const OurWork = () => {
           </div>
 
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
-            <Link href="/sanchi-bags">
+            <Link href="/our-work/sanchi-bags">
               <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
                 <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
                 <Image
@@ -118,7 +118,7 @@ const OurWork = () => {
           </div>
 
           <div className="w-full md:w-[48%] lg:w-[45%] xl:w-[40%]">
-            <Link href="/haven">
+            <Link href="/our-work/haven">
               <div className="group relative aspect-[16/9] transform rounded-2xl border-8 border-[#F3F5E5] shadow-custom transition-transform duration-300 ease-out hover:scale-105 hover:cursor-pointer">
                 <div className="absolute inset-0 z-10 rounded-2xl bg-gradient-to-t from-[#000000] to-transparent opacity-70 mix-blend-multiply transition delay-150 duration-300 ease-in-out group-hover:opacity-20"></div>
                 <Image
