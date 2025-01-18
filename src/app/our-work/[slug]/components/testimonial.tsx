@@ -21,7 +21,7 @@ function Testimonial(props: TestimonialProps) {
 
         {currentWork.testimonialVideo ? (
           <iframe
-            className="mx-auto aspect-video w-[90%] rounded-2xl border-[5px] border-[#ECC19A] md:w-[50%] lg:w-[50%]"
+            className="mx-auto aspect-video w-[90%] rounded-2xl border-[5px] border-[#ECC19A] md:w-[50%] lg:w-3/5"
             src={currentWork.testimonialVideo}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

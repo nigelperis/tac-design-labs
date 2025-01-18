@@ -32,3 +32,7 @@ export interface FeaturedVideoProps {
 export interface AdmirationProps {
   work: Work;
 }
+
+export interface CallToActionProps {
+  work: Work;
+}
