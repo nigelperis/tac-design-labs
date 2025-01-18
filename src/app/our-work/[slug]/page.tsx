@@ -1,5 +1,6 @@
 import Admiration from './components/admiration';
 import Banner from './components/banner';
+import CallToAction from './components/call-to-action';
 import FeaturedVideos from './components/featured-videos';
 import Highlights from './components/highlights';
 import MainContent from './components/main-content';
@@ -17,6 +18,7 @@ async function Page({ params }: PageParams) {
       <Testimonial work={slug} />
       <FeaturedVideos work={slug} />
       <Admiration work={slug} />
+      <CallToAction work={slug} />
     </div>
   );
 }

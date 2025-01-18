@@ -114,6 +114,15 @@ const havenData: WorkDetails = {
     'https://www.youtube.com/embed/n_6n7HprSFM?si=dAqhrCCIWsacLkl4',
   admiration:
     'Haven exemplifies how sustainable design and cultural heritage can merge to create a functional, eco-conscious, and aesthetically enriching family home. This project beautifully balances tradition, innovation, and environmental responsibility.',
+  callToAction: {
+    title:
+      'If Haven sparks your interest, share this page and help others discover innovative, sustainable living solutions!',
+    nextWorkTitle: 'Shire',
+    nextWorkLocation: 'Udupi',
+    nextWorkLink: '/our-work/shire',
+    nextWorkImage: '/works/shire-banner.png',
+    nextWorkViewImage: '/works/view-shire.png',
+  },
 };
 
 const canaanData: WorkDetails = {
@@ -251,6 +260,15 @@ const canaanData: WorkDetails = {
       video: 'https://www.youtube.com/embed/9w7kEwVBmEk',
     },
   ],
+  callToAction: {
+    title:
+      'If you’re inspired by Project Canaan, share this page and help spread the message of sustainable living!',
+    nextWorkTitle: 'Shire',
+    nextWorkLocation: 'Udupi',
+    nextWorkLink: '/our-work/shire',
+    nextWorkImage: '/works/shire-banner.png',
+    nextWorkViewImage: '/works/view-shire.png',
+  },
 };
 
 const shireData: WorkDetails = {
@@ -380,6 +398,15 @@ const shireData: WorkDetails = {
   testimonial: '',
   testimonialVideo: '',
   admiration: '',
+  callToAction: {
+    title:
+      'If Project Shire resonates with you, share this page and inspire others to embrace sustainable architecture!',
+    nextWorkTitle: 'Sanchi Bags',
+    nextWorkLocation: 'Trivandrum',
+    nextWorkLink: '/our-work/sanchi-bags',
+    nextWorkImage: '/works/sanchi-bags-banner.png',
+    nextWorkViewImage: '/works/view-sanchi-bags.png',
+  },
 };
 
 export const workDetails: Record<Work, WorkDetails> = {

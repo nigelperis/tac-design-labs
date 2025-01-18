@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 
+import ImageGallery from '~/components/image-gallery';
+
 import landingPageLeavesBackground from '~/assets/images/landing-page-team-background.png';
 
 import { images, rightColImageCount, workDetails } from '../constant';
@@ -67,7 +69,7 @@ function MainContent(props: MainContentProps) {
                 <div key={idx} className="flex flex-col gap-7">
                   {/* Mobile Images */}
                   <div className="mx-auto grid grid-cols-2 gap-4 lg:hidden">
-                    {getMobileImages(idx).map((image, imageIdx) => (
+                    {/* {getMobileImages(idx).map((image, imageIdx) => (
                       <div key={imageIdx} className="mb-5">
                         <Image
                           src={image}
@@ -78,7 +80,11 @@ function MainContent(props: MainContentProps) {
                           className="h-[140px] w-[160px] rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
                         />
                       </div>
-                    ))}
+                    ))} */}
+                    <ImageGallery
+                      images={getMobileImages(idx)}
+                      className="h-[140px] w-[160px] rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
+                    />
                   </div>
 
                   {/* Section Title */}
@@ -118,21 +124,11 @@ function MainContent(props: MainContentProps) {
 
         {/* Main Images Section */}
         <div className="mx-auto hidden max-w-[38vw] columns-2 gap-4 lg:my-auto lg:block">
-          {mainImages.map((image, idx) => (
-            <div key={idx} className="mb-5">
-              <Image
-                src={image}
-                alt={`Image ${idx.toString()}`}
-                width={0}
-                height={0}
-                sizes="100vw"
-                loading="lazy"
-                className="max-h-96 w-full max-w-80 rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
-              />
-            </div>
-          ))}
+          <ImageGallery
+            images={mainImages}
+            className="max-h-96 w-full max-w-80 rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
+          />
         </div>
-        {/* <DetailsCarousel images={mainImages} /> */}
       </div>
       <ImageSlider images={extraImages} />
     </div>

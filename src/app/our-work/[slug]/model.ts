@@ -31,6 +31,7 @@ export interface WorkDetails {
   testimonialVideo: string;
   admiration: string;
   featuredVideos?: FeaturedVideo[];
+  callToAction: CallToAction;
 }
 
 export interface PageParams {
@@ -50,4 +51,13 @@ export interface FeaturedVideo {
   title: string;
   description: string;
   video: string;
+}
+
+export interface CallToAction {
+  title: string;
+  nextWorkTitle: string;
+  nextWorkLocation: string;
+  nextWorkLink: string;
+  nextWorkImage: string;
+  nextWorkViewImage: string;
 }
