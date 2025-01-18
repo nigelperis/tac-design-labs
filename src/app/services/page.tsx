@@ -19,63 +19,65 @@ import institution from '~/assets/images/institution-service.png';
 import interiorService from '~/assets/images/interior-service.png';
 import landscapeDesign from '~/assets/images/landscape-design.png';
 import piscart from '~/assets/images/piscart-service.jpeg';
-import service from '~/assets/images/servicesBgYTBg.png';
+import serviceYoutubeBg from '~/assets/images/services-yt-bg.png';
 import udupiService from '~/assets/images/udupi-service.jpeg';
 
-interface ProjectCard {
-  image: string;
+import { ServiceCard } from './service-card';
+import type { StaticImageData } from 'next/image';
+
+export interface ServiceCardInfo {
   title: string;
-  tags: string[];
+  image: StaticImageData;
+  categories: string[];
   description: string;
 }
-
-const projects: ProjectCard[] = [
+const services: ServiceCardInfo[] = [
   {
-    image: udupiService.src,
+    image: udupiService,
     title: 'Residential Projects',
-    tags: ['Houses', 'Apartments', 'Villas'],
+    categories: ['Houses', 'Apartments', 'Villas'],
     description:
       'Crafting sustainable, eco-conscious homes that blend comfort with innovative design.',
   },
   {
-    image: piscart.src,
+    image: piscart,
     title: 'Commercial Projects',
-    tags: ['Shops', 'Malls', 'Offices'],
+    categories: ['Shops', 'Malls', 'Offices'],
     description:
       'Designing dynamic commercial spaces that foster growth and elevate brand presence.',
   },
   {
-    image: institution.src,
+    image: institution,
     title: 'Institutional Projects',
-    tags: ['Educational', 'Healthcare', 'Yoga Centers'],
+    categories: ['Educational', 'Healthcare', 'YogaCenters'],
     description:
       'Building institutions that inspire learning, healing, and holistic well-being.',
   },
   {
-    image: hospitality.src,
+    image: hospitality,
     title: 'Hospitality Projects ',
-    tags: ['Hotels', 'Resorts', 'Homestays'],
+    categories: ['Hotels', 'Resorts', 'Homestays'],
     description:
       'Creating serene and sustainable retreats that offer luxury in harmony with nature.',
   },
   {
-    image: conservationProject.src,
+    image: conservationProject,
     title: 'Conservation Projects',
-    tags: ['Heritage Restoration', 'Adaptive Reuse'],
+    categories: ['Heritage Restoration', 'Adaptive Reuse'],
     description:
       'Preserving historical structures with innovative, eco-friendly methods that honor their legacy.',
   },
   {
-    image: landscapeDesign.src,
+    image: landscapeDesign,
     title: 'Landscape Design',
-    tags: ['Parks', 'Gardens', 'Outdoor Spaces'],
+    categories: ['Parks', 'Gardens', 'Outdoor Spaces'],
     description:
       'Designing green, sustainable landscapes that enhance natural beauty and promote biodiversity.',
   },
   {
-    image: interiorService.src,
+    image: interiorService,
     title: 'Interior Design',
-    tags: ['Residential & Commercial Interiors'],
+    categories: ['Residential & Commercial Interiors'],
     description:
       'Transforming interiors with eco-friendly, stylish designs that reflect individual personalities.',
   },
@@ -115,12 +117,12 @@ const CarouselItem: React.FC<CarouselItemProps> = ({
   author,
 }) => (
   <div
-    className={`relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-[20px] bg-white bg-opacity-40 shadow-md`}
+    className={`relative flex h-auto w-auto flex-col items-center justify-center overflow-hidden rounded-[20px] bg-white bg-opacity-40 shadow-md`}
   >
-    <div className="relative z-10 flex w-auto flex-col items-center px-10 py-4">
+    <div className="relative z-10 flex flex-col items-center px-10 py-4">
       {youtubeLink && (
         <iframe
-          className="aspect-video h-[100%] w-[120%] rounded-[24px] shadow-lg md:mt-10 md:h-[90%] md:w-[160%]"
+          className="aspect-video h-[105%] w-[105%] rounded-[24px] shadow-lg md:mt-6 md:h-[75%] md:w-[140%]"
           src={youtubeLink}
           title="YouTube video"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -129,7 +131,7 @@ const CarouselItem: React.FC<CarouselItemProps> = ({
       )}
       {!youtubeLink && imageLink && (
         <Image
-          className="rounded-[24px] object-cover shadow-lg md:mt-10"
+          className="rounded-[24px] object-cover shadow-lg md:mt-6"
           src={imageLink}
           alt="Coming Soon"
           width={400}
@@ -137,11 +139,11 @@ const CarouselItem: React.FC<CarouselItemProps> = ({
         />
       )}
     </div>
-    <div className="px-5">
-      <p className="mt-4 max-w-2xl text-center font-primary text-[14px] font-[400] leading-relaxed md:text-[22px]">
+    <div className="px-4">
+      <p className="mt-4 text-center font-primary text-[14px] font-[400] leading-relaxed text-[#000000] md:text-[18px]">
         &quot;{text}&quot;
       </p>
-      <h1 className="py-8 text-center font-primary text-[22px] font-[600] text-[#173552]">
+      <h1 className="py-4 text-center font-primary text-[18px] font-[600] text-[#173552]">
         {author}
       </h1>
     </div>
@@ -170,52 +172,14 @@ const ServicePage = () => {
       className="relative bg-[#EDD7C3] bg-contain font-primary bg-blend-overlay"
       style={{ backgroundImage: optimizedCareerPageBackground }}
     >
-      <div className="" style={{ fontFamily: 'Comic Sans MS' }}>
+      <div>
         <div className="mb-10 pt-16 text-center text-[32px] font-bold text-[#552b0a] lg:text-[42px]">
-          <h1 style={{ fontFamily: 'Comic Sans MS' }}>We Work with Everyone</h1>
+          <h1>We Work with Everyone</h1>
         </div>
-
-        <div className="container mx-auto h-full max-w-[1100px] px-8">
-          <div className="flex flex-col space-y-11">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="flex flex-col overflow-hidden rounded-[22px] bg-white bg-opacity-[40%] shadow-sm md:flex-row"
-              >
-                <div className="aspect-square p-5 md:h-auto md:w-1/3 md:p-2">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full rounded-[22px] border-4 border-[#ECC19A] object-cover"
-                    width={500}
-                    height={500}
-                    style={{
-                      boxShadow: '0px 4px 4px 0px #00000040',
-                    }}
-                  />
-                </div>
-
-                <div className="-mt-5 ml-2 flex flex-col justify-center p-4 lg:w-1/2">
-                  <h3 className="mb-2 font-primary text-[20px] font-bold text-[#552B0A] md:text-[32px]">
-                    {project.title}
-                  </h3>
-                  <div className="mb-4 flex flex-wrap space-x-2">
-                    {project.tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="cursor-default rounded-full border border-[#C6742B] bg-white px-2 py-1 text-[14px] font-bold text-[#C6742B] hover:bg-orange-300 hover:text-white md:px-2 md:text-[18px]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-[14px] leading-relaxed text-black md:text-[20px]">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="flex flex-col items-center space-y-11 px-4 md:px-32">
+          {services.map((serviceItem, index) => (
+            <ServiceCard key={index} service={serviceItem} />
+          ))}
         </div>
 
         <div
@@ -240,13 +204,13 @@ const ServicePage = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-6 leading-8 tracking-[2%] md:leading-[45px]">
-            <h3 className="text-balance text-center text-[17px] md:text-[32px]">
+            <h3 className="text-balance text-center text-[17px] leading-relaxed md:text-[32px]">
               Every great project starts with a conversation. Let&apos;s design
               something extraordinary together—talk to us!
             </h3>
             <a
               href="tel:+919072062086"
-              className="relative h-[70px] w-[225px] rounded bg-cover bg-center text-base font-bold text-primary-500 duration-200 hover:scale-105 md:h-[120px] md:w-[380px] md:p-10 md:text-2xl md:font-bold"
+              className="h-[70px] w-[225px] rounded bg-cover bg-center text-base font-bold text-primary-500 duration-200 hover:scale-105 md:h-[90px] md:w-[300px] md:p-10 md:text-xl md:font-bold"
               style={{
                 backgroundImage: optimizedOurWorkBgButton,
               }}
@@ -257,21 +221,19 @@ const ServicePage = () => {
             </a>
           </div>
         </div>
-
         <div
-          className=""
+          className="mx-auto bg-opacity-60 bg-cover"
           style={{
-            backgroundImage: `url(${service.src})`,
+            backgroundImage: `url(${serviceYoutubeBg.src})`,
           }}
         >
-          <div className="font-primary text-[48px] font-[600] text-[#552B0A]">
-            <h1 className="pt-10 text-center text-[24px] md:text-[48px]">
+          <div className="font-primary font-[600] text-[#552B0A]">
+            <h1 className="pt-6 text-center text-[24px] md:text-[36px]">
               Hear from those who trust us
             </h1>
-          </div>
-          <div className="pb-6 md:block">
-            <ZoomCarousel loop={true} className="my-carousel">
-              <ZoomCarouselContainer>
+
+            <ZoomCarousel loop={true} className="">
+              <ZoomCarouselContainer className="pb-4">
                 {carouselItems.map((item, index) => (
                   <ZoomCarouselSlide key={index}>
                     <CarouselItem
