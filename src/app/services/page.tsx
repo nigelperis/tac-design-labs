@@ -1,5 +1,5 @@
 import React from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 import {
   ZoomCarousel,
@@ -19,18 +19,19 @@ import institution from '~/assets/images/institution-service.png';
 import interiorService from '~/assets/images/interior-service.png';
 import landscapeDesign from '~/assets/images/landscape-design.png';
 import piscart from '~/assets/images/piscart-service.jpeg';
-import service from '~/assets/images/servicesBgYTBg.png';
+import serviceYoutubeBg from '~/assets/images/services-yt-bg.png';
 import udupiService from '~/assets/images/udupi-service.jpeg';
 
-import { ServiceCard } from './ServiceCard';
+import { ServiceCard } from './service-card';
+import type { StaticImageData } from 'next/image';
 
 export interface ServiceCardInfo {
   title: string;
   image: StaticImageData;
-  categories: Array<string>;
+  categories: string[];
   description: string;
 }
-const services: Array<ServiceCardInfo> = [
+const services: ServiceCardInfo[] = [
   {
     image: udupiService,
     title: 'Residential Projects',
@@ -116,12 +117,12 @@ const CarouselItem: React.FC<CarouselItemProps> = ({
   author,
 }) => (
   <div
-    className={`relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-[20px] bg-white bg-opacity-40 shadow-md`}
+    className={`relative flex h-auto w-auto flex-col items-center justify-center overflow-hidden rounded-[20px] bg-white bg-opacity-40 shadow-md`}
   >
-    <div className="relative z-10 flex w-auto flex-col items-center px-10 py-4">
+    <div className="relative z-10 flex flex-col items-center px-10 py-4">
       {youtubeLink && (
         <iframe
-          className="aspect-video h-[100%] w-[120%] rounded-[24px] shadow-lg md:mt-10 md:h-[90%] md:w-[160%]"
+          className="aspect-video h-[105%] w-[105%] rounded-[24px] shadow-lg md:mt-6 md:h-[75%] md:w-[140%]"
           src={youtubeLink}
           title="YouTube video"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -130,7 +131,7 @@ const CarouselItem: React.FC<CarouselItemProps> = ({
       )}
       {!youtubeLink && imageLink && (
         <Image
-          className="rounded-[24px] object-cover shadow-lg md:mt-10"
+          className="rounded-[24px] object-cover shadow-lg md:mt-6"
           src={imageLink}
           alt="Coming Soon"
           width={400}
@@ -138,11 +139,11 @@ const CarouselItem: React.FC<CarouselItemProps> = ({
         />
       )}
     </div>
-    <div className="px-5">
-      <p className="mt-4 max-w-2xl text-center font-primary text-[14px] font-[400] leading-relaxed md:text-[22px]">
+    <div className="px-4">
+      <p className="mt-4 text-center font-primary text-[14px] font-[400] leading-relaxed text-[#000000] md:text-[18px]">
         &quot;{text}&quot;
       </p>
-      <h1 className="py-8 text-center font-primary text-[22px] font-[600] text-[#173552]">
+      <h1 className="py-4 text-center font-primary text-[18px] font-[600] text-[#173552]">
         {author}
       </h1>
     </div>
@@ -176,8 +177,8 @@ const ServicePage = () => {
           <h1>We Work with Everyone</h1>
         </div>
         <div className="flex flex-col items-center space-y-11 px-4 md:px-32">
-          {services.map((service, index) => (
-            <ServiceCard key={index} service={service} />
+          {services.map((serviceItem, index) => (
+            <ServiceCard key={index} service={serviceItem} />
           ))}
         </div>
 
@@ -209,7 +210,7 @@ const ServicePage = () => {
             </h3>
             <a
               href="tel:+919072062086"
-              className="h-[70px] w-[225px] rounded bg-cover bg-center text-base font-bold text-primary-500 duration-200 hover:scale-105 md:h-[120px] md:w-[380px] md:p-10 md:text-2xl md:font-bold"
+              className="h-[70px] w-[225px] rounded bg-cover bg-center text-base font-bold text-primary-500 duration-200 hover:scale-105 md:h-[90px] md:w-[300px] md:p-10 md:text-xl md:font-bold"
               style={{
                 backgroundImage: optimizedOurWorkBgButton,
               }}
@@ -221,19 +222,18 @@ const ServicePage = () => {
           </div>
         </div>
         <div
-          className=""
+          className="mx-auto bg-opacity-60 bg-cover"
           style={{
-            backgroundImage: `url(${service.src})`,
+            backgroundImage: `url(${serviceYoutubeBg.src})`,
           }}
         >
-          <div className="font-primary text-[48px] font-[600] text-[#552B0A]">
-            <h1 className="pt-10 text-center text-[24px] md:text-[48px]">
+          <div className="font-primary font-[600] text-[#552B0A]">
+            <h1 className="pt-6 text-center text-[24px] md:text-[36px]">
               Hear from those who trust us
             </h1>
-          </div>
-          <div>
-            <ZoomCarousel loop={true} className="my-carousel">
-              <ZoomCarouselContainer>
+
+            <ZoomCarousel loop={true} className="">
+              <ZoomCarouselContainer className="pb-4">
                 {carouselItems.map((item, index) => (
                   <ZoomCarouselSlide key={index}>
                     <CarouselItem

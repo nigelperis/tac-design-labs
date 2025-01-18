@@ -1,26 +1,9 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 
-import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
-
-import OurWorkBgButton from '~/assets/images/button-background.png';
-import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
-
-import { ServiceCardInfo } from './page';
+import type { ServiceCardInfo } from './page';
 
 export const ServiceCard = ({ service }: { service: ServiceCardInfo }) => {
-  const optimizedBG = getOptimizedBackgroundImage({
-    src: designDreamDeliverBG.src,
-    width: designDreamDeliverBG.width,
-    height: designDreamDeliverBG.height,
-  });
-  const optimizedOurWorkBgButton = getOptimizedBackgroundImage({
-    src: OurWorkBgButton.src,
-    width: OurWorkBgButton.width,
-    height: OurWorkBgButton.height,
-  });
   return (
     <>
       <div className="flex flex-col rounded-[22px] bg-white bg-opacity-[40%] shadow-sm md:flex-row xl:max-w-screen-xl">
@@ -37,7 +20,7 @@ export const ServiceCard = ({ service }: { service: ServiceCardInfo }) => {
           />
         </div>
         {/* Info Section */}
-        <div className="-mt-5 ml-2 flex flex-col justify-center p-4 lg:w-1/2">
+        <div className="-mt-5 ml-2 flex flex-col justify-center p-4 tracking-[5%] lg:w-1/2">
           <h3 className="mb-2 font-primary text-[20px] font-bold text-[#552B0A] md:text-[32px]">
             {service.title}
           </h3>
@@ -51,7 +34,7 @@ export const ServiceCard = ({ service }: { service: ServiceCardInfo }) => {
               </span>
             ))}
           </div>
-          <p className="text-[14px] leading-6 tracking-[5%] text-black md:text-[20px]">
+          <p className="text-[14px] leading-6 tracking-[5%] text-black md:text-[20px] md:leading-8">
             {service.description}
           </p>
         </div>
