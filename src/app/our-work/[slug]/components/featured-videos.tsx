@@ -71,8 +71,9 @@ function FeaturedVideos(props: FeaturedVideoProps) {
         <div
           className="mx-auto my-auto block pt-14 lg:hidden"
           style={{
-            backgroundImage: "url('/works/teamsbg.png')",
-            borderTop: '8px solid white',
+            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.40)), url(${landingPageLeavesBackground.src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
           <p className="mx-auto my-auto w-[333px] text-center text-[16px]">
