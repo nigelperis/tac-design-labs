@@ -57,11 +57,11 @@ function AboutUsPage() {
           backgroundImage: optimizedAboutUsBackground,
         }}
       >
-        <p className="mx-8 w-fit rounded-full bg-white px-5 py-[10px] font-primary text-xs font-extrabold text-primary-500 md:mx-[120px] md:px-10 md:py-[15px] md:text-base">
+        <p className="mx-8 w-fit rounded-full bg-white px-5 py-[10px] font-primary text-xs font-extrabold text-primary-500 md:mx-[40px] md:px-12 md:py-[15px] md:text-base">
           OUR STORY{' '}
         </p>
 
-        <h2 className="mt-8 px-8 font-primary text-3xl font-normal leading-9 text-primary-500 md:px-[120px] md:text-[52px] md:leading-[72px] lg:text-[44px] lg:leading-[67px]">
+        <h2 className="mt-8 px-8 font-primary text-3xl font-normal leading-9 text-primary-500 md:px-[40px] md:text-[52px] md:leading-[72px] lg:text-[44px] lg:leading-[67px]">
           TAC Design LAB: Crafting{' '}
           <span className="text-accent-500"> Sustainable Future</span> with
           Vision and Innovation
