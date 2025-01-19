@@ -25,11 +25,9 @@ function AchievementCard(props: AchievementCardProps) {
       <Image
         src={image}
         alt="Achievement photo"
-        className={cn(
-          achievementsStyles.achievement_card_image,
-          'aspect-video',
-        )}
+        className={cn(achievementsStyles.achievement_card_image)}
         placeholder="blur"
+        id={title.substring(0, 4)}
       />
       <p className={cn(achievementsStyles.achievement_card_description)}>
         {description}

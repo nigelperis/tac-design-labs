@@ -21,7 +21,6 @@
 
 .achievement_card_image {
   grid-area: image;
-  /* max-height: 215px; */
   margin-block: 1.25rem;
   align-items: center;
   overflow: hidden;
@@ -92,8 +91,8 @@
     margin-block: 0;
     height: 450px;
     /* max-height: 450px; */
-    object-fit: fill;
-    object-position: center;
+    object-fit: cover;
+    object-position: 17% center;
   }
   .achievement_card_description {
     font-size: 1.25rem;
@@ -108,10 +107,12 @@
   .achievement_card_title {
     font-size: 1.5rem;
     font-size: 1.875rem;
-    line-height: 2.25rem;
+    line-height: 2.5rem;
+    max-width: 35vw;
   }
   .achievement_card_description {
     line-height: 2.5rem;
+    margin-top: -6 px;
   }
   .achievement_card_link {
     font-size: 1rem;
