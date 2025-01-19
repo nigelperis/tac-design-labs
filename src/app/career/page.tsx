@@ -8,7 +8,7 @@ import {
   AutoScrollCarouselPrevButton,
   AutoScrollCarouselSlide,
 } from '~/components/auto-scroll-carousel';
-import OurWorkCarousel from '~/components/works-carousel';
+import OurWorkCarousel from '~/components/our-works-carousel';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 

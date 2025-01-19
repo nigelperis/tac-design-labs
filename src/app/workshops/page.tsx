@@ -26,26 +26,29 @@ import Workshope6 from '~/assets/images/Workshop4.jpg';
 import Workshope8 from '~/assets/images/workshop6.jpg';
 import Workshopemobile from '~/assets/images/workshopbgmobiel.jpg';
 
+import DesktopCompletedWorkshopsCarousel from './desktop-completed-workshops-carousel';
+import MobileCompletedWorkshopsCarousel from './mobile-completed-workshops-carousel';
 import { WorkshopsMobileCarousel } from './workshops-carousel';
 
+const mudWorkshopImages = [
+  { src: mudWorkshop1, alt: 'Mud Workshop Image 1' },
+  { src: mudWorkshop2, alt: 'Mud Workshop Image 2' },
+  { src: mudWorkshop3, alt: 'Mud Workshop Image 3' },
+];
+
+const bambooWorkshopImages = [
+  { src: bambooWorkshop1, alt: 'Bamboo Workshop Image 1' },
+  { src: bambooWorkshop2, alt: 'Bamboo Workshop Image 2' },
+  { src: bambooWorkshop3, alt: 'Bamboo Workshop Image 3' },
+];
+
+const brickWorkshopImages = [
+  { src: brickWorkshop1, alt: 'Brick Workshop Image 1' },
+  { src: brickWorkshop2, alt: 'Brick Workshop Image 2' },
+  { src: brickWorkshop3, alt: 'Brick Workshop Image 3' },
+];
+
 const Workshops = () => {
-  const mudWorkshopImages = [
-    { src: mudWorkshop1, alt: 'Mud Workshop Image 1' },
-    { src: mudWorkshop2, alt: 'Mud Workshop Image 2' },
-    { src: mudWorkshop3, alt: 'Mud Workshop Image 3' },
-  ];
-
-  const bambooWorkshopImages = [
-    { src: bambooWorkshop1, alt: 'Bamboo Workshop Image 1' },
-    { src: bambooWorkshop2, alt: 'Bamboo Workshop Image 2' },
-    { src: bambooWorkshop3, alt: 'Bamboo Workshop Image 3' },
-  ];
-
-  const brickWorkshopImages = [
-    { src: brickWorkshop1, alt: 'Brick Workshop Image 1' },
-    { src: brickWorkshop2, alt: 'Brick Workshop Image 2' },
-    { src: brickWorkshop3, alt: 'Brick Workshop Image 3' },
-  ];
   const optimizedButtonBackground = getOptimizedBackgroundImage({
     src: buttonBackground.src,
     width: buttonBackground.width,
@@ -56,6 +59,7 @@ const Workshops = () => {
     width: workshopPageBackground.width,
     height: workshopPageBackground.height,
   });
+
   const optimizedWorkshopCtaBackground = getOptimizedBackgroundImage({
     src: workshopCta.src,
     width: workshopCta.width,
@@ -63,7 +67,7 @@ const Workshops = () => {
   });
   return (
     <div
-      className="bg-[#E9D0B7] bg-repeat font-primary"
+      className="max-w-full bg-[#E9D0B7] bg-repeat font-primary"
       style={{
         backgroundImage: optimizedWorkshopPageBackground,
       }}
@@ -575,7 +579,7 @@ const Workshops = () => {
             </div>
 
             {/* Completed Workshops Section */}
-            <div className="pt-1 md:pt-6">
+            <div className="pb-6 pt-1 md:pb-10 md:pt-6">
               <h2 className="text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Completed Workshops and Talks
               </h2>
@@ -583,11 +587,17 @@ const Workshops = () => {
                 A journey of impactful workshos and enlightening talks that
                 promote sustainable architectural practices.
               </p>
+              <div className="-mx-4 mt-8 md:-mx-16">
+                <div className="md:hidden">
+                  <MobileCompletedWorkshopsCarousel />
+                </div>
+                <div className="hidden md:block">
+                  <DesktopCompletedWorkshopsCarousel />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="h-32"></div>
       </div>
       <div>
         <div className="bg-white py-2">

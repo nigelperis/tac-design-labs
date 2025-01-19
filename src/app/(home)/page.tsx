@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import OurWorkCarousel from '~/components/works-carousel';
+import OurWorkCarousel from '~/components/our-works-carousel';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 import { cn } from '~/utils/cn';
