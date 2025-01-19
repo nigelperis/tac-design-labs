@@ -74,6 +74,9 @@ export default {
       boxShadow: {
         custom: '0 11px 4px #00000040',
       },
+      height: {
+        'screen-vh': 'calc(var(--vh, 1vh) * 85)',
+      },
     },
   },
   plugins: [flowBitePlugin, tailwindCSSAnimate, tailwindContainerQueries],
