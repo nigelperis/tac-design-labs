@@ -25,7 +25,7 @@ import landingPagePortfolioHouse2 from '~/assets/images/landing-page-portfolio-h
 import landingPagePortfolioHouse3 from '~/assets/images/landing-page-portfolio-house-3.png';
 import landingPagePortfolioHouse4 from '~/assets/images/landing-page-portfolio-house-4.png';
 import landingPagePortfolioHouse5 from '~/assets/images/landing-page-portfolio-house-5.png';
-import landingPageWoodenBoardBackground from '~/assets/images/landing-page-wooden-board-background.png';
+import landingPageWoodenBoardBackground from '~/assets/images/landing-page-wooden-board-bg.png';
 
 import { LandingPageCarousel } from './landing-page-carousel';
 import styles from './landing-page-style.module.css';
@@ -299,7 +299,7 @@ export default function Home() {
       </section>
 
       <section
-        className="md:py-26 border-b-[5px] border-t-[5px] border-white bg-opacity-30 bg-cover bg-center pt-11 mix-blend-multiply md:pb-8 md:pt-8"
+        className="md:py-26 border-b-[5px] border-t-[5px] border-white bg-cover bg-center pt-11 md:pb-8 md:pt-8"
         style={{
           backgroundImage: optimizedLandingPageWoodenBoardBackground,
         }}
