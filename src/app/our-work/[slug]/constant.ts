@@ -532,7 +532,7 @@ export const images: WorkImages = {
     (_, index) => `/shire/${(index + 1).toString()}.jpg`,
   ),
   [Work.SANCHIBAGS]: Array.from(
-    { length: 19 },
+    { length: 20 },
     (_, index) => `/sanchi/${(index + 1).toString()}.jpg`,
   ),
 };
@@ -541,5 +541,5 @@ export const rightColImageCount = {
   [Work.HAVEN]: 29,
   [Work.CANAAN]: 30,
   [Work.SHIRE]: 28,
-  [Work.SANCHIBAGS]: 19,
+  [Work.SANCHIBAGS]: 20,
 };
