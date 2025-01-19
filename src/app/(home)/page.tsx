@@ -13,7 +13,7 @@ import OpenQuoteSm from '~/assets/svgs/open-quote-sm.svg';
 import OpenQuote from '~/assets/svgs/openquote.svg';
 
 import buttonBackground from '~/assets/images/button-background.png';
-import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-background.jpg';
+import landingPageArchitectureBackground from '~/assets/images/landing-page-architecture-bg.png';
 import landingPageAshamsRavi from '~/assets/images/landing-page-ashams-ravi-potrait.jpeg';
 import landingPageAssetGrass from '~/assets/images/landing-page-asset-grass.png';
 import landingPageAssetLeaves from '~/assets/images/landing-page-asset-leaves.png';
@@ -70,7 +70,7 @@ export default function Home() {
     <div className="h-full min-h-full">
       <section
         className={cn(
-          'screen-vh relative min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light md:flex md:h-[80vh] md:flex-row-reverse md:items-center md:justify-between',
+          'relative overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light md:flex md:flex-row-reverse md:items-center md:justify-between',
           styles.dashed_dotted_line,
         )}
         style={{
@@ -89,7 +89,7 @@ export default function Home() {
               src={landingPageAssetGrass}
               placeholder="empty"
               alt="Landing page asset grass"
-              className="absolute -bottom-10 -right-10 h-[165px] w-[120px] object-contain drop-shadow-md md:-left-5 md:w-[24%]"
+              className="absolute -bottom-14 -right-10 h-[165px] w-[120px] object-contain drop-shadow-md md:-bottom-10 md:-left-9 md:w-[24%]"
             />
           </div>
         </div>
