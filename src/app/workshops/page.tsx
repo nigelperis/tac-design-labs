@@ -213,7 +213,7 @@ const Workshops = () => {
                 <h2 className="mb-4 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-8 md:ml-6 md:text-[36px]">
                   Lecture Session Highlights:
                 </h2>
-                <ul className="ml-6 max-w-[790px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px]">
+                <ul className="ml-6 max-w-[900px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px] xl:text-[24px] 2xl:text-[26px]">
                   <li>
                     <span className="font-bold">
                       Understanding the Built Environment:
@@ -420,7 +420,7 @@ const Workshops = () => {
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 A sneak peek of what you’ll learn in this workshop -
               </p>
-              <ul className="ml-8 list-disc text-[16px] font-[400] leading-9 text-[#173552] md:px-10 md:text-[24px]">
+              <ul className="ml-8 list-disc text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 <li className="md:mt-8">
                   <strong>Introduction to Mud:</strong> Understanding mud’s
                   characteristics, properties, and preservation techniques.
@@ -501,7 +501,7 @@ const Workshops = () => {
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 See what valuable insights await in this workshop -
               </p>
-              <ul className="ml-8 list-disc text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
+              <ul className="ml-8 list-disc text-[16px] font-[400] leading-relaxed text-[#173552] md:px-10 md:text-[24px]">
                 <li className="md:mt-8">
                   <strong>Introduction to Bricks:</strong> Characteristics,
                   properties, and preservation techniques.
