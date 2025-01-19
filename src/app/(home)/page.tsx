@@ -70,7 +70,7 @@ export default function Home() {
     <div className="h-full min-h-full">
       <section
         className={cn(
-          'relative h-[85vh] min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light sm:h-[80vh] md:flex md:h-[80vh] md:flex-row-reverse md:items-center md:justify-between',
+          'screen-vh relative min-h-full overflow-hidden bg-[#D19A6A] bg-cover pb-10 bg-blend-soft-light md:flex md:h-[80vh] md:flex-row-reverse md:items-center md:justify-between',
           styles.dashed_dotted_line,
         )}
         style={{
