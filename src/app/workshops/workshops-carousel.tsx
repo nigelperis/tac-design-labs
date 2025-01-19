@@ -30,8 +30,8 @@ const WorkshopsMobileCarousel: React.FC<CarouselProps> = ({
     <div className={cn('md:hidden', className)}>
       <OpacityCarousel className="relative mx-[-1rem] max-w-[48rem] pb-4">
         <OpacityCarouselContainer>
-          {images.map((image) => (
-            <OpacityCarouselSlide key={String(image.src)}>
+          {images.map((image, index) => (
+            <OpacityCarouselSlide key={index}>
               <Image
                 src={image.src}
                 alt={image.alt ?? 'Carousel image'}

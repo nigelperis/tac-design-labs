@@ -8,6 +8,7 @@ import React, {
   useRef,
 } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { cn } from '~/utils/cn';
 
@@ -127,21 +128,23 @@ export function ZoomCarousel(props: EmblaCarouselProps) {
       <div className={cn('relative', className)}>
         {children}
 
-        {/* Left Arrow */}
-        <button
-          className="absolute left-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-3 text-black shadow-md"
-          onClick={() => emblaApi?.scrollPrev()}
-        >
-          ←
-        </button>
+        <div className="mt-4 flex items-center justify-between">
+          {/* Left Arrow */}
+          <button
+            className="absolute left-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300"
+            onClick={() => emblaApi?.scrollPrev()}
+          >
+            <ChevronLeft size={28} className="text-primary-500" />
+          </button>
 
-        {/* Right Arrow */}
-        <button
-          className="absolute right-4 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-3 text-black shadow-md"
-          onClick={() => emblaApi?.scrollNext()}
-        >
-          →
-        </button>
+          {/* Right Arrow */}
+          <button
+            className="absolute right-0 top-1/2 z-10 -translate-y-full rounded-full bg-white p-1 shadow-lg transition-transform duration-300"
+            onClick={() => emblaApi?.scrollNext()}
+          >
+            <ChevronRight size={28} className="text-primary-500" />
+          </button>
+        </div>
       </div>
     </EmblaCarouselContext.Provider>
   );
@@ -177,7 +180,7 @@ export function ZoomCarouselSlide(props: ZoomCarouselItemProps) {
   return (
     <div
       className={cn(
-        'mt-4 aspect-square w-full flex-shrink-0 basis-[100%] lg:basis-[50%]', // `aspect-square` ensures a square container
+        'mt-4 flex-shrink-0 basis-[100%] lg:basis-[50%]', // `aspect-square` ensures a square container
         className,
       )}
     >

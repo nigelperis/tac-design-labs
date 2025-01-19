@@ -12,6 +12,8 @@ interface ImageGridProps {
   subImage1: string | StaticImport;
   subImage2: string | StaticImport;
   alignment?: 'main-left' | 'main-right' | 'main-bottom';
+  title?: string | null;
+  specialStyles?: boolean;
 }
 
 function ImageGrid(props: ImageGridProps) {
@@ -21,6 +23,7 @@ function ImageGrid(props: ImageGridProps) {
     subImage1,
     subImage2,
     alignment = 'main-left',
+    specialStyles = false,
   } = props;
 
   return (
@@ -44,6 +47,7 @@ function ImageGrid(props: ImageGridProps) {
         className={cn(
           imageGridStyles.image_base_style,
           imageGridStyles.main_image,
+          specialStyles ? 'lg:!h-[50vh]' : '',
         )}
         src={mainImage}
         placeholder="blur"

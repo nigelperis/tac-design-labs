@@ -26,26 +26,29 @@ import Workshope6 from '~/assets/images/Workshop4.jpg';
 import Workshope8 from '~/assets/images/workshop6.jpg';
 import Workshopemobile from '~/assets/images/workshopbgmobiel.jpg';
 
+import DesktopCompletedWorkshopsCarousel from './desktop-completed-workshops-carousel';
+import MobileCompletedWorkshopsCarousel from './mobile-completed-workshops-carousel';
 import { WorkshopsMobileCarousel } from './workshops-carousel';
 
+const mudWorkshopImages = [
+  { src: mudWorkshop1, alt: 'Mud Workshop Image 1' },
+  { src: mudWorkshop2, alt: 'Mud Workshop Image 2' },
+  { src: mudWorkshop3, alt: 'Mud Workshop Image 3' },
+];
+
+const bambooWorkshopImages = [
+  { src: bambooWorkshop1, alt: 'Bamboo Workshop Image 1' },
+  { src: bambooWorkshop2, alt: 'Bamboo Workshop Image 2' },
+  { src: bambooWorkshop3, alt: 'Bamboo Workshop Image 3' },
+];
+
+const brickWorkshopImages = [
+  { src: brickWorkshop1, alt: 'Brick Workshop Image 1' },
+  { src: brickWorkshop2, alt: 'Brick Workshop Image 2' },
+  { src: brickWorkshop3, alt: 'Brick Workshop Image 3' },
+];
+
 const Workshops = () => {
-  const mudWorkshopImages = [
-    { src: mudWorkshop1, alt: 'Mud Workshop Image 1' },
-    { src: mudWorkshop2, alt: 'Mud Workshop Image 2' },
-    { src: mudWorkshop3, alt: 'Mud Workshop Image 3' },
-  ];
-
-  const bambooWorkshopImages = [
-    { src: bambooWorkshop1, alt: 'Bamboo Workshop Image 1' },
-    { src: bambooWorkshop2, alt: 'Bamboo Workshop Image 2' },
-    { src: bambooWorkshop3, alt: 'Bamboo Workshop Image 3' },
-  ];
-
-  const brickWorkshopImages = [
-    { src: brickWorkshop1, alt: 'Brick Workshop Image 1' },
-    { src: brickWorkshop2, alt: 'Brick Workshop Image 2' },
-    { src: brickWorkshop3, alt: 'Brick Workshop Image 3' },
-  ];
   const optimizedButtonBackground = getOptimizedBackgroundImage({
     src: buttonBackground.src,
     width: buttonBackground.width,
@@ -56,6 +59,7 @@ const Workshops = () => {
     width: workshopPageBackground.width,
     height: workshopPageBackground.height,
   });
+
   const optimizedWorkshopCtaBackground = getOptimizedBackgroundImage({
     src: workshopCta.src,
     width: workshopCta.width,
@@ -63,7 +67,7 @@ const Workshops = () => {
   });
   return (
     <div
-      className="bg-[#E9D0B7] bg-repeat font-primary"
+      className="max-w-full bg-[#E9D0B7] bg-repeat font-primary"
       style={{
         backgroundImage: optimizedWorkshopPageBackground,
       }}
@@ -209,7 +213,7 @@ const Workshops = () => {
                 <h2 className="mb-4 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-8 md:ml-6 md:text-[36px]">
                   Lecture Session Highlights:
                 </h2>
-                <ul className="ml-6 max-w-[790px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px]">
+                <ul className="ml-6 max-w-[900px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px] xl:text-[24px] 2xl:text-[26px]">
                   <li>
                     <span className="font-bold">
                       Understanding the Built Environment:
@@ -289,7 +293,7 @@ const Workshops = () => {
         </div>
 
         <div className="">
-          <div className=" ">
+          <div className="">
             <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5 md:py-2">
               <h1 className="text-center text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Bamboo Workshop
@@ -338,7 +342,7 @@ const Workshops = () => {
                   <strong>Introduction to Bamboo:</strong> Characteristics,
                   properties, and preservation methods.
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Feasibility in Current Scenarios:</strong> Exploring
                   the pros and cons of bamboo in contemporary construction.
                 </li>
@@ -358,7 +362,7 @@ const Workshops = () => {
                   <strong>Structural Properties: </strong>Examining
                   bamboo&apos;s tensile strength and bending capacity.
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Practical Construction: </strong>Building a structure
                   using bamboo, applying the knowledge gained in the lecture.
                 </li>
@@ -372,8 +376,8 @@ const Workshops = () => {
         </div>
 
         <div className="mt-5">
-          <div className=" ">
-            <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5">
+          <div className="">
+            <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5 md:py-2">
               <h1 className="text-center text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Mud Workshop
               </h1>
@@ -416,12 +420,12 @@ const Workshops = () => {
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 A sneak peek of what you’ll learn in this workshop -
               </p>
-              <ul className="ml-8 list-disc text-[16px] font-[400] leading-9 text-[#173552] md:px-10 md:text-[24px]">
+              <ul className="ml-8 list-disc text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 <li className="md:mt-8">
                   <strong>Introduction to Mud:</strong> Understanding mud’s
                   characteristics, properties, and preservation techniques.
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Feasibility in Current Scenarios:</strong> Discussing
                   the advantages and challenges of mud in modern construction.
                 </li>
@@ -437,12 +441,12 @@ const Workshops = () => {
                   <strong>Elemental Composition:</strong> Understanding the role
                   of mud components in construction
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Stabilization Methods:</strong> Understanding the role
                   Techniques for stabilizing mud using lime, rice husk, or other
                   binders
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Practical Construction:</strong> Understanding the
                   role Building structures using mud, such as Adobe bricks, Cob
                   walls and Wattle & Daub walls.
@@ -452,9 +456,9 @@ const Workshops = () => {
           </div>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 text-lg">
           <div className=" ">
-            <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5">
+            <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5 md:py-7">
               <h1 className="text-center text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Brick Workshop
               </h1>
@@ -497,7 +501,7 @@ const Workshops = () => {
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
                 See what valuable insights await in this workshop -
               </p>
-              <ul className="ml-8 list-disc text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
+              <ul className="ml-8 list-disc text-[16px] font-[400] leading-relaxed text-[#173552] md:px-10 md:text-[24px]">
                 <li className="md:mt-8">
                   <strong>Introduction to Bricks:</strong> Characteristics,
                   properties, and preservation techniques.
@@ -575,7 +579,7 @@ const Workshops = () => {
             </div>
 
             {/* Completed Workshops Section */}
-            <div className="pt-1 md:pt-6">
+            <div className="pb-6 pt-1 md:pb-10 md:pt-6">
               <h2 className="text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Completed Workshops and Talks
               </h2>
@@ -583,11 +587,17 @@ const Workshops = () => {
                 A journey of impactful workshos and enlightening talks that
                 promote sustainable architectural practices.
               </p>
+              <div className="-mx-4 mt-8 md:-mx-16">
+                <div className="md:hidden">
+                  <MobileCompletedWorkshopsCarousel />
+                </div>
+                <div className="hidden md:block">
+                  <DesktopCompletedWorkshopsCarousel />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="h-32"></div>
       </div>
       <div>
         <div className="bg-white py-2">
