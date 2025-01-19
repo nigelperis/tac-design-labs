@@ -44,7 +44,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, className }) => {
           />
           <div className="absolute right-3 top-2 h-[2vh] w-[2vw] opacity-0 transition-transform duration-300 group-hover:opacity-100">
             <Scan
-              className="w-[2vw] text-white"
+              className="w-[2vw] cursor-pointer text-white"
               onClick={() => {
                 handleImageClick(idx);
               }}

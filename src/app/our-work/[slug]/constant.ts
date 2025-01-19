@@ -520,7 +520,7 @@ export const workDetails: Record<Work, WorkDetails> = {
 
 export const images: WorkImages = {
   [Work.HAVEN]: Array.from(
-    { length: 27 },
+    { length: 29 },
     (_, index) => `/haven/${(index + 1).toString()}.jpg`,
   ),
   [Work.CANAAN]: Array.from(
@@ -538,7 +538,7 @@ export const images: WorkImages = {
 };
 
 export const rightColImageCount = {
-  [Work.HAVEN]: 27,
+  [Work.HAVEN]: 29,
   [Work.CANAAN]: 30,
   [Work.SHIRE]: 28,
   [Work.SANCHIBAGS]: 19,

@@ -35,7 +35,7 @@ function FeaturedVideos(props: FeaturedVideoProps) {
               /* Card */
               return (
                 <div
-                  className="h-[700px] w-[42vw] rounded-2xl bg-[#FFFFFFBB] pb-5 pl-4 pr-4 pt-8"
+                  className="rounded-2xl bg-[#FFFFFFBB] pb-10 pl-5 pr-5 pt-8"
                   key={index}
                 >
                   <h3 className="mx-auto w-[37vw] text-center text-[1.9vw] font-bold text-[#552B0A]">
