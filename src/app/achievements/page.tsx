@@ -6,9 +6,9 @@ import { cn } from '~/utils/cn';
 
 import achievementPhoto1 from '~/assets/images/achievement-photo-1.jpeg';
 import achievementPhoto2 from '~/assets/images/achievement-photo-2.jpeg';
-import achievementPhoto3 from '~/assets/images/achievement-photo-3.jpg';
+import achievementPhoto3 from '~/assets/images/achievement-photo-3.png';
 import achievementPhoto4 from '~/assets/images/achievement-photo-4.jpeg';
-import achievementPhoto5 from '~/assets/images/achievement-photo-5.jpeg';
+import achievementPhoto5 from '~/assets/images/achievement-photo-5.jpg';
 import achievementPhoto6 from '~/assets/images/achievement-photo-6.png';
 import achievementsBambooBackground from '~/assets/images/achievements-bamboo-background.png';
 import achievementsPageBackground from '~/assets/images/achievemnents-page-background.png';
@@ -35,13 +35,13 @@ const achievements = [
     href: 'https://thebetterindia.com/224686/kerala-architect-sustainable-home-recycled-material-eco-friendly-water-india-ang136/',
   },
   {
-    title: 'Manorama Online: Eco-Friendly Budget Home in Trivandrum',
-    description:
-      "Manorama Online featured TAC Design LAB's eco-friendly residence in Trivandrum, constructed on a 4.25-cent plot with a budget of ₹25 lakh. The design emphasizes sustainability and thermal comfort, utilizing locally sourced materials and passive cooling techniques to create a comfortable living environment.",
+    title:
+      'Rethinking The Future: Top 10 Examples of Upcycling in Architecture',
+    description: `TAC Design LAB's work was featured in Rethinking The Future as one of the top 10 examples of upcycling in architecture. Their innovative approach to reusing materials from demolished buildings showcases their commitment to reducing waste and promoting sustainable architecture.`,
     image: achievementPhoto3,
     buttonText: 'Read the full article',
 
-    href: 'https://www.manoramaonline.com/homestyle/dream-home/2025/01/09/small-plot-eco-budget-home-trivandrum-hometour.html',
+    href: 'https://www.re-thinkingthefuture.com/rtf-fresh-perspectives/a1989-10-examples-of-upcycling-in-architecture/',
   },
   {
     title: 'The New Indian Express: The Green Building Specialist',
@@ -53,13 +53,13 @@ const achievements = [
     href: 'https://www.newindianexpress.com/cities/kochi/2022/Aug/26/the-green-building-specialist-2491360.html',
   },
   {
-    title: 'Tamil Thisai: Bamboo & Recycled Waste - A Green Home in Kerala',
+    title: 'Manorama Online: Eco-Friendly Budget Home in Trivandrum',
     description:
-      "Tamil Thisai highlighted TAC Design LAB's eco-friendly home in Kerala, constructed using 90% recycled materials and bamboo. Completed in just four months, the project exemplifies the firm's dedication to rapid, sustainable construction that harmonizes with nature.",
+      "Manorama Online featured TAC Design LAB's eco-friendly residence in Trivandrum, constructed on a 4.25-cent plot with a budget of ₹25 lakh. The design emphasizes sustainability and thermal comfort, utilizing locally sourced materials and passive cooling techniques to create a comfortable living environment.",
     image: achievementPhoto5,
     buttonText: 'Read the full article',
 
-    href: 'https://tamilthisai.com/india/bamboo-90-recycled-waste-kerala-architect-builds-green-home-in-4-months/',
+    href: 'https://www.manoramaonline.com/homestyle/dream-home/2025/01/09/small-plot-eco-budget-home-trivandrum-hometour.html',
   },
   {
     title: 'TEDx: Sustainable Architecture - A Talk by Ar. Ashams Ravi',

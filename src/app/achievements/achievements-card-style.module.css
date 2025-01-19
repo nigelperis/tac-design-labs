@@ -106,9 +106,9 @@
 
 @screen lg {
   .achievement_card_title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-size: 1.875rem;
-    line-height: 2.25rem;
+    line-height: 2.5rem;
   }
   .achievement_card_description {
     line-height: 2.5rem;
@@ -121,10 +121,13 @@
 
 @screen 2xl {
   .achievement_card_title {
+    font-size: 2.2rem;
     align-self: center;
+    line-height: 3rem;
   }
   .achievement_card_description {
     height: fit-content;
+    font-size: 1.4rem;
     align-self: center;
   }
 }
@@ -137,7 +140,10 @@
 
 @media (max-width: 1620px) {
   .achievement_card_image {
-    height: 300px;
+    height: 280px;
+  }
+  .achievement_card_description {
+    line-height: 2.2rem;
   }
 }
 

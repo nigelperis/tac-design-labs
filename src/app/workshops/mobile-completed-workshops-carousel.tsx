@@ -40,19 +40,19 @@ const completedWorkshops = [
     key: 'workshop-1',
     image: workshop1,
     workshopName:
-      'The Way of Vernacular Sustainable Architecture Workshop Prime College of Architecture, Nagapattinam 2023',
+      'The Way of Vernacular | Sustainable Architecture Workshop | Prime College of Architecture, Nagapattinam 2023',
   },
   {
     key: 'workshop-2',
     image: workshop2,
     workshopName:
-      'The Beauty of Bricks | National Level Symposium at Prime College of Architecture and Planning 2024 |Nagapattinam ',
+      'The Beauty of Bricks | National Level Symposium at Prime College of Architecture and Planning 2024 | Nagapattinam',
   },
   {
     key: 'workshop-3',
     image: workshop3,
     workshopName:
-      'Stories with Mud and Brick DC Workshop 2022 | Brick Masonry and Arches DC School of Architecture, Trivandrum',
+      'Stories with Mud and Brick | DC Workshop 2022 | Brick Masonry and Arches | DC School of Architecture, Trivandrum',
   },
   {
     key: 'workshop-4',
@@ -64,7 +64,7 @@ const completedWorkshops = [
     key: 'workshop-5',
     image: workshop5,
     workshopName:
-      'Hands-On Workshop on Brick Bonding and Jali Design Rathinam School of Architecture 2023 Coimbatore',
+      'Hands-On Workshop on Brick Bonding and Jali Design | Rathinam School of Architecture 2023 | Coimbatore',
   },
   {
     key: 'workshop-6',
