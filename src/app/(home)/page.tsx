@@ -77,26 +77,28 @@ export default function Home() {
           backgroundImage: optimizedLandingPageHeroBackground,
         }}
       >
-        <div className="relative ml-auto w-full">
-          <Image
-            src={landingPageHeroImage}
-            placeholder="blur"
-            alt="Landing page hero image "
-            className="w-full overflow-hidden rounded-md md:ml-auto md:aspect-video md:h-[350px] md:w-3/4 md:rounded-none md:rounded-s-3xl lg:mt-10 lg:h-[300px]"
-          />
-          <Image
-            src={landingPageAssetGrass}
-            placeholder="empty"
-            alt="Landing page asset grass"
-            className="absolute -right-6 top-[95%] h-[165px] w-[120px] -translate-y-1/2 object-contain drop-shadow-md md:left-1/3 md:w-[150px] md:-translate-x-[60%]"
-          />
+        <div className="ml-auto w-full">
+          <div className="relative h-[50vh] w-full md:-mr-8 md:ml-auto md:aspect-[1.3] md:h-auto md:rounded-md md:pb-9 md:pt-14 xl:max-w-2xl">
+            <Image
+              src={landingPageHeroImage}
+              placeholder="blur"
+              alt="Landing page hero image "
+              className="h-full w-full object-cover md:object-fill"
+            />
+            <Image
+              src={landingPageAssetGrass}
+              placeholder="empty"
+              alt="Landing page asset grass"
+              className="absolute -bottom-10 -right-10 h-[165px] w-[120px] object-contain drop-shadow-md md:-left-5 md:w-[24%]"
+            />
+          </div>
         </div>
 
         <div className="relative mt-8 flex flex-col items-start justify-center p-8 pt-0 sm:pt-8 md:pl-24">
-          <h1 className="whitespace-nowrap text-center font-primary text-[38px] font-bold text-primary-500 md:text-6xl">
+          <h1 className="whitespace-nowrap text-center font-primary text-[38px] font-bold text-primary-500 md:text-4xl lg:text-5xl xl:text-6xl">
             TAC Design LAB
           </h1>
-          <p className="mt-6 text-balance font-primary text-[22px] font-normal text-primary-500 md:text-4xl lg:text-3xl">
+          <p className="my-6 text-balance font-primary text-[22px] font-normal text-primary-500 md:text-2xl lg:text-3xl">
             Where Every Space Is A Step Towards Sustainability
           </p>
         </div>
@@ -211,21 +213,21 @@ export default function Home() {
                 }}
               />
             </li>
-            <li className="">
+            <li className="col-span-2 self-start xl:col-span-1">
               <Image
                 src={landingPagePortfolioHouse2}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="max-h-64 rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
                 style={{
                   boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
                 }}
               />
             </li>
-            <li className="">
+            <li className="col-span-2 xl:col-span-1">
               <Image
                 src={landingPagePortfolioHouse3}
                 alt="Portfolio image"
-                className="aspect-square rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+                className="aspect-square max-h-64 rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
                 style={{
                   boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
                 }}
