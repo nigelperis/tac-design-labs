@@ -100,7 +100,7 @@ const completedWorkshops = [
     key: 'workshop-11',
     image: workshop11,
     workshopName:
-      'Upcycling Context-Specific Materials | Guest Lecture at PiCA 2023 | Mumbai',
+      'Process Of Upcycling Materials | Guest Lecture at PICA 2023 | Mumbai',
   },
   {
     key: 'workshop-12',
@@ -122,8 +122,7 @@ const completedWorkshops = [
   {
     key: 'workshop-15',
     image: workshop15,
-    workshopName:
-      'Countdown to Sustainability | TEDxKCMT 2023 | Live Speaker Series',
+    workshopName: 'Countdown | TEDxKCMT 2023 | Live Speaker Series',
   },
 ] as const;
 
@@ -173,7 +172,10 @@ function MobileCompletedWorkshopsCarousel() {
                       </div>
                     </div>
 
-                    <p className="line-clamp-4 overflow-hidden break-all font-primary text-sm font-bold text-[#173552]">
+                    <p
+                      className="line-clamp-4 overflow-hidden text-center font-primary text-sm font-bold text-[#173552]"
+                      style={{ wordBreak: 'break-word' }}
+                    >
                       {itm.workshopName}
                     </p>
                   </div>

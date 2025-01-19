@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Scan } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import Image from 'next/image';
 import { Lightbox } from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
@@ -168,7 +168,7 @@ function DesktopCompletedWorkshopsCarousel() {
                           }}
                         />
                         <div className="absolute right-3 top-2 h-[2vh] w-[2vw] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                          <Scan
+                          <ZoomIn
                             className="w-[2vw] text-white"
                             onClick={() => {
                               openLightbox(index);
@@ -177,7 +177,10 @@ function DesktopCompletedWorkshopsCarousel() {
                         </div>
                       </div>
 
-                      <p className="text-balance break-all text-center font-primary text-base font-bold text-[#173552]">
+                      <p
+                        className="text-balance text-center font-primary text-base font-bold text-[#173552]"
+                        style={{ wordBreak: 'break-word' }}
+                      >
                         {itm.workshopName}
                       </p>
                     </div>
@@ -230,7 +233,7 @@ function DesktopCompletedWorkshopsCarousel() {
                           }}
                         />
                         <div className="absolute right-3 top-2 h-[2vh] w-[2vw] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                          <Scan
+                          <ZoomIn
                             className="w-[2vw] text-white"
                             onClick={() => {
                               openLightbox(index);
@@ -239,7 +242,10 @@ function DesktopCompletedWorkshopsCarousel() {
                         </div>
                       </div>
 
-                      <p className="text-balance break-all text-center font-primary text-base font-bold text-[#173552]">
+                      <p
+                        className="text-balance text-center font-primary text-base font-bold text-[#173552]"
+                        style={{ wordBreak: 'break-word' }}
+                      >
                         {itm.workshopName}
                       </p>
                     </div>
