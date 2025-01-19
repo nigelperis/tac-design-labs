@@ -143,7 +143,7 @@ function MobileCompletedWorkshopsCarousel() {
             return (
               <OpacityCarouselSlide
                 key={index}
-                className="max-w-[60%] basis-[60%] overflow-hidden pl-2.5"
+                className="max-w-[60%] basis-[60%] overflow-hidden pl-3"
               >
                 <div className="w-full max-w-full">
                   <div className="flex cursor-pointer flex-col items-center justify-center">
@@ -173,7 +173,7 @@ function MobileCompletedWorkshopsCarousel() {
                       </div>
                     </div>
 
-                    <p className="line-clamp-4 max-w-[176px] overflow-hidden break-all font-primary text-sm font-bold text-[#173552]">
+                    <p className="line-clamp-4 overflow-hidden break-all font-primary text-sm font-bold text-[#173552]">
                       {itm.workshopName}
                     </p>
                   </div>
