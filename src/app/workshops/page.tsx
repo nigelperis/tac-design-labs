@@ -579,7 +579,7 @@ const Workshops = () => {
             </div>
 
             {/* Completed Workshops Section */}
-            <div className="pt-1 md:pt-6">
+            <div className="pb-6 pt-1 md:pb-10 md:pt-6">
               <h2 className="text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Completed Workshops and Talks
               </h2>
@@ -587,7 +587,7 @@ const Workshops = () => {
                 A journey of impactful workshos and enlightening talks that
                 promote sustainable architectural practices.
               </p>
-              <div className="my-4 mt-8">
+              <div className="-mx-4 mt-8 md:-mx-16">
                 <div className="md:hidden">
                   <MobileCompletedWorkshopsCarousel />
                 </div>
@@ -598,8 +598,6 @@ const Workshops = () => {
             </div>
           </div>
         </div>
-
-        <div className="h-32"></div>
       </div>
       <div>
         <div className="bg-white py-2">

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Scan } from 'lucide-react';
 import Image from 'next/image';
 import { Lightbox } from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
@@ -148,10 +148,10 @@ function DesktopCompletedWorkshopsCarousel() {
                   key={index}
                   className="relative basis-[48%] md:basis-[20%]"
                 >
-                  <div className="max-w-full">
-                    <div className="flex cursor-pointer flex-col items-center justify-center">
+                  <div className="max-w-full transition-transform duration-300 hover:scale-105 md:py-4">
+                    <div className="group flex cursor-pointer flex-col items-center justify-center">
                       <div
-                        className="mb-3 overflow-hidden rounded-md border-2 border-[#F0E0D6] md:rounded-2xl md:border-4"
+                        className="relative mb-3 overflow-hidden rounded-md border-[#F0E0D6] md:rounded-2xl md:border-4"
                         style={{
                           boxShadow:
                             '0px 3.81px 3.81px 0px rgba(0, 0, 0, 0.25)',
@@ -167,6 +167,14 @@ function DesktopCompletedWorkshopsCarousel() {
                             openLightbox(index);
                           }}
                         />
+                        <div className="absolute right-3 top-2 h-[2vh] w-[2vw] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <Scan
+                            className="w-[2vw] text-white"
+                            onClick={() => {
+                              openLightbox(index);
+                            }}
+                          />
+                        </div>
                       </div>
 
                       <p className="text-balance break-all text-center font-primary text-base font-bold text-[#173552]">
@@ -199,10 +207,10 @@ function DesktopCompletedWorkshopsCarousel() {
                   key={index}
                   className="relative basis-[48%] md:basis-[20%]"
                 >
-                  <div className="max-w-full">
-                    <div className="flex cursor-pointer flex-col items-center justify-center">
+                  <div className="max-w-full transition-transform duration-300 hover:scale-105 md:py-4">
+                    <div className="group flex cursor-pointer flex-col items-center justify-center">
                       <div
-                        className="mb-3 overflow-hidden rounded-md border-2 border-[#F0E0D6] md:rounded-2xl md:border-4"
+                        className="relative mb-3 overflow-hidden rounded-md border-2 border-[#F0E0D6] md:rounded-2xl md:border-4"
                         style={{
                           boxShadow:
                             '0px 3.81px 3.81px 0px rgba(0, 0, 0, 0.25)',
@@ -221,6 +229,14 @@ function DesktopCompletedWorkshopsCarousel() {
                             openLightbox(indexToUse);
                           }}
                         />
+                        <div className="absolute right-3 top-2 h-[2vh] w-[2vw] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <Scan
+                            className="w-[2vw] text-white"
+                            onClick={() => {
+                              openLightbox(index);
+                            }}
+                          />
+                        </div>
                       </div>
 
                       <p className="text-balance break-all text-center font-primary text-base font-bold text-[#173552]">

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import Image from 'next/image';
 import { Lightbox } from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
@@ -143,12 +143,12 @@ function MobileCompletedWorkshopsCarousel() {
             return (
               <OpacityCarouselSlide
                 key={index}
-                className="max-w-[60%] basis-[60%] overflow-hidden pl-2"
+                className="max-w-[60%] basis-[60%] overflow-hidden pl-2.5"
               >
                 <div className="w-full max-w-full">
                   <div className="flex cursor-pointer flex-col items-center justify-center">
                     <div
-                      className="mb-3 overflow-hidden rounded-md border-2 border-[#F0E0D6] md:rounded-2xl md:border-4"
+                      className="relative mb-3 overflow-hidden rounded-md border-4 border-[#F0E0D6] md:rounded-2xl md:border-4"
                       style={{
                         boxShadow: '0px 3.81px 3.81px 0px rgba(0, 0, 0, 0.25)',
                       }}
@@ -163,6 +163,14 @@ function MobileCompletedWorkshopsCarousel() {
                           openLightbox(index);
                         }}
                       />
+                      <div className="absolute right-4 top-2 h-[2vh] w-[2vw] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <ZoomIn
+                          className="w-[2vw] text-white"
+                          onClick={() => {
+                            openLightbox(index);
+                          }}
+                        />
+                      </div>
                     </div>
 
                     <p className="line-clamp-4 max-w-[176px] overflow-hidden break-all font-primary text-sm font-bold text-[#173552]">

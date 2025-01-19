@@ -5,7 +5,7 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
 import 'yet-another-react-lightbox/styles.css';
 
-import { ZoomIn } from 'lucide-react';
+import { Scan } from 'lucide-react';
 
 import { cn } from '~/utils/cn';
 
@@ -42,8 +42,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, className }) => {
               handleImageClick(idx);
             }}
           />
-          <div className="absolute right-4 top-2 h-[2vh] w-[2vw] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <ZoomIn
+          <div className="absolute right-3 top-2 h-[2vh] w-[2vw] opacity-0 transition-transform duration-300 group-hover:opacity-100">
+            <Scan
               className="w-[2vw] text-white"
               onClick={() => {
                 handleImageClick(idx);
