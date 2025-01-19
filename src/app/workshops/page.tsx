@@ -293,7 +293,7 @@ const Workshops = () => {
         </div>
 
         <div className="">
-          <div className=" ">
+          <div className="">
             <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5 md:py-2">
               <h1 className="text-center text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Bamboo Workshop
@@ -342,7 +342,7 @@ const Workshops = () => {
                   <strong>Introduction to Bamboo:</strong> Characteristics,
                   properties, and preservation methods.
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Feasibility in Current Scenarios:</strong> Exploring
                   the pros and cons of bamboo in contemporary construction.
                 </li>
@@ -362,7 +362,7 @@ const Workshops = () => {
                   <strong>Structural Properties: </strong>Examining
                   bamboo&apos;s tensile strength and bending capacity.
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Practical Construction: </strong>Building a structure
                   using bamboo, applying the knowledge gained in the lecture.
                 </li>
@@ -376,8 +376,8 @@ const Workshops = () => {
         </div>
 
         <div className="mt-5">
-          <div className=" ">
-            <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5">
+          <div className="">
+            <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5 md:py-2">
               <h1 className="text-center text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Mud Workshop
               </h1>
@@ -425,7 +425,7 @@ const Workshops = () => {
                   <strong>Introduction to Mud:</strong> Understanding mud’s
                   characteristics, properties, and preservation techniques.
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Feasibility in Current Scenarios:</strong> Discussing
                   the advantages and challenges of mud in modern construction.
                 </li>
@@ -441,12 +441,12 @@ const Workshops = () => {
                   <strong>Elemental Composition:</strong> Understanding the role
                   of mud components in construction
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Stabilization Methods:</strong> Understanding the role
                   Techniques for stabilizing mud using lime, rice husk, or other
                   binders
                 </li>
-                <li className="md:mt-8">
+                <li className="md:mt-8 md:leading-8">
                   <strong>Practical Construction:</strong> Understanding the
                   role Building structures using mud, such as Adobe bricks, Cob
                   walls and Wattle & Daub walls.
@@ -456,9 +456,9 @@ const Workshops = () => {
           </div>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 text-lg">
           <div className=" ">
-            <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5">
+            <div className="w-full rounded-[50px] bg-[#FFF5EDB2] py-5 md:py-7">
               <h1 className="text-center text-[24px] font-bold text-[#C6742B] md:text-[48px]">
                 Brick Workshop
               </h1>
