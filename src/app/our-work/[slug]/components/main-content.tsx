@@ -7,6 +7,7 @@ import ImageGallery from '~/components/image-gallery';
 import landingPageLeavesBackground from '~/assets/images/landing-page-team-background.png';
 
 import { images, rightColImageCount, workDetails } from '../constant';
+import { shuffleImages } from '../utils';
 import ImageSlider from './image-slider';
 import type { MainContentProps } from './model';
 
@@ -113,7 +114,7 @@ function MainContent(props: MainContentProps) {
         {/* Main Images Section */}
         <div className="mx-auto hidden max-w-[38vw] columns-2 gap-4 lg:my-auto lg:block">
           <ImageGallery
-            images={mainImages}
+            images={shuffleImages(mainImages)}
             className="max-h-96 w-full max-w-80 rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
           />
         </div>

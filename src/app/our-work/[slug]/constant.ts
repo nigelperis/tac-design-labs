@@ -402,14 +402,14 @@ const shireData: WorkDetails = {
   ],
   culturalConsiderations: [
     {
-      title: 'Placeholder',
+      title: 'Traditional Design',
       description:
         'Reflects traditional Udupi architecture with rustic aesthetics.',
     },
     {
-      title: 'Placeholder',
+      title: 'Local Materials',
       description:
-        'Combines natural and local materials to exhibit regional heritage.',
+        'Highlights regional heritage through natural and local resources.',
     },
   ],
   outcome:
@@ -532,7 +532,7 @@ export const images: WorkImages = {
     (_, index) => `/shire/${(index + 1).toString()}.jpg`,
   ),
   [Work.SANCHIBAGS]: Array.from(
-    { length: 17 },
+    { length: 19 },
     (_, index) => `/sanchi/${(index + 1).toString()}.jpg`,
   ),
 };
@@ -541,5 +541,5 @@ export const rightColImageCount = {
   [Work.HAVEN]: 27,
   [Work.CANAAN]: 30,
   [Work.SHIRE]: 28,
-  [Work.SANCHIBAGS]: 17,
+  [Work.SANCHIBAGS]: 19,
 };
