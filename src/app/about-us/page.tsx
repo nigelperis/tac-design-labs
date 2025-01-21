@@ -52,7 +52,7 @@ function AboutUsPage() {
   return (
     <div className="relative">
       <section
-        className="py-10"
+        className="bg-cover py-10"
         style={{
           backgroundImage: optimizedAboutUsBackground,
         }}

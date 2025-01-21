@@ -122,8 +122,7 @@ const completedWorkshops = [
   {
     key: 'workshop-15',
     image: workshop15,
-    workshopName:
-      'Countdown to Sustainability | TEDxKCMT 2023 | Live Speaker Series',
+    workshopName: 'Countdown | TEDxKCMT 2023 | Live Speaker Series',
   },
 ] as const;
 

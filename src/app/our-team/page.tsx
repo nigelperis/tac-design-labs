@@ -66,7 +66,7 @@ const teamMemberDetails: TeamMember[] = [
     position: 'Project Engineer',
   },
   {
-    name: 'ASWATHY UV',
+    name: 'ASWATHY U V',
     summary: `She is a proficient Architectural Assistant at TAC Design LAB with a solid background in interior design and architectural drafting. Aswathy holds a Diploma in Interior Designing from CADPOINT, Trivandrum, along with an Architectural Draughtsman certification from Govt ITI for Women, Kazhakuttam, where she excelled with a 94.5% score. Aswathy's academic background is complemented by hands-on experience in residential and office building projects, making her a valuable asset to the team`,
     picture: aswathi,
     position: 'Architectural Assistant',

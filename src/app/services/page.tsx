@@ -49,7 +49,7 @@ const services: ServiceCardInfo[] = [
   {
     image: institution,
     title: 'Institutional Projects',
-    categories: ['Educational', 'Healthcare', 'YogaCenters'],
+    categories: ['Educational', 'Healthcare', 'Yoga Centers'],
     description:
       'Building institutions that inspire learning, healing, and holistic well-being.',
   },
@@ -229,7 +229,7 @@ const ServicePage = () => {
         >
           <div className="font-primary font-[600] text-[#552B0A]">
             <h1 className="pt-6 text-center text-[24px] md:text-[36px]">
-              Hear from those who trust us
+              Hear From Those Who Trust Us
             </h1>
 
             <ZoomCarousel loop={true} className="">
