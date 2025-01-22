@@ -7,7 +7,7 @@ import { type BlogCardDetail } from '../components/blog-card';
 
 export const blogs: BlogCardDetail[] = [
   {
-    title: 'Sustainable building materials in India',
+    title: 'Sustainable Building Materials in India',
     description: `When it comes to sustainable architecture, the materials you choose play a crucial role in determining the environmental impact of your building project. Sustainable building materials in India and around the world are increasingly being recognized for their ability to reduce this impact. However, not all materials are created equal, and understanding the environmental footprint of different building materials is essential for making eco-conscious decisions.`,
     postedBy: 'admin',
     publishedDate: new Date(),
@@ -23,7 +23,7 @@ export const blogs: BlogCardDetail[] = [
     blogURL: '/blogs/02',
   },
   {
-    title: 'How to reduce carbon footprint in building design...',
+    title: 'How to Reduce Carbon Footprint in Building Design',
     description: `Incorporating carbon reduction strategies from the initial planning stages of a building project is essential for creating sustainable structures. Addressing carbon footprints early can reduce long-term operational costs and contribute positively to the environment.`,
     postedBy: 'admin',
     publishedDate: new Date(),
@@ -31,7 +31,7 @@ export const blogs: BlogCardDetail[] = [
     blogURL: '/blogs/03',
   },
   {
-    title: 'How to design energy-efficient homes',
+    title: 'How to Design Energy-Efficient Homes',
     description: `Insulating your home effectively doesn't have to break the bank. By choosing cost-effective and sustainable insulation materials, you can ensure that your home stays cool in the summer and warm in the winter, all while reducing energy consumption. Here are some budget-friendly ...`,
     postedBy: 'admin',
     publishedDate: new Date(),
