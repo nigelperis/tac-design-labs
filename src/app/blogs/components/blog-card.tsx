@@ -25,7 +25,7 @@ export const BlogCard = (props: BlogCardDetail) => {
         }}
       />
       <div className="flex flex-col gap-2 p-5">
-        <h1 className="line-clamp-2 text-xl font-semibold text-primary-500 md:line-clamp-1 md:text-2xl">
+        <h1 className="text-xl font-semibold text-primary-500 md:text-2xl">
           {props.title}
         </h1>
         <span className="text-xs">

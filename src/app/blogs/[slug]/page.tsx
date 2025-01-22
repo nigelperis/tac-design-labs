@@ -115,7 +115,7 @@ interface BlogDetail {
 
 const blogs: Record<string, BlogDetail> = {
   '01': {
-    title: 'Sustainable building materials in India',
+    title: 'Sustainable Building Materials in India',
     coverImgURL: blogPost1,
     markdown: Blog01,
   },
@@ -126,7 +126,7 @@ const blogs: Record<string, BlogDetail> = {
   },
   '03': {
     title:
-      'How to reduce carbon footprint in building design, A Step-by-Step Guide',
+      'How to Reduce Carbon Footprint in Building Design, A Step-by-Step Guide',
     coverImgURL: blogPost3,
     markdown: Blog03,
   },
