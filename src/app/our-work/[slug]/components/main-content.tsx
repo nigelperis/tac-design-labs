@@ -112,10 +112,10 @@ function MainContent(props: MainContentProps) {
         </div>
 
         {/* Main Images Section */}
-        <div className="mx-auto hidden max-w-[38vw] columns-2 gap-4 lg:my-auto lg:block">
+        <div className="mx-auto hidden h-auto max-w-[38vw] columns-2 gap-4 lg:my-auto lg:block">
           <ImageGallery
             images={shuffleImages(mainImages)}
-            className="max-h-96 w-full max-w-80 rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
+            className="max-h-[22vw] w-full max-w-80 rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
           />
         </div>
       </div>
