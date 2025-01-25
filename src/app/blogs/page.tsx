@@ -68,7 +68,7 @@ const ConsultationCTA = () => {
           </p>
           <div className="flex justify-center">
             <Link
-              href="https://www.instagram.com/tacdesignlab/profilecard/?igsh=MWo5MXl0cGluajdieg==F"
+              href="https://www.instagram.com/tacdesignlab?igsh=MWF2cXBxdWU0YTA0NA=="
               style={{ backgroundImage: optimizedOurWorkBgButton }}
               className="rounded bg-cover bg-center p-8 text-[13px] font-bold text-[#331803] duration-200 hover:scale-105 hover:bg-opacity-80 md:mt-2 md:p-14 md:text-2xl"
             >

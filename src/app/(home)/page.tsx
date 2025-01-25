@@ -113,17 +113,17 @@ export default function Home() {
           className="relative -top-5 h-[300px] w-[200px] rounded-3xl object-cover max-sm:mx-auto md:-top-8 md:h-[400px] md:w-[300px] md:object-fill"
         />
         <div className="relative md:w-1/2">
-          <OpenQuote className="absolute -left-11 top-2 hidden min-[1200px]:-top-4 min-[1200px]:inline" />
+          <OpenQuote className="absolute -left-10 mt-2 hidden min-[1200px]:-top-4 min-[1200px]:inline" />
 
           <p className="relative mt-2 text-justify font-primary text-lg font-normal italic leading-5 tracking-wide md:text-left md:text-4xl">
-            <OpenQuoteSm className="absolute -top-[7px] inline min-[1200px]:hidden" />{' '}
+            <OpenQuoteSm className="absolute -top-[7px] inline min-[1200px]:hidden" />
             <span className="ml-[30px] min-[1200px]:ml-0">
               We all know the greenest choice is to avoid building altogether.
               But when construction is necessary, the focus must shift to
-              creating spaces that respect and protect nature.{' '}
+              creating spaces that respect and protect nature.
             </span>
-            <CloseQuote className="mt-5 hidden min-[1200px]:inline" />
-            <CloseQuoteSm className="ml-1 mt-1 inline min-[1200px]:hidden" />
+            <CloseQuote className="ml-2 mt-7 hidden min-[1200px]:inline" />
+            <CloseQuoteSm className="absolute ml-[6px] mt-[8px] inline min-[1200px]:hidden" />
           </p>
 
           <p className="mt-6 text-center font-primary text-2xl font-bold text-accent-500 md:text-right md:text-[32px]">

@@ -456,7 +456,7 @@ const sanchiBagsData: WorkDetails = {
     {
       title: 'Traditional Trussed Roofing',
       description:
-        'Includes skylights and clerestory windows for natural light and ventilation minimizing thew reliance on artificial energy sources.',
+        'Includes skylights and clerestory windows for natural light and ventilation minimizing the reliance on artificial energy sources.',
     },
   ],
   keyFeatures: [
@@ -483,7 +483,7 @@ const sanchiBagsData: WorkDetails = {
         'Provides enhanced insulation, reducing indoor temperatures and energy consumption.',
     },
     {
-      title: 'Energy Efficiency',
+      title: 'Passive Cooling',
       description:
         'Achieved through strategically placed windows, clerestory, and the building’s octagonal layout, which facilitates natural air circulation.',
     },

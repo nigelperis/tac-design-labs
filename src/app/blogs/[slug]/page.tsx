@@ -29,7 +29,7 @@ const getLinkTarget = (url: string): LinkTarget => {
 const overrideComponents: MDXComponents = {
   h2: ({ children }) => (
     <h2
-      className="text-3xl md:text-[36px]"
+      className="text-[26px] md:text-[36px]"
       style={{
         color: '#C6742B',
         fontWeight: '700',
@@ -43,7 +43,7 @@ const overrideComponents: MDXComponents = {
 
   h3: ({ children }) => (
     <h3
-      className="text-2xl md:text-[28px]"
+      className="text-[23px] md:text-[28px]"
       style={{
         color: '#C6742B',
         fontWeight: '700',
@@ -111,6 +111,7 @@ interface BlogDetail {
   title: string;
   coverImgURL: StaticImageData;
   markdown: MDXData;
+  altText?: string;
 }
 
 const blogs: Record<string, BlogDetail> = {
@@ -123,15 +124,18 @@ const blogs: Record<string, BlogDetail> = {
     title: 'The Benefits of Bamboo in Sustainable Architecture',
     coverImgURL: blogPost2,
     markdown: Blog02,
+    altText:
+      'Laurie Baker Centre for Habitat Studies, designed & built by COSTFORD',
   },
   '03': {
     title:
       'How to Reduce Carbon Footprint in Building Design, A Step-by-Step Guide',
     coverImgURL: blogPost3,
     markdown: Blog03,
+    altText: 'Sanchi Bags, Trivandrum. Designed & built by TAC Design LAB',
   },
   '04': {
-    title: 'How to design energy-efficient homes',
+    title: 'How to Design Energy-Efficient Homes',
     coverImgURL: blogPost4,
     markdown: Blog04,
   },
@@ -154,7 +158,11 @@ export default function Page({
   return (
     <>
       <div className="bg-[#EDD7C3] font-primary">
-        <BlogHero title={blogs[slug].title} image={blogs[slug].coverImgURL} />
+        <BlogHero
+          title={blogs[slug].title}
+          image={blogs[slug].coverImgURL}
+          altText={blogs[slug].altText ?? 'Banner Image'}
+        />
         <div className="p-5 md:p-28">
           {blogs[slug].markdown({ components: overrideComponents })}
         </div>

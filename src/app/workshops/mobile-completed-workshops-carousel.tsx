@@ -162,9 +162,9 @@ function MobileCompletedWorkshopsCarousel() {
                           openLightbox(index);
                         }}
                       />
-                      <div className="absolute right-4 top-2 h-[2vh] w-[2vw] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <div className="absolute right-4 top-2 h-[2vh] w-[2vw] opacity-100 transition-opacity duration-300 group-hover:opacity-100">
                         <ZoomIn
-                          className="w-[2vw] text-white"
+                          className="w-[5.5vw] text-white"
                           onClick={() => {
                             openLightbox(index);
                           }}
@@ -173,7 +173,7 @@ function MobileCompletedWorkshopsCarousel() {
                     </div>
 
                     <p
-                      className="line-clamp-4 overflow-hidden text-center font-primary text-sm font-bold text-[#173552]"
+                      className="line-clamp-5 overflow-hidden text-center font-primary text-sm font-bold text-[#173552]"
                       style={{ wordBreak: 'break-word' }}
                     >
                       {itm.workshopName}
