@@ -40,7 +40,7 @@ function MainContent(props: MainContentProps) {
       {/* Main Layout */}
       <div className="mx-auto mt-10 flex flex-col lg:mt-20 lg:w-[85vw] lg:flex-row lg:gap-20">
         {/* Left Column */}
-        <div className="mb-8 flex flex-col gap-16 text-[#173552]">
+        <div className="mb-8 flex flex-col gap-8 text-[#173552] lg:gap-16">
           {[
             { title: 'Design Intent', content: currentWork.designIntent },
             {
@@ -67,14 +67,16 @@ function MainContent(props: MainContentProps) {
             .filter((section) => Boolean(section.content))
             .map((section, idx) => {
               return (
-                <div key={idx} className="flex flex-col gap-7">
+                <div key={idx} className="flex flex-col gap-4 lg:gap-7">
                   {/* Mobile Images */}
-                  <div className="mx-auto grid grid-cols-2 gap-4 lg:hidden">
-                    <ImageGallery
-                      images={getMobileImages(idx)}
-                      className="h-[140px] w-[160px] rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
-                    />
-                  </div>
+                  {getMobileImages(idx).length > 0 && (
+                    <div className="mx-auto grid grid-cols-2 gap-4 lg:hidden">
+                      <ImageGallery
+                        images={getMobileImages(idx)}
+                        className="h-[140px] w-[160px] rounded-[27px] border-4 border-[#ECC19A] object-cover shadow-[0px_3.6px_3.6px_0px_#00000040]"
+                      />
+                    </div>
+                  )}
 
                   {/* Section Title */}
                   <div className="mx-7 flex items-center gap-2 lg:mx-0">

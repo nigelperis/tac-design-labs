@@ -42,9 +42,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, className }) => {
               handleImageClick(idx);
             }}
           />
-          <div className="absolute right-3 top-2 h-[2vh] w-[2vw] opacity-0 transition-transform duration-300 group-hover:opacity-100">
+          <div className="absolute right-3 top-2 mr-3 h-[2vh] w-[2vw] opacity-100 transition-transform duration-300 lg:mr-1 lg:opacity-0 lg:group-hover:opacity-100">
             <ZoomIn
-              className="w-[2vw] cursor-pointer text-white"
+              className="w-[4vw] cursor-pointer text-white"
               onClick={() => {
                 handleImageClick(idx);
               }}
