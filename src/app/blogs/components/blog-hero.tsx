@@ -6,6 +6,7 @@ import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer'
 interface BlogHeroProps {
   title: string;
   image: StaticImageData;
+  altText: string;
 }
 
 const BlogHero = (props: BlogHeroProps) => {
@@ -21,6 +22,7 @@ const BlogHero = (props: BlogHeroProps) => {
         backgroundImage: optimizedBG,
         boxShadow: '4px 4px 8px 6px #00000040 inset',
       }}
+      aria-label={props.altText}
     >
       <h1 className="text-balance px-5 text-center text-2xl font-bold leading-10 md:text-4xl">
         {props.title}
