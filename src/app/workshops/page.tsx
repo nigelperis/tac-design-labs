@@ -336,7 +336,7 @@ const Workshops = () => {
             {/* Bamboo Workshop */}
             <div className="space-y-6 text-lg">
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
-                Here is what this workshop has in store for you -
+                Here is what this workshop has in store for you&nbsp;-
               </p>
               <ul className="ml-8 list-disc text-[16px] font-[400] leading-7 text-[#173552] md:px-12 md:text-[24px] md:leading-tight">
                 <li className="md:mt-8">
@@ -420,7 +420,7 @@ const Workshops = () => {
             {/* Mud Workshop */}
             <div className="space-y-5 text-lg">
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
-                A sneak peek of what you’ll learn in this workshop -
+                A sneak peek of what you’ll learn in this workshop&nbsp;-
               </p>
               <ul className="ml-8 list-disc text-[16px] font-[400] leading-7 text-[#173552] md:px-12 md:text-[24px] md:leading-tight">
                 <li className="md:mt-8">
@@ -500,7 +500,7 @@ const Workshops = () => {
 
             <div className="space-y-6 text-lg">
               <p className="text-[16px] font-[400] text-[#173552] md:px-10 md:text-[24px]">
-                See what valuable insights await in this workshop -
+                See what valuable insights await in this workshop&nbsp;-
               </p>
               <ul className="ml-8 list-disc text-[16px] font-[400] leading-7 text-[#173552] md:px-12 md:text-[24px] md:leading-tight">
                 <li className="md:mt-8">
