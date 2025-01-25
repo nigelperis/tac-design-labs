@@ -29,7 +29,7 @@ const getLinkTarget = (url: string): LinkTarget => {
 const overrideComponents: MDXComponents = {
   h2: ({ children }) => (
     <h2
-      className="text-3xl md:text-[36px]"
+      className="text-[26px] md:text-[36px]"
       style={{
         color: '#C6742B',
         fontWeight: '700',
@@ -43,7 +43,7 @@ const overrideComponents: MDXComponents = {
 
   h3: ({ children }) => (
     <h3
-      className="text-2xl md:text-[28px]"
+      className="text-[23px] md:text-[28px]"
       style={{
         color: '#C6742B',
         fontWeight: '700',

@@ -208,7 +208,7 @@ const OurProcess = () => {
                   className="min-h-[50px] min-w-[50px]"
                 />
                 <h3 className="text-[20px] font-bold text-accent-500">
-                  Sustainable Construction
+                  Sustainable&nbsp;Construction
                 </h3>
               </div>
               <div className="text-[#173552]">
@@ -320,7 +320,7 @@ const OurProcess = () => {
                   className="h-64 w-2"
                 />
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="mt-4 flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Registration
                 </h3>
@@ -355,7 +355,7 @@ const OurProcess = () => {
                   className="h-28 w-2"
                 />
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="mt-6 flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Site Visit & Initial Planning
                 </h3>
@@ -385,7 +385,7 @@ const OurProcess = () => {
                   className="h-64 w-2"
                 />
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="mt-6 flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Documentation & Approvals
                 </h3>
@@ -422,7 +422,7 @@ const OurProcess = () => {
                   className="h-48 w-2"
                 />
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="mt-3 flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Cost Estimation
                 </h3>
@@ -459,7 +459,7 @@ const OurProcess = () => {
                   // className="min-h-[50px] min-w-[50px]"
                 />
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="mt-4 flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Sustainable Construction
                 </h3>
@@ -508,7 +508,7 @@ const OurProcess = () => {
                   className="h-28 w-2"
                 />
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="mt-6 flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Health & Comfort Integration
                 </h3>
@@ -529,7 +529,7 @@ const OurProcess = () => {
                   className="min-h-[120px] min-w-[120px]"
                 />
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="mt-4 flex flex-col gap-5">
                 <h3 className="text-4xl font-bold text-accent-500">
                   Economic & Environmental Benefits
                 </h3>
