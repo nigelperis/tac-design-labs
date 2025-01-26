@@ -140,7 +140,7 @@ const havenData: WorkDetails = {
     nextWorkTitle: 'Shire',
     nextWorkLocation: 'Udupi',
     nextWorkLink: '/our-work/shire',
-    nextWorkImage: '/works/shire-banner.png',
+    nextWorkImage: '/works/shire-cta.png',
     nextWorkViewImage: '/works/view-shire.png',
   },
 };
@@ -286,7 +286,7 @@ const canaanData: WorkDetails = {
     nextWorkTitle: 'Shire',
     nextWorkLocation: 'Udupi',
     nextWorkLink: '/our-work/shire',
-    nextWorkImage: '/works/shire-banner.png',
+    nextWorkImage: '/works/shire-cta.png',
     nextWorkViewImage: '/works/view-shire.png',
   },
 };
@@ -425,7 +425,7 @@ const shireData: WorkDetails = {
     nextWorkTitle: 'Sanchi Bags',
     nextWorkLocation: 'Trivandrum',
     nextWorkLink: '/our-work/sanchi-bags',
-    nextWorkImage: '/works/sanchi-bags-banner.png',
+    nextWorkImage: '/works/sanchi-cta.png',
     nextWorkViewImage: '/works/view-sanchi-bags.png',
   },
 };
@@ -506,7 +506,7 @@ const sanchiBagsData: WorkDetails = {
     nextWorkTitle: 'Haven',
     nextWorkLocation: 'Trivandrum',
     nextWorkLink: '/our-work/haven',
-    nextWorkImage: '/works/haven-banner.png',
+    nextWorkImage: '/works/haven-cta.png',
     nextWorkViewImage: '/works/view-haven.png',
   },
 };
