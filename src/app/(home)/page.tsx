@@ -147,7 +147,7 @@ export default function Home() {
         }}
       >
         <div className="md:grid md:grid-cols-2">
-          <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl font-bold leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-[95%] after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-14 md:pl-24 md:text-5xl">
+          <h2 className="relative w-full pl-4 pt-4 font-primary text-[28px] font-bold leading-6 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-[95%] after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-14 md:pl-24 md:text-5xl">
             Sustainable Architecture
           </h2>
 
