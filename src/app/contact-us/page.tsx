@@ -13,18 +13,18 @@ import Phone from '~/assets/svgs/phone.svg';
 import YoutubeLogo from '~/assets/svgs/youtube.svg';
 
 import contactPlace from '~/assets/images/contact-image.jpeg';
-import leavesBG from '~/assets/images/contact-us-leaves-bg.png';
+import contactUsBg from '~/assets/images/contact-us-bg.png';
 
 const ContactUsPage = () => {
-  const optimizedLandingPageBackground = getOptimizedBackgroundImage({
-    src: leavesBG.src,
-    width: leavesBG.width,
-    height: leavesBG.height,
+  const optimizedContactUsPageBackground = getOptimizedBackgroundImage({
+    src: contactUsBg.src,
+    width: contactUsBg.width,
+    height: contactUsBg.height,
   });
   return (
     <div
-      className="bg-[#EDD7C3] p-9 font-primary bg-blend-overlay md:px-24 md:py-20"
-      style={{ backgroundImage: optimizedLandingPageBackground }}
+      className="bg-[#EDD7C3] p-9 font-primary md:px-24 md:py-20"
+      style={{ backgroundImage: optimizedContactUsPageBackground }}
     >
       <div className="flex grow flex-col gap-7">
         <h1 className="text-[28px] font-bold leading-10 text-primary-500 md:text-5xl">
