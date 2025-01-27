@@ -208,12 +208,12 @@ const Workshops = () => {
             holistic learning experience in sustainable architecture.
           </p>
           <div className="py-6">
-            <div className="flex flex-col justify-between gap-8 lg:flex-row 2xl:mx-[50px]">
+            <div className="flex flex-col justify-between gap-8 lg:flex-row">
               <div className="flex h-full w-full flex-col justify-between lg:w-[70%]">
                 <h2 className="mb-4 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-8 md:ml-6 md:text-[36px]">
                   Lecture Session Highlights:
                 </h2>
-                <ul className="ml-6 max-w-[900px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px] xl:text-[25px] 2xl:text-[25px]">
+                <ul className="ml-6 list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px] xl:text-[25px] 2xl:space-y-12 2xl:text-[25px]">
                   <li>
                     <span className="font-bold">
                       Understanding the Built Environment:
@@ -241,7 +241,7 @@ const Workshops = () => {
                     Learn techniques like reducing resource input, managing
                     waste, and designing with minimal environmental impact.
                   </li>
-                  <li>
+                  <li className="2xl:mt-6">
                     <span className="font-bold">Building with Purpose:</span>
                     Understand how to create spaces that blend comfort,
                     functionality, and environmental harmony through humane
