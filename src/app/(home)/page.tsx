@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,6 +34,29 @@ import { LandingPageCarousel } from './landing-page-carousel';
 import styles from './landing-page-style.module.css';
 
 export default function Home() {
+  const textRef = useRef(null);
+  const [cardHeight, setCardHeight] = useState(0);
+
+  const handleCardHeight = () => {
+    if (textRef.current) {
+      const { offsetHeight, offsetWidth } = textRef.current;
+      // if (offsetWidth < 500) {
+      setCardHeight(offsetHeight / 3);
+      // } else {
+      //   setCardHeight(offsetHeight / 2);
+      // }
+    }
+    return;
+  };
+
+  // Modify card height for Grid Images
+  useEffect(() => {
+    // On Resizing
+    window.addEventListener('resize', handleCardHeight);
+    // On Load
+    handleCardHeight();
+  });
+
   const optimizedLandingPageHeroBackground = getOptimizedBackgroundImage({
     src: landingPageHeroBackground.src,
     width: landingPageHeroBackground.width,
@@ -77,19 +103,19 @@ export default function Home() {
           backgroundImage: optimizedLandingPageHeroBackground,
         }}
       >
-        <div className="ml-auto w-full">
-          <div className="relative h-[50vh] w-full md:-mr-8 md:ml-auto md:aspect-[1.3] md:h-auto md:rounded-md md:pb-9 md:pt-14 xl:max-w-2xl">
+        <div className="ml-auto overflow-x-visible md:w-full">
+          <div className="relative h-[50vh] md:-mr-8 md:mb-9 md:ml-auto md:mt-14 md:aspect-[1.4] md:h-auto md:w-full md:rounded-md xl:max-w-2xl">
             <Image
               src={landingPageHeroImage}
               placeholder="blur"
               alt="Landing page hero image "
-              className="h-full w-full object-cover md:object-fill"
+              className="h-full object-cover md:w-full md:object-contain"
             />
             <Image
               src={landingPageAssetGrass}
               placeholder="empty"
               alt="Landing page asset grass"
-              className="absolute -bottom-14 -right-10 h-[165px] w-[120px] object-contain drop-shadow-md md:-bottom-10 md:-left-9 md:w-[24%]"
+              className="absolute -bottom-14 -right-4 h-[165px] w-[120px] object-contain drop-shadow-md md:-bottom-10 md:-left-9 md:w-[24%]"
             />
           </div>
         </div>
@@ -141,125 +167,141 @@ export default function Home() {
       </section>
 
       <section
-        className="relative bg-cover py-16 md:flex md:justify-between"
+        className="relative flex-col bg-cover py-16 md:flex md:justify-between"
         style={{
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <div className="md:grid md:grid-cols-2">
-          <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl font-bold leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-[95%] after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-14 md:pl-24 md:text-5xl">
-            Sustainable Architecture
-          </h2>
+        <div className="relative max-h-min md:grid md:grid-cols-4 md:grid-rows-2">
+          {/* MARK: Left GRID  */}
+          <div className="col-span-2 row-span-3" ref={textRef}>
+            <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl font-bold leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-[95%] after:translate-y-4 after:bg-black md:w-fit md:px-14 md:pl-24 md:text-5xl">
+              Sustainable Architecture
+            </h2>
 
-          <ul className="my-8 space-y-8 md:ml-16">
-            <li className="px-8">
-              <div className="flex space-x-2">
-                <LandingPageListImage className="" />
-                <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
-                  Understanding Sustainable Architecture
-                </h3>
-              </div>
-              <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
-                A practice of designing and constructing buildings that minimize
-                environmental impact while optimizing resources. It combines
-                energy conservation, renewable materials and innovative
-                technologies with traditional wisdom to create harmonious and
-                healthy spaces. At its core, it is about building responsibly
-                for a better future.
-              </p>
-            </li>
+            <ul className="my-8 space-y-8 md:ml-16" ref={textRef}>
+              <li className="px-8">
+                <div className="flex space-x-2">
+                  <LandingPageListImage className="" />
+                  <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                    Understanding Sustainable Architecture
+                  </h3>
+                </div>
+                <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
+                  A practice of designing and constructing buildings that
+                  minimize environmental impact while optimizing resources. It
+                  combines energy conservation, renewable materials and
+                  innovative technologies with traditional wisdom to create
+                  harmonious and healthy spaces. At its core, it is about
+                  building responsibly for a better future.
+                </p>
+              </li>
 
-            <li className="px-8">
-              <div className="flex space-x-2">
-                <LandingPageListImage className="" />
-                <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
-                  The Need for Sustainable Design
-                </h3>
-              </div>
-              <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
-                Buildings account for nearly 40% of global carbon emissions,
-                highlighting the urgency for sustainable practices. Thoughtful
-                architecture reduces environmental impact while fostering
-                healthier living spaces and harmony with nature. As awareness
-                grows, architects, engineers and developers are re-imagining
-                construction methods to meet the rising demand for eco-friendly
-                and resilient structures.
-              </p>
-            </li>
+              <li className="px-8">
+                <div className="flex space-x-2">
+                  <LandingPageListImage className="" />
+                  <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                    The Need for Sustainable Design
+                  </h3>
+                </div>
+                <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
+                  Buildings account for nearly 40% of global carbon emissions,
+                  highlighting the urgency for sustainable practices. Thoughtful
+                  architecture reduces environmental impact while fostering
+                  healthier living spaces and harmony with nature. As awareness
+                  grows, architects, engineers and developers are re-imagining
+                  construction methods to meet the rising demand for
+                  eco-friendly and resilient structures.
+                </p>
+              </li>
 
-            <li className="px-8">
-              <div className="flex space-x-2">
-                <LandingPageListImage className="" />
-                <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
-                  A Global Mission
-                </h3>
-              </div>
-              <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
-                Governments and global organizations are driving sustainable
-                architecture with incentives and regulations, emphasizing its
-                importance as a collective effort to address climate challenges
-                and ensure a resilient future.
-              </p>
-            </li>
-          </ul>
-          <ul className="mr-16 hidden grid-cols-2 gap-x-4 gap-y-4 md:grid md:pt-7">
-            <li className="col-span-2">
-              <Image
-                src={landingPagePortfolioHouse1}
-                alt="Portfolio image"
-                className="rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
-                style={{
-                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
-                }}
-              />
-            </li>
-            <li className="col-span-2 self-start xl:col-span-1">
-              <Image
-                src={landingPagePortfolioHouse2}
-                alt="Portfolio image"
-                className="max-h-64 rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
-                style={{
-                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
-                }}
-              />
-            </li>
-            <li className="col-span-2 xl:col-span-1">
-              <Image
-                src={landingPagePortfolioHouse3}
-                alt="Portfolio image"
-                className="aspect-square max-h-64 rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
-                style={{
-                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
-                }}
-              />
-            </li>
-          </ul>
+              <li className="px-8">
+                <div className="flex space-x-2">
+                  <LandingPageListImage className="" />
+                  <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                    A Global Mission
+                  </h3>
+                </div>
+                <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
+                  Governments and global organizations are driving sustainable
+                  architecture with incentives and regulations, emphasizing its
+                  importance as a collective effort to address climate
+                  challenges and ensure a resilient future.
+                </p>
+              </li>
+            </ul>
+          </div>
 
-          <ul className="col-span-2 my-4 hidden grid-cols-2 gap-x-4 gap-y-4 md:mx-16 md:grid">
-            <li>
-              <Image
-                src={landingPagePortfolioHouse4}
-                alt="Portfolio image"
-                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
-                style={{
-                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
-                }}
-              />
-            </li>
-            <li>
-              <Image
-                src={landingPagePortfolioHouse5}
-                alt="Portfolio image"
-                className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
-                style={{
-                  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
-                }}
-              />
-            </li>
-          </ul>
-
-          <LandingPageCarousel />
+          <div
+            className={`col-span-2 mr-6 hidden rounded-3xl border-[5px] border-[#F0E0D6] md:inline`}
+            style={{
+              height: cardHeight,
+            }}
+          >
+            <Image
+              src={landingPagePortfolioHouse1}
+              alt="Portfolio image"
+              className="h-full w-full rounded-3xl object-cover"
+              style={{
+                boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+              }}
+            />
+          </div>
+          <div
+            style={{
+              height: cardHeight,
+            }}
+            className={`mr-6 hidden rounded-3xl border-[5px] border-[#F0E0D6] md:col-span-2 md:inline xl:col-span-1`}
+          >
+            <Image
+              src={landingPagePortfolioHouse2}
+              alt="Portfolio image"
+              className="h-full w-full rounded-3xl object-cover"
+              style={{
+                boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+              }}
+            />
+          </div>
+          <div
+            className={`mr-6 hidden rounded-3xl border-[5px] border-[#F0E0D6] md:col-span-2 md:inline xl:col-span-1`}
+            style={{
+              height: cardHeight,
+            }}
+          >
+            <Image
+              src={landingPagePortfolioHouse3}
+              alt="Portfolio image"
+              className="h-full w-full rounded-3xl object-cover"
+              style={{
+                boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+              }}
+            />
+          </div>
         </div>
+        <ul className="col-span-2 my-4 hidden grid-cols-2 gap-x-4 gap-y-4 md:mx-16 md:grid">
+          <li>
+            <Image
+              src={landingPagePortfolioHouse4}
+              alt="Portfolio image"
+              className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+              style={{
+                boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+              }}
+            />
+          </li>
+          <li>
+            <Image
+              src={landingPagePortfolioHouse5}
+              alt="Portfolio image"
+              className="aspect-video rounded-3xl border-[5px] border-[#F0E0D6] object-cover"
+              style={{
+                boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.2)',
+              }}
+            />
+          </li>
+        </ul>
+
+        <LandingPageCarousel />
       </section>
 
       <section
