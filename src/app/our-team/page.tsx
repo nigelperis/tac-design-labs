@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
 import brickButton from '~/assets/images/button-background.png';
-import exploreProjectBG from '~/assets/images/explore-our-work-background.png';
-import landingPageLeavesBackground from '~/assets/images/landing-page-team-background.png';
+import teamBg from '~/assets/images/our-team-bg.png';
+import ourTemaCta from '~/assets/images/our-team-cta.png';
 import teamPicture from '~/assets/images/TAC-team-picture.jpg';
 import akshay from '~/assets/profile-images/akshay.jpg';
 import ashams from '~/assets/profile-images/ashams.jpg';
@@ -74,18 +74,18 @@ const teamMemberDetails: TeamMember[] = [
 ];
 
 const TeamPage = () => {
-  const optimizedLandingPageBackground = getOptimizedBackgroundImage({
-    src: landingPageLeavesBackground.src,
-    width: landingPageLeavesBackground.width,
-    height: landingPageLeavesBackground.height,
+  const optimizedTeamBackground = getOptimizedBackgroundImage({
+    src: teamBg.src,
+    width: teamBg.width,
+    height: teamBg.height,
   });
 
   return (
     <div>
       <section
-        className="bg-[#EDD7C3] pt-40 font-primary font-normal bg-blend-luminosity"
+        className="bg-cover pt-40 font-primary font-normal"
         style={{
-          backgroundImage: optimizedLandingPageBackground,
+          backgroundImage: optimizedTeamBackground,
         }}
       >
         <TeamCard
@@ -110,9 +110,9 @@ const TeamPage = () => {
         ))}
 
         <div
-          className="mt-20 border-y-8 border-white bg-[#420C03]/70 bg-cover p-8 text-center text-2xl text-white bg-blend-soft-light md:p-20 md:text-4xl"
+          className="mt-20 border-y-8 border-white bg-[#420C03]/70 bg-cover p-8 text-center text-2xl text-white md:p-20 md:text-4xl"
           style={{
-            backgroundImage: getOptimizedBackgroundImage(exploreProjectBG),
+            backgroundImage: getOptimizedBackgroundImage(ourTemaCta),
           }}
         >
           <h1 className="mb-6 sm:text-balance">

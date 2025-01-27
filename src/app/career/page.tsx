@@ -30,7 +30,7 @@ export default function Career() {
   });
   return (
     <div
-      className="bg-[#EDD7C3] bg-contain py-16 font-primary bg-blend-overlay"
+      className="bg-cover py-16 font-primary"
       style={{
         backgroundImage: optimizedCareerPageBackground,
       }}

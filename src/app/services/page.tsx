@@ -151,7 +151,7 @@ const CarouselItem: React.FC<CarouselItemProps> = ({
 );
 
 const ServicePage = () => {
-  const optimizedCareerPageBackground = getOptimizedBackgroundImage({
+  const optimizedServicesPageBackground = getOptimizedBackgroundImage({
     src: servicePageBackground.src,
     width: servicePageBackground.width,
     height: servicePageBackground.height,
@@ -169,8 +169,8 @@ const ServicePage = () => {
 
   return (
     <div
-      className="relative bg-[#EDD7C3] bg-contain font-primary bg-blend-overlay"
-      style={{ backgroundImage: optimizedCareerPageBackground }}
+      className="relative bg-cover font-primary"
+      style={{ backgroundImage: optimizedServicesPageBackground }}
     >
       <div>
         <div className="mb-10 pt-16 text-center text-[32px] font-bold text-[#552b0a] lg:text-[42px]">
