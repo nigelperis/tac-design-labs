@@ -6,7 +6,7 @@ import { cn } from '~/utils/cn';
 
 import achievementPhoto1 from '~/assets/images/achievement-photo-1.jpeg';
 import achievementPhoto2 from '~/assets/images/achievement-photo-2.jpeg';
-import achievementPhoto3 from '~/assets/images/achievement-photo-3.png';
+import achievementMob3 from '~/assets/images/achievement-photo-3.jpeg';
 import achievementPhoto4 from '~/assets/images/achievement-photo-4.jpeg';
 import achievementPhoto5 from '~/assets/images/achievement-photo-5.jpg';
 import achievementPhoto6 from '~/assets/images/achievement-photo-6.png';
@@ -38,9 +38,8 @@ const achievements = [
     title:
       'Rethinking The Future: Top 10 Examples of Upcycling in Architecture',
     description: `TAC Design LAB's work was featured in Rethinking The Future as one of the top 10 examples of upcycling in architecture. Their innovative approach to reusing materials from demolished buildings showcases their commitment to reducing waste and promoting sustainable architecture.`,
-    image: achievementPhoto3,
+    image: achievementMob3,
     buttonText: 'Read the full article',
-
     href: 'https://www.re-thinkingthefuture.com/rtf-fresh-perspectives/a1989-10-examples-of-upcycling-in-architecture/',
   },
   {
@@ -99,9 +98,13 @@ function Achievement() {
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <ul className="group space-y-5 lg:space-y-8">
+        <ul className="group space-y-5 lg:space-y-12">
           {achievements.map((achievement, index) => (
-            <AchievementCard key={index} {...achievement} />
+            <AchievementCard
+              key={index}
+              {...achievement}
+              isMobileFill={achievement.image === achievementPhoto4} // Add the condition for `achievementMob3`
+            />
           ))}
         </ul>
       </section>

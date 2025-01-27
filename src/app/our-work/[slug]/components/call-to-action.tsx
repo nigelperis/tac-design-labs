@@ -68,10 +68,9 @@ function CallToAction(props: CallToActionProps) {
           width={0}
           height={0}
           sizes="100vw"
-          className="absolute left-1/2 top-[40%] aspect-video w-[79%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl border-[5px] border-[#F3F5E5] shadow-lg lg:top-[-20%] lg:mb-80 lg:h-[300px] lg:w-[50.6vw] lg:max-w-none lg:translate-y-0"
+          className="absolute left-1/2 top-[40%] aspect-video w-[79%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl border-[5px] border-[#F3F5E5] object-fill shadow-lg lg:top-[-20%] lg:mb-80 lg:h-[300px] lg:w-[50.6vw] lg:max-w-none lg:translate-y-0 lg:object-cover"
           style={{
             boxShadow: '0px 11px 4px 0px #00000040',
-            objectFit: 'cover',
           }}
         />
         {/* Content over the image */}

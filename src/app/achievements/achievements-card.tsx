@@ -16,8 +16,10 @@ interface AchievementCardProps {
   href: string;
 }
 
-function AchievementCard(props: AchievementCardProps) {
-  const { title, description, image, buttonText, href } = props;
+function AchievementCard(
+  props: AchievementCardProps & { isMobileFill?: boolean },
+) {
+  const { title, description, image, buttonText, href, isMobileFill } = props;
 
   return (
     <li className={cn(achievementsStyles.achievement_card)}>
@@ -30,6 +32,10 @@ function AchievementCard(props: AchievementCardProps) {
           'aspect-video',
         )}
         placeholder="blur"
+        style={{
+          objectFit: isMobileFill ? 'fill' : 'cover',
+          objectPosition: isMobileFill ? 'center' : 'center',
+        }}
       />
       <p className={cn(achievementsStyles.achievement_card_description)}>
         {description}

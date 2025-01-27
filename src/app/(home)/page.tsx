@@ -110,14 +110,14 @@ export default function Home() {
           placeholder="blur"
           loading="lazy"
           alt="Ashams Ravi portrait"
-          className="relative -top-5 h-[300px] w-[200px] rounded-3xl object-cover max-sm:mx-auto md:-top-8 md:h-[400px] md:w-[300px] md:object-fill"
+          className="relative -top-5 h-[300px] w-[200px] rounded-3xl object-cover max-sm:mx-auto md:-top-8 md:h-[400px] md:w-[300px] md:object-cover"
         />
         <div className="relative md:w-1/2">
           <OpenQuote className="absolute -left-10 mt-2 hidden min-[1200px]:-top-4 min-[1200px]:inline" />
 
           <p className="relative mt-2 text-justify font-primary text-lg font-normal italic leading-5 tracking-wide md:text-left md:text-4xl">
             <OpenQuoteSm className="absolute -top-[7px] inline min-[1200px]:hidden" />
-            <span className="ml-[30px] min-[1200px]:ml-0">
+            <span className="ml-[30px] leading-6 md:leading-[45px] min-[1200px]:ml-0">
               We all know the greenest choice is to avoid building altogether.
               But when construction is necessary, the focus must shift to
               creating spaces that respect and protect nature.
@@ -146,23 +146,23 @@ export default function Home() {
           backgroundImage: optimizedLandingPageArchitectureBackground,
         }}
       >
-        <div className="md:grid md:grid-cols-2">
-          <h2 className="relative w-2/3 pl-4 pt-4 font-primary text-4xl font-bold leading-10 text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-[95%] after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-14 md:pl-24 md:text-5xl">
+        <div className="font-primary md:grid md:grid-cols-2">
+          <h2 className="relative w-2/3 pl-8 pt-4 font-primary text-4xl font-black leading-[50px] text-primary-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-[95%] after:translate-y-4 after:bg-black md:col-span-2 md:w-fit md:px-14 md:pl-24 md:text-5xl">
             Sustainable Architecture
           </h2>
 
           <ul className="my-8 space-y-8 md:ml-16">
             <li className="px-8">
-              <div className="flex space-x-2">
-                <LandingPageListImage className="" />
-                <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
+              <div className="flex items-start space-x-2">
+                <LandingPageListImage className="h-6 w-6" />
+                <h3 className="pb-4 font-primary text-xl font-bold leading-7 text-primary-500 md:text-2xl">
                   Understanding Sustainable Architecture
                 </h3>
               </div>
-              <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
+              <p className="text-balance text-justify text-[16px] font-normal leading-6 text-primary-500 md:text-lg">
                 A practice of designing and constructing buildings that minimize
                 environmental impact while optimizing resources. It combines
-                energy conservation, renewable materials and innovative
+                energy conservation, renewable materials, and innovative
                 technologies with traditional wisdom to create harmonious and
                 healthy spaces. At its core, it is about building responsibly
                 for a better future.
@@ -170,13 +170,13 @@ export default function Home() {
             </li>
 
             <li className="px-8">
-              <div className="flex space-x-2">
+              <div className="flex items-start space-x-2">
                 <LandingPageListImage className="" />
-                <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                <h3 className="pb-4 font-primary text-xl font-bold text-primary-500 md:text-2xl">
                   The Need for Sustainable Design
                 </h3>
               </div>
-              <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
+              <p className="text-balance text-justify text-[16px] font-normal leading-6 text-primary-500 md:text-lg">
                 Buildings account for nearly 40% of global carbon emissions,
                 highlighting the urgency for sustainable practices. Thoughtful
                 architecture reduces environmental impact while fostering
@@ -188,13 +188,13 @@ export default function Home() {
             </li>
 
             <li className="px-8">
-              <div className="flex space-x-2">
+              <div className="flex items-start space-x-2">
                 <LandingPageListImage className="" />
-                <h3 className="pb-6 font-primary text-xl font-bold text-primary-500 md:text-2xl">
+                <h3 className="pb-4 text-xl font-bold text-primary-500 md:text-2xl">
                   A Global Mission
                 </h3>
               </div>
-              <p className="text-balance text-justify font-primary font-normal text-primary-500 md:text-lg">
+              <p className="text-balance text-justify text-[16px] font-normal text-primary-500 md:text-lg">
                 Governments and global organizations are driving sustainable
                 architecture with incentives and regulations, emphasizing its
                 importance as a collective effort to address climate challenges
@@ -313,7 +313,7 @@ export default function Home() {
 
         <OurWorkCarousel />
 
-        <div className="flex justify-center md:mt-10">
+        <div className="mb-6 flex justify-center md:mt-10">
           <Link
             href="/our-work"
             style={{ backgroundImage: optimizedButtonBackground }}

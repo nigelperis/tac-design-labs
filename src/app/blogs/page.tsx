@@ -4,25 +4,24 @@ import Link from 'next/link';
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
 import OurWorkBgButton from '~/assets/images/button-background.png';
+import mainBlogsBackground from '~/assets/images/contact-us-bg.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
-import landingPageBlogLeavesBackground from '~/assets/images/landing-page-blog-main-leaves-bg.png';
 
 import { BlogCard } from './components/blog-card';
 import { blogs } from './constants/blogs';
 
 const BlogMainPage = () => {
-  const optimizedLandingPageArchitectureBackground =
-    getOptimizedBackgroundImage({
-      src: landingPageBlogLeavesBackground.src,
-      width: landingPageBlogLeavesBackground.width,
-      height: landingPageBlogLeavesBackground.height,
-    });
+  const optimizedMainBlogsBackground = getOptimizedBackgroundImage({
+    src: mainBlogsBackground.src,
+    width: mainBlogsBackground.width,
+    height: mainBlogsBackground.height,
+  });
   return (
     <div className="relative font-primary">
       <section
-        className="bg-[#EDD7C3] px-10 py-16 bg-blend-overlay"
+        className="bg-[#EDD7C3] px-10 py-16"
         style={{
-          backgroundImage: optimizedLandingPageArchitectureBackground,
+          backgroundImage: optimizedMainBlogsBackground,
         }}
       >
         <h1 className="mb-10 text-center text-[26px] font-bold text-primary-500 md:text-start md:text-5xl">
