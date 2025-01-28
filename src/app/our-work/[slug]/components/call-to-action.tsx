@@ -73,6 +73,7 @@ function CallToAction(props: CallToActionProps) {
             boxShadow: '0px 11px 4px 0px #00000040',
           }}
         />
+
         {/* Content over the image */}
         <div className="absolute left-1/2 top-[40%] z-10 w-[79%] -translate-x-1/2 -translate-y-1/2 transform text-center text-white lg:top-[0%] lg:mb-80 lg:h-[300px] lg:w-[50.6vw] lg:max-w-none lg:translate-y-0">
           <p className="text-[5vw] lg:text-[2.314vw]">

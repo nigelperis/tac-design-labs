@@ -52,7 +52,7 @@
   grid-template-areas: 'main-image';
 }
 
-@screen md {
+@media (min-width: 768px) {
   .mobile_image {
     display: none;
   }
