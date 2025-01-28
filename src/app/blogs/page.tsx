@@ -1,4 +1,5 @@
 import React from 'react';
+import { listBlogs } from '~/services/list-blogs';
 import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
@@ -10,12 +11,13 @@ import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
 import { BlogCard } from './components/blog-card';
 import { blogs } from './constants/blogs';
 
-const BlogMainPage = () => {
+async function BlogMainPage() {
   const optimizedMainBlogsBackground = getOptimizedBackgroundImage({
     src: mainBlogsBackground.src,
     width: mainBlogsBackground.width,
     height: mainBlogsBackground.height,
   });
+  const blogsList = await listBlogs();
   return (
     <div className="relative font-primary">
       <section
@@ -28,15 +30,28 @@ const BlogMainPage = () => {
           BLOGS
         </h1>
         <div className="grid-cols1 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
-          {blogs.map((blog, index) => (
-            <BlogCard key={index} {...blog} />
+          {blogsList?.map((blog, index) => (
+            <BlogCard
+              key={index}
+              title={blog.title}
+              blogURL={`/blogs/${blog.slug}`}
+              description={blog.shortDescription}
+              postedBy={blog.authorName}
+              publishedDate={new Date(blog.publishedOn)}
+              imageUrl={new URL(
+                blog.coverImage.url ?? '',
+                process.env.NEXT_PUBLIC_STRAPI_URL,
+              ).toString()}
+              imageWidth={blog.coverImage.width ?? 0}
+              imageHeight={blog.coverImage.height ?? 0}
+            />
           ))}
         </div>
       </section>
       <ConsultationCTA />
     </div>
   );
-};
+}
 
 const ConsultationCTA = () => {
   const optimizedBG = getOptimizedBackgroundImage({

@@ -12,11 +12,28 @@ interface BlogListItem {
   publishedOn: string;
 }
 
-export async function listBlogs(): Promise<BlogListItem[] | undefined> {
-  const endpoint = '/';
+export async function listBlogs(args?: {
+  /**@defaultValue 1 */
+  page?: number;
+  /**@defaultValue 25 */
+  pageSize?: number;
+}): Promise<BlogListItem[] | undefined> {
+  const { page = 1, pageSize = 25 } = args ?? {};
+
+  const endpoint = '/blogs/';
+  const queryParams = new URLSearchParams({
+    'populate[0]': 'coverImage',
+    'populate[1]': 'author',
+    'sort[0]': 'updatedAt:desc',
+    'pagination[page]': String(page),
+    'pagination[pageSize]': String(pageSize),
+  });
+
   const responseData = await strapiFetch<ListBlogResponse>({
     endpoint,
+    queryParams,
   });
+
   const mappedData = responseData?.data.map<BlogListItem>((itm) => {
     return {
       documentId: itm.documentId,
@@ -24,9 +41,10 @@ export async function listBlogs(): Promise<BlogListItem[] | undefined> {
       slug: itm.slug,
       shortDescription: itm.shortDescription,
       coverImage: itm.coverImage,
-      authorName: itm.author?.name ?? '',
+      authorName: itm.author?.name ?? 'admin',
       publishedOn: itm.publishedOn ?? itm.publishedAt,
     };
   });
+
   return mappedData;
 }

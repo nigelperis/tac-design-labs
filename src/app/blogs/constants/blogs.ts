@@ -5,7 +5,7 @@ import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
 
 import { type BlogCardDetail } from '../components/blog-card';
 
-export const blogs: BlogCardDetail[] = [
+export const blogs: Omit<BlogCardDetail, 'imageWidth' | 'imageHeight'>[] = [
   {
     title: 'Sustainable Building Materials in India',
     description: `When it comes to sustainable architecture, the materials you choose play a crucial role in determining the environmental impact of your building project. Sustainable building materials in India and around the world are increasingly being recognized for their ability to reduce this impact. However, not all materials are created equal, and understanding the environmental footprint of different building materials is essential for making eco-conscious decisions.`,
