@@ -196,20 +196,22 @@ function AboutUsPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
       <section
-        className="relative border-y-8 border-white bg-cover py-11 md:h-[540px] md:py-[88px]"
+        className="relative border-y-8 border-white bg-cover py-5 md:h-[550px] md:py-[88px] lg:h-[540px] xl:h-[560px] 2xl:h-[550px]"
         style={{
           backgroundImage: optimizedAboutUsCta,
         }}
       >
         <SeparatorSM className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 md:hidden" />
         <SeparatorLG className="absolute left-1/2 top-0 hidden -translate-x-1/2 -translate-y-1/2 md:block" />
-        <div className="bg-opacity-50 px-8 md:px-32">
-          <h2 className="font-primary text-3xl font-normal text-primary-500 md:text-[52px] md:leading-[72px]">
+        <div className="bg-opacity-50 px-[8%] py-4 md:px-[5%] lg:px-[6%] xl:px-[6%] 2xl:px-[6%]">
+          <h2 className="font-primary text-3xl font-normal text-primary-500 md:text-[52px] md:leading-[72px] lg:text-[44px] lg:leading-[72px] xl:text-[52px] xl:leading-[72px] 2xl:text-[52px] 2xl:leading-[72px]">
             We
             <span className="text-accent-500"> Collaborate</span> with Everyone
           </h2>
-          <p className="mt-5 text-justify font-primary text-lg font-normal text-gray-950 md:text-2xl md:leading-[45px]">
+          <p className="mt-5 text-justify font-primary text-lg font-normal leading-8 text-gray-950 md:text-[28px] md:leading-[45px] lg:text-[24px] lg:leading-[45px] xl:text-[28px] xl:leading-[45px] 2xl:text-[28px] 2xl:leading-[45px]">
             At TAC Design LAB, we believe in the power of collaboration. Whether
             you&apos;re a homeowner, a business, or an institution, we tailor
             our services to meet your unique needs. Let&apos;s work together to
@@ -221,7 +223,7 @@ function AboutUsPage() {
           <Link
             href="/services"
             style={{ backgroundImage: optimizedButtonBackground }}
-            className="rounded bg-cover bg-center p-10 px-4 text-[13px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-14 md:text-2xl lg:p-8 lg:text-lg"
+            className="rounded bg-cover bg-center p-10 px-4 text-[13px] font-bold text-primary-500 duration-200 hover:scale-105 hover:bg-opacity-80 md:p-14 md:text-2xl lg:p-11 lg:text-xl xl:p-12 xl:text-xl 2xl:p-12 2xl:text-xl"
           >
             Explore Our Services
           </Link>
