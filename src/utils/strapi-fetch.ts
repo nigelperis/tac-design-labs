@@ -25,7 +25,7 @@ export async function strapiFetch<T>({
     throw new Error('Base url for strapi not found ');
   }
 
-  const url = new URL(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api${endpoint}`);
+  const url = new URL(`/api${endpoint}`, process.env.NEXT_PUBLIC_STRAPI_URL);
 
   if (queryParams) {
     for (const [key, value] of queryParams) {
