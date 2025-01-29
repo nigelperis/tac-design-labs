@@ -1,4 +1,5 @@
 import React from 'react';
+import { env } from '~/env';
 import { listBlogs } from '~/services/list-blogs';
 import Link from 'next/link';
 
@@ -9,6 +10,7 @@ import mainBlogsBackground from '~/assets/images/contact-us-bg.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
 
 import { BlogCard } from './components/blog-card';
+import NoBlogFound from './components/no-blog-found';
 import { blogs } from './constants/blogs';
 
 async function BlogMainPage() {
@@ -30,22 +32,26 @@ async function BlogMainPage() {
           BLOGS
         </h1>
         <div className="grid-cols1 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
-          {blogsList?.map((blog, index) => (
-            <BlogCard
-              key={index}
-              title={blog.title}
-              blogURL={`/blogs/${blog.slug}`}
-              description={blog.shortDescription}
-              postedBy={blog.authorName}
-              publishedDate={new Date(blog.publishedOn)}
-              imageUrl={new URL(
-                blog.coverImage.url ?? '',
-                process.env.NEXT_PUBLIC_STRAPI_URL,
-              ).toString()}
-              imageWidth={blog.coverImage.width ?? 0}
-              imageHeight={blog.coverImage.height ?? 0}
-            />
-          ))}
+          {blogsList ? (
+            blogsList.map((blog, index) => (
+              <BlogCard
+                key={index}
+                title={blog.title}
+                blogURL={`/blogs/${blog.slug}`}
+                description={blog.shortDescription}
+                postedBy={blog.authorName}
+                publishedDate={new Date(blog.publishedOn)}
+                imageUrl={new URL(
+                  blog.coverImage.url ?? '',
+                  env.NEXT_PUBLIC_STRAPI_URL,
+                ).toString()}
+                imageWidth={blog.coverImage.width ?? 0}
+                imageHeight={blog.coverImage.height ?? 0}
+              />
+            ))
+          ) : (
+            <NoBlogFound />
+          )}
         </div>
       </section>
       <ConsultationCTA />
