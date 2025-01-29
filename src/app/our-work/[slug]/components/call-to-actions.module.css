@@ -1,0 +1,7 @@
+@media (min-width: 1700px) and (max-width: 2048px) {
+  .call_to_action_image {
+    /* object-position: 50% 25%; */
+    height: 378px;
+    top: -33%;
+  }
+}

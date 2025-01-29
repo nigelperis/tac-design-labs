@@ -275,14 +275,12 @@ const canaanData: WorkDetails = {
     },
     {
       title: 'The Vision Behind Project Canaan: An Architectural Insight',
-      description:
-        'In this video, the architect narrates the design philosophy and the sustainable strategies implemented at Project Canaan, providing insight into the thoughtful integration of eco-friendly practices within the home’s architecture.',
+      description: `In this video, the architect narrates the design philosophy and the sustainable strategies implemented at Project Canaan, providing insight into the thoughtful integration of eco-friendly practices within the home's architecture.`,
       video: 'https://www.youtube.com/embed/9w7kEwVBmEk',
     },
   ],
   callToAction: {
-    title:
-      'If you’re inspired by Project Canaan, share this page and help spread the message of sustainable living!',
+    title: `If you're inspired by Project Canaan, share this page and help spread the message of sustainable living!`,
     nextWorkTitle: 'Shire',
     nextWorkLocation: 'Udupi',
     nextWorkLink: '/our-work/shire',
@@ -412,8 +410,7 @@ const shireData: WorkDetails = {
         'Highlights regional heritage through natural and local resources.',
     },
   ],
-  outcome:
-    'The Shire project was completed successfully, fulfilling the owners’ expectations and those of the local community. It has inspired others in the region to explore sustainable and eco-friendly construction practices.',
+  outcome: `The Shire project was completed successfully, fulfilling the owners' expectations and those of the local community. It has inspired others in the region to explore sustainable and eco-friendly construction practices.`,
   testimonial:
     'A heartfelt testimonial from the clients of Project Shire, highlighting the unique design, sustainable features, and the personalized approach that turned their dream home into a reality.',
   testimonialVideo: 'https://www.youtube.com/embed/qpOZ6rXgR_s',
@@ -425,7 +422,7 @@ const shireData: WorkDetails = {
     nextWorkTitle: 'Sanchi Bags',
     nextWorkLocation: 'Trivandrum',
     nextWorkLink: '/our-work/sanchi-bags',
-    nextWorkImage: '/works/sanchi-cta.png',
+    nextWorkImage: '/works/sanchi-bags-banner.png',
     nextWorkViewImage: '/works/view-sanchi-bags.png',
   },
 };
@@ -506,7 +503,7 @@ const sanchiBagsData: WorkDetails = {
     nextWorkTitle: 'Haven',
     nextWorkLocation: 'Trivandrum',
     nextWorkLink: '/our-work/haven',
-    nextWorkImage: '/works/haven-cta.png',
+    nextWorkImage: '/works/haven-banner.png',
     nextWorkViewImage: '/works/view-haven.png',
   },
 };

@@ -8,6 +8,7 @@ import React, {
 } from 'react';
 import AutoScroll from 'embla-carousel-auto-scroll';
 import useEmblaCarousel from 'embla-carousel-react';
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 
 import { cn } from '~/utils/cn';
 
@@ -65,6 +66,7 @@ export function AutoScrollCarousel(props: EmblaCarouselProps) {
       stopOnFocusIn,
       direction: autoScrollDirection,
     }),
+    WheelGesturesPlugin(),
   ]);
 
   return (
