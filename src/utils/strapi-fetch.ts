@@ -1,3 +1,5 @@
+import { env } from '~/env';
+
 interface StrapiFetchProps {
   endpoint: `/${string}`;
   queryParams?: URLSearchParams;
@@ -25,7 +27,7 @@ export async function strapiFetch<T>({
     throw new Error('Base url for strapi not found ');
   }
 
-  const url = new URL(`/api${endpoint}`, process.env.NEXT_PUBLIC_STRAPI_URL);
+  const url = new URL(`/api${endpoint}`, env.NEXT_PUBLIC_STRAPI_URL);
 
   if (queryParams) {
     for (const [key, value] of queryParams) {
