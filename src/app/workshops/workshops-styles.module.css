@@ -1,0 +1,28 @@
+@media (min-width: 1620) and (max-width: 1720px) {
+  .lecture_session_content {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+  .lecture_session_images {
+    margin-right: 6rem;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (min-width: 1720) and (max-width: 1820) {
+  .lecture_session_content {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+}
+
+@media (min-width: 1820) and (max-width: 1920) {
+  .lecture_session_content {
+    font-size: 1.73rem;
+    line-height: 3rem;
+  }
+  .lecture_session_images {
+    margin-right: 6rem;
+    margin-top: 0.8rem;
+  }
+}
