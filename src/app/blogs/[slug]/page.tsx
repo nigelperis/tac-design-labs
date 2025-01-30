@@ -1,12 +1,11 @@
-'use client';
-
-import { use } from 'react';
 import Image from 'next/image';
 
 import blogPost1 from '~/assets/images/blog-images/blog-post-1.jpg';
 import blogPost2 from '~/assets/images/blog-images/blog-post-2.jpg';
 import blogPost3 from '~/assets/images/blog-images/blog-post-3-banner.jpg';
 import blogPost4 from '~/assets/images/blog-images/blog-post-4.jpg';
+
+import { getBlog } from '~/services/get-blogs';
 
 import BlogHero from '../components/blog-hero';
 import MoreBlogs from '../components/more-blogs';
@@ -149,12 +148,10 @@ interface BlogDetail {
   markdown: MDXData;
 }
 
-export default function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = use(params);
+export default async function Page({ params }: { params: { slug: string } }) {
+  const { slug } = params;
+  const blog = await getBlog(slug);
+
   return (
     <>
       <div className="bg-[#EDD7C3] font-primary">
