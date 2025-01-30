@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
+import { cn } from '~/utils/cn';
 
 import CostEstimation from '~/assets/svgs/costestimation.svg';
 import DocApproval from '~/assets/svgs/docandapproval.svg';
@@ -22,6 +23,8 @@ import lineourwork5 from '~/assets/images/lineourwork5.png';
 import lineourwork6 from '~/assets/images/lineourwork6.png';
 import OurProcessBgImg from '~/assets/images/our-process-background.png';
 import ourprocesscatbgimg from '~/assets/images/ourproccessbgimg.png';
+
+import ourProcessStyles from './our-process-styles.module.css';
 
 const OurProcess = () => {
   const optimizedOurProcessBg = getOptimizedBackgroundImage({
@@ -317,7 +320,7 @@ const OurProcess = () => {
                   alt="logo"
                   width={50}
                   height={50}
-                  className="h-64 w-2"
+                  className={cn(ourProcessStyles.line_1, 'h-64 w-2')}
                 />
               </div>
               <div className="mt-4 flex flex-col gap-5">
@@ -352,7 +355,7 @@ const OurProcess = () => {
                   alt="logo"
                   width={50}
                   height={50}
-                  className="h-28 w-2"
+                  className={cn(ourProcessStyles.line_2, 'h-28 w-2')}
                 />
               </div>
               <div className="mt-6 flex flex-col gap-5">
@@ -382,7 +385,7 @@ const OurProcess = () => {
                   alt="logo"
                   width={50}
                   height={50}
-                  className="h-64 w-2"
+                  className={cn(ourProcessStyles.line_3, 'h-64 w-2')}
                 />
               </div>
               <div className="mt-6 flex flex-col gap-5">
@@ -391,7 +394,7 @@ const OurProcess = () => {
                 </h3>
                 <div className="text-[28px] text-[#173552]">
                   <p className="mb-5">
-                    Once the plan is finalized, you’ll need to submit all
+                    Once the plan is finalized, you&apos;ll need to submit all
                     required documents for sanction drawings.
                   </p>
                   <span className="text-2xl">
@@ -419,7 +422,7 @@ const OurProcess = () => {
                   alt="logo"
                   width={50}
                   height={50}
-                  className="h-48 w-2"
+                  className={cn(ourProcessStyles.line_4, 'h-48 w-2')}
                 />
               </div>
               <div className="mt-3 flex flex-col gap-5">
@@ -455,8 +458,7 @@ const OurProcess = () => {
                   alt="logo"
                   width={50}
                   height={50}
-                  className="h-96 w-2"
-                  // className="min-h-[50px] min-w-[50px]"
+                  className={cn(ourProcessStyles.line_5, 'h-96 w-2')}
                 />
               </div>
               <div className="mt-4 flex flex-col gap-5">
