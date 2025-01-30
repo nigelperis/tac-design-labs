@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoogleAnalytics } from '@next/third-parties/google';
+
 import { env } from '~/env';
 
 function GoogleAnalyticsScript() {

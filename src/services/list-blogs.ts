@@ -2,7 +2,7 @@ import { strapiFetch } from '~/utils/strapi-fetch';
 
 import type { ListBlogResponse, Media } from '~/models/blogs/list-blogs';
 
-interface BlogListItem {
+export interface BlogListItem {
   documentId: string;
   title: string;
   slug: string;

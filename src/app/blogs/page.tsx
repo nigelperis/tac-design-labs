@@ -1,6 +1,7 @@
 import React from 'react';
-import { env } from '~/env';
 import Link from 'next/link';
+
+import { env } from '~/env';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 import { getPlaceholderImage } from '~/utils/get-placeholder-image';
@@ -13,7 +14,6 @@ import { listBlogs } from '~/services/list-blogs';
 
 import { BlogCard } from './components/blog-card';
 import NoBlogFound from './components/no-blog-found';
-import { blogs } from './constants/blogs';
 
 async function BlogMainPage() {
   const optimizedMainBlogsBackground = getOptimizedBackgroundImage({

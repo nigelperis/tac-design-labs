@@ -5,15 +5,17 @@ import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer'
 
 interface BlogHeroProps {
   title: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
+  imageWidth: number;
+  imageHeight: number;
   altText: string;
 }
 
 const BlogHero = (props: BlogHeroProps) => {
   const optimizedBG = getOptimizedBackgroundImage({
-    src: props.image.src,
-    width: props.image.width,
-    height: props.image.height,
+    src: props.image,
+    width: props.imageWidth,
+    height: props.imageHeight,
   });
   return (
     <div
