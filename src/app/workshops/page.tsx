@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
+import { cn } from '~/utils/cn';
 
 import Workshope7 from '~/assets/images/about-us-page-image-15.jpg';
 import buttonBackground from '~/assets/images/button-background.png';
@@ -29,6 +30,7 @@ import Workshopemobile from '~/assets/images/workshopbgmobiel.jpg';
 import DesktopCompletedWorkshopsCarousel from './desktop-completed-workshops-carousel';
 import MobileCompletedWorkshopsCarousel from './mobile-completed-workshops-carousel';
 import { WorkshopsMobileCarousel } from './workshops-carousel';
+import workshopStyles from './workshops-styles.module.css';
 
 const mudWorkshopImages = [
   { src: mudWorkshop1, alt: 'Mud Workshop Image 1' },
@@ -210,10 +212,20 @@ const Workshops = () => {
           <div className="py-6">
             <div className="flex flex-col justify-between gap-8 lg:flex-row">
               <div className="flex h-full w-full flex-col justify-between lg:w-[70%]">
-                <h2 className="mb-4 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-8 md:ml-6 md:text-[36px]">
+                <h2
+                  className={cn(
+                    workshopStyles.lecture_session_title,
+                    'mb-4 text-3xl text-[24px] font-bold text-[#C6742B] md:mb-8 md:ml-6 md:text-[36px]',
+                  )}
+                >
                   Lecture Session Highlights:
                 </h2>
-                <ul className="ml-6 max-w-[900px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px] xl:text-[24px] 2xl:text-[26px]">
+                <ul
+                  className={cn(
+                    workshopStyles.lecture_session_content,
+                    'ml-6 max-w-[1000px] list-disc space-y-4 text-[16px] text-[#173552] md:ml-16 md:text-[24px] xl:text-[24px] 2xl:text-[26px]',
+                  )}
+                >
                   <li>
                     <span className="font-bold">
                       Understanding the Built Environment:
@@ -242,7 +254,7 @@ const Workshops = () => {
                     waste, and designing with minimal environmental impact.
                   </li>
                   <li>
-                    <span className="font-bold">Building with Purpose:</span>
+                    <span className="font-bold">Building with Purpose: </span>
                     Understand how to create spaces that blend comfort,
                     functionality, and environmental harmony through humane
                     design and site analysis.
@@ -250,7 +262,12 @@ const Workshops = () => {
                 </ul>
               </div>
 
-              <div className="mt-0 flex h-full w-full flex-col gap-4 md:mt-12 lg:w-[30%]">
+              <div
+                className={cn(
+                  workshopStyles.lecture_session_images,
+                  'mt-0 flex h-full w-full flex-col gap-4 md:mt-12 lg:w-[30%]',
+                )}
+              >
                 <div className="relative aspect-video h-full w-full lg:aspect-[5/3.5] xl:aspect-[2/1]">
                   <Image
                     src={Workshope6}
