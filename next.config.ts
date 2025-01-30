@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         hostname: '**.tacdesignlab.org',
       },
       {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      },
+      {
         protocol: 'http',
         hostname: 'localhost',
         port: '1337',

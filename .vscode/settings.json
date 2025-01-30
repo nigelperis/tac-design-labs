@@ -8,5 +8,18 @@
   "[html][typescript][typescriptreact][javascript][javascriptreact][css][json]": {
     "files.eol": "\n"
   },
-  "cSpell.words": ["Ashams", "embla", "svgs"]
+  "cSpell.words": ["Ashams", "embla", "svgs"],
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/{info,lfs,logs,refs,objects}/**",
+    ".git/{index,*refs,*HEAD}",
+    ".vscode",
+    ".vscode-insiders",
+    "public",
+    "next.config.ts",
+    "next.config.js",
+    "tailwind.config.ts"
+  ]
 }

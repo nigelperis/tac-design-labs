@@ -1,13 +1,15 @@
 import React from 'react';
 import { env } from '~/env';
-import { listBlogs } from '~/services/list-blogs';
 import Link from 'next/link';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
+import { getPlaceholderImage } from '~/utils/get-placeholder-image';
 
 import OurWorkBgButton from '~/assets/images/button-background.png';
 import mainBlogsBackground from '~/assets/images/contact-us-bg.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
+
+import { listBlogs } from '~/services/list-blogs';
 
 import { BlogCard } from './components/blog-card';
 import NoBlogFound from './components/no-blog-found';
@@ -20,6 +22,7 @@ async function BlogMainPage() {
     height: mainBlogsBackground.height,
   });
   const blogsList = await listBlogs();
+
   return (
     <div className="relative font-primary">
       <section
@@ -31,7 +34,7 @@ async function BlogMainPage() {
         <h1 className="mb-10 text-center text-[26px] font-bold text-primary-500 md:text-start md:text-5xl">
           BLOGS
         </h1>
-        <div className="grid-cols1 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
           {blogsList ? (
             blogsList.map((blog, index) => (
               <BlogCard
@@ -41,16 +44,20 @@ async function BlogMainPage() {
                 description={blog.shortDescription}
                 postedBy={blog.authorName}
                 publishedDate={new Date(blog.publishedOn)}
-                imageUrl={new URL(
-                  blog.coverImage.url ?? '',
-                  env.NEXT_PUBLIC_STRAPI_URL,
-                ).toString()}
+                imageUrl={
+                  blog.coverImage.url
+                    ? new URL(
+                        blog.coverImage.url,
+                        env.NEXT_PUBLIC_STRAPI_URL,
+                      ).toString()
+                    : getPlaceholderImage()
+                }
                 imageWidth={blog.coverImage.width ?? 0}
                 imageHeight={blog.coverImage.height ?? 0}
               />
             ))
           ) : (
-            <NoBlogFound />
+            <NoBlogFound className="md:col-span-2 md:w-1/2 xl:col-span-3" />
           )}
         </div>
       </section>
