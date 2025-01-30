@@ -17,6 +17,8 @@ const config = {
     '^react$',
     '<THIRD_PARTY_MODULES>',
     '',
+    '^~/env',
+    '',
     '^~/components/ui/(.*)$',
     '',
     '^~/components/(.*)$',
