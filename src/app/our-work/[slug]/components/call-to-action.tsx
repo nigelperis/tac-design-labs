@@ -100,7 +100,7 @@ function CallToAction(props: CallToActionProps) {
             width={0}
             height={0}
             sizes="100vw"
-            className="absolute bottom-[3%] right-1/2 mx-auto mt-1 h-[79px] w-[215px] translate-x-1/2 transform hover:scale-105 lg:bottom-[10%] lg:mx-0 lg:mt-0 lg:h-[92px] lg:w-[262px]"
+            className="absolute bottom-[3%] right-1/2 z-10 mx-auto mt-1 h-[79px] w-[215px] translate-x-1/2 transform hover:scale-105 lg:bottom-[10%] lg:mx-0 lg:mt-0 lg:h-[92px] lg:w-[262px]"
           />
         </Link>
       </div>
