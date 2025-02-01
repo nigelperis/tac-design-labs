@@ -78,13 +78,18 @@ export default function Home() {
           backgroundImage: optimizedLandingPageHeroBackground,
         }}
       >
-        <div className="ml-auto w-full">
-          <div className="relative h-[50vh] w-full md:-mr-8 md:ml-auto md:aspect-[1.3] md:h-auto md:rounded-md md:pb-9 md:pt-14 xl:max-w-2xl">
+        <div className="ml-auto overflow-x-visible md:w-full">
+          <div
+            className={cn(
+              homePageStyles.hero_image,
+              'relative h-[50vh] md:-mr-8 md:mb-9 md:ml-auto md:mt-14 md:aspect-[1.4] md:h-auto md:w-full md:rounded-md xl:max-w-2xl',
+            )}
+          >
             <Image
               src={landingPageHeroImage}
               placeholder="blur"
               alt="Landing page hero image "
-              className="h-full w-full object-cover md:object-fill"
+              className="h-full object-cover md:w-full md:object-contain"
             />
             <Image
               src={landingPageAssetGrass}
@@ -96,10 +101,20 @@ export default function Home() {
         </div>
 
         <div className="relative mt-8 flex flex-col items-start justify-center p-8 pt-0 sm:pt-8 md:pl-24">
-          <h1 className="whitespace-nowrap text-center font-primary text-[38px] font-bold text-primary-500 md:text-4xl lg:text-5xl xl:text-6xl">
+          <h1
+            className={cn(
+              homePageStyles.tac_title,
+              'whitespace-nowrap text-center font-primary text-[38px] font-bold text-primary-500 md:text-4xl lg:text-5xl xl:text-6xl',
+            )}
+          >
             TAC Design LAB
           </h1>
-          <p className="my-6 text-balance font-primary text-[22px] font-normal text-primary-500 md:text-2xl lg:text-3xl">
+          <p
+            className={cn(
+              homePageStyles.tac_subtitle,
+              'my-6 text-balance font-primary text-[22px] font-normal text-primary-500 md:text-2xl lg:text-3xl',
+            )}
+          >
             Where Every Space Is A Step Towards Sustainability
           </p>
         </div>

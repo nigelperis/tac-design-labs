@@ -1,5 +1,15 @@
 /* 80% */
 @media (max-width: 1920px) {
+  .hero_image {
+    max-width: 58rem;
+  }
+  .tac_title {
+    font-size: 5.8rem;
+  }
+  .tac_subtitle {
+    font-size: 3rem;
+    line-height: 3.9rem;
+  }
   .main_title {
     font-size: 4.75rem;
   }
@@ -17,6 +27,16 @@
 
 /* 90% */
 @media (max-width: 1770px) {
+  .hero_image {
+    max-width: 53rem;
+  }
+  .tac_title {
+    font-size: 5.2rem;
+  }
+  .tac_subtitle {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
   .main_title {
     font-size: 4.3rem;
   }
@@ -33,6 +53,16 @@
 
 /* 100% */
 @media (max-width: 1620px) {
+  .hero_image {
+    max-width: 48rem;
+  }
+  .tac_title {
+    font-size: 4.3rem;
+  }
+  .tac_subtitle {
+    font-size: 2.3rem;
+    line-height: 3rem;
+  }
   .main_title {
     font-size: 3.5rem;
   }
@@ -49,6 +79,16 @@
 
 /* 110% */
 @media (max-width: 1470px) {
+  .hero_image {
+    max-width: 42.2rem;
+  }
+  .tac_title {
+    font-size: 4rem;
+  }
+  .tac_subtitle {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
   .main_title {
     font-size: 3.2rem;
   }
@@ -65,6 +105,16 @@
 
 /* 125% */
 @media (max-width: 1245px) {
+  .hero_image {
+    max-width: 37.5rem;
+  }
+  .tac_title {
+    font-size: 3.3rem;
+  }
+  .tac_subtitle {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
   .main_title {
     font-size: 3rem;
   }
@@ -97,6 +147,13 @@
 
 /* mobile  */
 @media (max-width: 768px) {
+  .tac_title {
+    font-size: 38px;
+  }
+  .tac_subtitle {
+    font-size: 22px;
+    text-wrap: balance;
+  }
   .main_title {
     font-size: 2.25rem;
     padding-left: 2rem;
