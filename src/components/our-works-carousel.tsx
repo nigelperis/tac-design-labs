@@ -53,6 +53,7 @@ const OurWorkCarousel: React.FC = () => {
                     fill
                     alt={`${itm.name} Background`}
                     className="rounded-md object-cover md:rounded-xl"
+                    placeholder="blur"
                   />
 
                   {/* Text Content */}
