@@ -23,7 +23,7 @@ import landingPageHeroImage from '~/assets/images/landing-page-hero-image.png';
 import landingPagePortfolioHouse1 from '~/assets/images/landing-page-portfolio-house-1.png';
 import landingPagePortfolioHouse2 from '~/assets/images/landing-page-portfolio-house-2.png';
 import landingPagePortfolioHouse3 from '~/assets/images/landing-page-portfolio-house-3.png';
-import landingPagePortfolioHouse4 from '~/assets/images/landing-page-portfolio-house-4.png';
+import landingPagePortfolioHouse4 from '~/assets/images/landing-page-portfolio-house-4.jpg';
 import landingPagePortfolioHouse5 from '~/assets/images/landing-page-portfolio-house-5.png';
 import landingPageWoodenBoardBackground from '~/assets/images/landing-page-wooden-board-bg.png';
 
