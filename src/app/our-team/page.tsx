@@ -52,7 +52,7 @@ const teamMemberDetails: TeamMember[] = [
     position: 'Principal Architect',
   },
   {
-    name: 'SARADHA PRIYA CS',
+    name: 'SARADHA PRIYA C S',
     summary: `Having over seven years of experience in civil engineering and project management, Saradha Priya C S is a committed professional at TAC Design LAB. She holds a B.Tech in Civil Engineering and has a rich background working with COSTFORD (Centre of Science & Technology for Rural Development) in Thiruvananthapuram. During her tenure at COSTFORD, she played a crucial role in various government projects, including the setup of office facilities, market improvements, and community health center renovations.<br/><br/>Since joining TAC Design LAB in April 2023, Saradha has been instrumental in managing and executing projects such as the renovation of residential buildings and the construction of eco-friendly homes using reused materials. Her expertise in site supervision, material planning, and bill certification ensures the seamless execution of every project. Saradha's commitment to sustainable development and meticulous attention to detail make her an invaluable asset to the team.
     `,
     picture: priya,
@@ -67,7 +67,7 @@ const teamMemberDetails: TeamMember[] = [
   },
   {
     name: 'ASWATHY U V',
-    summary: `She is a proficient Architectural Assistant at TAC Design LAB with a solid background in interior design and architectural drafting. Aswathy holds a Diploma in Interior Designing from CADPOINT, Trivandrum, along with an Architectural Draughtsman certification from Govt ITI for Women, Kazhakuttam, where she excelled with a 94.5% score. Aswathy's academic background is complemented by hands-on experience in residential and office building projects, making her a valuable asset to the team`,
+    summary: `She is a proficient Architectural Assistant at TAC Design LAB with a solid background in interior design and architectural drafting. Aswathy holds a Diploma in Interior Designing from CADPOINT, Trivandrum, along with an Architectural Draughtsman certification from Govt ITI for Women, Kazhakuttam, where she excelled with a 94.5% score. Aswathy's academic background is complemented by hands-on experience in residential and office building projects, making her a valuable asset to the team.`,
     picture: aswathi,
     position: 'Architectural Assistant',
   },

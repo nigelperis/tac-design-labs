@@ -5,3 +5,12 @@
     top: -33%;
   }
 }
+
+@media (min-width: 1920px) {
+  .call_to_action_image {
+    /* object-position: 50% 25%; */
+    height: 395px;
+    width: 42vw;
+    top: -35%;
+  }
+}
