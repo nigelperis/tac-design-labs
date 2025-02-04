@@ -1,16 +1,24 @@
-@media (min-width: 1700px) and (max-width: 2048px) {
+@media (min-width: 1300px) and (max-width: 1500px) {
   .call_to_action_image {
     /* object-position: 50% 25%; */
-    height: 378px;
-    top: -33%;
+    height: 320px;
+    width: 640px;
+    top: -32%;
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1500px) and (max-width: 1700px) {
   .call_to_action_image {
-    /* object-position: 50% 25%; */
-    height: 395px;
-    width: 42vw;
+    height: 350px;
+    width: 680px;
     top: -35%;
+  }
+}
+
+@media (min-width: 1700px) and (max-width: 2048px) {
+  .call_to_action_image {
+    height: 390px;
+    width: 740px;
+    top: -34%;
   }
 }

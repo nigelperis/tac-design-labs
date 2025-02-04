@@ -14,6 +14,7 @@ interface ImageGridProps {
   alignment?: 'main-left' | 'main-right' | 'main-bottom';
   title?: string | null;
   specialStyles?: boolean;
+  centerObjectPosition?: boolean;
 }
 
 function ImageGrid(props: ImageGridProps) {
@@ -24,6 +25,7 @@ function ImageGrid(props: ImageGridProps) {
     subImage2,
     alignment = 'main-left',
     specialStyles = false,
+    centerObjectPosition = false,
   } = props;
 
   return (
@@ -47,7 +49,8 @@ function ImageGrid(props: ImageGridProps) {
         className={cn(
           imageGridStyles.image_base_style,
           imageGridStyles.main_image,
-          specialStyles ? 'lg:!h-[50vh]' : '',
+          // specialStyles ? 'lg:!h-[50vh]' : '',
+          centerObjectPosition ? imageGridStyles.center_object_position : '',
         )}
         src={mainImage}
         placeholder="blur"

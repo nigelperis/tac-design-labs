@@ -318,6 +318,9 @@ function StoryCard(props: StoryCardProps) {
     alignment,
     // specialStyles = false,
   } = props;
+
+  const isImage10 = mainImage === aboutUsImage10;
+
   return (
     <li className="group">
       <div className="md:hidden md:leading-[48px]">{title} </div>
@@ -331,10 +334,11 @@ function StoryCard(props: StoryCardProps) {
             subImage2={subImage2}
             alignment={alignment}
             // specialStyles={specialStyles}
+            centerObjectPosition={isImage10} // Pass the prop here
           />
         </div>
 
-        <div className="flex-grow basis-1/2">
+        <div className="flex-grow basis-1/2 lg:basis-[42%] xl:basis-[45%] 2xl:basis-1/2">
           <div className="mb-5 hidden md:block md:leading-[48px]">{title}</div>
           <p
             className={cn(

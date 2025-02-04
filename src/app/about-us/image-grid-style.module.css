@@ -28,6 +28,11 @@
 .main_image {
   grid-area: main-image;
   display: none;
+  object-position: 85% center;
+}
+
+.center_object_position {
+  object-position: center;
 }
 
 .sub_image_1 {
@@ -45,7 +50,7 @@
 }
 
 .main_right {
-  grid-template-areas: ' main-image';
+  grid-template-areas: 'main-image';
 }
 
 .main_bottom {
