@@ -166,7 +166,6 @@ function AboutUsPage() {
               subImage2={aboutUsImage15}
               description="Beyond our projects, TAC Design LAB engages with the community through collaborations with architecture and engineering colleges, advocating for sustainable practices, and conducting hands-on workshops in bamboo, mud, and brick masonry. Our vision is to reduce the building industry's environmental impact and create a sustainable future."
               alignment="main-left"
-              specialStyles={true}
             />
           </ul>
         </div>
@@ -304,7 +303,6 @@ interface StoryCardProps {
   subImage2: string | StaticImport;
   description: string;
   alignment?: 'main-left' | 'main-right' | 'main-bottom';
-  specialStyles?: boolean;
 }
 
 function StoryCard(props: StoryCardProps) {
@@ -316,7 +314,6 @@ function StoryCard(props: StoryCardProps) {
     subImage1,
     subImage2,
     alignment,
-    // specialStyles = false,
   } = props;
 
   const isImage10 = mainImage === aboutUsImage10;
@@ -333,8 +330,7 @@ function StoryCard(props: StoryCardProps) {
             subImage1={subImage1}
             subImage2={subImage2}
             alignment={alignment}
-            // specialStyles={specialStyles}
-            centerObjectPosition={isImage10} // Pass the prop here
+            centerObjectPosition={isImage10}
           />
         </div>
 
