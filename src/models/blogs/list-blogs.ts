@@ -118,7 +118,7 @@ interface Pagination {
 }
 
 export interface ListBlogResponse {
-  data: Blog[];
+  data?: Blog[];
   meta?: {
     pagination?: Pagination;
   };

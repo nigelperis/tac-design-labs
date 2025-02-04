@@ -67,6 +67,6 @@ interface Blog {
 }
 
 export interface BlogResponse {
-  data: Blog;
+  data?: Blog;
   meta: unknown;
 }

@@ -152,6 +152,8 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
               <figure>
                 <Image
                   draggable={false}
+                  width={args.image.width}
+                  height={args.image.height}
                   src={new URL(
                     args.image.url,
                     env.NEXT_PUBLIC_STRAPI_URL,

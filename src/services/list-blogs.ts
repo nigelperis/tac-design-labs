@@ -34,7 +34,11 @@ export async function listBlogs(args?: {
     queryParams,
   });
 
-  const mappedData = responseData?.data.map<BlogListItem>((itm) => {
+  if (!responseData?.data || responseData.data.length === 0) {
+    return undefined;
+  }
+
+  const mappedData = responseData.data.map<BlogListItem>((itm) => {
     return {
       documentId: itm.documentId,
       title: itm.title,
