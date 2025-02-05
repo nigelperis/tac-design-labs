@@ -39,6 +39,8 @@ export default async function Page({
           imageWidth={blog.coverImage.width ?? 0}
           imageHeight={blog.coverImage.height ?? 0}
           altText={blog.title}
+          author={blog.authorName}
+          publishedDate={blog.publishedOn}
         />
         <div className="p-5 md:p-28">
           {<StrapiBlocksRenderer content={blog.blogContent} />}

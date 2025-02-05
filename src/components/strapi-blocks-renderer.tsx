@@ -12,6 +12,7 @@ import type { BlocksContent } from '@strapi/blocks-react-renderer';
 interface StrapiBlocksRendererProps {
   content: BlocksContent;
 }
+
 type LinkTarget = '_self' | '_blank';
 
 function getLinkTarget(url: string): LinkTarget {
@@ -29,10 +30,12 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
             case 1: {
               return (
                 <h1
-                  className="md:leading-16 text-4xl font-bold leading-10 text-[#C6742B] md:text-6xl"
+                  className="text-[30px] md:text-[44px]"
                   style={{
-                    letterSpacing: '5%',
+                    color: '#C6742B',
+                    fontWeight: '700',
                     paddingBottom: '23px',
+                    lineHeight: '45px',
                   }}
                 >
                   {children}
@@ -43,10 +46,12 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
             case 2: {
               return (
                 <h2
-                  className="md:leading-16 text-3xl font-bold leading-10 text-[#C6742B] md:text-5xl"
+                  className="text-[26px] md:text-[36px]"
                   style={{
-                    letterSpacing: '5%',
+                    color: '#C6742B',
+                    fontWeight: '700',
                     paddingBottom: '23px',
+                    lineHeight: '45px',
                   }}
                 >
                   {children}
@@ -56,10 +61,12 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
             case 3: {
               return (
                 <h3
-                  className="md:leading-16 text-2xl font-bold leading-10 text-[#C6742B] md:text-4xl"
+                  className="text-[23px] md:text-[28px]"
                   style={{
-                    letterSpacing: '5%',
+                    color: '#C6742B',
+                    fontWeight: '700',
                     paddingBottom: '23px',
+                    lineHeight: '45px',
                   }}
                 >
                   {children}
@@ -69,10 +76,12 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
             case 4: {
               return (
                 <h4
-                  className="md:leading-16 text-xl font-bold leading-10 text-[#C6742B] md:text-3xl"
+                  className="text-xl md:text-2xl"
                   style={{
-                    letterSpacing: '5%',
+                    color: '#C6742B',
+                    fontWeight: '700',
                     paddingBottom: '23px',
+                    lineHeight: '45px',
                   }}
                 >
                   {children}
@@ -82,10 +91,12 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
             case 5: {
               return (
                 <h5
-                  className="md:leading-16 text-lg font-bold leading-10 text-[#C6742B] md:text-2xl"
+                  className="text-lg md:text-xl"
                   style={{
-                    letterSpacing: '5%',
+                    color: '#C6742B',
+                    fontWeight: '700',
                     paddingBottom: '23px',
+                    lineHeight: '45px',
                   }}
                 >
                   {children}
@@ -95,10 +106,12 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
             case 6: {
               return (
                 <h6
-                  className="md:leading-16 text-base font-bold leading-10 text-[#C6742B] md:text-xl"
+                  className="text-base md:text-lg"
                   style={{
-                    letterSpacing: '5%',
+                    color: '#C6742B',
+                    fontWeight: '700',
                     paddingBottom: '23px',
+                    lineHeight: '45px',
                   }}
                 >
                   {children}
@@ -136,7 +149,7 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
         image: (args) => {
           if (args.image.url) {
             return (
-              <>
+              <figure>
                 <Image
                   draggable={false}
                   src={new URL(
@@ -144,13 +157,21 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
                     env.NEXT_PUBLIC_STRAPI_URL,
                   ).toString()}
                   alt={args.image.alternativeText ?? 'Blog image'}
+                  data-img-type={args.image.alternativeText}
                 />
                 {args.image.caption ? (
-                  <caption>{args.image.caption}</caption>
+                  <figcaption
+                    className="text-center text-[10px] italic md:text-[20px] md:text-xl"
+                    style={{
+                      paddingBottom: '23px',
+                    }}
+                  >
+                    {args.image.caption}
+                  </figcaption>
                 ) : (
                   <></>
                 )}
-              </>
+              </figure>
             );
           }
           return <></>;
