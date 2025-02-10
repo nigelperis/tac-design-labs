@@ -11,7 +11,6 @@ import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer'
 
 import OurWorkBgButton from '~/assets/images/button-background.png';
 import servicePageBackground from '~/assets/images/career-page-background.png';
-import comingsoon from '~/assets/images/commingsoon.webp';
 import conservationProject from '~/assets/images/conservation-project.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
 import hospitality from '~/assets/images/hospilatiy-service.png';
@@ -85,7 +84,6 @@ const services: ServiceCardInfo[] = [
 
 interface CarouselItemProps {
   youtubeLink?: string;
-  imageLink?: string;
   text: string;
   author: string;
 }
@@ -104,15 +102,14 @@ const carouselItems: CarouselItemProps[] = [
     author: '~ Joe and Athira',
   },
   {
-    imageLink: comingsoon.src,
-    text: 'A glimpse into how the Sanchi Bags Tailoring Unit redefines sustainability and innovation in commercial spaces.',
-    author: '',
+    youtubeLink: 'https://youtube.com/embed/P-sFe-UYqD4?si=1IAfM27ez2nKi-0E',
+    text: 'Basically, I only gave an idea of what we were expecting to Ashams and his team, and he wonderfully designed and provided me with a draft of the construction and 3D design of the building. We are happy with the architecture and the way it was executed.',
+    author: '~ Zafer Ameer',
   },
 ];
 
 const CarouselItem: React.FC<CarouselItemProps> = ({
   youtubeLink,
-  imageLink,
   text,
   author,
 }) => (
@@ -128,15 +125,6 @@ const CarouselItem: React.FC<CarouselItemProps> = ({
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-      )}
-      {!youtubeLink && imageLink && (
-        <Image
-          className="rounded-[24px] object-cover shadow-lg md:mt-6"
-          src={imageLink}
-          alt="Coming Soon"
-          width={400}
-          height={400}
-        />
       )}
     </div>
     <div className="px-4">
@@ -240,7 +228,6 @@ const ServicePage = () => {
                       youtubeLink={item.youtubeLink}
                       text={item.text}
                       author={item.author}
-                      imageLink={item.imageLink}
                     />
                   </ZoomCarouselSlide>
                 ))}

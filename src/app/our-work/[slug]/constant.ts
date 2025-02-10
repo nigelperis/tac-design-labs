@@ -493,8 +493,8 @@ const sanchiBagsData: WorkDetails = {
   outcome:
     'The Sanchi Bags Tailoring Unit is not just a place of work but a testament to the possibility of merging architectural design with sustainable practices, creating a space that supports both the business and the community it serves.',
   testimonial:
-    'A heartfelt testimonial from the clients of Project Sanchi Bags, highlighting the unique design, sustainable features, and the personalized approach that turned their dream home into a reality.',
-  testimonialVideo: '',
+    'A walkthrough of the Sanchi Bags Tailoring Unit, featuring architect Ashams Ravi and a heartfelt testimonial from the owner on their experience working with TAC Design LAB.',
+  testimonialVideo: 'https://youtube.com/embed/P-sFe-UYqD4?si=1IAfM27ez2nKi-0E',
   admiration:
     'The Sanchi Bags project showcases the power of sustainable design to uplift local communities and promote ethical production. This initiative goes beyond architecture, representing a fusion of creativity, sustainability, and social impact.',
   callToAction: {
