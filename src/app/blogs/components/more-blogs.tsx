@@ -1,32 +1,62 @@
+'use client';
+
 import React, { useRef, useState } from 'react';
 
-import { blogs } from '../constants/blogs';
-import { BlogCard } from './blog-card';
-import type { BlogCardDetail } from './blog-card';
+import { env } from '~/env';
 
-const MoreBlogs = (props: { currentBlogKey: number }) => {
-  const otherBlogs = blogs.filter(
-    (_, index) => index + 1 !== props.currentBlogKey,
-  );
+import { getPlaceholderImage } from '~/utils/get-placeholder-image';
+
+import { type BlogListItem } from '~/services/list-blogs';
+
+import { BlogCard } from './blog-card';
+import NoBlogFound from './no-blog-found';
+
+function MoreBlogs(props: { blogs?: BlogListItem[]; currentBlogSlug: string }) {
+  const otherBlogs = props.blogs
+    ?.filter((blog) => blog.slug !== props.currentBlogSlug)
+    .slice(0, 3);
+
   return (
     <div className="flex flex-col gap-5 border-y-[10px] bg-surface-500 py-5 md:gap-12 md:px-28 md:py-16">
       <h2 className="text-center text-3xl font-bold text-accent-500 md:text-left md:text-5xl">
         More Blogs
       </h2>
       <div className="hidden gap-5 md:grid lg:grid-cols-2 xl:grid-cols-3">
-        {/* TODO: Limit the more blogs upto 3 blogs only */}
-        {otherBlogs.map((blog, index) => (
-          <BlogCard key={index} {...blog} />
-        ))}
+        {otherBlogs && otherBlogs.length > 0 ? (
+          otherBlogs.map((blog, index) => (
+            <BlogCard
+              key={index}
+              title={blog.title}
+              blogURL={`/blogs/${blog.slug}`}
+              description={blog.shortDescription}
+              postedBy={blog.authorName}
+              publishedDate={new Date(blog.publishedOn)}
+              imageUrl={
+                blog.coverImage.url
+                  ? new URL(
+                      blog.coverImage.url,
+                      env.NEXT_PUBLIC_STRAPI_URL,
+                    ).toString()
+                  : getPlaceholderImage()
+              }
+              imageWidth={blog.coverImage.width ?? 0}
+              imageHeight={blog.coverImage.height ?? 0}
+            />
+          ))
+        ) : (
+          <NoBlogFound className="md:col-span-2 md:w-1/2 xl:col-span-3" />
+        )}
       </div>
       <div className="relative block md:hidden">
-        <MobileMoreBlogs blog={otherBlogs} />
+        <MobileMoreBlogs otherBlogs={otherBlogs} />
       </div>
     </div>
   );
-};
+}
 
-const MobileMoreBlogs = (props: { blog: BlogCardDetail[] }) => {
+function MobileMoreBlogs(props: { otherBlogs: BlogListItem[] | undefined }) {
+  const { otherBlogs } = props;
+
   const [scrollPosition, setScrollPosition] = useState({
     scrollWidth: 0,
     scrollLeft: 0,
@@ -58,28 +88,52 @@ const MobileMoreBlogs = (props: { blog: BlogCardDetail[] }) => {
         <div className="shrink-0 snap-center">
           <div className="w-3 shrink-0"></div>
         </div>
-        {props.blog.map((blog, index) => (
-          <div
-            key={index}
-            className={`max-w-[80vw] shrink-0 snap-center transition duration-1000 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-50'} `}
-          >
-            <BlogCard key={index} {...blog} />
-          </div>
-        ))}
+        {otherBlogs && otherBlogs.length > 0 ? (
+          otherBlogs.map((blog, index) => (
+            <div
+              key={index}
+              className={`max-w-[80vw] shrink-0 snap-center transition duration-1000 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-50'} `}
+            >
+              <BlogCard
+                title={blog.title}
+                blogURL={`/blogs/${blog.slug}`}
+                description={blog.shortDescription}
+                postedBy={blog.authorName}
+                publishedDate={new Date(blog.publishedOn)}
+                imageUrl={
+                  blog.coverImage.url
+                    ? new URL(
+                        blog.coverImage.url,
+                        env.NEXT_PUBLIC_STRAPI_URL,
+                      ).toString()
+                    : getPlaceholderImage()
+                }
+                imageWidth={blog.coverImage.width ?? 0}
+                imageHeight={blog.coverImage.height ?? 0}
+              />
+            </div>
+          ))
+        ) : (
+          <NoBlogFound className="md:col-span-2 md:w-1/2 xl:col-span-3" />
+        )}
         <div className="shrink-0 snap-center">
           <div className="w-3 shrink-0"></div>
         </div>
       </div>
       <div className="-mt-2 flex justify-center gap-2 pb-4">
-        {props.blog.map((_, i) => (
-          <div
-            key={i}
-            className={`h-[10px] w-[10px] rounded-full ${i === activeIndex ? 'w-[27px] border-none bg-primary-600' : 'border border-secondary-200 bg-white'}`}
-          ></div>
-        ))}
+        {otherBlogs ? (
+          otherBlogs.map((_, i) => (
+            <div
+              key={i}
+              className={`h-[10px] w-[10px] rounded-full ${i === activeIndex ? 'w-[27px] border-none bg-primary-600' : 'border border-secondary-200 bg-white'}`}
+            ></div>
+          ))
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );
-};
+}
 
 export default MoreBlogs;

@@ -1,21 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
 
+import { env } from '~/env';
+
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
+import { getPlaceholderImage } from '~/utils/get-placeholder-image';
 
 import OurWorkBgButton from '~/assets/images/button-background.png';
 import mainBlogsBackground from '~/assets/images/contact-us-bg.png';
 import designDreamDeliverBG from '~/assets/images/design-dream-deliver-bg.jpg';
 
-import { BlogCard } from './components/blog-card';
-import { blogs } from './constants/blogs';
+import { listBlogs } from '~/services/list-blogs';
 
-const BlogMainPage = () => {
+import { BlogCard } from './components/blog-card';
+import NoBlogFound from './components/no-blog-found';
+
+async function BlogMainPage() {
   const optimizedMainBlogsBackground = getOptimizedBackgroundImage({
     src: mainBlogsBackground.src,
     width: mainBlogsBackground.width,
     height: mainBlogsBackground.height,
   });
+  const blogsList = await listBlogs();
+
   return (
     <div className="relative font-primary">
       <section
@@ -27,16 +34,37 @@ const BlogMainPage = () => {
         <h1 className="mb-10 text-center text-[26px] font-bold text-primary-500 md:text-start md:text-5xl">
           BLOGS
         </h1>
-        <div className="grid-cols1 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
-          {blogs.map((blog, index) => (
-            <BlogCard key={index} {...blog} />
-          ))}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
+          {blogsList ? (
+            blogsList.map((blog, index) => (
+              <BlogCard
+                key={index}
+                title={blog.title}
+                blogURL={`/blogs/${blog.slug}`}
+                description={blog.shortDescription}
+                postedBy={blog.authorName}
+                publishedDate={new Date(blog.publishedOn)}
+                imageUrl={
+                  blog.coverImage.url
+                    ? new URL(
+                        blog.coverImage.url,
+                        env.NEXT_PUBLIC_STRAPI_URL,
+                      ).toString()
+                    : getPlaceholderImage()
+                }
+                imageWidth={blog.coverImage.width ?? 0}
+                imageHeight={blog.coverImage.height ?? 0}
+              />
+            ))
+          ) : (
+            <NoBlogFound className="md:col-span-2 md:w-1/2 xl:col-span-3" />
+          )}
         </div>
       </section>
       <ConsultationCTA />
     </div>
   );
-};
+}
 
 const ConsultationCTA = () => {
   const optimizedBG = getOptimizedBackgroundImage({
