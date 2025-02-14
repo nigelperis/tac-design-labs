@@ -33,7 +33,7 @@ const BlogHero = (props: BlogHeroProps) => {
         {props.title}
       </h1>
       <h3 className="absolute bottom-5 right-5 text-sm leading-[5%] md:text-2xl">
-        by {props.author} | {format(props.publishedDate, 'dd-MM-yyyy')}
+        by {props.author} | {format(props.publishedDate, 'dd MMM yyyy')}
       </h3>
     </div>
   );

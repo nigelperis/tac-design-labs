@@ -159,25 +159,21 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
                     env.NEXT_PUBLIC_STRAPI_URL,
                   ).toString()}
                   alt={args.image.alternativeText ?? 'Blog image'}
-                  data-img-type={args.image.alternativeText}
+                  data-img-type={args.image.alternativeText || 'default'}
                 />
-                {args.image.caption ? (
-                  <figcaption
-                    className="text-center text-[10px] italic md:text-[20px] md:text-xl"
-                    style={{
-                      paddingBottom: '23px',
-                    }}
-                  >
+
+                {args.image.caption && (
+                  <figcaption className="pt-6 text-center text-[10px] italic md:text-[20px]">
                     {args.image.caption}
                   </figcaption>
-                ) : (
-                  <></>
                 )}
               </figure>
             );
           }
+
           return <></>;
         },
+
         list: ({ children }) => {
           return (
             <ul

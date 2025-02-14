@@ -8,6 +8,7 @@ export interface BlogListItem {
   slug: string;
   coverImage: Media;
   shortDescription: string;
+  metaDescription: string;
   authorName: string;
   publishedOn: string;
 }
@@ -44,6 +45,7 @@ export async function listBlogs(args?: {
       title: itm.title,
       slug: itm.slug,
       shortDescription: itm.shortDescription,
+      metaDescription: itm.metaDescription,
       coverImage: itm.coverImage,
       authorName: itm.author?.name ?? 'admin',
       publishedOn: itm.publishedOn ?? itm.publishedAt,

@@ -10,6 +10,7 @@ interface Blog {
   slug: string;
   coverImage: Media;
   shortDescription: string;
+  metaDescription: string;
   blogContent: BlocksContent;
   authorName: string;
   publishedOn: string;
@@ -33,6 +34,7 @@ export async function getBlog(slug: string): Promise<Blog | undefined> {
       title,
       slug: fetchedSlug,
       shortDescription,
+      metaDescription,
       coverImage,
       author,
       publishedOn,
@@ -44,6 +46,7 @@ export async function getBlog(slug: string): Promise<Blog | undefined> {
       title,
       slug: fetchedSlug,
       shortDescription,
+      metaDescription,
       coverImage,
       authorName: author?.name ?? 'admin',
       publishedOn: publishedOn ?? firstItem.publishedAt,

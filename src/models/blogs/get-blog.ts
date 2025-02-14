@@ -58,6 +58,7 @@ interface Blog {
   title: string;
   publishedOn?: string;
   shortDescription: string;
+  metaDescription: string;
   mainContent: BlocksContent;
   coverImage: CoverImage;
   author?: Author;
