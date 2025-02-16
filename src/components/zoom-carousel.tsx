@@ -1,6 +1,8 @@
 'use client';
 
 import React, {
+  Children,
+  cloneElement,
   createContext,
   useCallback,
   useContext,
@@ -184,8 +186,8 @@ export function ZoomCarouselSlide(props: ZoomCarouselItemProps) {
         className,
       )}
     >
-      {React.Children.map(children, (child) => {
-        return React.cloneElement(child, { 'data-slide-content': '' });
+      {Children.map(children, (child) => {
+        return cloneElement(child, { 'data-slide-content': '' });
       })}
     </div>
   );

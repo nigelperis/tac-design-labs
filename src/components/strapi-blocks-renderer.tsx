@@ -159,7 +159,7 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
                     env.NEXT_PUBLIC_STRAPI_URL,
                   ).toString()}
                   alt={args.image.alternativeText ?? 'Blog image'}
-                  data-img-type={args.image.alternativeText || 'default'}
+                  data-img-type={args.image.alternativeText ?? 'default'}
                 />
 
                 {args.image.caption && (
