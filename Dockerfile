@@ -1,17 +1,17 @@
-FROM  node:20-alpine3.20 as base
+FROM  node:20-alpine3.20 AS base
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 ENV HUSKY=0
 RUN npm i -g corepack
 
 
-FROM base as installer
+FROM base AS installer
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package.json pnpm-lock.yaml* .npmrc* ./
 RUN pnpm i --frozen-lockfile
 
 
-FROM base as builder
+FROM base AS builder
 WORKDIR /app
 ENV NODE_ENV=production
 ARG NEXT_PUBLIC_GOOGLE_ANALYTICS=""
@@ -24,7 +24,7 @@ COPY . .
 COPY --from=installer /app/node_modules ./node_modules
 RUN pnpm build
 
-FROM base as runner
+FROM base AS runner
 WORKDIR /app
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
