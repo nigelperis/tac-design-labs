@@ -1,0 +1,14 @@
+version: '3.8'
+name: 'tac-labs-frontend'
+
+services:
+  tac-labs-next-frontend:
+    build:
+      context: .
+      args:
+        - NEXT_PUBLIC_GOOGLE_ANALYTICS=${NEXT_PUBLIC_GOOGLE_ANALYTICS}
+        - NEXT_PUBLIC_CLARITY_PROJECT_ID=${NEXT_PUBLIC_CLARITY_PROJECT_ID}
+        - NEXT_PUBLIC_STRAPI_URL=${NEXT_PUBLIC_STRAPI_URL}
+    image: tac-labs/next-frontend
+    ports:
+      - '3000:3000'
