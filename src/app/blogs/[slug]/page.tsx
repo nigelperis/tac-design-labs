@@ -14,7 +14,7 @@ import type { Metadata } from 'next';
 export async function generateMetadata({
   params,
 }: {
-  params: { slug?: string };
+  params: Promise<{ slug?: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
 
@@ -24,7 +24,7 @@ export async function generateMetadata({
 
   if (!blog) return {};
 
-  const imageUrl = blog.coverImage?.url
+  const imageUrl = blog.coverImage.url
     ? new URL(blog.coverImage.url, env.NEXT_PUBLIC_STRAPI_URL).toString()
     : getPlaceholderImage();
 
@@ -39,8 +39,8 @@ export async function generateMetadata({
       images: [
         {
           url: imageUrl,
-          width: blog.coverImage?.width,
-          height: blog.coverImage?.height,
+          width: blog.coverImage.width,
+          height: blog.coverImage.height,
         },
       ],
     },
@@ -53,7 +53,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: { slug?: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug?: string }>;
+}) {
   const { slug } = await params;
 
   if (!slug) return <></>;
@@ -68,15 +72,15 @@ export default async function Page({ params }: { params: { slug?: string } }) {
       <BlogHero
         title={blog.title}
         image={
-          blog.coverImage?.url
+          blog.coverImage.url
             ? new URL(
                 blog.coverImage.url,
                 env.NEXT_PUBLIC_STRAPI_URL,
               ).toString()
             : getPlaceholderImage()
         }
-        imageWidth={blog.coverImage?.width ?? 0}
-        imageHeight={blog.coverImage?.height ?? 0}
+        imageWidth={blog.coverImage.width ?? 0}
+        imageHeight={blog.coverImage.height ?? 0}
         altText={blog.title}
         author={blog.authorName}
         publishedDate={blog.publishedOn}
