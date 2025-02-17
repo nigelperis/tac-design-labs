@@ -8,7 +8,9 @@ export interface BlogCardDetail {
   description: string;
   postedBy: string;
   publishedDate: Date;
-  imageUrl: StaticImageData;
+  imageUrl: StaticImageData | string;
+  imageWidth: number;
+  imageHeight: number;
   blogURL: string;
 }
 
@@ -20,6 +22,7 @@ export const BlogCard = (props: BlogCardDetail) => {
         src={props.imageUrl}
         alt="blog-image"
         height={400}
+        width={props.imageWidth}
         style={{
           boxShadow: '0px 4px 4px 0px #00000040',
         }}

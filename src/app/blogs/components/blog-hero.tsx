@@ -1,19 +1,24 @@
 import React from 'react';
+import { format } from 'date-fns';
 import { type StaticImageData } from 'next/image';
 
 import { getOptimizedBackgroundImage } from '~/utils/background-image-optimizer';
 
 interface BlogHeroProps {
   title: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
+  imageWidth: number;
+  imageHeight: number;
   altText: string;
+  author: string;
+  publishedDate: string;
 }
 
 const BlogHero = (props: BlogHeroProps) => {
   const optimizedBG = getOptimizedBackgroundImage({
-    src: props.image.src,
-    width: props.image.width,
-    height: props.image.height,
+    src: props.image,
+    width: props.imageWidth,
+    height: props.imageHeight,
   });
   return (
     <div
@@ -28,7 +33,7 @@ const BlogHero = (props: BlogHeroProps) => {
         {props.title}
       </h1>
       <h3 className="absolute bottom-5 right-5 text-sm leading-[5%] md:text-2xl">
-        by Admin | 28 Nov 2024
+        by {props.author} | {format(props.publishedDate, 'dd MMM yyyy')}
       </h3>
     </div>
   );
