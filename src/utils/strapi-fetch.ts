@@ -35,7 +35,7 @@ export async function strapiFetch<T>({
     }
   }
 
-  const res = await fetch(url.toString());
+  const res = await fetch(url.toString(), { cache: 'no-store' });
   const data = (await res.json()) as unknown as T;
 
   return data as unknown as T;
