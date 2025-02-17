@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic'  ;
 import { env } from '~/env';
 
 import StrapiBlocksRenderer from '~/components/strapi-blocks-renderer';
@@ -11,6 +10,8 @@ import { listBlogs } from '~/services/list-blogs';
 import BlogHero from '../components/blog-hero';
 import MoreBlogs from '../components/more-blogs';
 import type { Metadata } from 'next';
+
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,
