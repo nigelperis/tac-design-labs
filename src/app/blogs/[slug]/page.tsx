@@ -1,3 +1,4 @@
+export export const dynamic = 'force-dynamic'  ;
 import { env } from '~/env';
 
 import StrapiBlocksRenderer from '~/components/strapi-blocks-renderer';
