@@ -2,10 +2,9 @@
 
 import React from 'react';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
+import { env } from '~/env';
 import Image from 'next/image';
 import Link from 'next/link';
-
-import { env } from '~/env';
 
 import type { BlocksContent } from '@strapi/blocks-react-renderer';
 
@@ -105,15 +104,7 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
             }
             case 6: {
               return (
-                <h6
-                  className="text-base md:text-lg"
-                  style={{
-                    color: '#C6742B',
-                    fontWeight: '700',
-                    paddingBottom: '23px',
-                    lineHeight: '45px',
-                  }}
-                >
+                <h6 className="pt-6 text-center text-[10px] italic md:text-[20px]">
                   {children}
                 </h6>
               );
@@ -159,14 +150,8 @@ function StrapiBlocksRenderer(props: StrapiBlocksRendererProps) {
                     env.NEXT_PUBLIC_STRAPI_URL,
                   ).toString()}
                   alt={args.image.alternativeText ?? 'Blog image'}
-                  data-img-type={args.image.alternativeText ?? 'default'}
+                  data-img-type={args.image.caption ?? 'default'}
                 />
-
-                {args.image.caption && (
-                  <figcaption className="pt-6 text-center text-[10px] italic md:text-[20px]">
-                    {args.image.caption}
-                  </figcaption>
-                )}
               </figure>
             );
           }
