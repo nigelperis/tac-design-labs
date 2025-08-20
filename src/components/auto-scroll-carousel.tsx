@@ -18,7 +18,11 @@ import type {
   AutoScrollType,
 } from 'embla-carousel-auto-scroll';
 import type { EmblaViewportRefType } from 'embla-carousel-react';
-import type { ButtonHTMLAttributes, PropsWithChildren } from 'react';
+import type {
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+  ReactElement,
+} from 'react';
 
 interface EmblaCarouselContextType {
   carouselRef: EmblaViewportRefType;
@@ -96,7 +100,7 @@ export function AutoScrollCarouselContainer(
 
 interface AutoScrollCarouselItemProps {
   className?: string;
-  children: JSX.Element;
+  children: ReactElement;
 }
 
 export function AutoScrollCarouselSlide(props: AutoScrollCarouselItemProps) {
@@ -109,7 +113,10 @@ export function AutoScrollCarouselSlide(props: AutoScrollCarouselItemProps) {
       )}
     >
       {Children.map(children, (child) => {
-        return cloneElement(child, { 'data-slide-content': '' });
+        return cloneElement(child, { 'data-slide-content': '' } as Record<
+          string,
+          string
+        >);
       })}
     </div>
   );

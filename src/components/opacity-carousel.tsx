@@ -18,7 +18,11 @@ import type {
   EmblaOptionsType,
 } from 'embla-carousel';
 import type { EmblaViewportRefType } from 'embla-carousel-react';
-import type { ButtonHTMLAttributes, PropsWithChildren } from 'react';
+import type {
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+  ReactElement,
+} from 'react';
 
 interface EmblaCarouselContextType {
   carouselRef: EmblaViewportRefType;
@@ -208,7 +212,7 @@ export function OpacityCarouselNextButton(
 }
 
 export function OpacityCarouselIndicator(props: {
-  children: (activeIndex?: number) => JSX.Element;
+  children: (activeIndex?: number) => ReactElement;
 }) {
   const { children } = props;
   const [activeIndex, setActiveIndex] = useState(0);

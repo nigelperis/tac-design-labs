@@ -20,7 +20,7 @@ import type {
   EmblaOptionsType,
 } from 'embla-carousel';
 import type { EmblaViewportRefType } from 'embla-carousel-react';
-import type { PropsWithChildren } from 'react';
+import type { PropsWithChildren, ReactElement } from 'react';
 
 interface EmblaCarouselContextType {
   carouselRef: EmblaViewportRefType;
@@ -173,7 +173,7 @@ export function ZoomCarouselContainer(props: ZoomCarouselContainerProps) {
 
 interface ZoomCarouselItemProps {
   className?: string;
-  children: JSX.Element;
+  children: ReactElement;
 }
 
 export function ZoomCarouselSlide(props: ZoomCarouselItemProps) {
@@ -187,7 +187,10 @@ export function ZoomCarouselSlide(props: ZoomCarouselItemProps) {
       )}
     >
       {Children.map(children, (child) => {
-        return cloneElement(child, { 'data-slide-content': '' });
+        return cloneElement(child, { 'data-slide-content': '' } as Record<
+          string,
+          string
+        >);
       })}
     </div>
   );
