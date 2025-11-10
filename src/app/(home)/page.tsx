@@ -343,7 +343,7 @@ export default function Home() {
       >
         <h2 className="mb-4 bg-cover px-5 text-center font-primary text-[22px] font-normal text-[#250606] md:mb-11 md:px-7 md:pt-6 md:text-[40px]">
           Dive into our portfolio of projects that blend innovative design with
-          sustainable solutions.
+          sustainable solutions
         </h2>
 
         <OurWorkCarousel />
